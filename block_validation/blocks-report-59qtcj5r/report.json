@@ -1,0 +1,779 @@
+{
+  "overall": "FAIL",
+  "scope": "V1c blocks; V1b gate runs separately via unchanged validate-windows.cmd",
+  "checks": [
+    {
+      "id": "v1b_reference_unchanged",
+      "status": "PASS",
+      "changed_files": []
+    },
+    {
+      "status": "PASS",
+      "tests": [
+        {
+          "test": "test_blocks.BlockTests.test_ambiguous_errors_never_skipped",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_append_only",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_checkpoint_corruption",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_conflict_halts",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_corrupt_checkpoint_blocks_network_collection",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_document_corruption",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_error_text_not_logged",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_hard_crash",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_history_survives_retry",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_live_worker_protocol_with_simulated_transport",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_missing_slot_detected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_parent_absent_not_skipped",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_parent_hash_required",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_raw_corruption",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_raw_replay_recovery",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_redelivery",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_refuse_reference_db",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_session_hash_corruption",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_state_corruption_detected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_states_checkpoint_retry",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_transport_timeout",
+          "status": "PASS"
+        },
+        {
+          "test": "test_blocks.BlockTests.test_wrong_cluster_future_range",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.ClockRegressionTests.test_clock_regression_leaves_no_publication_and_recovery_is_safe",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.ClockRegressionTests.test_original_clock_invariant_repeated_without_os_clock",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_32015_at_version_one_not_retried_blindly",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_32603_is_error_retryable_and_history_preserved",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_all_transaction_formats_preserved_offline",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_audit_version_metadata_corruption_detected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_invalid_rpc_params_not_retried",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_legacy_zero_evidence_survives_upgrade_and_retry",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_no_false_pass_all_rpc_errors",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_old_zero_reproduces_32015_new_one_succeeds",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_retry_internal_error_bounded_to_three_rounds",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_safe_error_diagnostic_exposes_only_numeric_version",
+          "status": "PASS"
+        },
+        {
+          "test": "test_rpc_versions.RpcVersionTests.test_wire_request_integer_one_and_full_finalized",
+          "status": "PASS"
+        }
+      ],
+      "count": 35,
+      "id": "unit",
+      "seconds": 1.52
+    },
+    {
+      "status": "PASS",
+      "evidence": {
+        "middle": {
+          "expected_slots": 6,
+          "counts": {
+            "archived": 2,
+            "skipped": 1,
+            "unavailable": 3,
+            "error": 0
+          },
+          "accounting_ok": true,
+          "next_slot": 103,
+          "first_pass_complete": false,
+          "checkpoint_ok": true,
+          "unresolved": 3,
+          "pending_attempts": 0,
+          "hash_or_replay_errors": 0,
+          "skip_proof_errors": 0,
+          "publications": 2,
+          "integrity": "ok",
+          "foreign_key_errors": 0,
+          "healthy": true,
+          "coverage": {
+            "available": 2,
+            "skipped": 1,
+            "unresolved": 3,
+            "error": 0,
+            "accounted_fraction": 1.0,
+            "resolved_fraction": 0.5,
+            "attempted_slots": 3,
+            "attempts": 3,
+            "raw_bytes": 370
+          },
+          "attempt_diagnostics": [
+            {
+              "attempt_id": 1,
+              "slot": 100,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "f4735fab8ea336405e2d49facf461e4c842d91987b2ae7f98b89b48cb55f87e6",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  100,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            },
+            {
+              "attempt_id": 2,
+              "slot": 101,
+              "status": "unavailable",
+              "reason": "rpc_-32007",
+              "raw_hash": "b48474d1eae883f2f7e4fe3e6ff0e21c89ae4416b93e7a4b1e6c8acf45ee0217",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  101,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              },
+              "category": "other_unresolved",
+              "retry": "bounded_backoff",
+              "rpc_code": -32007
+            },
+            {
+              "attempt_id": 3,
+              "slot": 102,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "2a3e428838525ec6dfa550c83154392221c1a2279b431f4aeaf999d64333dd4a",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  102,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            }
+          ],
+          "slots": [
+            {
+              "slot": 100,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 1,
+              "proof_slot": null
+            },
+            {
+              "slot": 101,
+              "status": "skipped",
+              "reason": "verified_parent_gap",
+              "attempt_id": 2,
+              "proof_slot": 102
+            },
+            {
+              "slot": 102,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 3,
+              "proof_slot": null
+            },
+            {
+              "slot": 103,
+              "status": "unavailable",
+              "reason": "not_attempted",
+              "attempt_id": null,
+              "proof_slot": null
+            },
+            {
+              "slot": 104,
+              "status": "unavailable",
+              "reason": "not_attempted",
+              "attempt_id": null,
+              "proof_slot": null
+            },
+            {
+              "slot": 105,
+              "status": "unavailable",
+              "reason": "not_attempted",
+              "attempt_id": null,
+              "proof_slot": null
+            }
+          ]
+        },
+        "before_retry": {
+          "expected_slots": 6,
+          "counts": {
+            "archived": 3,
+            "skipped": 1,
+            "unavailable": 1,
+            "error": 1
+          },
+          "accounting_ok": true,
+          "next_slot": 106,
+          "first_pass_complete": true,
+          "checkpoint_ok": true,
+          "unresolved": 2,
+          "pending_attempts": 0,
+          "hash_or_replay_errors": 0,
+          "skip_proof_errors": 0,
+          "publications": 3,
+          "integrity": "ok",
+          "foreign_key_errors": 0,
+          "healthy": true,
+          "coverage": {
+            "available": 3,
+            "skipped": 1,
+            "unresolved": 1,
+            "error": 1,
+            "accounted_fraction": 1.0,
+            "resolved_fraction": 0.6666666666666666,
+            "attempted_slots": 6,
+            "attempts": 6,
+            "raw_bytes": 629
+          },
+          "attempt_diagnostics": [
+            {
+              "attempt_id": 1,
+              "slot": 100,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "f4735fab8ea336405e2d49facf461e4c842d91987b2ae7f98b89b48cb55f87e6",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  100,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            },
+            {
+              "attempt_id": 2,
+              "slot": 101,
+              "status": "unavailable",
+              "reason": "rpc_-32007",
+              "raw_hash": "b48474d1eae883f2f7e4fe3e6ff0e21c89ae4416b93e7a4b1e6c8acf45ee0217",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  101,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              },
+              "category": "other_unresolved",
+              "retry": "bounded_backoff",
+              "rpc_code": -32007
+            },
+            {
+              "attempt_id": 3,
+              "slot": 102,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "2a3e428838525ec6dfa550c83154392221c1a2279b431f4aeaf999d64333dd4a",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  102,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            },
+            {
+              "attempt_id": 4,
+              "slot": 103,
+              "status": "unavailable",
+              "reason": "null_result",
+              "raw_hash": "4fb5bd7bf674e3fda36dbf53b935803a7ef6758db4a965b2956e8cee0c878642",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  103,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              },
+              "category": "other_unresolved",
+              "retry": "bounded_backoff"
+            },
+            {
+              "attempt_id": 5,
+              "slot": 104,
+              "status": "error",
+              "reason": "rpc_-32603",
+              "raw_hash": "2486b4a2d690c559a41fa4c81d97877917450d7e26214ffe37196d3d56f22b8d",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  104,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              },
+              "category": "internal_rpc_error",
+              "retry": "bounded_backoff",
+              "rpc_code": -32603
+            },
+            {
+              "attempt_id": 6,
+              "slot": 105,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "dbbb127ac83f422467ef58166a4f591eb38055bc89c3d024b15806e6950c28fd",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  105,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            }
+          ],
+          "slots": [
+            {
+              "slot": 100,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 1,
+              "proof_slot": null
+            },
+            {
+              "slot": 101,
+              "status": "skipped",
+              "reason": "verified_parent_gap",
+              "attempt_id": 2,
+              "proof_slot": 102
+            },
+            {
+              "slot": 102,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 3,
+              "proof_slot": null
+            },
+            {
+              "slot": 103,
+              "status": "unavailable",
+              "reason": "null_result",
+              "attempt_id": 4,
+              "proof_slot": null
+            },
+            {
+              "slot": 104,
+              "status": "error",
+              "reason": "rpc_-32603",
+              "attempt_id": 5,
+              "proof_slot": null
+            },
+            {
+              "slot": 105,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 6,
+              "proof_slot": null
+            }
+          ]
+        },
+        "after_retry": {
+          "expected_slots": 6,
+          "counts": {
+            "archived": 5,
+            "skipped": 1,
+            "unavailable": 0,
+            "error": 0
+          },
+          "accounting_ok": true,
+          "next_slot": 106,
+          "first_pass_complete": true,
+          "checkpoint_ok": true,
+          "unresolved": 0,
+          "pending_attempts": 0,
+          "hash_or_replay_errors": 0,
+          "skip_proof_errors": 0,
+          "publications": 5,
+          "integrity": "ok",
+          "foreign_key_errors": 0,
+          "healthy": true,
+          "coverage": {
+            "available": 5,
+            "skipped": 1,
+            "unresolved": 0,
+            "error": 0,
+            "accounted_fraction": 1.0,
+            "resolved_fraction": 1.0,
+            "attempted_slots": 6,
+            "attempts": 8,
+            "raw_bytes": 931
+          },
+          "attempt_diagnostics": [
+            {
+              "attempt_id": 1,
+              "slot": 100,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "f4735fab8ea336405e2d49facf461e4c842d91987b2ae7f98b89b48cb55f87e6",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  100,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            },
+            {
+              "attempt_id": 2,
+              "slot": 101,
+              "status": "unavailable",
+              "reason": "rpc_-32007",
+              "raw_hash": "b48474d1eae883f2f7e4fe3e6ff0e21c89ae4416b93e7a4b1e6c8acf45ee0217",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  101,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              },
+              "category": "other_unresolved",
+              "retry": "bounded_backoff",
+              "rpc_code": -32007
+            },
+            {
+              "attempt_id": 3,
+              "slot": 102,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "2a3e428838525ec6dfa550c83154392221c1a2279b431f4aeaf999d64333dd4a",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  102,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            },
+            {
+              "attempt_id": 4,
+              "slot": 103,
+              "status": "unavailable",
+              "reason": "null_result",
+              "raw_hash": "4fb5bd7bf674e3fda36dbf53b935803a7ef6758db4a965b2956e8cee0c878642",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  103,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              },
+              "category": "other_unresolved",
+              "retry": "bounded_backoff"
+            },
+            {
+              "attempt_id": 5,
+              "slot": 104,
+              "status": "error",
+              "reason": "rpc_-32603",
+              "raw_hash": "2486b4a2d690c559a41fa4c81d97877917450d7e26214ffe37196d3d56f22b8d",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  104,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              },
+              "category": "internal_rpc_error",
+              "retry": "bounded_backoff",
+              "rpc_code": -32603
+            },
+            {
+              "attempt_id": 6,
+              "slot": 105,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "dbbb127ac83f422467ef58166a4f591eb38055bc89c3d024b15806e6950c28fd",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  105,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            },
+            {
+              "attempt_id": 7,
+              "slot": 103,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "40e9cfd942f5a5798b8167fd314d7328d0b3d07db456b94fb9525f6062e86c63",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  103,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            },
+            {
+              "attempt_id": 8,
+              "slot": 104,
+              "status": "archived",
+              "reason": "ok",
+              "raw_hash": "453825a8b6382746f2400e5ec591f1822a43ec9c9e9a985deea1823345155013",
+              "request": {
+                "method": "getBlock",
+                "params": [
+                  104,
+                  {
+                    "commitment": "finalized",
+                    "encoding": "json",
+                    "transactionDetails": "full",
+                    "maxSupportedTransactionVersion": 0,
+                    "rewards": false
+                  }
+                ]
+              }
+            }
+          ],
+          "slots": [
+            {
+              "slot": 100,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 1,
+              "proof_slot": null
+            },
+            {
+              "slot": 101,
+              "status": "skipped",
+              "reason": "verified_parent_gap",
+              "attempt_id": 2,
+              "proof_slot": 102
+            },
+            {
+              "slot": 102,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 3,
+              "proof_slot": null
+            },
+            {
+              "slot": 103,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 7,
+              "proof_slot": null
+            },
+            {
+              "slot": 104,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 8,
+              "proof_slot": null
+            },
+            {
+              "slot": 105,
+              "status": "archived",
+              "reason": "ok",
+              "attempt_id": 6,
+              "proof_slot": null
+            }
+          ]
+        }
+      },
+      "id": "deterministic",
+      "seconds": 0.617
+    },
+    {
+      "id": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used"
+    },
+    {
+      "id": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used"
+    },
+    {
+      "id": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used"
+    },
+    {
+      "id": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used"
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "overall": "PASS",
+  "local_overall": "PASS",
+  "platform": "win32",
+  "windows_executed": true,
+  "rpc_configured": true,
+  "rpc_requested": true,
+  "historical_baseline_evidence": "Supplied Windows V1d PASS is distinct from this execution; V1e Windows fix remains unqualified until this launcher passes there.",
+  "test_suites": [
+    {
+      "suite": "V1b/runner",
+      "reported": 8,
+      "passed": 8
+    },
+    {
+      "suite": "V1b/foundation",
+      "reported": 38,
+      "passed": 38
+    },
+    {
+      "suite": "V1c/unit",
+      "reported": 35,
+      "passed": 35
+    },
+    {
+      "suite": "V1d/unit",
+      "reported": 31,
+      "passed": 31
+    },
+    {
+      "suite": "V1e/unit",
+      "reported": 28,
+      "passed": 28
+    },
+    {
+      "suite": "V1f_local/validation_tests",
+      "reported": 7,
+      "passed": 7
+    },
+    {
+      "suite": "V1f_local/budget_tests",
+      "reported": 12,
+      "passed": 12
+    }
+  ],
+  "tests_reported": 159,
+  "tests_passed": 159,
+  "checks": [
+    {
+      "layer": "V1b",
+      "control": "runner_8_tests",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "foundation",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "live_rpc",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "raw_bytes",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "replay",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "before_normalize",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "before_publish",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "recover_twice",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "redelivery",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "conflict",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "continue",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "backup",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "hashes",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "outage",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1c",
+      "control": "v1b_reference_unchanged",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1c",
+      "control": "unit",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1c",
+      "control": "deterministic",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1d",
+      "control": "v1c_reference_unchanged",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1d",
+      "control": "unit",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1d",
+      "control": "deterministic",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "PASS",
+      "code": "real_transfer_decoded",
+      "cause": "real transfer decoded"
+    },
+    {
+      "layer": "V1e",
+      "control": "v1d_reference_unchanged",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1e",
+      "control": "unit",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1e",
+      "control": "deterministic",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1f_local",
+      "control": "validation_tests",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    },
+    {
+      "layer": "V1f_local",
+      "control": "budget_tests",
+      "status": "PASS",
+      "code": "",
+      "cause": ""
+    }
+  ],
+  "failures": [],
+  "reports_directory": "all-validation-uecloxuk"
+}

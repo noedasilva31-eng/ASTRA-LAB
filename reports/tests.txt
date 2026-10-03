@@ -1,0 +1,37 @@
+test_append_only (test_foundation.FoundationTests.test_append_only) ... ok
+test_backup_no_overwrite (test_foundation.FoundationTests.test_backup_no_overwrite) ... ok
+test_backup_restore (test_foundation.FoundationTests.test_backup_restore) ... ok
+test_bool_time_rejected (test_foundation.FoundationTests.test_bool_time_rejected) ... ok
+test_boundary (test_foundation.FoundationTests.test_boundary) ... ok
+test_clock_regression_fail_closed (test_foundation.FoundationTests.test_clock_regression_fail_closed) ... ok
+test_conflicting_id_preserves_raw (test_foundation.FoundationTests.test_conflicting_id_preserves_raw) ... ok
+test_core_has_no_llm_network_imports (test_foundation.FoundationTests.test_core_has_no_llm_network_imports) ... ok
+test_correction_does_not_rewrite_past (test_foundation.FoundationTests.test_correction_does_not_rewrite_past) ... ok
+test_crash_after_capture_recovery (test_foundation.FoundationTests.test_crash_after_capture_recovery) ... ok
+test_crash_after_normalization_recovery (test_foundation.FoundationTests.test_crash_after_normalization_recovery) ... ok
+test_duplicate_idempotent (test_foundation.FoundationTests.test_duplicate_idempotent) ... ok
+test_duplicate_json_keys (test_foundation.FoundationTests.test_duplicate_json_keys) ... ok
+test_future_clock_quarantine (test_foundation.FoundationTests.test_future_clock_quarantine) ... ok
+test_health_detects_quarantine (test_foundation.FoundationTests.test_health_detects_quarantine) ... ok
+test_invalid_utf8 (test_foundation.FoundationTests.test_invalid_utf8) ... ok
+test_missing_field (test_foundation.FoundationTests.test_missing_field) ... ok
+test_missing_revision_parent (test_foundation.FoundationTests.test_missing_revision_parent) ... ok
+test_nonfinite_rejected (test_foundation.FoundationTests.test_nonfinite_rejected) ... ok
+test_normalized_corruption_blocks_replay (test_foundation.FoundationTests.test_normalized_corruption_blocks_replay) ... ok
+test_null_event_time (test_foundation.FoundationTests.test_null_event_time) ... ok
+test_old_event_not_backdated (test_foundation.FoundationTests.test_old_event_not_backdated) ... ok
+test_out_of_order_event_time (test_foundation.FoundationTests.test_out_of_order_event_time) ... ok
+test_providers_not_silently_merged (test_foundation.FoundationTests.test_providers_not_silently_merged) ... ok
+test_raw_corruption_detected (test_foundation.FoundationTests.test_raw_corruption_detected) ... ok
+test_recovery_idempotent (test_foundation.FoundationTests.test_recovery_idempotent) ... ok
+test_repeatable_snapshot (test_foundation.FoundationTests.test_repeatable_snapshot) ... ok
+test_retraction (test_foundation.FoundationTests.test_retraction) ... ok
+test_revision_collision (test_foundation.FoundationTests.test_revision_collision) ... ok
+test_unknown_field (test_foundation.FoundationTests.test_unknown_field) ... ok
+test_unknown_schema (test_foundation.FoundationTests.test_unknown_schema) ... ok
+test_valid_contract (test_foundation.FoundationTests.test_valid_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.056s
+
+OK

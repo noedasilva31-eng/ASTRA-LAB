@@ -1,0 +1,883 @@
+{
+  "schema": "paper-cycle-report-v1",
+  "qualified_configuration": {
+    "assurance": "CONDITIONAL_PAPER_SCENARIO",
+    "code": "4cf2a016672732f7442e290b6805ea433e01532a92693c8d45fab10520163cd6",
+    "hold_rule": "next_distinct_observed_swap_after_entry",
+    "initial": 1000000000,
+    "model": {
+      "adverse_bps": 25,
+      "delay_slots": 1,
+      "fee_quote_raw": 2100000,
+      "quote_ttl_ns": 5000000000
+    },
+    "policy": {
+      "max_age_ns": 5000000000,
+      "max_exposure": 40000000,
+      "max_heartbeat_age_ns": 5000000000,
+      "max_position": 20000000,
+      "max_positions": 2,
+      "max_session_loss": 10000000,
+      "max_slippage_bps": 100,
+      "min_liquidity": 1000000000
+    },
+    "size": 10000000,
+    "strategy": "bounded-observed-swap-v1"
+  },
+  "transport_latencies": {
+    "http_roundtrip_ns": {
+      "samples": 16,
+      "p95": 132759900,
+      "p99": 132759900
+    },
+    "notification_to_processing_ns": {
+      "samples": 2,
+      "p95": 104417500,
+      "p99": 104417500
+    },
+    "provider_emission_latency": "NOT_MEASURED"
+  },
+  "initial_cash_quote_raw": 1000000000,
+  "pending": {},
+  "open_positions": {},
+  "open_entry_measurements": {},
+  "status_semantics": {
+    "PROVEN": "Archived market/provider facts or recorded decisions; never proof of actual execution",
+    "DERIVED": "Exact calculation from archived inputs; paper PnL remains conditional",
+    "SIMULATED": "Model assumptions/haircuts/fixed fees, not paid fees",
+    "UNKNOWN": "Missing evidence; not zero"
+  },
+  "unknowns": {
+    "actual_network_priority_ATA_fees": "UNKNOWN: ASTRA did not submit a transaction",
+    "separate_DEX_LP_creator_allocation": "UNKNOWN: no validated fee allocation; do not add to quoted output",
+    "adverse_movement_causal_attribution": "UNKNOWN: quote output change is measurable, causal decomposition is not",
+    "pool_reserves_are_executable_depth": "NO: account reserves and provider indicative size quote only"
+  },
+  "audit": {
+    "status": "PASS",
+    "plans": 4,
+    "results": 4,
+    "network_used": false
+  },
+  "source_file_sha256": {
+    "raw": "9649fc258ea5024ff259e69f93be856c32d0fe731449de80c932da541649baf9",
+    "paper": "de5c7c3a1e7346e972713c0bacb45809c658d2fbd324a008249ef81a1d815181",
+    "engine": "563504d1de6d28bed1684dca75ab4cb09aef3ba1d416ca89d2a4785d2c40b3d7"
+  },
+  "classification_legend": [
+    "PROVEN",
+    "DERIVED",
+    "SIMULATED",
+    "UNKNOWN"
+  ],
+  "cycles": [
+    {
+      "cycle_id": "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f",
+      "classification": "DERIVED",
+      "assurance": "CONDITIONAL_PAPER_NOT_REAL_EXECUTION",
+      "token": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "quote_mint": "So11111111111111111111111111111111111111112",
+      "base_quantity_raw": 406739,
+      "buy_notional_quote_raw": 10000000,
+      "buy": {
+        "classification": "DERIVED",
+        "market_evidence_classification": "PROVEN",
+        "paper_model_classification": "SIMULATED",
+        "fill_signature": "Tfp1J1fb8x5MNJWHZpy4h2acPL5YRKsyVcQPLMzqwx3RuLCqx2cWWRAd2dF6UZhrJptSaYDQx8Xcz9spyiSrXeP",
+        "fill_slot": 452325981,
+        "intent_id": "1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f",
+        "settlement_id": "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f",
+        "side": "BUY",
+        "event_id": "64044359db948a3107bd53c46bce915abbbf2f9b62389ec283a51ce13f5e8870",
+        "decision_ns": 1790867979271045600,
+        "settlement_ns": 1790867983367432500,
+        "decision_quote": {
+          "input_mint": "So11111111111111111111111111111111111111112",
+          "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "input_raw": 10000000,
+          "output_raw": 408803,
+          "minimum_output_raw": 406759,
+          "slippage_bps": 50,
+          "slot": 452325977,
+          "observed_ns": 1790867977142138900,
+          "impact": "0.0034140997341972582006714654",
+          "routes": [
+            {
+              "swapInfo": {
+                "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+                "label": "Pump.fun Amm",
+                "inputMint": "So11111111111111111111111111111111111111112",
+                "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+                "inAmount": "10000000",
+                "outAmount": "408803",
+                "updateContextSlot": "452325974"
+              },
+              "percent": 100,
+              "bps": null
+            }
+          ],
+          "provenance": {
+            "frame": 15,
+            "frame_sha256": "9feb1cdebb416198c9deaf6c88adba976add8f791bd2b026712bc5691fbcd362"
+          },
+          "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION"
+        },
+        "settlement_quote": {
+          "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+          "impact": "0.0029355476490863510689991924",
+          "input_mint": "So11111111111111111111111111111111111111112",
+          "input_raw": 10000000,
+          "minimum_output_raw": 406739,
+          "observed_ns": 1790867981227807400,
+          "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "output_raw": 408782,
+          "provenance": {
+            "frame": 25,
+            "frame_sha256": "998a94756f8331810376d84d2f1eb0781e7d5552ec3d09eba0b81b9fa149a27f"
+          },
+          "routes": [
+            {
+              "bps": null,
+              "percent": 100,
+              "swapInfo": {
+                "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+                "inAmount": "10000000",
+                "inputMint": "So11111111111111111111111111111111111111112",
+                "label": "Pump.fun Amm",
+                "outAmount": "408782",
+                "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+                "updateContextSlot": "452325992"
+              }
+            }
+          ],
+          "slippage_bps": 50,
+          "slot": 452325992
+        },
+        "decision_price_quote_raw_per_base_raw": {
+          "classification": "DERIVED",
+          "numerator": 10000000,
+          "denominator": 408803
+        },
+        "settlement_price_quote_raw_per_base_raw": {
+          "classification": "DERIVED",
+          "numerator": 10000000,
+          "denominator": 406739
+        },
+        "decision_to_settlement_ns": 4096386900,
+        "acquisition_monotonic_ns": 3575154600,
+        "risk_decision": {
+          "allowed": true,
+          "policy": {
+            "max_age_ns": 5000000000,
+            "max_exposure": 40000000,
+            "max_heartbeat_age_ns": 5000000000,
+            "max_position": 20000000,
+            "max_positions": 2,
+            "max_session_loss": 10000000,
+            "max_slippage_bps": 100,
+            "min_liquidity": 1000000000
+          },
+          "reasons": [],
+          "version": "risk-v1"
+        },
+        "risk_settlement": {
+          "allowed": true,
+          "policy": {
+            "max_age_ns": 5000000000,
+            "max_exposure": 40000000,
+            "max_heartbeat_age_ns": 5000000000,
+            "max_position": 20000000,
+            "max_positions": 2,
+            "max_session_loss": 10000000,
+            "max_slippage_bps": 100,
+            "min_liquidity": 1000000000
+          },
+          "reasons": [],
+          "version": "risk-v1"
+        },
+        "account_evidence_at_decision": {
+          "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+          "base_reserve_raw": 850843617641,
+          "mint_profiles": [
+            "token2022-immutable-self-metadata-v1",
+            "classic-spl-v1"
+          ],
+          "not_a_rug_safety_guarantee": true,
+          "observed_ns": 1790867979267432800,
+          "provenance": {
+            "frame": 17,
+            "frame_sha256": "f62267116cc5d00329089e45cd7f15d8a378e8cf575151c228f465345a8e03c2"
+          },
+          "quote_reserve_raw": 20734219414450,
+          "slot": 452325984,
+          "token_programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+            "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+          ]
+        },
+        "costs": {
+          "version": "cost-description-v1",
+          "rows": [
+            {
+              "category": "network",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "priority",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "DEX",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "LP",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "creator",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "ATA-create",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "ATA-close-or-refund",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "other",
+              "amount": 2100000,
+              "unit": "lamports",
+              "source": {
+                "ledger_id": "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f"
+              },
+              "observed_or_simulated": "SIMULATED",
+              "available_at": 1790867983367432500,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "separate",
+              "accounting_key": "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:legacy_fixed_fee",
+              "component_keys": [
+                "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:network",
+                "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:priority",
+                "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:DEX",
+                "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:LP",
+                "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:creator",
+                "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:ATA-create",
+                "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:ATA-close-or-refund",
+                "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:other"
+              ]
+            },
+            {
+              "category": "price-impact",
+              "amount": "0.0029355476490863510689991924",
+              "unit": "provider_fraction",
+              "source": {
+                "frame": 25,
+                "frame_sha256": "998a94756f8331810376d84d2f1eb0781e7d5552ec3d09eba0b81b9fa149a27f"
+              },
+              "observed_or_simulated": "PROVEN",
+              "available_at": 1790867981227807400,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "descriptive_only",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "adverse-movement",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "paper-slippage",
+              "amount": 2043,
+              "unit": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump:raw",
+              "source": {
+                "frame": 25,
+                "frame_sha256": "998a94756f8331810376d84d2f1eb0781e7d5552ec3d09eba0b81b9fa149a27f"
+              },
+              "observed_or_simulated": "SIMULATED",
+              "available_at": 1790867983367432500,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "descriptive_only",
+              "accounting_key": "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f:haircut",
+              "component_keys": [],
+              "already_applied_in_ledger": true
+            }
+          ],
+          "separate_total_lamports": 2100000,
+          "fee_allocation": "UNKNOWN: fixed aggregate; no measured network/priority/DEX/LP/creator/ATA split",
+          "double_counting_rule": "Quote-to-fill haircut is already in ledger outputs. Provider impact is descriptive. Neither is subtracted again. Component allocations must share aggregate component_keys.",
+          "changes_ledger": false
+        },
+        "provenance": {
+          "decision_event": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 13,
+            "frame_sha256": "d9c77bdde1e555a830698592cd8e70346a5672871385d567a8576417b1c25356",
+            "genesis_sequence": 3,
+            "raw_sha256": "e62d704cb313fb3f8dc6ca7fe7e04995269cf44e4a482aa893559f6a1eaf46cb"
+          },
+          "fill_event": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 24,
+            "frame_sha256": "960a3e0a87a23f2a8daa13fd7e6224f160b8539952735eea8bf10f71bb576d3c",
+            "genesis_sequence": 22,
+            "raw_sha256": "ad3cf0e0965d8376b56b429c939d0a3a5879f5d5cd86ec71b54bb94434ea32ca"
+          },
+          "evidence_frames": {
+            "accounts_seq": 27,
+            "forward_seq": 25,
+            "reverse_seq": 26
+          }
+        },
+        "quote_output_change_raw": -21,
+        "quote_output_change_classification": "DERIVED; not independently attributed to market movement/fees/impact",
+        "quote_age_at_settlement_ns": 2139625100,
+        "depth_at_decision": {
+          "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+          "base_reserve_raw": 850843617641,
+          "mint_profiles": [
+            "token2022-immutable-self-metadata-v1",
+            "classic-spl-v1"
+          ],
+          "not_a_rug_safety_guarantee": true,
+          "observed_ns": 1790867979267432800,
+          "provenance": {
+            "frame": 17,
+            "frame_sha256": "f62267116cc5d00329089e45cd7f15d8a378e8cf575151c228f465345a8e03c2"
+          },
+          "quote_reserve_raw": 20734219414450,
+          "slot": 452325984,
+          "token_programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+            "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+          ]
+        },
+        "cash_before_quote_raw": 1000000000,
+        "cash_after_quote_raw": 987900000
+      },
+      "sell": {
+        "classification": "DERIVED",
+        "market_evidence_classification": "PROVEN",
+        "paper_model_classification": "SIMULATED",
+        "fill_signature": "4WambDfnoaYnTV3yELKvFabDzHt4wKpyxhPHyDZ94fn5ekDFYqtRHTe9CsmpoL7TmPqbaQviimmfECRKg1TWhFnL",
+        "fill_slot": 452326011,
+        "intent_id": "0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82",
+        "settlement_id": "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82",
+        "side": "SELL",
+        "event_id": "2bd6e20446a52308557b6a32a655950bf4c2e384ade54ddf46c6e8442000cd51",
+        "decision_ns": 1790867987479133100,
+        "settlement_ns": 1790867991577601700,
+        "decision_quote": {
+          "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "output_mint": "So11111111111111111111111111111111111111112",
+          "input_raw": 406739,
+          "output_raw": 9890467,
+          "minimum_output_raw": 9841015,
+          "slippage_bps": 50,
+          "slot": 452326008,
+          "observed_ns": 1790867985333942800,
+          "impact": "0.0029952550741282055739580031",
+          "routes": [
+            {
+              "swapInfo": {
+                "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+                "label": "Pump.fun Amm",
+                "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+                "outputMint": "So11111111111111111111111111111111111111112",
+                "inAmount": "406739",
+                "outAmount": "9890467",
+                "updateContextSlot": "452326005"
+              },
+              "percent": 100,
+              "bps": null
+            }
+          ],
+          "provenance": {
+            "frame": 33,
+            "frame_sha256": "8b906e5ba6cffee8c110a2af0cb8cd7de9f4f78bc2ac8ea29946924d16e29ee2"
+          },
+          "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION"
+        },
+        "settlement_quote": {
+          "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+          "impact": "0.0029666288578767893956912018",
+          "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "input_raw": 406739,
+          "minimum_output_raw": 9841241,
+          "observed_ns": 1790867989463112000,
+          "output_mint": "So11111111111111111111111111111111111111112",
+          "output_raw": 9890694,
+          "provenance": {
+            "frame": 41,
+            "frame_sha256": "3c65eb4c1eb82ebbe8565391e2dc28661076991b366dcb9852caa55086a1e179"
+          },
+          "routes": [
+            {
+              "bps": null,
+              "percent": 100,
+              "swapInfo": {
+                "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+                "inAmount": "406739",
+                "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+                "label": "Pump.fun Amm",
+                "outAmount": "9890694",
+                "outputMint": "So11111111111111111111111111111111111111112",
+                "updateContextSlot": "452326020"
+              }
+            }
+          ],
+          "slippage_bps": 50,
+          "slot": 452326023
+        },
+        "decision_price_quote_raw_per_base_raw": {
+          "classification": "DERIVED",
+          "numerator": 9890467,
+          "denominator": 406739
+        },
+        "settlement_price_quote_raw_per_base_raw": {
+          "classification": "DERIVED",
+          "numerator": 9841241,
+          "denominator": 406739
+        },
+        "decision_to_settlement_ns": 4098468600,
+        "acquisition_monotonic_ns": 2891553500,
+        "risk_decision": {
+          "allowed": true,
+          "policy": {
+            "max_age_ns": 5000000000,
+            "max_exposure": 40000000,
+            "max_heartbeat_age_ns": 5000000000,
+            "max_position": 20000000,
+            "max_positions": 2,
+            "max_session_loss": 10000000,
+            "max_slippage_bps": 100,
+            "min_liquidity": 1000000000
+          },
+          "reasons": [],
+          "version": "risk-v1"
+        },
+        "risk_settlement": {
+          "allowed": true,
+          "policy": {
+            "max_age_ns": 5000000000,
+            "max_exposure": 40000000,
+            "max_heartbeat_age_ns": 5000000000,
+            "max_position": 20000000,
+            "max_positions": 2,
+            "max_session_loss": 10000000,
+            "max_slippage_bps": 100,
+            "min_liquidity": 1000000000
+          },
+          "reasons": [],
+          "version": "risk-v1"
+        },
+        "account_evidence_at_decision": {
+          "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+          "base_reserve_raw": 850833853253,
+          "mint_profiles": [
+            "token2022-immutable-self-metadata-v1",
+            "classic-spl-v1"
+          ],
+          "not_a_rug_safety_guarantee": true,
+          "observed_ns": 1790867987476017400,
+          "provenance": {
+            "frame": 35,
+            "frame_sha256": "e2a75c9d3ee1e8b7b7df018beddb6f4955ae56f9737fff11efe33dbd46c9ed0a"
+          },
+          "quote_reserve_raw": 20734458044214,
+          "slot": 452326015,
+          "token_programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+            "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+          ]
+        },
+        "costs": {
+          "version": "cost-description-v1",
+          "rows": [
+            {
+              "category": "network",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "priority",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "DEX",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "LP",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "creator",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "ATA-create",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "ATA-close-or-refund",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "other",
+              "amount": 2100000,
+              "unit": "lamports",
+              "source": {
+                "ledger_id": "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82"
+              },
+              "observed_or_simulated": "SIMULATED",
+              "available_at": 1790867991577601700,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "separate",
+              "accounting_key": "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:legacy_fixed_fee",
+              "component_keys": [
+                "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:network",
+                "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:priority",
+                "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:DEX",
+                "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:LP",
+                "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:creator",
+                "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:ATA-create",
+                "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:ATA-close-or-refund",
+                "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:other"
+              ]
+            },
+            {
+              "category": "price-impact",
+              "amount": "0.0029666288578767893956912018",
+              "unit": "provider_fraction",
+              "source": {
+                "frame": 41,
+                "frame_sha256": "3c65eb4c1eb82ebbe8565391e2dc28661076991b366dcb9852caa55086a1e179"
+              },
+              "observed_or_simulated": "PROVEN",
+              "available_at": 1790867989463112000,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "descriptive_only",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "adverse-movement",
+              "amount": null,
+              "unit": "lamports",
+              "source": null,
+              "observed_or_simulated": "UNKNOWN",
+              "available_at": null,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "unknown",
+              "accounting_key": null,
+              "component_keys": []
+            },
+            {
+              "category": "paper-slippage",
+              "amount": 49453,
+              "unit": "So11111111111111111111111111111111111111112:raw",
+              "source": {
+                "frame": 41,
+                "frame_sha256": "3c65eb4c1eb82ebbe8565391e2dc28661076991b366dcb9852caa55086a1e179"
+              },
+              "observed_or_simulated": "SIMULATED",
+              "available_at": 1790867991577601700,
+              "model_version": "cost-description-v1",
+              "included_in_quote_or_separate": "descriptive_only",
+              "accounting_key": "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82:haircut",
+              "component_keys": [],
+              "already_applied_in_ledger": true
+            }
+          ],
+          "separate_total_lamports": 2100000,
+          "fee_allocation": "UNKNOWN: fixed aggregate; no measured network/priority/DEX/LP/creator/ATA split",
+          "double_counting_rule": "Quote-to-fill haircut is already in ledger outputs. Provider impact is descriptive. Neither is subtracted again. Component allocations must share aggregate component_keys.",
+          "changes_ledger": false
+        },
+        "provenance": {
+          "decision_event": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 32,
+            "frame_sha256": "9ead124fa2f7014771ea36625b25583b98b31c0950518b6fd022feb3062d36a7",
+            "genesis_sequence": 22,
+            "raw_sha256": "370abdedf5581b02be2da446a004fc8808000803e07a653dd12a95f6fdc6854b"
+          },
+          "fill_event": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 40,
+            "frame_sha256": "6bbe69cf9254c089881c8cdacb4862decfb6dd5477a9866ff14e5a1cb8ed83e6",
+            "genesis_sequence": 22,
+            "raw_sha256": "97ac3211043897dd86232befb1ccabe4cc499fde4d14e6c161e8f6ee8490811b"
+          },
+          "evidence_frames": {
+            "accounts_seq": 43,
+            "forward_seq": 41,
+            "reverse_seq": 42
+          }
+        },
+        "quote_output_change_raw": 227,
+        "quote_output_change_classification": "DERIVED; not independently attributed to market movement/fees/impact",
+        "quote_age_at_settlement_ns": 2114489700,
+        "depth_at_decision": {
+          "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+          "base_reserve_raw": 850833853253,
+          "mint_profiles": [
+            "token2022-immutable-self-metadata-v1",
+            "classic-spl-v1"
+          ],
+          "not_a_rug_safety_guarantee": true,
+          "observed_ns": 1790867987476017400,
+          "provenance": {
+            "frame": 35,
+            "frame_sha256": "e2a75c9d3ee1e8b7b7df018beddb6f4955ae56f9737fff11efe33dbd46c9ed0a"
+          },
+          "quote_reserve_raw": 20734458044214,
+          "slot": 452326015,
+          "token_programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+            "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+          ]
+        },
+        "cash_before_quote_raw": 987900000,
+        "cash_after_quote_raw": 995641241
+      },
+      "holding_duration_ns": 8210169200,
+      "gross_before_fixed_fees_quote_raw": -158759,
+      "fixed_simulated_fees_quote_raw": 4200000,
+      "net_quote_raw": -4358759,
+      "exit_reason": {
+        "classification": "PROVEN",
+        "rule": "next_distinct_observed_swap_after_entry",
+        "trigger_event": "2bd6e20446a52308557b6a32a655950bf4c2e384ade54ddf46c6e8442000cd51"
+      },
+      "MAE": {
+        "classification": "UNKNOWN",
+        "reason": "no_complete_position_scoped_executable_price_path"
+      },
+      "MFE": {
+        "classification": "UNKNOWN",
+        "reason": "no_complete_position_scoped_executable_price_path"
+      },
+      "coverage": "OBSERVED_SUBSET",
+      "real_execution": false,
+      "base_decimals": {
+        "classification": "PROVEN",
+        "value": 6,
+        "source": {
+          "frame": 17,
+          "frame_sha256": "f62267116cc5d00329089e45cd7f15d8a378e8cf575151c228f465345a8e03c2"
+        }
+      },
+      "fixed_fee_share_of_loss": {
+        "classification": "DERIVED",
+        "numerator": 4200000,
+        "denominator": 4358759
+      }
+    }
+  ],
+  "portfolio": {
+    "cash_quote_raw": 995641241,
+    "positions": {},
+    "realized_scenario_pnl_quote_raw": -4358759,
+    "loss_quote_raw": 4358759,
+    "pending": {},
+    "head": "4668e05bd13c452891a9a9a2323e6a8446225e0083a19d884abdb5719f45a521",
+    "sequence": 4
+  },
+  "decision_census": [
+    {
+      "decision_id": "1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f",
+      "event_id": "d9caddd3812540f4594fca313259817562b63ee3a361b2246edeef96dd19dfb2",
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "result_kind": "intent",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": true
+    },
+    {
+      "decision_id": "6d039892aa0e27773cb075e6a266c35443af28e60ebb90baa748eabe5b4139da",
+      "event_id": "64044359db948a3107bd53c46bce915abbbf2f9b62389ec283a51ce13f5e8870",
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "result_kind": "settlement",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82",
+      "event_id": "4f7426fc2831018b8d2d29be483651076709fc5ce4e00c0555b5a5956c1d9b75",
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "result_kind": "intent",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": true
+    },
+    {
+      "decision_id": "cfea7b192854fdf45702cb84089e7f0f46ee385d2dc3db8e1f522050b8e5e51f",
+      "event_id": "2bd6e20446a52308557b6a32a655950bf4c2e384ade54ddf46c6e8442000cd51",
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "result_kind": "settlement",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    }
+  ],
+  "rejections": [],
+  "outcomes": [
+    {
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "horizon_seconds": 60,
+      "due_ns": 1790868036936120800,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "horizon_seconds": 300,
+      "due_ns": 1790868276936120800,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "horizon_seconds": 1800,
+      "due_ns": 1790869776936120800,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "horizon_seconds": 3600,
+      "due_ns": 1790871576936120800,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+      "horizon_seconds": 86400,
+      "due_ns": 1790954376936120800,
+      "status": "NOT_COLLECTED"
+    }
+  ],
+  "coverage": "OBSERVED_SUBSET",
+  "provider_emission_latency": {
+    "classification": "UNKNOWN",
+    "status": "NOT_MEASURED"
+  },
+  "real_execution": false
+}

@@ -1,0 +1,19 @@
+{
+  "baseline": "ASTRA-V1-context",
+  "protected_files_identical": 43,
+  "protected_manifest": "PROTECTED_COMPONENTS.json",
+  "modified_existing_code": [
+    "astra_measure/report.py",
+    "validate_all_current.py"
+  ],
+  "new_modules": [
+    "astra_position",
+    "position_tests",
+    "position_validation.py",
+    "resume-position-windows.cmd"
+  ],
+  "qualified_components_changed": false,
+  "economic_thresholds_changed": false,
+  "exit_policy_change": "V0.2 requires persistent joint deterioration; legacy timer exit is not used for new position continuation plans",
+  "source_windows_artifacts_identical": true
+}

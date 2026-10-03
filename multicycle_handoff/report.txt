@@ -1,0 +1,14 @@
+ASTRA global: FAIL / Local: PASS
+Tests: 364/364
+PASS | V1e preservation after cleanup
+PASS | V1e events=0 remains FAIL; protected components unchanged
+PASS | Cost registry descriptive; legacy economics unchanged
+PASS | Real archived VSOF exact reconstruction
+PASS | Bounded multi-opportunity orchestration/recovery/idempotence
+PASS | Unknown metrics/partial observation never extrapolated
+PASS | Local complete non-regression
+NOT_EXECUTED | New Windows/Mainnet multiple real cycles qualification
+UNKNOWN | Historical V1e 137-transaction decoding diagnosis
+
+Gate details: validation-summary.txt
+No real transaction; conditional paper only.

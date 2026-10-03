@@ -1,0 +1,184 @@
+{
+  "overall": "FAIL",
+  "platform": "linux",
+  "windows_executed": false,
+  "rpc_configured": false,
+  "baseline_V1d": "Windows/Devnet PASS supplied by user; original reports in baseline_windows_evidence; not a current local RPC execution",
+  "immutable_baseline_files": 98,
+  "tests": {
+    "V1e": 28,
+    "V1d": 31,
+    "V1c": 35,
+    "V1b_repository": 38,
+    "V1b_runner": 8,
+    "total_pass": 140
+  },
+  "criteria": [
+    {
+      "id": "slot_provenance_and_boundaries",
+      "status": "PASS"
+    },
+    {
+      "id": "proved_skip_and_unresolved_error_distinct",
+      "status": "PASS"
+    },
+    {
+      "id": "explicit_exclusion",
+      "status": "PASS"
+    },
+    {
+      "id": "raw_archived_before_derivation",
+      "status": "PASS"
+    },
+    {
+      "id": "crash_before_during_after_publication",
+      "status": "PASS"
+    },
+    {
+      "id": "new_process_recovery_and_no_republication",
+      "status": "PASS"
+    },
+    {
+      "id": "retry_new_version_keeps_history",
+      "status": "PASS"
+    },
+    {
+      "id": "offline_data_provenance_coverage_rebuild",
+      "status": "PASS"
+    },
+    {
+      "id": "corruption_and_forged_coverage_fail_closed",
+      "status": "PASS"
+    },
+    {
+      "id": "baseline_V1d_V1c_V1b_local_non_regression",
+      "status": "PASS"
+    },
+    {
+      "id": "current_session_real_RPC_V1e_V1d_V1c_V1b",
+      "status": "FAIL",
+      "code": "endpoint_absent"
+    },
+    {
+      "id": "V1e_Windows_qualification",
+      "status": "NOT_RUN"
+    }
+  ],
+  "v1b_criteria_pass": 12,
+  "v1b_criteria_fail": 2,
+  "deterministic": {
+    "journal": {
+      "captures": 1,
+      "datasets": 1,
+      "pending": 0,
+      "unique_event_publications": 3,
+      "hash_or_replay_errors": 0,
+      "foreign_key_errors": 0,
+      "integrity": "ok",
+      "healthy": true,
+      "coverage_versions": [
+        {
+          "accounted_fraction": 1.0,
+          "accounted_slots": 6,
+          "accounting_ok": true,
+          "archive_end": 105,
+          "archive_start": 100,
+          "counts": {
+            "archived": 3,
+            "error": 1,
+            "excluded": 0,
+            "skipped": 1,
+            "unresolved": 1
+          },
+          "decoder_errors": 0,
+          "end": 105,
+          "events": 3,
+          "expected_slots": 6,
+          "fully_decoded": false,
+          "historical_error_attempts": 1,
+          "included_range_complete": false,
+          "resolved_fraction": 0.6666666666666666,
+          "resolved_slots": 4,
+          "selected_attempts": 6,
+          "source_attempts": 6,
+          "source_complete": false,
+          "start": 100,
+          "transactions_expected": 3
+        }
+      ]
+    },
+    "dataset_sha256": "0d5b23db4d0be2628b3819ba1179e75122135e77efce5e937ab8ee83b59e532f",
+    "offline_reconstruction_identical": true,
+    "resume_new_process": true,
+    "after_retry": {
+      "captures": 2,
+      "datasets": 2,
+      "pending": 0,
+      "unique_event_publications": 5,
+      "hash_or_replay_errors": 0,
+      "foreign_key_errors": 0,
+      "integrity": "ok",
+      "healthy": true,
+      "coverage_versions": [
+        {
+          "accounted_fraction": 1.0,
+          "accounted_slots": 6,
+          "accounting_ok": true,
+          "archive_end": 105,
+          "archive_start": 100,
+          "counts": {
+            "archived": 3,
+            "error": 1,
+            "excluded": 0,
+            "skipped": 1,
+            "unresolved": 1
+          },
+          "decoder_errors": 0,
+          "end": 105,
+          "events": 3,
+          "expected_slots": 6,
+          "fully_decoded": false,
+          "historical_error_attempts": 1,
+          "included_range_complete": false,
+          "resolved_fraction": 0.6666666666666666,
+          "resolved_slots": 4,
+          "selected_attempts": 6,
+          "source_attempts": 6,
+          "source_complete": false,
+          "start": 100,
+          "transactions_expected": 3
+        },
+        {
+          "accounted_fraction": 1.0,
+          "accounted_slots": 6,
+          "accounting_ok": true,
+          "archive_end": 105,
+          "archive_start": 100,
+          "counts": {
+            "archived": 5,
+            "error": 0,
+            "excluded": 0,
+            "skipped": 1,
+            "unresolved": 0
+          },
+          "decoder_errors": 0,
+          "end": 105,
+          "events": 5,
+          "expected_slots": 6,
+          "fully_decoded": true,
+          "historical_error_attempts": 1,
+          "included_range_complete": true,
+          "resolved_fraction": 1.0,
+          "resolved_slots": 6,
+          "selected_attempts": 8,
+          "source_attempts": 8,
+          "source_complete": true,
+          "start": 100,
+          "transactions_expected": 5
+        }
+      ]
+    }
+  },
+  "next_command": "validate-provenance-windows.cmd",
+  "next_session": "v1e_handoff/NEXT_SESSION.md"
+}

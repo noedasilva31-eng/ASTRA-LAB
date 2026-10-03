@@ -1,0 +1,19 @@
+Local: 255/255 PASS
+Global: FAIL
+readonly_network_identity: LOCAL_PASS
+bounded_http_search: LOCAL_PASS_REAL_UNQUALIFIED
+websocket_adapter: LOCAL_PASS_SIMULATED_REAL_NOT_EXECUTED
+universe_census: LOCAL_PASS_OBSERVED_SUBSET
+opportunity_features: LOCAL_PASS_PARTIAL_COVERAGE
+outcomes_for_rejected: LOCAL_PASS_OBSERVED_MARKS_ONLY
+risk_vetoes: LOCAL_PASS
+decision_journal: LOCAL_PASS_NO_TRADE_ONLY
+paper_fills_and_pnl: NOT_IMPLEMENTED
+launch_bonding_migration: NOT_IMPLEMENTED
+routed_CPI: UNSUPPORTED
+mainnet_pumpswap: NOT_QUALIFIED
+production_hot_path: NOT_QUALIFIED
+independent_clock_qualification: NOT_EXECUTED
+Public Mainnet attempt: FAIL transport_error
+Windows execution of new version: NOT_EXECUTED
+V1 complete: NO

@@ -1,0 +1,2428 @@
+{
+  "V1b": {
+    "schema_version": 1,
+    "overall": "FAIL",
+    "scope": "V1b implemented primitives only; not full V1 gate",
+    "source_sha256": "53d801011f6b0569dabbc34cf43821366a9c2ed00895b529a950576a6af7aad4",
+    "source_python_files": 11,
+    "adapter_sha256": "11cb6a0cc64255bd0a7e1786099a596f2fa17834242c3c68638faa19854cae5c",
+    "real_rpc_captured": false,
+    "reference_databases_accessed": false,
+    "temporary_databases_deleted_on_normal_exit": true,
+    "criteria": [
+      {
+        "id": "foundation",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "tests": [
+            {
+              "test": "test_foundation.FoundationTests.test_append_only",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_backup_no_overwrite",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_backup_restore",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_bool_time_rejected",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_boundary",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_clock_regression_fail_closed",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_conflicting_id_preserves_raw",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_core_has_no_llm_network_imports",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_correction_does_not_rewrite_past",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_crash_after_capture_recovery",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_crash_after_normalization_recovery",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_duplicate_idempotent",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_duplicate_json_keys",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_future_clock_quarantine",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_health_detects_quarantine",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_invalid_utf8",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_missing_field",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_missing_revision_parent",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_nonfinite_rejected",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_normalized_corruption_blocks_replay",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_null_event_time",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_old_event_not_backdated",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_out_of_order_event_time",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_providers_not_silently_merged",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_raw_corruption_detected",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_recovery_idempotent",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_repeatable_snapshot",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_retraction",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_revision_collision",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_unknown_field",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_unknown_schema",
+              "status": "PASS"
+            },
+            {
+              "test": "test_foundation.FoundationTests.test_valid_contract",
+              "status": "PASS"
+            },
+            {
+              "test": "test_rpc_conflict.RpcConflictTests.test_same_identity_changed_payload_is_quarantined_without_mutating_original",
+              "status": "PASS"
+            },
+            {
+              "test": "test_rpc_publish_recovery.RpcPublishRecoveryTests.test_restart_publishes_normalized_unpublished_exactly_once",
+              "status": "PASS"
+            },
+            {
+              "test": "test_rpc_recovery.RpcRecoveryTests.test_restart_recovers_archived_pending_rpc_exactly_once",
+              "status": "PASS"
+            },
+            {
+              "test": "test_rpc_redelivery.RpcRedeliveryTests.test_identical_offline_redelivery_is_duplicate_and_does_not_republish",
+              "status": "PASS"
+            },
+            {
+              "test": "test_rpc_replay.RpcReplayTests.test_endpoint_credentials_are_not_persisted",
+              "status": "PASS"
+            },
+            {
+              "test": "test_rpc_replay.RpcReplayTests.test_rpc_raw_first_and_offline_replay",
+              "status": "PASS"
+            }
+          ],
+          "count": 38,
+          "suite_pass": true
+        },
+        "seconds": 0.083,
+        "criterion": "Suite de tests existante du depot"
+      },
+      {
+        "id": "live_rpc",
+        "status": "FAIL",
+        "code": "live_capture_unavailable",
+        "seconds": 0.019,
+        "criterion": "Capture RPC reelle et ingestion"
+      },
+      {
+        "id": "raw_bytes",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "provenance_preserved": true,
+          "raw_sha256": "3865094234a386f1d0dd858a18ac2f2d1a8fcf875be9f8241e00abda80e1eb45"
+        },
+        "seconds": 0.025,
+        "criterion": "Brut RPC conserve octet pour octet avant transformation"
+      },
+      {
+        "id": "replay",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "replay": {
+            "capture_id": 1,
+            "match": true,
+            "document_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c",
+            "replayed_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c"
+          }
+        },
+        "seconds": 0.017,
+        "criterion": "Replay hors reseau depuis le brut archive"
+      },
+      {
+        "id": "before_normalize",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": true,
+            "publication_count": 1
+          },
+          "replay": {
+            "capture_id": 1,
+            "match": true,
+            "document_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c",
+            "replayed_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c"
+          }
+        },
+        "seconds": 0.085,
+        "criterion": "Arret brutal apres capture, avant normalisation"
+      },
+      {
+        "id": "before_publish",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": true,
+            "publication_count": 1
+          },
+          "replay": {
+            "capture_id": 1,
+            "match": true,
+            "document_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c",
+            "replayed_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c"
+          }
+        },
+        "seconds": 0.083,
+        "criterion": "Arret brutal apres normalisation, avant publication"
+      },
+      {
+        "id": "recover_twice",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": true,
+            "publication_count": 1
+          }
+        },
+        "seconds": 0.018,
+        "criterion": "Recover idempotent, lignes et publications inchangees"
+      },
+      {
+        "id": "redelivery",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 1,
+              "duplicate": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": true,
+            "publication_count": 1
+          }
+        },
+        "seconds": 0.018,
+        "criterion": "Redelivery et deduplication"
+      },
+      {
+        "id": "conflict",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "original_replay": {
+            "capture_id": 1,
+            "match": true,
+            "document_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c",
+            "replayed_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c"
+          },
+          "mutations": "synthetic conflict; synthetic distinct identity for offline isolation",
+          "health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 1,
+              "quarantined": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": false,
+            "publication_count": 1
+          }
+        },
+        "seconds": 0.019,
+        "criterion": "Conflit identite source et quarantaine"
+      },
+      {
+        "id": "continue",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "original_replay": {
+            "capture_id": 1,
+            "match": true,
+            "document_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c",
+            "replayed_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c"
+          },
+          "mutations": "synthetic conflict; synthetic distinct identity for offline isolation",
+          "health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 2,
+              "quarantined": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": false,
+            "publication_count": 2
+          }
+        },
+        "seconds": 0.018,
+        "criterion": "Ingestion apres quarantaine"
+      },
+      {
+        "id": "backup",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "original_replay": {
+            "capture_id": 1,
+            "match": true,
+            "document_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c",
+            "replayed_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c"
+          },
+          "mutations": "synthetic conflict; synthetic distinct identity for offline isolation",
+          "health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 2,
+              "quarantined": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": false,
+            "publication_count": 2
+          },
+          "restored_health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 2,
+              "quarantined": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": false,
+            "publication_count": 2
+          },
+          "replays": [
+            {
+              "capture_id": 1,
+              "match": true,
+              "document_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c",
+              "replayed_hash": "2411fafc982c89de6d027f27f2cdf8af4c630ad8a91671ed88d1f8b296651d7c"
+            },
+            {
+              "capture_id": 3,
+              "match": true,
+              "document_hash": "80277d6fcb6c140c05127b300c48ad95088ead705118e13e6c0edfb07ab75e71",
+              "replayed_hash": "80277d6fcb6c140c05127b300c48ad95088ead705118e13e6c0edfb07ab75e71"
+            }
+          ]
+        },
+        "seconds": 0.021,
+        "criterion": "Backup et restauration locale, snapshots et replays"
+      },
+      {
+        "id": "hashes",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "health_before": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": true,
+            "publication_count": 1
+          },
+          "corruptions_detected": [
+            "raw",
+            "document"
+          ]
+        },
+        "seconds": 0.022,
+        "criterion": "Hashes bruts/documents et detection de corruption"
+      },
+      {
+        "id": "outage",
+        "status": "PASS",
+        "evidence": {
+          "origin": "synthetic_fallback",
+          "scope": "production APIs via explicit adapter",
+          "seconds": 15.015,
+          "hard_worker_deadline_seconds": 25,
+          "health": {
+            "integrity": "ok",
+            "raw_hash_errors": 0,
+            "document_hash_errors": 0,
+            "counts": {
+              "accepted": 1
+            },
+            "pending": 0,
+            "unpublished": 0,
+            "healthy": true,
+            "publication_count": 1
+          }
+        },
+        "seconds": 15.036,
+        "criterion": "RPC muet, timeout borne, aucune ecriture"
+      },
+      {
+        "id": "after_outage",
+        "status": "FAIL",
+        "code": "live_capture_unavailable",
+        "seconds": 0.018,
+        "criterion": "Nouvelle collecte reelle apres panne simulee"
+      }
+    ]
+  },
+  "V1c": {
+    "overall": "FAIL",
+    "scope": "V1c blocks; V1b gate runs separately via unchanged validate-windows.cmd",
+    "checks": [
+      {
+        "id": "v1b_reference_unchanged",
+        "status": "PASS",
+        "changed_files": []
+      },
+      {
+        "status": "PASS",
+        "tests": [
+          {
+            "test": "test_blocks.BlockTests.test_ambiguous_errors_never_skipped",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_append_only",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_checkpoint_corruption",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_conflict_halts",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_corrupt_checkpoint_blocks_network_collection",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_document_corruption",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_error_text_not_logged",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_hard_crash",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_history_survives_retry",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_live_worker_protocol_with_simulated_transport",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_missing_slot_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_parent_absent_not_skipped",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_parent_hash_required",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_raw_corruption",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_raw_replay_recovery",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_redelivery",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_refuse_reference_db",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_session_hash_corruption",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_state_corruption_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_states_checkpoint_retry",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_transport_timeout",
+            "status": "PASS"
+          },
+          {
+            "test": "test_blocks.BlockTests.test_wrong_cluster_future_range",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.ClockRegressionTests.test_clock_regression_leaves_no_publication_and_recovery_is_safe",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.ClockRegressionTests.test_original_clock_invariant_repeated_without_os_clock",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_32015_at_version_one_not_retried_blindly",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_32603_is_error_retryable_and_history_preserved",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_all_transaction_formats_preserved_offline",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_audit_version_metadata_corruption_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_invalid_rpc_params_not_retried",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_legacy_zero_evidence_survives_upgrade_and_retry",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_no_false_pass_all_rpc_errors",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_old_zero_reproduces_32015_new_one_succeeds",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_retry_internal_error_bounded_to_three_rounds",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_safe_error_diagnostic_exposes_only_numeric_version",
+            "status": "PASS"
+          },
+          {
+            "test": "test_rpc_versions.RpcVersionTests.test_wire_request_integer_one_and_full_finalized",
+            "status": "PASS"
+          }
+        ],
+        "count": 35,
+        "id": "unit",
+        "seconds": 1.519
+      },
+      {
+        "status": "PASS",
+        "evidence": {
+          "middle": {
+            "expected_slots": 6,
+            "counts": {
+              "archived": 2,
+              "skipped": 1,
+              "unavailable": 3,
+              "error": 0
+            },
+            "accounting_ok": true,
+            "next_slot": 103,
+            "first_pass_complete": false,
+            "checkpoint_ok": true,
+            "unresolved": 3,
+            "pending_attempts": 0,
+            "hash_or_replay_errors": 0,
+            "skip_proof_errors": 0,
+            "publications": 2,
+            "integrity": "ok",
+            "foreign_key_errors": 0,
+            "healthy": true,
+            "coverage": {
+              "available": 2,
+              "skipped": 1,
+              "unresolved": 3,
+              "error": 0,
+              "accounted_fraction": 1.0,
+              "resolved_fraction": 0.5,
+              "attempted_slots": 3,
+              "attempts": 3,
+              "raw_bytes": 370
+            },
+            "attempt_diagnostics": [
+              {
+                "attempt_id": 1,
+                "slot": 100,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "f4735fab8ea336405e2d49facf461e4c842d91987b2ae7f98b89b48cb55f87e6",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    100,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              },
+              {
+                "attempt_id": 2,
+                "slot": 101,
+                "status": "unavailable",
+                "reason": "rpc_-32007",
+                "raw_hash": "b48474d1eae883f2f7e4fe3e6ff0e21c89ae4416b93e7a4b1e6c8acf45ee0217",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    101,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                },
+                "category": "other_unresolved",
+                "retry": "bounded_backoff",
+                "rpc_code": -32007
+              },
+              {
+                "attempt_id": 3,
+                "slot": 102,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "2a3e428838525ec6dfa550c83154392221c1a2279b431f4aeaf999d64333dd4a",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    102,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              }
+            ],
+            "slots": [
+              {
+                "slot": 100,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 1,
+                "proof_slot": null
+              },
+              {
+                "slot": 101,
+                "status": "skipped",
+                "reason": "verified_parent_gap",
+                "attempt_id": 2,
+                "proof_slot": 102
+              },
+              {
+                "slot": 102,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 3,
+                "proof_slot": null
+              },
+              {
+                "slot": 103,
+                "status": "unavailable",
+                "reason": "not_attempted",
+                "attempt_id": null,
+                "proof_slot": null
+              },
+              {
+                "slot": 104,
+                "status": "unavailable",
+                "reason": "not_attempted",
+                "attempt_id": null,
+                "proof_slot": null
+              },
+              {
+                "slot": 105,
+                "status": "unavailable",
+                "reason": "not_attempted",
+                "attempt_id": null,
+                "proof_slot": null
+              }
+            ]
+          },
+          "before_retry": {
+            "expected_slots": 6,
+            "counts": {
+              "archived": 3,
+              "skipped": 1,
+              "unavailable": 1,
+              "error": 1
+            },
+            "accounting_ok": true,
+            "next_slot": 106,
+            "first_pass_complete": true,
+            "checkpoint_ok": true,
+            "unresolved": 2,
+            "pending_attempts": 0,
+            "hash_or_replay_errors": 0,
+            "skip_proof_errors": 0,
+            "publications": 3,
+            "integrity": "ok",
+            "foreign_key_errors": 0,
+            "healthy": true,
+            "coverage": {
+              "available": 3,
+              "skipped": 1,
+              "unresolved": 1,
+              "error": 1,
+              "accounted_fraction": 1.0,
+              "resolved_fraction": 0.6666666666666666,
+              "attempted_slots": 6,
+              "attempts": 6,
+              "raw_bytes": 629
+            },
+            "attempt_diagnostics": [
+              {
+                "attempt_id": 1,
+                "slot": 100,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "f4735fab8ea336405e2d49facf461e4c842d91987b2ae7f98b89b48cb55f87e6",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    100,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              },
+              {
+                "attempt_id": 2,
+                "slot": 101,
+                "status": "unavailable",
+                "reason": "rpc_-32007",
+                "raw_hash": "b48474d1eae883f2f7e4fe3e6ff0e21c89ae4416b93e7a4b1e6c8acf45ee0217",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    101,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                },
+                "category": "other_unresolved",
+                "retry": "bounded_backoff",
+                "rpc_code": -32007
+              },
+              {
+                "attempt_id": 3,
+                "slot": 102,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "2a3e428838525ec6dfa550c83154392221c1a2279b431f4aeaf999d64333dd4a",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    102,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              },
+              {
+                "attempt_id": 4,
+                "slot": 103,
+                "status": "unavailable",
+                "reason": "null_result",
+                "raw_hash": "4fb5bd7bf674e3fda36dbf53b935803a7ef6758db4a965b2956e8cee0c878642",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    103,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                },
+                "category": "other_unresolved",
+                "retry": "bounded_backoff"
+              },
+              {
+                "attempt_id": 5,
+                "slot": 104,
+                "status": "error",
+                "reason": "rpc_-32603",
+                "raw_hash": "2486b4a2d690c559a41fa4c81d97877917450d7e26214ffe37196d3d56f22b8d",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    104,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                },
+                "category": "internal_rpc_error",
+                "retry": "bounded_backoff",
+                "rpc_code": -32603
+              },
+              {
+                "attempt_id": 6,
+                "slot": 105,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "dbbb127ac83f422467ef58166a4f591eb38055bc89c3d024b15806e6950c28fd",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    105,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              }
+            ],
+            "slots": [
+              {
+                "slot": 100,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 1,
+                "proof_slot": null
+              },
+              {
+                "slot": 101,
+                "status": "skipped",
+                "reason": "verified_parent_gap",
+                "attempt_id": 2,
+                "proof_slot": 102
+              },
+              {
+                "slot": 102,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 3,
+                "proof_slot": null
+              },
+              {
+                "slot": 103,
+                "status": "unavailable",
+                "reason": "null_result",
+                "attempt_id": 4,
+                "proof_slot": null
+              },
+              {
+                "slot": 104,
+                "status": "error",
+                "reason": "rpc_-32603",
+                "attempt_id": 5,
+                "proof_slot": null
+              },
+              {
+                "slot": 105,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 6,
+                "proof_slot": null
+              }
+            ]
+          },
+          "after_retry": {
+            "expected_slots": 6,
+            "counts": {
+              "archived": 5,
+              "skipped": 1,
+              "unavailable": 0,
+              "error": 0
+            },
+            "accounting_ok": true,
+            "next_slot": 106,
+            "first_pass_complete": true,
+            "checkpoint_ok": true,
+            "unresolved": 0,
+            "pending_attempts": 0,
+            "hash_or_replay_errors": 0,
+            "skip_proof_errors": 0,
+            "publications": 5,
+            "integrity": "ok",
+            "foreign_key_errors": 0,
+            "healthy": true,
+            "coverage": {
+              "available": 5,
+              "skipped": 1,
+              "unresolved": 0,
+              "error": 0,
+              "accounted_fraction": 1.0,
+              "resolved_fraction": 1.0,
+              "attempted_slots": 6,
+              "attempts": 8,
+              "raw_bytes": 931
+            },
+            "attempt_diagnostics": [
+              {
+                "attempt_id": 1,
+                "slot": 100,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "f4735fab8ea336405e2d49facf461e4c842d91987b2ae7f98b89b48cb55f87e6",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    100,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              },
+              {
+                "attempt_id": 2,
+                "slot": 101,
+                "status": "unavailable",
+                "reason": "rpc_-32007",
+                "raw_hash": "b48474d1eae883f2f7e4fe3e6ff0e21c89ae4416b93e7a4b1e6c8acf45ee0217",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    101,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                },
+                "category": "other_unresolved",
+                "retry": "bounded_backoff",
+                "rpc_code": -32007
+              },
+              {
+                "attempt_id": 3,
+                "slot": 102,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "2a3e428838525ec6dfa550c83154392221c1a2279b431f4aeaf999d64333dd4a",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    102,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              },
+              {
+                "attempt_id": 4,
+                "slot": 103,
+                "status": "unavailable",
+                "reason": "null_result",
+                "raw_hash": "4fb5bd7bf674e3fda36dbf53b935803a7ef6758db4a965b2956e8cee0c878642",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    103,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                },
+                "category": "other_unresolved",
+                "retry": "bounded_backoff"
+              },
+              {
+                "attempt_id": 5,
+                "slot": 104,
+                "status": "error",
+                "reason": "rpc_-32603",
+                "raw_hash": "2486b4a2d690c559a41fa4c81d97877917450d7e26214ffe37196d3d56f22b8d",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    104,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                },
+                "category": "internal_rpc_error",
+                "retry": "bounded_backoff",
+                "rpc_code": -32603
+              },
+              {
+                "attempt_id": 6,
+                "slot": 105,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "dbbb127ac83f422467ef58166a4f591eb38055bc89c3d024b15806e6950c28fd",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    105,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              },
+              {
+                "attempt_id": 7,
+                "slot": 103,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "40e9cfd942f5a5798b8167fd314d7328d0b3d07db456b94fb9525f6062e86c63",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    103,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              },
+              {
+                "attempt_id": 8,
+                "slot": 104,
+                "status": "archived",
+                "reason": "ok",
+                "raw_hash": "453825a8b6382746f2400e5ec591f1822a43ec9c9e9a985deea1823345155013",
+                "request": {
+                  "method": "getBlock",
+                  "params": [
+                    104,
+                    {
+                      "commitment": "finalized",
+                      "encoding": "json",
+                      "transactionDetails": "full",
+                      "maxSupportedTransactionVersion": 0,
+                      "rewards": false
+                    }
+                  ]
+                }
+              }
+            ],
+            "slots": [
+              {
+                "slot": 100,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 1,
+                "proof_slot": null
+              },
+              {
+                "slot": 101,
+                "status": "skipped",
+                "reason": "verified_parent_gap",
+                "attempt_id": 2,
+                "proof_slot": 102
+              },
+              {
+                "slot": 102,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 3,
+                "proof_slot": null
+              },
+              {
+                "slot": 103,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 7,
+                "proof_slot": null
+              },
+              {
+                "slot": 104,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 8,
+                "proof_slot": null
+              },
+              {
+                "slot": 105,
+                "status": "archived",
+                "reason": "ok",
+                "attempt_id": 6,
+                "proof_slot": null
+              }
+            ]
+          }
+        },
+        "id": "deterministic",
+        "seconds": 0.619
+      },
+      {
+        "id": "first",
+        "status": "FAIL",
+        "code": "live_endpoint_not_used"
+      },
+      {
+        "id": "resume",
+        "status": "FAIL",
+        "code": "live_endpoint_not_used"
+      },
+      {
+        "id": "retry",
+        "status": "FAIL",
+        "code": "live_endpoint_not_used"
+      },
+      {
+        "id": "offline_replay",
+        "status": "FAIL",
+        "code": "live_endpoint_not_used"
+      }
+    ]
+  },
+  "V1d": {
+    "overall": "FAIL",
+    "checks": [
+      {
+        "id": "v1c_reference_unchanged",
+        "status": "PASS",
+        "changed_files": [],
+        "files_checked": 75
+      },
+      {
+        "status": "PASS",
+        "count": 31,
+        "tests": [
+          {
+            "test": "test_memory.MemoryTests.test_append_only",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_crash_before_and_after_publication",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_decoder_code_mismatch_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_export_manifest_tamper_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_export_rebuild_same_dataset",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_failed_transaction_no_transfer",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_foreign_database_refused_without_change",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_import_blocks_read_only_and_repeatable",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_inner_instruction_not_assumed_successful",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_invalid_indexes_and_data_never_publish",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_legacy_exact_transfer",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_metadata_corruption_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_missing_inner_coverage_explicit",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_missing_loaded_accounts_fail_closed",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_missing_meta_and_unknown_version_accounted",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_pending_recovery_and_dedup",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_publication_corruption_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_publication_transaction_rollback",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_raw_corruption_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_rebuild_failure_leaves_no_destination",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_source_conflict_preserves_original",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_unknown_program_explicit",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_v0_loaded_addresses",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_v1_and_u64_precision",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_wrong_cluster_never_publishes",
+            "status": "PASS"
+          },
+          {
+            "test": "test_memory.MemoryTests.test_wrong_opcode_not_transfer",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_endpoint_not_passed_to_offline_worker",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_malformed_report_is_fail",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_missing_endpoint_cannot_pass",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_missing_report_is_fail",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_timeout_is_fail",
+            "status": "PASS"
+          }
+        ],
+        "id": "unit"
+      },
+      {
+        "status": "PASS",
+        "evidence": {
+          "first_import": {
+            "inputs": 1,
+            "decoded": 1,
+            "pending": 0,
+            "events": 1,
+            "hash_or_replay_errors": 0,
+            "integrity": "ok",
+            "foreign_key_errors": 0,
+            "healthy": true,
+            "decoder_version": "system-transfer-v1",
+            "transactions_expected": 1,
+            "transactions": {
+              "processed": 1,
+              "failed": 0,
+              "unsupported": 0,
+              "error": 0
+            },
+            "instructions": {
+              "decoded": 1,
+              "unsupported": 0,
+              "error": 0
+            },
+            "accounting_ok": true,
+            "inner_coverage_unavailable": 0
+          },
+          "final": {
+            "inputs": 2,
+            "decoded": 2,
+            "pending": 0,
+            "events": 2,
+            "hash_or_replay_errors": 0,
+            "integrity": "ok",
+            "foreign_key_errors": 0,
+            "healthy": true,
+            "decoder_version": "system-transfer-v1",
+            "transactions_expected": 2,
+            "transactions": {
+              "processed": 2,
+              "failed": 0,
+              "unsupported": 0,
+              "error": 0
+            },
+            "instructions": {
+              "decoded": 2,
+              "unsupported": 0,
+              "error": 0
+            },
+            "accounting_ok": true,
+            "inner_coverage_unavailable": 0
+          },
+          "dataset_sha256": "ff876bb64061800e0a31cf924effcccba5ce74fa16c0d30764fe903083f7494c",
+          "rebuild": {
+            "inputs": 2,
+            "decoded": 2,
+            "pending": 0,
+            "events": 2,
+            "hash_or_replay_errors": 0,
+            "integrity": "ok",
+            "foreign_key_errors": 0,
+            "healthy": true,
+            "decoder_version": "system-transfer-v1",
+            "transactions_expected": 2,
+            "transactions": {
+              "processed": 2,
+              "failed": 0,
+              "unsupported": 0,
+              "error": 0
+            },
+            "instructions": {
+              "decoded": 2,
+              "unsupported": 0,
+              "error": 0
+            },
+            "accounting_ok": true,
+            "inner_coverage_unavailable": 0
+          },
+          "resume_new_process": true,
+          "source_read_only": true,
+          "offline": true
+        },
+        "id": "deterministic"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "first"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "resume"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "retry"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "offline_replay"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "live_memory"
+      }
+    ],
+    "proof_artifacts_directory": "memory_validation/memory-report-al308v5g"
+  },
+  "V1e": {
+    "overall": "FAIL",
+    "checks": [
+      {
+        "id": "v1d_reference_unchanged",
+        "status": "PASS",
+        "files_checked": 98,
+        "changed_files": []
+      },
+      {
+        "status": "PASS",
+        "count": 28,
+        "tests": [
+          {
+            "test": "test_provenance.ProvenanceTests.test_all_slots_accounted_incomplete_not_complete",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_append_only",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_bad_dataset_no_output",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_boundary_subset_preserves_external_skip_witnesses",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_cannot_exclude_unknown",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_code_hash_mismatch_fail_closed",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_corrupt_raw_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_crash_before_during_after_publication",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_excluded_is_explicit",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_foreign_database_refused",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_forged_complete_metric_rejected_even_with_new_outer_hash",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_forged_event_provenance_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_journal_corruption_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_journal_dedup_recover_no_republication",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_missing_skip_witness_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_missing_slot_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_never_attempted_explicit",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_offline_reconstruction_exact",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_outside_boundaries_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_pending_source_never_claimed_complete",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_provenance_every_event",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_retry_new_version_preserves_old_and_unique_events",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_retry_preserves_error_and_previous_dataset",
+            "status": "PASS"
+          },
+          {
+            "test": "test_provenance.ProvenanceTests.test_source_read_only",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_missing_endpoint_never_passes",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_missing_report_fails",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_offline_worker_does_not_receive_endpoint",
+            "status": "PASS"
+          },
+          {
+            "test": "test_runner.RunnerTests.test_timeout_fails",
+            "status": "PASS"
+          }
+        ],
+        "id": "unit"
+      },
+      {
+        "status": "PASS",
+        "evidence": {
+          "journal": {
+            "captures": 1,
+            "datasets": 1,
+            "pending": 0,
+            "unique_event_publications": 3,
+            "hash_or_replay_errors": 0,
+            "foreign_key_errors": 0,
+            "integrity": "ok",
+            "healthy": true,
+            "coverage_versions": [
+              {
+                "accounted_fraction": 1.0,
+                "accounted_slots": 6,
+                "accounting_ok": true,
+                "archive_end": 105,
+                "archive_start": 100,
+                "counts": {
+                  "archived": 3,
+                  "error": 1,
+                  "excluded": 0,
+                  "skipped": 1,
+                  "unresolved": 1
+                },
+                "decoder_errors": 0,
+                "end": 105,
+                "events": 3,
+                "expected_slots": 6,
+                "fully_decoded": false,
+                "historical_error_attempts": 1,
+                "included_range_complete": false,
+                "resolved_fraction": 0.6666666666666666,
+                "resolved_slots": 4,
+                "selected_attempts": 6,
+                "source_attempts": 6,
+                "source_complete": false,
+                "start": 100,
+                "transactions_expected": 3
+              }
+            ]
+          },
+          "dataset_sha256": "323c598e35b3a91a062fb4b1c70830e8c71d30023a2e8efc387926c84ea534f3",
+          "offline_reconstruction_identical": true,
+          "resume_new_process": true,
+          "after_retry": {
+            "captures": 2,
+            "datasets": 2,
+            "pending": 0,
+            "unique_event_publications": 5,
+            "hash_or_replay_errors": 0,
+            "foreign_key_errors": 0,
+            "integrity": "ok",
+            "healthy": true,
+            "coverage_versions": [
+              {
+                "accounted_fraction": 1.0,
+                "accounted_slots": 6,
+                "accounting_ok": true,
+                "archive_end": 105,
+                "archive_start": 100,
+                "counts": {
+                  "archived": 3,
+                  "error": 1,
+                  "excluded": 0,
+                  "skipped": 1,
+                  "unresolved": 1
+                },
+                "decoder_errors": 0,
+                "end": 105,
+                "events": 3,
+                "expected_slots": 6,
+                "fully_decoded": false,
+                "historical_error_attempts": 1,
+                "included_range_complete": false,
+                "resolved_fraction": 0.6666666666666666,
+                "resolved_slots": 4,
+                "selected_attempts": 6,
+                "source_attempts": 6,
+                "source_complete": false,
+                "start": 100,
+                "transactions_expected": 3
+              },
+              {
+                "accounted_fraction": 1.0,
+                "accounted_slots": 6,
+                "accounting_ok": true,
+                "archive_end": 105,
+                "archive_start": 100,
+                "counts": {
+                  "archived": 5,
+                  "error": 0,
+                  "excluded": 0,
+                  "skipped": 1,
+                  "unresolved": 0
+                },
+                "decoder_errors": 0,
+                "end": 105,
+                "events": 5,
+                "expected_slots": 6,
+                "fully_decoded": true,
+                "historical_error_attempts": 1,
+                "included_range_complete": true,
+                "resolved_fraction": 1.0,
+                "resolved_slots": 6,
+                "selected_attempts": 8,
+                "source_attempts": 8,
+                "source_complete": true,
+                "start": 100,
+                "transactions_expected": 5
+              }
+            ]
+          }
+        },
+        "id": "deterministic"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "first"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "resume"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "retry"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "offline_replay"
+      },
+      {
+        "status": "FAIL",
+        "code": "live_endpoint_not_used",
+        "id": "live_provenance"
+      }
+    ]
+  },
+  "V1f_local": {
+    "overall": "PASS",
+    "checks": [
+      {
+        "id": "validation_tests",
+        "status": "PASS",
+        "count": 7,
+        "tests": [
+          {
+            "test": "validation_tests.test_summary.SummaryTests.test_inconsistent_pass_cannot_mask_failure",
+            "status": "PASS"
+          },
+          {
+            "test": "validation_tests.test_summary.SummaryTests.test_missing_report_fails",
+            "status": "PASS"
+          },
+          {
+            "test": "validation_tests.test_summary.SummaryTests.test_nested_error_has_control_code_cause",
+            "status": "PASS"
+          },
+          {
+            "test": "validation_tests.test_summary.SummaryTests.test_raw_exception_text_never_echoed",
+            "status": "PASS"
+          },
+          {
+            "test": "validation_tests.test_summary.SummaryTests.test_timeout_bounded",
+            "status": "PASS"
+          },
+          {
+            "test": "validation_tests.test_windows_encoding.WindowsEncodingTests.test_invalid_utf8_is_not_replaced",
+            "status": "PASS"
+          },
+          {
+            "test": "validation_tests.test_windows_encoding.WindowsEncodingTests.test_real_pipeline_under_windows_cp1252_default",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "id": "budget_tests",
+        "status": "PASS",
+        "count": 12,
+        "tests": [
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_conflicting_identity_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_corruption_blocks_reservation",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_duplicate_is_not_authorization_to_resend",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_limit_rejects_without_write",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_over_settlement_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_policy_immutable",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_rebuild_preserves_reservation_order_not_key_order",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_settlement_idempotent_and_request_limit_retained",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_snapshot_corruption_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_snapshot_rebuild_identical",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_two_connections_enforce_common_limit",
+            "status": "PASS"
+          },
+          {
+            "test": "budget_tests.test_budget.BudgetTests.test_unknown_usage_remains_charged_after_crash",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "id": "pipeline_tests",
+        "status": "PASS",
+        "count": 30,
+        "tests": [
+          {
+            "test": "pipeline_tests.test_coordinator.CoordinatorTests.test_quota_exhaustion_does_not_advance",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_coordinator.CoordinatorTests.test_receipt_corruption_stops_recovery",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_coordinator.CoordinatorTests.test_restart_after_output_before_receipt",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_coordinator.CoordinatorTests.test_successive_ranges_no_holes",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_coordinator.CoordinatorTests.test_wait_for_finality_no_receipt",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_changed_business_data_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_comparison_detects_conflicting_block",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_comparison_missing_overlap_not_agreement",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_comparison_same_archive_not_independent_provider_claim",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_completed_run_no_additional_rpc",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_export_corruption_not_overwritten",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_failed_transaction_emits_no_transfer",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_index_atomic_rollback_and_corruption",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_invalid_decimals_fail_closed",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_invalid_instruction_accounts_is_error",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_large_units_no_float",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_metadata_change_no_fabricated_delta",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_missing_balance_is_unknown_not_zero",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_native_transfer_not_reported_unsupported_by_combined_decoder",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_offline_new_process_after_crash",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_pipeline_quota_applies_to_context_and_blocks",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_quota_exhaustion_before_transport",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_replay_and_exports_identical",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_restart_does_not_republish",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_resume_pending_provenance_after_source_has_advanced",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_same_block_payload_disagreement_is_not_silently_merged",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_shared_budget_across_workspaces",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_spl_and_exact_balance_deltas",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_token_metadata_absent_counted",
+            "status": "PASS"
+          },
+          {
+            "test": "pipeline_tests.test_pipeline.PipelineTests.test_u64_corruption_rejected",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "id": "operations_tests",
+        "status": "PASS",
+        "count": 36,
+        "tests": [
+          {
+            "test": "operations_tests.test_alerts.AlertTests.test_corruption_fails_closed",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_alerts.AlertTests.test_full_budget_remains_alert_on_success",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_alerts.AlertTests.test_incomplete_report_never_clears",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_alerts.AlertTests.test_lifecycle_and_dedup",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_alerts.AlertTests.test_restart_replay",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_alerts.AlertTests.test_secrets_not_recorded",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_alerts.AlertTests.test_snapshot_rebuild_preserves_lifecycle",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_all_six_supported_instructions",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_buy_wallet_mints_amounts_fees_and_signed_reserves",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_corrupt_source_cannot_be_decoded",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_duplicate_event_is_error",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_failed_transaction_no_swap",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_missing_event_remains_unresolved",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_replay_and_pipeline_timeline_integration",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_routed_swap_explicitly_unsupported",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_stack_unknown_not_authenticated",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_truncation_and_noncanonical_bool_fail_closed",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_unknown_layout_is_error",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_wrong_emitter_not_decoded",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_dex.DexTests.test_wrong_user_account_is_error",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_probe.ProbeTests.test_absence_remains_fail_and_budget_bounded",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_probe.ProbeTests.test_deadline_not_pass",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_probe.ProbeTests.test_empty_initial_range_then_real_format_proof_replayed",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_probe.ProbeTests.test_existing_proof_needs_no_extra_request",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_probe.ProbeTests.test_original_source_unchanged",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_cli_replay_without_endpoint",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_clock_regression_rejected_no_write",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_cutoff_and_future_retry",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_dataset_corruption_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_duplicate_receipt_not_retimed",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_empty_knowledge_not_zero_activity_proof",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_features_exact_with_event_provenance",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_interruption_new_process_before_and_after_commit",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_pipeline_restart_keeps_knowledge_receipt",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_receipt_corruption_fail_closed",
+            "status": "PASS"
+          },
+          {
+            "test": "operations_tests.test_timeline.TimelineTests.test_snapshot_offline_restore_identical",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "id": "observer_tests",
+        "status": "PASS",
+        "count": 30,
+        "tests": [
+          {
+            "test": "observer_tests.test_gate.ObserverGateTests.test_missing_prerequisite_not_report_inconsistency",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_gate.ObserverGateTests.test_real_failure_is_preserved",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_gate.ObserverGateTests.test_self_test_never_calls_configured_provider",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_census_before_strategy_and_outcomes_for_no_trade",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_clock_regression_fail_closed",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_crash_atomicity",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_empty_search_is_failure",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_event_identity_conflict_refused",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_fixed_feature_window",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_historical_decision_does_not_gain_future_data",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_mainnet_genesis_required",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_network_cannot_change",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_no_heavy_timeline_in_hot_path",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_null_is_unresolved",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_raw_corruption_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_readonly_and_budget_reserved_before_io",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_recovery_new_process",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_repeat_delivery_does_not_republish",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_replay_same_decisions_features_outcomes",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_risk_limits_frozen",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_stream_hydration_same_engine",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_transaction_signature_bound_to_request",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_unknown_social_never_zero",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ObserverTests.test_ws_echo_not_archived",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ReplayIntegrityTests.test_error_history_survives_later_success",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.ReplayIntegrityTests.test_materialized_state_corruption_detected",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.RiskTests.test_all_position_limits",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.RiskTests.test_all_prerequisites_needed",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.RiskTests.test_kill_and_loss",
+            "status": "PASS"
+          },
+          {
+            "test": "observer_tests.test_observer.RiskTests.test_stale_and_liquidity_and_slippage",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "id": "execution_tests",
+        "status": "PASS",
+        "count": 25,
+        "tests": [
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_actual_observatory_partial_state_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_adverse_model_cannot_bypass_slippage_limit",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_corruption_fail_closed",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_decision_cannot_use_future_quote",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_entry_fees_count_against_position_cap",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_existing_unrelated_database_untouched",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_explicit_cancel_releases_pending",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_intent_and_settlement_idempotence",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_kill_switch_rechecked_at_settlement",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_model_immutable",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_quote_bound_to_request",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_quote_from_future_rejected",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_quote_requires_genesis",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_reopen_and_cli_audit",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_rollback_after_calculation",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_roundtrip_portfolio_pnl_exact",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_same_slot_cannot_fill",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_state_replay_exact",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_paper.PaperTests.test_wrong_quote_size_cannot_settle",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_routed.RoutedTests.test_missing_child_depth_unresolved",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_routed.RoutedTests.test_missing_parent_depth_unresolved",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_routed.RoutedTests.test_nested_other_program_cannot_spoof_event",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_routed.RoutedTests.test_routed_replay_same_engine_output",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_routed.RoutedTests.test_routed_swap_uses_nearest_authenticated_parent",
+            "status": "PASS"
+          },
+          {
+            "test": "execution_tests.test_routed.RoutedTests.test_sibling_event_cannot_authenticate_parent",
+            "status": "PASS"
+          }
+        ]
+      }
+    ]
+  },
+  "Integrated": {
+    "overall": "FAIL",
+    "checks": [
+      {
+        "id": "integrated_live_pipeline",
+        "status": "FAIL",
+        "code": "live_endpoint_not_used"
+      }
+    ]
+  },
+  "Observer": {
+    "overall": "FAIL",
+    "checks": [
+      {
+        "id": "real_pumpswap_events",
+        "status": "NOT_EXECUTED",
+        "code": "observer_mainnet_configuration_missing"
+      },
+      {
+        "id": "real_websocket_spine",
+        "status": "NOT_EXECUTED",
+        "code": "observer_mainnet_configuration_missing"
+      }
+    ],
+    "proofs": "observer-proofs"
+  }
+}

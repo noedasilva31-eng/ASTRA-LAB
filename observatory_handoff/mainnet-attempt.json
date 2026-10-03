@@ -1,0 +1,14 @@
+{
+  "real": true,
+  "network": "mainnet",
+  "endpoint_type": "public",
+  "status": "FAIL",
+  "events": 0,
+  "code": "public_rpc_unavailable_or_rejected",
+  "exception_type": "ValueError",
+  "archive": {
+    "frames": 1,
+    "head": "2a8d54ba1d630dc64d1ee1ff5404f3e910b46045b40fb1d816425e12587bf365"
+  },
+  "cause": "transport_error on getGenesisHash; no network identity or transaction obtained"
+}

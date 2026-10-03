@@ -1,0 +1,29 @@
+{
+  "version": "ASTRA-V1c-rpc-v1-fix",
+  "baseline": "ASTRA-V1b-windows-fix",
+  "baseline_modified": false,
+  "collector_implementation": "completed",
+  "local_validation": "PASS",
+  "overall_validation": "FAIL",
+  "blocking_dependency": "SOLANA_RPC_URL absent from Work execution environment",
+  "windows_validation_this_session": "NOT_RUN",
+  "next_command_windows": ".\\validate-blocks-windows.cmd",
+  "next_command_linux": "python3 validate_all.py",
+  "next_checkpoint": "Run corrected getBlock maxSupportedTransactionVersion=1 against Devnet on Windows; require all live gates PASS",
+  "local_tests": {
+    "blocks": 35,
+    "v1b_repository": 38,
+    "v1b_runner": 8
+  },
+  "future_v1_gate": "docs/TESTING_ACCEPTANCE.md",
+  "received_windows_evidence": {
+    "previous_v1c": "FAIL rpc_-32015",
+    "v1b": "PASS",
+    "clock_regression_fail_closed": "PASS"
+  },
+  "rpc_correction": {
+    "maxSupportedTransactionVersion": 1,
+    "legacy_replay_supported": true,
+    "retry_rounds_limit": 3
+  }
+}

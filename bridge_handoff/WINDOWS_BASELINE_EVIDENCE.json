@@ -1,0 +1,39 @@
+{
+  "baseline": "ASTRA-V1-paper",
+  "source": "user_reported_windows_execution",
+  "independently_verified_in_this_work_session": false,
+  "platform": "win32",
+  "provider": "Helius Mainnet",
+  "tests_passed": 280,
+  "tests_total": 280,
+  "checks": {
+    "V1e/live_provenance": "PASS",
+    "Observer/real_pumpswap_events/real_events_decoded": "PASS",
+    "Observer/real_websocket_spine/real_events_decoded": "PASS"
+  },
+  "new_evidence_bridge_covered_by_this_reference": false,
+  "latest_user_report": {
+    "version": "ASTRA-V1-evidence",
+    "platform": "win32",
+    "tests_passed": 312,
+    "tests_total": 312,
+    "real_pumpswap_events": "PASS",
+    "real_websocket_spine": "PASS",
+    "real_evidence_bridge": "FAIL: evidence_exception_ValueError",
+    "report_name": "all-validation-tfyzt4x",
+    "report_available_in_work": false
+  },
+  "token_evidence_user_qualification": {
+    "version": "ASTRA-V1-token-evidence",
+    "report": "all-validation-74buueu_",
+    "source": "user_report",
+    "report_attached": false,
+    "Observer_HTTP": "PASS",
+    "Observer_WebSocket": "PASS",
+    "Bridge_real_evidence_bridge": "PASS",
+    "archived_real_accounts_and_risk": "PASS",
+    "real_conditional_roundtrip": "NOT_EXECUTED",
+    "visible_reason": "pending_other_token",
+    "new_session_scheduler_qualified": false
+  }
+}

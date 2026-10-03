@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "code": "watch_offline_resume",
+  "position_loaded": true,
+  "cursor": {
+    "phase": "OPEN_POSITION",
+    "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+    "mint": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump",
+    "after_slot": 452646758,
+    "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+    "decision_ns": 1790953857333198100,
+    "cursor_slot": 452646818,
+    "cursor_signature": "3VysxbmZRkgdx4WSSC8RPgp8Pw3P8c63vtvMyrHkSXykMU5ssfgpdiX8NehgU3JZEY3WTU7821L7BSKSm2dvNKhT",
+    "cursor_signature_slot": 452646818,
+    "cursor_availability_ns": 1790953900472740100
+  },
+  "network_attempted": false,
+  "replay": {
+    "status": "PASS",
+    "plans": 51,
+    "position_health": 0,
+    "network_used": false
+  },
+  "portfolio": {
+    "cash_quote_raw": 987900000,
+    "positions": {
+      "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump": {
+        "units": 4624230,
+        "cost": 12100000,
+        "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f"
+      }
+    },
+    "realized_scenario_pnl_quote_raw": 0,
+    "loss_quote_raw": 0,
+    "pending": {},
+    "head": "d5a48517ee10097aa7db6cacd8e19721a08cea73b1dc7e95d8cc6ccd9fc8baca",
+    "sequence": 2
+  },
+  "diagnostic": {
+    "position_loaded": true,
+    "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+    "mint": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump",
+    "cursor_slot": 452646818,
+    "network_attempted": false,
+    "signatures_found": 0,
+    "transactions_hydrated": 0,
+    "position_observations": 0,
+    "latest_slot_seen": null,
+    "stop_reason": "offline_only",
+    "stage": "NO_NETWORK_CALL",
+    "endpoint_env": "ASTRA_OBSERVER_RPC_URL",
+    "cursor_signature": "3VysxbmZRkgdx4WSSC8RPgp8Pw3P8c63vtvMyrHkSXykMU5ssfgpdiX8NehgU3JZEY3WTU7821L7BSKSm2dvNKhT"
+  }
+}

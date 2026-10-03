@@ -1,0 +1,27 @@
+{
+  "baseline_sha256": "74c1cad472a29380ce8f2ddba3f01a9a5df69faa77b75c1b044d21068e959f7b",
+  "changed_existing_files": [
+    "START_HERE.md",
+    "astra_observer/source.py",
+    "astra_observer/spine.py",
+    "validate_all_current.py",
+    "validation-summary.json",
+    "validation-summary.txt"
+  ],
+  "new_modules": [
+    "astra_execution",
+    "execution_tests"
+  ],
+  "reference_checks": {
+    "V1C_REFERENCE.json": {
+      "status": "PASS",
+      "files": 75,
+      "mismatches": []
+    },
+    "V1D_REFERENCE.json": {
+      "status": "PASS",
+      "files": 98,
+      "mismatches": []
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASTRA published envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "capture_id",
+    "record",
+    "observed_at",
+    "processed_at",
+    "available_to_strategy_at",
+    "raw_sha256",
+    "normalizer_version"
+  ],
+  "properties": {
+    "capture_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "record": {
+      "$ref": "source-record.schema.json"
+    },
+    "observed_at": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "processed_at": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "available_to_strategy_at": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "raw_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "normalizer_version": {
+      "const": "1"
+    }
+  },
+  "$comment": "Temporal ordering and revision linkage enforced by journal, not JSON Schema."
+}

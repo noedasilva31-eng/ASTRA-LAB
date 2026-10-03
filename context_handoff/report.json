@@ -1,0 +1,192 @@
+{
+  "version": "ASTRA-V1-context",
+  "local_status": "PASS",
+  "overall": "FAIL",
+  "platform": "linux",
+  "tests_passed": 406,
+  "tests_reported": 406,
+  "new_tests": 20,
+  "protected_files_unchanged": 36,
+  "windows_context_qualification": "NOT_EXECUTED",
+  "mainnet_context_qualification": "NOT_EXECUTED",
+  "reference_regression": {
+    "status": "PASS",
+    "decisions_replayed": 51,
+    "evidence_proven_null_scores": 4,
+    "cause": "One pool observation per candidate; momentum_bps missing, not stale quote",
+    "unsupported_quote_count": 23,
+    "wsol_base_orientation": 21,
+    "no_wsol_leg": 2,
+    "support_expanded": false
+  },
+  "gate_report_directory": "all-validation-qxlpu50r",
+  "outstanding_checks": [
+    {
+      "layer": "V1b",
+      "control": "live_rpc",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Integrated",
+      "control": "integrated_live_pipeline",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_pumpswap_events",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_websocket_spine",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_evidence_bridge",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_conditional_roundtrip",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Context",
+      "control": "real_context_session",
+      "status": "NOT_EXECUTED",
+      "code": "context_mainnet_configuration_missing",
+      "cause": "context mainnet configuration missing"
+    }
+  ],
+  "initial_environment_failure": {
+    "cause": "Sandbox denied local socket creation",
+    "resolution": "Same gate rerun with authorized loopback access: outage PASS; no test or code relaxation"
+  },
+  "unknown_metrics": [
+    "Guaranteed executable depth",
+    "Calibrated confidence",
+    "Unproven pool/token age",
+    "Complete market coverage",
+    "Actual costs paid by ASTRA",
+    "Complete executable MAE/MFE"
+  ],
+  "no_live_transactions": true
+}

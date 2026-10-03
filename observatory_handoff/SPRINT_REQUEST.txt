@@ -1,0 +1,427 @@
+Oui. **Je remplacerais l’ancien prompt par celui-ci.** Il reprend exactement où ASTRA s’est arrêté, mais intègre les bonnes idées trouvées par Claude : Mainnet lecture seule, streaming, bonding curve, Opportunity State, Universe Census et Outcome Tracker.
+
+Envoie-le à Work **avec `ASTRA-V1-operations.zip` si son workspace n’est plus restauré** :
+
+> # REPRISE ASTRA — SPRINT LIVE DATA → OBSERVATOIRE → PAPER
+>
+> Reprends exactement depuis `ASTRA-V1-operations` et le workspace existant.
+>
+> La dernière validation que j’ai exécutée sur mon poste réel **Windows + Helius Devnet** a donné :
+>
+> - `ASTRA: PASS`
+> - `Local: PASS`
+> - **225/225 tests PASS**
+> - `Platform: win32`
+> - `V1d | live_memory` PASS avec témoin réel
+> - `V1e | live_provenance` PASS
+> - `Integrated | real_token_business_data` PASS
+> - `Integrated | real_range_coordinator` PASS
+>
+> Cette exécution Windows a eu lieu après la création du ZIP ; les anciens rapports contenus dans l’archive peuvent donc montrer un état antérieur. Ne les interprète pas comme annulant ce résultat utilisateur. En revanche, ne prétends pas avoir indépendamment vérifié ce PASS.
+>
+> Le précédent sprint devait poursuivre `PumpSwap réel → Hot Path → features → Risk/paper`, mais a été interrompu par l’indisponibilité de l’environnement Work. **Aucun code n’a été modifié pendant cette tentative interrompue.**
+>
+> Ne recommence pas les anciennes briques déjà validées. Préserve les baselines et `validate-all.cmd`.
+>
+> ---
+>
+> # IMPORTANT — AJUSTEMENT D’ARCHITECTURE
+>
+> Avant d’implémenter aveuglément l’ancien plan, prends en compte ces constats issus d’un audit du repository :
+>
+> 1. La collecte actuelle `getBlock`/finalized convient à l’archive, au replay et à la réconciliation, **pas au futur Hot Path faible latence**.
+>
+> 2. ASTRA est actuellement fortement orienté/verrouillé Devnet. La qualification d’activité PumpSwap réellement représentative nécessite probablement **Mainnet en lecture seule**.
+>
+> 3. Pour détecter certains memecoins très tôt, **PumpSwap seul arrive trop tard** : il faut prévoir la phase launch/bonding curve puis migration vers AMM.
+>
+> 4. Les CPI/inner instructions et swaps routés doivent être correctement pris en compte plutôt que supposés équivalents aux instructions top-level.
+>
+> 5. `Timeline.verify` et certains audits/budgets semblent avoir des coûts qui croissent avec tout l’historique. Vérifie cela et évite d’introduire ces comportements sur le Hot Path.
+>
+> 6. Le Live Brain doit privilégier des **modules déterministes/incrémentaux très rapides**, pas une collection de LLM appelés à chaque événement.
+>
+> Ne réécris pas pour autant les composants existants qui fonctionnent. **Gèle le socle validé et construis autour**, sauf correction réellement nécessaire et couverte par non-régression.
+>
+> ---
+>
+> # OBJECTIF PRINCIPAL
+>
+> Fais progresser ASTRA vers cette verticale :
+>
+> `Solana live`
+>
+> `→ événements launch/DEX`
+>
+> `→ OpportunityState`
+>
+> `→ features marché/risk`
+>
+> `→ Risk`
+>
+> `→ décision PAPER`
+>
+> `→ Outcome Tracker`
+>
+> tout en conservant :
+>
+> `raw → provenance → replay → reconstruction`
+>
+> L’objectif de cette session est **une progression fonctionnelle importante**, pas simplement davantage de tests.
+>
+> ---
+>
+> # 1 — MAINNET READ-ONLY
+>
+> Prépare ASTRA pour pouvoir observer **Mainnet en lecture seule**, sans supprimer la vérification d’identité de chaîne.
+>
+> La sécurité genesis/network doit devenir explicitement configurable et fail-closed :
+>
+> - Devnet reste supporté ;
+> - Mainnet peut être explicitement autorisé pour observation/collecte ;
+> - aucune confusion silencieuse de réseau ;
+> - aucun ordre réel ;
+> - aucun wallet de trading nécessaire.
+>
+> **Mainnet signifie ici DATA ONLY / READ ONLY / PAPER.**
+>
+> Ne construis aucune exécution live réelle.
+>
+> ---
+>
+> # 2 — EVENT SPINE / STREAMING
+>
+> Ne transforme pas `getBlock finalized` en faux système temps réel.
+>
+> Conçois puis implémente autant que raisonnablement possible une colonne vertébrale événementielle permettant :
+>
+> `source live → événements canoniques → même moteur que replay`
+>
+> Étudie une ingestion streaming adaptée à Solana, par exemple WebSocket/gRPC/Yellowstone ou abstraction provider équivalente selon les capacités réellement disponibles.
+>
+> Le contrat doit être suffisamment indépendant du fournisseur pour pouvoir en changer plus tard.
+>
+> `getBlock` doit pouvoir rester utile pour :
+>
+> - backfill ;
+> - finalité ;
+> - réconciliation ;
+> - archive ;
+> - vérification.
+>
+> Le live et le replay doivent idéalement alimenter **les mêmes événements canoniques et le même moteur de features**, afin d’éviter deux implémentations divergentes.
+>
+> Instrumente les latences par étage, notamment réception provider → décodage → features → décision.
+>
+> Ne suppose aucune performance : **mesure-la**.
+>
+> ---
+>
+> # 3 — LAUNCH / BONDING / MIGRATION / PUMPSWAP
+>
+> Ne limite plus la conception au PumpSwap post-migration.
+>
+> Prépare la chaîne :
+>
+> `launch/bonding → migration → AMM/PumpSwap`
+>
+> et une architecture extensible vers d’autres venues ultérieurement.
+>
+> Pour PumpSwap :
+>
+> - confronte le décodeur à de vraies captures Mainnet lorsque l’environnement le permet ;
+> - archive les témoins réels ;
+> - rends-les rejouables hors réseau ;
+> - comptabilise explicitement unsupported/unresolved/error ;
+> - vérifie les inner instructions/CPI nécessaires ;
+> - ne déduis jamais un événement non prouvé.
+>
+> Si l’environnement Work n’a pas accès aux données Mainnet nécessaires, **ne bloque pas tout le sprint** : prépare correctement les interfaces/tests et poursuis.
+>
+> ---
+>
+> # 4 — UNIVERSE CENSUS
+>
+> Ajoute une fondation permettant de suivre **l’univers observé**, pas seulement les tokens qu’une stratégie trouve intéressants.
+>
+> Pour chaque token/pool détecté, conserve les éléments temporels et de provenance nécessaires.
+>
+> Le but est d’éviter le biais de sélection :
+>
+> ASTRA devra plus tard pouvoir comparer les tokens tradés, rejetés et ignorés.
+>
+> Une donnée non collectée doit rester `NOT_COLLECTED`/équivalent, jamais être transformée silencieusement en zéro.
+>
+> ---
+>
+> # 5 — OPPORTUNITY STATE
+>
+> Construis un contrat central représentant :
+>
+> **« ce qu’ASTRA savait réellement sur cette opportunité à l’instant T »**.
+>
+> Il doit pouvoir accueillir progressivement :
+>
+> - identité token/pool/venue ;
+> - slot/event time ;
+> - availability/observed time ;
+> - lifecycle : launch/bonding/migrating/AMM/dead ;
+> - market ;
+> - execution quote avec TTL ;
+> - launch/bundle ;
+> - holders ;
+> - wallets ;
+> - deployer ;
+> - risk flags ;
+> - meta/social snapshot ;
+> - data health ;
+> - couverture ;
+> - provenance/version.
+>
+> Une valeur inconnue n’est **jamais égale à zéro**.
+>
+> Chaque information doit porter suffisamment de métadonnées pour distinguer :
+>
+> `OBSERVED / PARTIAL / NOT_COLLECTED / STALE / ERROR`
+>
+> ou une sémantique équivalente.
+>
+> Évite de persister un énorme snapshot complet après chaque micro-événement. Priorise les événements incrémentaux et les snapshots aux moments réellement utiles, notamment les décisions.
+>
+> ---
+>
+> # 6 — PREMIERS MODULES DU LIVE BRAIN
+>
+> Ne construis pas encore une armée d’agents LLM.
+>
+> Commence par quelques **feature providers/spécialistes rapides** :
+>
+> ### Market
+>
+> Swaps/réserves → prix, volume, flow, traders uniques, liquidité et coût d’entrée/sortie pour une taille donnée.
+>
+> ### Rug / Authority
+>
+> Lorsque les données le permettent : mint/freeze authority, caractéristiques token pertinentes, possibilité réelle de sortie, liquidité/LP et autres vetos factuels.
+>
+> ### Launch
+>
+> Premiers slots/transactions → activité initiale, concentration observable, patterns launch/bundle démontrables.
+>
+> Ces modules doivent être déterministes/incrémentaux autant que possible.
+>
+> **Aucun LLM dans le chemin critique.**
+>
+> Wallet/Holder/Bundle/Meta plus sophistiqués viendront ensuite, seulement lorsque les données nécessaires sont propres.
+>
+> ---
+>
+> # 7 — OUTCOME TRACKER
+>
+> Ajoute un **Outcome Tracker**.
+>
+> C’est une priorité importante.
+>
+> ASTRA doit pouvoir suivre les résultats futurs des tokens observés **qu’ils aient été tradés ou non**.
+>
+> Prépare des horizons configurables, par exemple :
+>
+> `+1 min / +5 min / +30 min / +1 h / +24 h`
+>
+> et conserve lorsque disponible :
+>
+> - prix réellement liquidable ;
+> - liquidité ;
+> - drawdown ;
+> - survie/mort du pool ;
+> - événements de risque/rug selon définitions explicites ;
+> - couverture des données.
+>
+> L’objectif est de construire progressivement un dataset permettant de répondre :
+>
+> **« ASTRA a rejeté ce token : avait-il raison ? »**
+>
+> et pas seulement d’étudier les trades sélectionnés.
+>
+> ---
+>
+> # 8 — PAPER + EXÉCUTION RÉALISTE
+>
+> Lorsque la colonne de données précédente est suffisamment fonctionnelle, construis/poursuis une première boucle PAPER.
+>
+> **Aucun ordre réel.**
+>
+> Ne simule pas naïvement :
+>
+> `signal → prix affiché → fill parfait`.
+>
+> Prépare un modèle tenant progressivement compte de :
+>
+> - latence réellement mesurée ;
+> - slot/ordre disponible ;
+> - profondeur/liquidité ;
+> - impact de notre propre taille ;
+> - slippage ;
+> - frais protocole/LP/creator ;
+> - base/priority fees/tips lorsque pertinents ;
+> - ATA lorsque pertinent ;
+> - transactions échouées/coûts associés ;
+> - possibilité réelle de sortir.
+>
+> Permets des stress tests du type :
+>
+> `+1 slot / +3 slots / fees ×2 / slippage supérieur`
+>
+> afin de déterminer si une stratégie dépend d’une latence irréaliste.
+>
+> Chaque paper trade doit pouvoir être relié :
+>
+> `trade → décision → Risk → OpportunityState → features → événements → brut`
+>
+> ---
+>
+> # 9 — RISK
+>
+> Risk reste **déterministe, fail-closed et non contournable**.
+>
+> Prépare notamment :
+>
+> - position max ;
+> - exposition max ;
+> - nombre de positions ;
+> - liquidité minimale ;
+> - slippage max ;
+> - perte/session ;
+> - données périmées/incomplètes ;
+> - divergence/santé des feeds ;
+> - heartbeat ;
+> - kill switch.
+>
+> Risk peut réduire ou refuser une décision.
+>
+> Une future stratégie ou un futur agent ne doit pas pouvoir augmenter lui-même ses limites.
+>
+> ---
+>
+> # 10 — ARCHITECTURE DES FUTURS AGENTS
+>
+> Conserve notre vision :
+>
+> **LIVE :** modules réflexes très rapides.
+>
+> **BACKGROUND :** Wallet Graph, Holder, Bundle, Meta/KOL, etc. calculent des états versionnés/prêts à lire.
+>
+> **R&D :** Research / Data / Quant / Developer / Backtester / Critic / Optimizer travaillent hors Hot Path.
+>
+> Le futur cycle reste :
+>
+> `observation → hypothèse falsifiable → candidate → replay/backtest → holdout/stress → shadow/paper → comparaison → promotion ou rejet`
+>
+> Une idée découverte pendant une session ne doit pas être « prouvée » sur cette même session.
+>
+> Prépare la possibilité d’un **champion/challenger sur le même flux**, avec decision-diff et golden traces.
+>
+> Au départ, la promotion reste contrôlée humainement.
+>
+> ---
+>
+> # 11 — SOCIAL / X / KOL / META
+>
+> Ne construis pas encore une grosse intégration sociale si elle détourne le sprint de la colonne on-chain.
+>
+> Mais prépare le contrat permettant plus tard :
+>
+> `social event → observed_at → source → provenance → meta_state versionné`
+>
+> Le Hot Path devra seulement lire un snapshot déjà calculé avec son âge/TTL.
+>
+> Aucun appel lourd à X/LLM ne doit bloquer une décision live.
+>
+> ---
+>
+> # 12 — PERFORMANCE
+>
+> Vérifie et corrige lorsque nécessaire les comportements qui ne passent pas à l’échelle, notamment les vérifications/audits qui rescannent l’historique complet.
+>
+> Pas de réécriture prématurée en Rust.
+>
+> Commence avec l’architecture la plus simple mesurable.
+>
+> Optimise seulement sur benchmark.
+>
+> Mesure au minimum les distributions de latence et particulièrement le **p95/p99**, pas seulement une moyenne.
+>
+> ---
+>
+> # ÉCONOMIE DE QUOTA WORK
+>
+> Important :
+>
+> - gros sprint autonome ;
+> - pas de ZIP après chaque brique ;
+> - pas de demande de confirmation intermédiaire ;
+> - tests ciblés pendant le développement ;
+> - non-régression complète aux jalons importants et avant livraison ;
+> - ne refais pas les analyses V1b–V1e déjà réalisées ;
+> - ne construis pas d’UI finale ;
+> - ne construis pas tous les agents maintenant ;
+> - ne passe pas le sprint à documenter ce que tu pourrais implémenter ;
+> - si un credential/provider manque, marque précisément le contrôle réel restant puis avance sur ce qui est réalisable.
+>
+> Priorité :
+>
+> **données réelles → event spine → observatoire → OpportunityState/features → outcomes → Risk/paper → documentation.**
+>
+> ---
+>
+> # VALIDATION
+>
+> `validate-all.cmd` reste l’unique gate permanente.
+>
+> Préserve les anciennes baselines.
+>
+> Ajoute les nouvelles validations sans transformer un contrôle impossible en PASS.
+>
+> Distingue explicitement :
+>
+> - déterministe/local PASS ;
+> - réel PASS ;
+> - non exécuté/prérequis absent ;
+> - FAIL.
+>
+> Ne persiste aucun secret.
+>
+> ---
+>
+> # LIVRAISON FINALE
+>
+> Ne livre **qu’un seul ZIP cohérent à la fin du sprint**.
+>
+> Il doit contenir :
+>
+> - code ;
+> - `validate-all.cmd` ;
+> - `validation-summary.json` ;
+> - rapports nécessaires ;
+> - état Mainnet read-only ;
+> - état streaming/event spine ;
+> - état launch/bonding/PumpSwap réel ;
+> - état Universe Census ;
+> - état OpportunityState/features ;
+> - état Outcome Tracker ;
+> - état Risk/paper ;
+> - latences mesurées lorsqu’elles ont réellement pu l’être ;
+> - contrôles restant à exécuter sur mon Windows/provider ;
+> - `NEXT_SESSION.md`.
+>
+> Avant épuisement du quota, privilégie **un état cohérent et exécutable** plutôt qu’une multitude de composants à moitié terminés.
+>
+> Ne déclare jamais un contrôle réel PASS s’il n’a pas réellement été exécuté.
+>
+> **Commence par inspecter le workspace existant et `START_HERE.md`/handoff. Ensuite travaille directement et continue tant qu’aucune intervention humaine n’est indispensable.**
+
+Ce prompt change un truc important : **on ne demande plus à Work de foncer directement sur le paper trading en construisant sur `getBlock finalized`**. On lui demande d’abord de créer la vraie colonne vertébrale live dont le reste dépend.
+
+Et les deux idées de Claude que je veux absolument conserver sont **Universe Census + Outcome Tracker** : elles donneront plus tard aux agents R&D des exemples de ce qu’ASTRA a tradé **mais aussi de tout ce qu’il a refusé**, ce qui est beaucoup plus utile pour apprendre correctement. :chatgpt-content-reference{index="0"}
+
+Claude a également raison sur le fait que la phase très précoce peut se produire **avant PumpSwap**, sur la bonding curve ; le nouveau prompt corrige donc notre roadmap sur ce point. :chatgpt-content-reference{index="1"}

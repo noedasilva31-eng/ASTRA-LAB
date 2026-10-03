@@ -1,0 +1,12 @@
+{
+  "version": "ASTRA-V1-operations",
+  "reported_by_user": true,
+  "independent_verification": false,
+  "platform": "win32",
+  "network": "Helius Devnet",
+  "ASTRA": "PASS",
+  "Local": "PASS",
+  "tests_passed": 225,
+  "tests_total": 225,
+  "qualification_scope_excludes_real_PumpSwap": true
+}

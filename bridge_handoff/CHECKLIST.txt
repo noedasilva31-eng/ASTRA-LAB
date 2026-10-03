@@ -1,0 +1,7 @@
+Local: PASS 339/339
+Bridge suites: PASS 59/59
+New session tests: PASS 9/9
+Observer/Evidence/Risk/ledger: unchanged
+Session scheduler Mainnet: NOT_EXECUTED
+Real conditional roundtrip: NOT_EXECUTED
+Global Work: FAIL retained, network unavailable

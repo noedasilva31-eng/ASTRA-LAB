@@ -1,0 +1,253 @@
+{
+  "overall": "FAIL",
+  "checks": [
+    {
+      "id": "v1c_reference_unchanged",
+      "status": "PASS",
+      "changed_files": [],
+      "files_checked": 75
+    },
+    {
+      "status": "PASS",
+      "count": 31,
+      "tests": [
+        {
+          "test": "test_memory.MemoryTests.test_append_only",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_crash_before_and_after_publication",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_decoder_code_mismatch_rejected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_export_manifest_tamper_rejected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_export_rebuild_same_dataset",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_failed_transaction_no_transfer",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_foreign_database_refused_without_change",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_import_blocks_read_only_and_repeatable",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_inner_instruction_not_assumed_successful",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_invalid_indexes_and_data_never_publish",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_legacy_exact_transfer",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_metadata_corruption_detected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_missing_inner_coverage_explicit",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_missing_loaded_accounts_fail_closed",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_missing_meta_and_unknown_version_accounted",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_pending_recovery_and_dedup",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_publication_corruption_detected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_publication_transaction_rollback",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_raw_corruption_detected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_rebuild_failure_leaves_no_destination",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_source_conflict_preserves_original",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_unknown_program_explicit",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_v0_loaded_addresses",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_v1_and_u64_precision",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_wrong_cluster_never_publishes",
+          "status": "PASS"
+        },
+        {
+          "test": "test_memory.MemoryTests.test_wrong_opcode_not_transfer",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_endpoint_not_passed_to_offline_worker",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_malformed_report_is_fail",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_missing_endpoint_cannot_pass",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_missing_report_is_fail",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_timeout_is_fail",
+          "status": "PASS"
+        }
+      ],
+      "id": "unit"
+    },
+    {
+      "status": "PASS",
+      "evidence": {
+        "first_import": {
+          "inputs": 1,
+          "decoded": 1,
+          "pending": 0,
+          "events": 1,
+          "hash_or_replay_errors": 0,
+          "integrity": "ok",
+          "foreign_key_errors": 0,
+          "healthy": true,
+          "decoder_version": "system-transfer-v1",
+          "transactions_expected": 1,
+          "transactions": {
+            "processed": 1,
+            "failed": 0,
+            "unsupported": 0,
+            "error": 0
+          },
+          "instructions": {
+            "decoded": 1,
+            "unsupported": 0,
+            "error": 0
+          },
+          "accounting_ok": true,
+          "inner_coverage_unavailable": 0
+        },
+        "final": {
+          "inputs": 2,
+          "decoded": 2,
+          "pending": 0,
+          "events": 2,
+          "hash_or_replay_errors": 0,
+          "integrity": "ok",
+          "foreign_key_errors": 0,
+          "healthy": true,
+          "decoder_version": "system-transfer-v1",
+          "transactions_expected": 2,
+          "transactions": {
+            "processed": 2,
+            "failed": 0,
+            "unsupported": 0,
+            "error": 0
+          },
+          "instructions": {
+            "decoded": 2,
+            "unsupported": 0,
+            "error": 0
+          },
+          "accounting_ok": true,
+          "inner_coverage_unavailable": 0
+        },
+        "dataset_sha256": "ff876bb64061800e0a31cf924effcccba5ce74fa16c0d30764fe903083f7494c",
+        "rebuild": {
+          "inputs": 2,
+          "decoded": 2,
+          "pending": 0,
+          "events": 2,
+          "hash_or_replay_errors": 0,
+          "integrity": "ok",
+          "foreign_key_errors": 0,
+          "healthy": true,
+          "decoder_version": "system-transfer-v1",
+          "transactions_expected": 2,
+          "transactions": {
+            "processed": 2,
+            "failed": 0,
+            "unsupported": 0,
+            "error": 0
+          },
+          "instructions": {
+            "decoded": 2,
+            "unsupported": 0,
+            "error": 0
+          },
+          "accounting_ok": true,
+          "inner_coverage_unavailable": 0
+        },
+        "resume_new_process": true,
+        "source_read_only": true,
+        "offline": true
+      },
+      "id": "deterministic"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "first"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "resume"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "retry"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "offline_replay"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "live_memory"
+    }
+  ],
+  "proof_artifacts_directory": "memory_validation/memory-report-7wpx_h_3"
+}

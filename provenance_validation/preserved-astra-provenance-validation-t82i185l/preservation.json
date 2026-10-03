@@ -1,0 +1,16 @@
+{
+  "status": "PRESERVED",
+  "files": {
+    "deterministic/blocks.sqlite": "fc10810167015db3470da8e8481bc90592918da085e247ba93d025aa9e443692",
+    "deterministic/blocks.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "deterministic/blocks.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deterministic/dataset.json": "2634e513bb2ad9ac52be808374682b46ec9e9085a02037a9be440d97774bf8f9",
+    "deterministic/deterministic.json": "fc2ea90748407e0761277b05f01f037c888b4ef83c5429df8fbc8b157f22601f",
+    "deterministic/journal.sqlite": "5058281f037fe097c7cc8eca9f4d6b4405be06ea1af2e6bc9ce05a498607694b",
+    "deterministic/rebuilt.json": "2634e513bb2ad9ac52be808374682b46ec9e9085a02037a9be440d97774bf8f9",
+    "deterministic/retry-dataset.json": "f97799d1d16791afd1327768a293fb13b3c034a3ace7aba75b66fa8a6566cda8",
+    "deterministic/retry-rebuilt.json": "f97799d1d16791afd1327768a293fb13b3c034a3ace7aba75b66fa8a6566cda8",
+    "unit/unit.json": "f84cef738f041bd55e2f5ae803120ab6c231952cbd55e5c62a1ae157b993c5ec"
+  },
+  "criteria_changed": false
+}

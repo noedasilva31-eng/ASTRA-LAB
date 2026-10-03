@@ -1,0 +1,327 @@
+{
+  "source": "SYNTHETIC_TEST_FIXTURES_NOT_MAINNET",
+  "real_execution": false,
+  "scenario": {
+    "configuration": {
+      "code_sha256": "df21fbca2987ea2cbcdbf21b98f712b232f61a44267c96b69ff9723760a9cf97",
+      "initial": 10000,
+      "model": {
+        "adverse_bps": 0,
+        "delay_slots": 1,
+        "fee_quote_raw": 10,
+        "quote_ttl_ns": 5000000000
+      },
+      "policy": {
+        "max_age_ns": 5000000000,
+        "max_exposure": 2000000,
+        "max_heartbeat_age_ns": 5000000000,
+        "max_position": 5000,
+        "max_positions": 2,
+        "max_session_loss": 100000,
+        "max_slippage_bps": 100,
+        "min_liquidity": 1
+      },
+      "quote_mint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+      "version": "paper-conditional-v1"
+    },
+    "ledger": [
+      {
+        "amount": 1000,
+        "decision_ns": 10,
+        "decision_slot": 100,
+        "id": "buy",
+        "kind": "intent",
+        "live_execution": false,
+        "mint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+        "model": {
+          "adverse_bps": 0,
+          "delay_slots": 1,
+          "fee_quote_raw": 10,
+          "quote_ttl_ns": 5000000000
+        },
+        "opportunity": {
+          "authority_state": "OBSERVED_SAFE",
+          "availability_ns": 10,
+          "coverage": "OBSERVED",
+          "data_health": "OBSERVED",
+          "execution_quote": {
+            "exit_possible": true,
+            "expires_ns": 1010,
+            "liquidity_quote_raw": 100000,
+            "observed_ns": 5,
+            "provenance": {
+              "frame": 2,
+              "frame_sha256": "a69acd794349057a959f600fdea05a672b0b1f2b2397c60edb228106c44a74c9"
+            },
+            "size_raw": 1000,
+            "slippage_bps": 0,
+            "status": "OBSERVED"
+          },
+          "fixture_only": true,
+          "heartbeat_ns": 10,
+          "slot": 100
+        },
+        "risk": {
+          "allowed": true,
+          "policy": {
+            "max_age_ns": 5000000000,
+            "max_exposure": 2000000,
+            "max_heartbeat_age_ns": 5000000000,
+            "max_position": 5000,
+            "max_positions": 2,
+            "max_session_loss": 100000,
+            "max_slippage_bps": 100,
+            "min_liquidity": 1
+          },
+          "reasons": [],
+          "version": "risk-v1"
+        },
+        "side": "BUY",
+        "strategy_version": "external-candidate-unpromoted"
+      },
+      {
+        "assurance": "CONDITIONAL_PAPER_SCENARIO",
+        "availability_ns": 20,
+        "base_units": 2000,
+        "fees_model": {
+          "adverse_bps": 0,
+          "delay_slots": 1,
+          "fee_quote_raw": 10,
+          "quote_ttl_ns": 5000000000
+        },
+        "id": "settle:buy",
+        "intent_id": "buy",
+        "kind": "settlement",
+        "live_execution": false,
+        "quote_evidence": {
+          "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+          "impact": "0.001",
+          "input_mint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+          "input_raw": 1000,
+          "minimum_output_raw": 2000,
+          "observed_ns": 20,
+          "output_mint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+          "output_raw": 2000,
+          "provenance": {
+            "frame": 3,
+            "frame_sha256": "4780fefa6366b2f1b1a630a4fec196e0c1f01a52f34e52e3782d82693798c868"
+          },
+          "routes": [
+            {
+              "swapInfo": {
+                "label": "fixture"
+              }
+            }
+          ],
+          "slippage_bps": 0,
+          "slot": 101
+        },
+        "quote_spent": 1010,
+        "risk": {
+          "allowed": true,
+          "policy": {
+            "max_age_ns": 5000000000,
+            "max_exposure": 2000000,
+            "max_heartbeat_age_ns": 5000000000,
+            "max_position": 5000,
+            "max_positions": 2,
+            "max_session_loss": 100000,
+            "max_slippage_bps": 100,
+            "min_liquidity": 1
+          },
+          "reasons": [],
+          "version": "risk-v1"
+        }
+      },
+      {
+        "amount": 2000,
+        "decision_ns": 30,
+        "decision_slot": 102,
+        "id": "sell",
+        "kind": "intent",
+        "live_execution": false,
+        "mint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+        "model": {
+          "adverse_bps": 0,
+          "delay_slots": 1,
+          "fee_quote_raw": 10,
+          "quote_ttl_ns": 5000000000
+        },
+        "opportunity": {
+          "authority_state": "OBSERVED_SAFE",
+          "availability_ns": 30,
+          "coverage": "OBSERVED",
+          "data_health": "OBSERVED",
+          "execution_quote": {
+            "exit_possible": true,
+            "expires_ns": 1030,
+            "liquidity_quote_raw": 100000,
+            "observed_ns": 30,
+            "provenance": {
+              "frame": 4,
+              "frame_sha256": "51fbfa4b85a162ded58129e390a2234ac8816bb8ebe2f7cb0ef19fa5841fdb6a"
+            },
+            "size_raw": 2000,
+            "slippage_bps": 0,
+            "status": "OBSERVED"
+          },
+          "fixture_only": true,
+          "heartbeat_ns": 30,
+          "slot": 102
+        },
+        "risk": {
+          "allowed": true,
+          "policy": {
+            "max_age_ns": 5000000000,
+            "max_exposure": 2000000,
+            "max_heartbeat_age_ns": 5000000000,
+            "max_position": 5000,
+            "max_positions": 2,
+            "max_session_loss": 100000,
+            "max_slippage_bps": 100,
+            "min_liquidity": 1
+          },
+          "reasons": [],
+          "version": "risk-v1"
+        },
+        "side": "SELL",
+        "strategy_version": "external-candidate-unpromoted"
+      },
+      {
+        "assurance": "CONDITIONAL_PAPER_SCENARIO",
+        "availability_ns": 40,
+        "base_units": 2000,
+        "fees_model": {
+          "adverse_bps": 0,
+          "delay_slots": 1,
+          "fee_quote_raw": 10,
+          "quote_ttl_ns": 5000000000
+        },
+        "id": "settle:sell",
+        "intent_id": "sell",
+        "kind": "settlement",
+        "live_execution": false,
+        "quote_evidence": {
+          "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+          "impact": "0.001",
+          "input_mint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+          "input_raw": 2000,
+          "minimum_output_raw": 1200,
+          "observed_ns": 40,
+          "output_mint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+          "output_raw": 1200,
+          "provenance": {
+            "frame": 5,
+            "frame_sha256": "3881d42a6758ddf58b2c17252e464ed13eeac47d2e1a4fa509fd5d22b5cf2126"
+          },
+          "routes": [
+            {
+              "swapInfo": {
+                "label": "fixture"
+              }
+            }
+          ],
+          "slippage_bps": 0,
+          "slot": 103
+        },
+        "quote_received": 1190,
+        "risk": {
+          "allowed": true,
+          "policy": {
+            "max_age_ns": 5000000000,
+            "max_exposure": 2000000,
+            "max_heartbeat_age_ns": 5000000000,
+            "max_position": 5000,
+            "max_positions": 2,
+            "max_session_loss": 100000,
+            "max_slippage_bps": 100,
+            "min_liquidity": 1
+          },
+          "reasons": [],
+          "version": "risk-v1"
+        }
+      }
+    ],
+    "state": {
+      "cash_quote_raw": 10180,
+      "positions": {},
+      "realized_scenario_pnl_quote_raw": 180,
+      "loss_quote_raw": 0,
+      "pending": {},
+      "head": "73cb47cd40d5fbbb3a32721914b79e84223e57e4fdae60bdf8136c1bfe12c76a",
+      "sequence": 4
+    },
+    "assurance": "CONDITIONAL_PAPER_NOT_EXECUTED_TRADES"
+  },
+  "raw_frames": [
+    {
+      "kind": "rpc",
+      "metadata": {
+        "method": "getGenesisHash"
+      },
+      "network": "mainnet",
+      "observed_ns": 1,
+      "raw": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsInJlc3VsdCI6IjVleWt0NFVzRnY4UDhOSmRUUkVwWTF2enFLcVpLdmRwS3VjMTQ3ZHcyTjlkIn0="
+    },
+    {
+      "kind": "quote",
+      "metadata": {
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 1000,
+          "inputMint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+          "outputMint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+          "slippageBps": 0
+        }
+      },
+      "network": "mainnet",
+      "observed_ns": 5,
+      "raw": "eyJjb250ZXh0U2xvdCI6MTAwLCJpbkFtb3VudCI6IjEwMDAiLCJpbnB1dE1pbnQiOiI0dko5SlUxYkpKRTk2RldTSkt2SHNtbUZBRENnNGdwWlFmZjRQM2JrTEtpIiwib3RoZXJBbW91bnRUaHJlc2hvbGQiOiIyMDAwIiwib3V0QW1vdW50IjoiMjAwMCIsIm91dHB1dE1pbnQiOiI4cWJIYncyQmJiVEhCVzFzYmVxYWtZWFZLUlFNOE5lN3BMSzdtNkNWZmVSIiwicHJpY2VJbXBhY3RQY3QiOiIwLjAwMSIsInJvdXRlUGxhbiI6W3sic3dhcEluZm8iOnsibGFiZWwiOiJmaXh0dXJlIn19XSwic2xpcHBhZ2VCcHMiOjAsInN3YXBNb2RlIjoiRXhhY3RJbiJ9"
+    },
+    {
+      "kind": "quote",
+      "metadata": {
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 1000,
+          "inputMint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+          "outputMint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+          "slippageBps": 0
+        }
+      },
+      "network": "mainnet",
+      "observed_ns": 20,
+      "raw": "eyJjb250ZXh0U2xvdCI6MTAxLCJpbkFtb3VudCI6IjEwMDAiLCJpbnB1dE1pbnQiOiI0dko5SlUxYkpKRTk2RldTSkt2SHNtbUZBRENnNGdwWlFmZjRQM2JrTEtpIiwib3RoZXJBbW91bnRUaHJlc2hvbGQiOiIyMDAwIiwib3V0QW1vdW50IjoiMjAwMCIsIm91dHB1dE1pbnQiOiI4cWJIYncyQmJiVEhCVzFzYmVxYWtZWFZLUlFNOE5lN3BMSzdtNkNWZmVSIiwicHJpY2VJbXBhY3RQY3QiOiIwLjAwMSIsInJvdXRlUGxhbiI6W3sic3dhcEluZm8iOnsibGFiZWwiOiJmaXh0dXJlIn19XSwic2xpcHBhZ2VCcHMiOjAsInN3YXBNb2RlIjoiRXhhY3RJbiJ9"
+    },
+    {
+      "kind": "quote",
+      "metadata": {
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 2000,
+          "inputMint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+          "outputMint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+          "slippageBps": 0
+        }
+      },
+      "network": "mainnet",
+      "observed_ns": 30,
+      "raw": "eyJjb250ZXh0U2xvdCI6MTAyLCJpbkFtb3VudCI6IjIwMDAiLCJpbnB1dE1pbnQiOiI4cWJIYncyQmJiVEhCVzFzYmVxYWtZWFZLUlFNOE5lN3BMSzdtNkNWZmVSIiwib3RoZXJBbW91bnRUaHJlc2hvbGQiOiIxMjAwIiwib3V0QW1vdW50IjoiMTIwMCIsIm91dHB1dE1pbnQiOiI0dko5SlUxYkpKRTk2RldTSkt2SHNtbUZBRENnNGdwWlFmZjRQM2JrTEtpIiwicHJpY2VJbXBhY3RQY3QiOiIwLjAwMSIsInJvdXRlUGxhbiI6W3sic3dhcEluZm8iOnsibGFiZWwiOiJmaXh0dXJlIn19XSwic2xpcHBhZ2VCcHMiOjAsInN3YXBNb2RlIjoiRXhhY3RJbiJ9"
+    },
+    {
+      "kind": "quote",
+      "metadata": {
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 2000,
+          "inputMint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+          "outputMint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+          "slippageBps": 0
+        }
+      },
+      "network": "mainnet",
+      "observed_ns": 40,
+      "raw": "eyJjb250ZXh0U2xvdCI6MTAzLCJpbkFtb3VudCI6IjIwMDAiLCJpbnB1dE1pbnQiOiI4cWJIYncyQmJiVEhCVzFzYmVxYWtZWFZLUlFNOE5lN3BMSzdtNkNWZmVSIiwib3RoZXJBbW91bnRUaHJlc2hvbGQiOiIxMjAwIiwib3V0QW1vdW50IjoiMTIwMCIsIm91dHB1dE1pbnQiOiI0dko5SlUxYkpKRTk2RldTSkt2SHNtbUZBRENnNGdwWlFmZjRQM2JrTEtpIiwicHJpY2VJbXBhY3RQY3QiOiIwLjAwMSIsInJvdXRlUGxhbiI6W3sic3dhcEluZm8iOnsibGFiZWwiOiJmaXh0dXJlIn19XSwic2xpcHBhZ2VCcHMiOjAsInN3YXBNb2RlIjoiRXhhY3RJbiJ9"
+    }
+  ]
+}

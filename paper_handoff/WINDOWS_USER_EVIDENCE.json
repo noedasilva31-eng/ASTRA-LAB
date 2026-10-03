@@ -1,0 +1,19 @@
+{
+  "reported_by_user": true,
+  "independently_verified": false,
+  "version": "ASTRA-V1-observatory",
+  "platform": "win32",
+  "provider_network": "Helius Devnet",
+  "overall": "FAIL",
+  "local": "FAIL",
+  "tests_passed": 255,
+  "tests_total": 255,
+  "V1d_live_memory": "PASS real_transfer_decoded",
+  "V1e_live_provenance": {
+    "status": "FAIL",
+    "code": "live_coverage_or_supported_events_missing",
+    "root_cause": "NOT_DISAMBIGUATED"
+  },
+  "observer_tests": "PASS",
+  "Integrated_visible_checks": "PASS"
+}

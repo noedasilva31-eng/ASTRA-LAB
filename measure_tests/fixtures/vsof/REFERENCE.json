@@ -1,0 +1,19 @@
+{
+  "source": "User Windows/Mainnet all-validation-92dln067, successful round-trip captures",
+  "use": "offline reconstruction regression, never live qualification",
+  "sha256": {
+    "paper.sqlite": "de5c7c3a1e7346e972713c0bacb45809c658d2fbd324a008249ef81a1d815181",
+    "engine.sqlite": "563504d1de6d28bed1684dca75ab4cb09aef3ba1d416ca89d2a4785d2c40b3d7",
+    "raw.sqlite": "9649fc258ea5024ff259e69f93be856c32d0fe731449de80c932da541649baf9"
+  },
+  "expected": {
+    "buy_notional_lamports": 10000000,
+    "quantity_base_raw": 406739,
+    "base_decimals": 6,
+    "holding_ns": 8210169200,
+    "gross_before_fixed_fees_lamports": -158759,
+    "fixed_simulated_fees_lamports": 4200000,
+    "net_lamports": -4358759,
+    "cash_final_lamports": 995641241
+  }
+}

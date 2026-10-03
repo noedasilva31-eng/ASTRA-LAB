@@ -1,0 +1,10 @@
+ASTRA-V1-context — Brain V0.1
+Local PASS | Tests 406/406 PASS | Nouveaux 20/20 PASS
+Global FAIL: endpoints absents/contrôles réels non exécutés; aucun PASS réel revendiqué.
+36 fichiers protégés identiques à ASTRA-V1-brain.
+Régression Windows archivée PASS: 51 décisions et freeze reconstruits. Quatre scores nuls: momentum_bps absent, un seul swap/pool, quotes fraîches.
+23 devises refusées: 21 WSOL-base, 2 sans WSOL; aucun support étendu.
+Contexte temporel, régime, scoring conditionnel, hydratation persistante, freeze/replay intégrés.
+FAIL historiques Windows conservés séparément dans reference-audit.json.
+Qualification Windows/Mainnet Context NOT_EXECUTED. Aucun ordre réel ni fill fabriqué.
+Détail exact: validation-summary.json et context_handoff/report.json.

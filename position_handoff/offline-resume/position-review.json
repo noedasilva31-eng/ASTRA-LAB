@@ -1,0 +1,2996 @@
+{
+  "schema": "PositionReviewV0.2",
+  "qualified_configuration": {
+    "assurance": "CONDITIONAL_PAPER_SCENARIO",
+    "code": "4cf2a016672732f7442e290b6805ea433e01532a92693c8d45fab10520163cd6",
+    "hold_rule": "next_distinct_observed_swap_after_entry",
+    "initial": 1000000000,
+    "model": {
+      "adverse_bps": 25,
+      "delay_slots": 1,
+      "fee_quote_raw": 2100000,
+      "quote_ttl_ns": 5000000000
+    },
+    "policy": {
+      "max_age_ns": 5000000000,
+      "max_exposure": 40000000,
+      "max_heartbeat_age_ns": 5000000000,
+      "max_position": 20000000,
+      "max_positions": 2,
+      "max_session_loss": 10000000,
+      "max_slippage_bps": 100,
+      "min_liquidity": 1000000000
+    },
+    "size": 10000000,
+    "strategy": "bounded-observed-swap-v1"
+  },
+  "transport_latencies": {
+    "http_roundtrip_ns": {
+      "samples": 112,
+      "p95": 143763600,
+      "p99": 152899800
+    },
+    "notification_to_processing_ns": {
+      "samples": 45,
+      "p95": 4158176600,
+      "p99": 4331663300
+    },
+    "provider_emission_latency": "NOT_MEASURED"
+  },
+  "initial_cash_quote_raw": 1000000000,
+  "pending": {},
+  "open_positions": {
+    "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump": {
+      "units": 4624230,
+      "cost": 12100000,
+      "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f"
+    }
+  },
+  "open_entry_measurements": {
+    "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump": {
+      "classification": "DERIVED",
+      "market_evidence_classification": "PROVEN",
+      "paper_model_classification": "SIMULATED",
+      "fill_signature": "3mGCvAJngCMu9F3VWapbq3QCY8gGdha3qKCEMH25NHxtYUa2o5KH3DPh1bqcm7m8uY8CGdCyM5QHkJNym1tGzjZm",
+      "fill_slot": 452646745,
+      "intent_id": "4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+      "settlement_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+      "side": "BUY",
+      "event_id": "0cd3222ba4996c23189a96e1735f7dde1332a26fca107b941e779594233d099e",
+      "decision_ns": 1790953853010131600,
+      "settlement_ns": 1790953857333198100,
+      "decision_quote": {
+        "input_mint": "So11111111111111111111111111111111111111112",
+        "output_mint": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump",
+        "input_raw": 10000000,
+        "output_raw": 4647473,
+        "minimum_output_raw": 4624236,
+        "slippage_bps": 50,
+        "slot": 452646741,
+        "observed_ns": 1790953850824964000,
+        "impact": "0.0027392260427366386866163976",
+        "routes": [
+          {
+            "swapInfo": {
+              "ammKey": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+              "label": "Pump.fun Amm",
+              "inputMint": "So11111111111111111111111111111111111111112",
+              "outputMint": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump",
+              "inAmount": "10000000",
+              "outAmount": "4647473",
+              "updateContextSlot": "452646740"
+            },
+            "percent": 100,
+            "bps": null
+          }
+        ],
+        "provenance": {
+          "frame": 462,
+          "frame_sha256": "93e5312a017eddb45fdd8f3409bc9863c141671c7a4ef066e8021c10a8f668de"
+        },
+        "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION"
+      },
+      "settlement_quote": {
+        "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+        "impact": "0.0028444622585041736654446781",
+        "input_mint": "So11111111111111111111111111111111111111112",
+        "input_raw": 10000000,
+        "minimum_output_raw": 4624230,
+        "observed_ns": 1790953855102700500,
+        "output_mint": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump",
+        "output_raw": 4647467,
+        "provenance": {
+          "frame": 475,
+          "frame_sha256": "73b39b68624031123456ad829e9e7bb575ecbb43b462840d20285152dde5de3d"
+        },
+        "routes": [
+          {
+            "bps": null,
+            "percent": 100,
+            "swapInfo": {
+              "ammKey": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+              "inAmount": "10000000",
+              "inputMint": "So11111111111111111111111111111111111111112",
+              "label": "Pump.fun Amm",
+              "outAmount": "4647467",
+              "outputMint": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump",
+              "updateContextSlot": "452646756"
+            }
+          }
+        ],
+        "slippage_bps": 50,
+        "slot": 452646758
+      },
+      "decision_price_quote_raw_per_base_raw": {
+        "classification": "DERIVED",
+        "numerator": 10000000,
+        "denominator": 4647473
+      },
+      "settlement_price_quote_raw_per_base_raw": {
+        "classification": "DERIVED",
+        "numerator": 1000000,
+        "denominator": 462423
+      },
+      "decision_to_settlement_ns": 4323066500,
+      "acquisition_monotonic_ns": 2283922300,
+      "risk_decision": {
+        "allowed": true,
+        "policy": {
+          "max_age_ns": 5000000000,
+          "max_exposure": 40000000,
+          "max_heartbeat_age_ns": 5000000000,
+          "max_position": 20000000,
+          "max_positions": 2,
+          "max_session_loss": 10000000,
+          "max_slippage_bps": 100,
+          "min_liquidity": 1000000000
+        },
+        "reasons": [],
+        "version": "risk-v1"
+      },
+      "risk_settlement": {
+        "allowed": true,
+        "policy": {
+          "max_age_ns": 5000000000,
+          "max_exposure": 40000000,
+          "max_heartbeat_age_ns": 5000000000,
+          "max_position": 20000000,
+          "max_positions": 2,
+          "max_session_loss": 10000000,
+          "max_slippage_bps": 100,
+          "min_liquidity": 1000000000
+        },
+        "reasons": [],
+        "version": "risk-v1"
+      },
+      "account_evidence_at_decision": {
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "base_reserve_raw": 2866811070453,
+        "mint_profiles": [
+          "token2022-immutable-self-metadata-v1",
+          "classic-spl-v1"
+        ],
+        "not_a_rug_safety_guarantee": true,
+        "observed_ns": 1790953853006926600,
+        "provenance": {
+          "frame": 464,
+          "frame_sha256": "442834e6af6a817a146fe52583cf29c7b33433ea22cec7e90d2aa8a4d189eeab"
+        },
+        "quote_reserve_raw": 6132493707200,
+        "slot": 452646750,
+        "token_programs": [
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        ]
+      },
+      "costs": {
+        "version": "cost-description-v1",
+        "rows": [
+          {
+            "category": "network",
+            "amount": null,
+            "unit": "lamports",
+            "source": null,
+            "observed_or_simulated": "UNKNOWN",
+            "available_at": null,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "unknown",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "priority",
+            "amount": null,
+            "unit": "lamports",
+            "source": null,
+            "observed_or_simulated": "UNKNOWN",
+            "available_at": null,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "unknown",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "DEX",
+            "amount": null,
+            "unit": "lamports",
+            "source": null,
+            "observed_or_simulated": "UNKNOWN",
+            "available_at": null,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "unknown",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "LP",
+            "amount": null,
+            "unit": "lamports",
+            "source": null,
+            "observed_or_simulated": "UNKNOWN",
+            "available_at": null,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "unknown",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "creator",
+            "amount": null,
+            "unit": "lamports",
+            "source": null,
+            "observed_or_simulated": "UNKNOWN",
+            "available_at": null,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "unknown",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "ATA-create",
+            "amount": null,
+            "unit": "lamports",
+            "source": null,
+            "observed_or_simulated": "UNKNOWN",
+            "available_at": null,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "unknown",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "ATA-close-or-refund",
+            "amount": null,
+            "unit": "lamports",
+            "source": null,
+            "observed_or_simulated": "UNKNOWN",
+            "available_at": null,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "unknown",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "other",
+            "amount": 2100000,
+            "unit": "lamports",
+            "source": {
+              "ledger_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f"
+            },
+            "observed_or_simulated": "SIMULATED",
+            "available_at": 1790953857333198100,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "separate",
+            "accounting_key": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:legacy_fixed_fee",
+            "component_keys": [
+              "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:network",
+              "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:priority",
+              "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:DEX",
+              "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:LP",
+              "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:creator",
+              "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:ATA-create",
+              "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:ATA-close-or-refund",
+              "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:other"
+            ]
+          },
+          {
+            "category": "price-impact",
+            "amount": "0.0028444622585041736654446781",
+            "unit": "provider_fraction",
+            "source": {
+              "frame": 475,
+              "frame_sha256": "73b39b68624031123456ad829e9e7bb575ecbb43b462840d20285152dde5de3d"
+            },
+            "observed_or_simulated": "PROVEN",
+            "available_at": 1790953855102700500,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "descriptive_only",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "adverse-movement",
+            "amount": null,
+            "unit": "lamports",
+            "source": null,
+            "observed_or_simulated": "UNKNOWN",
+            "available_at": null,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "unknown",
+            "accounting_key": null,
+            "component_keys": []
+          },
+          {
+            "category": "paper-slippage",
+            "amount": 23237,
+            "unit": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump:raw",
+            "source": {
+              "frame": 475,
+              "frame_sha256": "73b39b68624031123456ad829e9e7bb575ecbb43b462840d20285152dde5de3d"
+            },
+            "observed_or_simulated": "SIMULATED",
+            "available_at": 1790953857333198100,
+            "model_version": "cost-description-v1",
+            "included_in_quote_or_separate": "descriptive_only",
+            "accounting_key": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f:haircut",
+            "component_keys": [],
+            "already_applied_in_ledger": true
+          }
+        ],
+        "separate_total_lamports": 2100000,
+        "fee_allocation": "UNKNOWN: fixed aggregate; no measured network/priority/DEX/LP/creator/ATA split",
+        "double_counting_rule": "Quote-to-fill haircut is already in ledger outputs. Provider impact is descriptive. Neither is subtracted again. Component allocations must share aggregate component_keys.",
+        "changes_ledger": false
+      },
+      "provenance": {
+        "decision_event": {
+          "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+          "frame_sequence": 460,
+          "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+          "genesis_sequence": 445,
+          "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+        },
+        "fill_event": {
+          "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+          "frame_sequence": 474,
+          "frame_sha256": "cb5b6caeeffd5c5ffddb708c38c9a6fad214b0a66df26f0e2be341852130321c",
+          "genesis_sequence": 445,
+          "raw_sha256": "6ed0e6107bb24ab2095a6bc4f23ae3c3223ffef971f374f77f27978da1660d7b"
+        },
+        "evidence_frames": {
+          "accounts_seq": 477,
+          "forward_seq": 475,
+          "reverse_seq": 476
+        }
+      },
+      "quote_output_change_raw": -6,
+      "quote_output_change_classification": "DERIVED; not independently attributed to market movement/fees/impact",
+      "quote_age_at_settlement_ns": 2230497600,
+      "depth_at_decision": {
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "base_reserve_raw": 2866811070453,
+        "mint_profiles": [
+          "token2022-immutable-self-metadata-v1",
+          "classic-spl-v1"
+        ],
+        "not_a_rug_safety_guarantee": true,
+        "observed_ns": 1790953853006926600,
+        "provenance": {
+          "frame": 464,
+          "frame_sha256": "442834e6af6a817a146fe52583cf29c7b33433ea22cec7e90d2aa8a4d189eeab"
+        },
+        "quote_reserve_raw": 6132493707200,
+        "slot": 452646750,
+        "token_programs": [
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        ]
+      },
+      "cash_before_quote_raw": 1000000000,
+      "cash_after_quote_raw": 987900000
+    }
+  },
+  "status_semantics": {
+    "PROVEN": "Archived market/provider facts or recorded decisions; never proof of actual execution",
+    "DERIVED": "Exact calculation from archived inputs; paper PnL remains conditional",
+    "SIMULATED": "Model assumptions/haircuts/fixed fees, not paid fees",
+    "UNKNOWN": "Missing evidence; not zero"
+  },
+  "unknowns": {
+    "actual_network_priority_ATA_fees": "UNKNOWN: ASTRA did not submit a transaction",
+    "separate_DEX_LP_creator_allocation": "UNKNOWN: no validated fee allocation; do not add to quoted output",
+    "adverse_movement_causal_attribution": "UNKNOWN: quote output change is measurable, causal decomposition is not",
+    "pool_reserves_are_executable_depth": "NO: account reserves and provider indicative size quote only"
+  },
+  "audit": {
+    "status": "PASS",
+    "plans": 51,
+    "position_health": 0,
+    "network_used": false
+  },
+  "source_file_sha256": {
+    "raw": "93795169b1ec65058b572b19762e3a0dcfc280b64ec15f7141f7cf2dcd500562",
+    "paper": "552d439372464971ecfb34bd0dd37a05211507fa714eb4f6a76cd9c4964da62a",
+    "engine": "d61646d3c37a9a60af10b65ffab3c6aa512bef1ab188d4ef1d8675e7fc597b7f"
+  },
+  "classification_legend": [
+    "PROVEN",
+    "DERIVED",
+    "SIMULATED",
+    "UNKNOWN"
+  ],
+  "cycles": [],
+  "portfolio": {
+    "cash_quote_raw": 987900000,
+    "positions": {
+      "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump": {
+        "units": 4624230,
+        "cost": 12100000,
+        "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f"
+      }
+    },
+    "realized_scenario_pnl_quote_raw": 0,
+    "loss_quote_raw": 0,
+    "pending": {},
+    "head": "d5a48517ee10097aa7db6cacd8e19721a08cea73b1dc7e95d8cc6ccd9fc8baca",
+    "sequence": 2
+  },
+  "decision_census": [
+    {
+      "decision_id": "d22b674f6227bd30f905b591732a37955628a1803436ad4074fd2b2bd71af959",
+      "event_id": "a92cf759db46395332739b0ad6bf1aab045a981418cada2016667cd157fc4f1b",
+      "pool": "EB3NyfTMmpAeVqZdHTw9VyzVzhdCBG9j2bSpP3j9Cf68",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "b15751f035456872e1810d601f9048863aa3076af9cee2f1db939a29c976a4a7",
+      "event_id": "cb3efd58fce21f689d40f0c366c514f77a6da800b58c4a7fcef91234f394bc54",
+      "pool": "5wYcsL6CLeDtpG9us6BLawLnFV8oQS4yGEgjPrArTdV",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "ac8de85a472200da54fd2a0fc4a5f369e7acf2d1190ce472b2ab28bfa1dd3bed",
+      "event_id": "9678d54506708ec76616831d5e44c147bf3b65bec773bda6ce87dd7f7f28d8db",
+      "pool": "4fusSKD4GbzfDggrNreXn1wBzRWvm2tGt9nm8ZtPLZYA",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "cde4526aaf349ae6d1bc6e526521002d0a376ad93343cfc3fbe99f5c3e744c7e",
+      "event_id": "c6679242efc14a07fb61908aa183aec950dde1487eb7081700c45e2f0dde8d05",
+      "pool": "97iGTeLhVr6dUT55brbqXDVTmsBdoZHSc3Jr64TD2cZE",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "8cce2c75ab1046ecb8343aef6b66590c98190af7bef50447d0ea0a38032b0218",
+      "event_id": "d3be09b1b4bf40092a70d4bc097b5f44ce185bec42aaa92ca1dc4bf9dc9d2a5b",
+      "pool": "BnLU4wS1anXzrYbNzG6fQkmeLNUXLb7L5eqdeWDiNi3y",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "3419230cb4a7829e3dbaa349c3a1444e4e7a6dd6ceb4771d53593e5e1d0029d3",
+      "event_id": "74b2b8c8a35220b60c749e9467de3281703c78e2e0cd291f6d7c01ed3cbf8f83",
+      "pool": "Eba8gxzeDrXpo6ZtMK18sSpTuwF9KUWxPy6EXFB7ERAq",
+      "result_kind": "no_trade",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "6dc7933e6edd7a547a99c7ab8627935c103050584bcaf901329fb83329f376c0",
+      "event_id": "9024c87ed8f910feeea8f5b25c3e6ba244879cfe526bb3b84b8beccf263dd9b0",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "3ccd5d30c1b8c28a7f57c394e584e217bb86af17097d19353bcce982055bd306",
+      "event_id": "2eb00840010e43c9f31ec1c805a9643723dad73bffd8f3de0d6e07c87d536639",
+      "pool": "AR6ZxRGfrTzWthUgvFnV958tuoECqoqhqVvHVqjL5gz9",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "32f3a2adf88f66bf88ea688d994e90bab081dda9cfc286ab08ac134a00d3aa5f",
+      "event_id": "59e489413af4dda2441c1f25188b3525dead4e592834b3eaf0d3b08c6de986cb",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "7e2400d91739ffde69aad5371e500f8f7c45228b474fb58a838655fa298afa68",
+      "event_id": "6e75df9222621d4976cfa695f4a2520b566c4ce30a2bd8ff1d82c46775aa5ff5",
+      "pool": "DfHAXf6aPHne72LWNF5wWvLPyUKYoAnFFLPYsG9vyQUY",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "fa49ece3a16542f97b38ce53eb4b6265d5f33c54f98bb0557b7d881a0d3a40ae",
+      "event_id": "21b6fdd75d6308592a5925bce05dc9a30a256d9e7a499d0f48d47fe15063bcf9",
+      "pool": "DfHAXf6aPHne72LWNF5wWvLPyUKYoAnFFLPYsG9vyQUY",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "0559a47c0657899e39f6c5554c0c099a813e3287e16ac0fda4cde49aa6969e29",
+      "event_id": "ad32551766a55f183566483ca545287bf516f48cf22c90b72c4c527714f1ca52",
+      "pool": "DfHAXf6aPHne72LWNF5wWvLPyUKYoAnFFLPYsG9vyQUY",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "b251756ec3e4de99263a68e33989c4964d9849121685674ab5684a1c3e676a02",
+      "event_id": "25b598e54d5fe64dae2e16fea885048769c604221f3334c172401ca4267f790c",
+      "pool": "GTZRTawr5LPxzfT9imJfrgD6E7Hs3xsg4JY41gT9J8Xp",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "0bb4e76b757ffde4e566dc13ea7e1f7df1cb5d803207c61cddde9d9bf69c4adf",
+      "event_id": "15875d5d795dd1107191902d1095415305d8bf8443d030f5a66a02bd56468985",
+      "pool": "Eba8gxzeDrXpo6ZtMK18sSpTuwF9KUWxPy6EXFB7ERAq",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "5a01be430515c859f805db2ce7e8761fd3f753375d48d94ba9b4b6fcbc9bdc26",
+      "event_id": "a944fb34c1bd1d8d2dae90ce6f7e084fcd651762a3f2669638cb7c43f9ea087e",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "d24e0994d16aceffc07c41df8873a426f81bf9f99592a7a912906d8674d4d132",
+      "event_id": "6ba2b3d17c33aaec3d1e647decf039fdc6a7a8e399d729bc10cc5c2ed50c4d40",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "312710971fc4edf2ef952526be8600dd506202116a58993d476adbe4f5502025",
+      "event_id": "a7d46d877e7a533b415b8ba2ce1cbd8f92389f4bd7046c9a0538e05c014231fa",
+      "pool": "EEUaf7rxYuUa8L2BNV2k4T5ahLYHKxefkB17W73okjFW",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "8964fa89d910c3636b841528449b22135f239e589d8bf259df569439e743d0d6",
+      "event_id": "d3a8e6a8dc9014ad368a1a1481534d57f65243216c64db67f6ac39e35b8aa763",
+      "pool": "EEUaf7rxYuUa8L2BNV2k4T5ahLYHKxefkB17W73okjFW",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "a64513a3e15eafaacfc5a7b34cc088b17ba0c7eee043616c82e891beb9864ef2",
+      "event_id": "af1b0211d6c562fd9c5894f0eee2193a67c4fad0c98432917ba4107e51bcb9e8",
+      "pool": "FNbHzyruvEgDB9q3qRwktLc7qHoF2Qet8HXAcom6ZWLU",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "deb39e2ca246c3f222b9a181da892e8b089d7b8b90161172c1422e2919a5cb48",
+      "event_id": "d1255a68118ce66cea5ca21e87b3231095ceb01dc97dbc025a271832fb146dba",
+      "pool": "AR6ZxRGfrTzWthUgvFnV958tuoECqoqhqVvHVqjL5gz9",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "81d3a2f411a6154d74829ddfce59dff5ca36e0b19c7e13a3213b4bf824b44c28",
+      "event_id": "0cfecbd77cd93794647a6c5fe49bd338e3ff77331b6b9b9054a2f6abed7136ef",
+      "pool": "AR6ZxRGfrTzWthUgvFnV958tuoECqoqhqVvHVqjL5gz9",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "2c715222960ac90f1d9ba15066d0eea48ffed9270386bdfab0bf78cbe01bae1d",
+      "event_id": "3df01b499cf4d3742f419e16400ab143bf9eb9b43b9bb5fadf2f21cfd0aae6c6",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "c3c88a9f3cd047ca6b737af0addab61b145325c02051e19590ec77668c935cb2",
+      "event_id": "6e1ed92063e7cfa7d896ba77228eb9b37cace13c8c40d1201ffe7274a004d906",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "02ab2b4bd643ef2622b233e0f4e5851e2a077022a49533a7269107087c81e1fd",
+      "event_id": "5b822e177caa017d20525487dac387afd37791b46e2d1dac225209fdd87d2094",
+      "pool": "Dgwez867ASvZzX8LBRB51mup4tGvi6X1TQZLSr9xX5PZ",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "7a75761e7c25072af402ee59899a7921757e815a7cbe4d9c19830021c59a1547",
+      "event_id": "5a271a941493e3d99c7940807c3a5f0a92ab64a62b950e945f2af9f8dd6ec650",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "bd3da1e19e154372d3fe78c2690383bd8e849f2dcf34fef312bbb6f463838542",
+      "event_id": "341270a77427cf41309293a5489903708f9b6a3594bce9782e26fd907f4698f3",
+      "pool": "H7pt7KK8pB8xHwpF9DHrgdZsZb6yBjZHhGiUkigyaXwZ",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "b64034bb3b5af55b4fe1784c17ae25dd0523d0ff69e9763091d287f7f4dc9cd7",
+      "event_id": "c3d9080b24fccb32362cbb8160fae5c9ad4da5b7295948eb0adf2e2c788eeeb2",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "fac125a79e02d46e3236c4740069fa045c5f59ea846e9e35bd188acc2662946c",
+      "event_id": "a94ceebf367d7563d8634d00f4f61b0cf7f59b496f72e822a2f735990d720281",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "5760a4b265dacb842ca9b5313a1fdf71666196903df9705d4b01b7da6d2bf101",
+      "event_id": "533398311ed148d742a2a796dc565f05544d80ceb8b44be0fa415de906f81db0",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "627cbada64013bdbe8fed73982443f301aba330647fe71efe8c32a7e8fe5c72c",
+      "event_id": "bf407cf52fa976a611df34d58dfed6d91c9157f15e9aba57e6793183a3391483",
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "fdf1d7b70355cba936bb131ddc3e2e64753e80a87b8ce5b1a0f10b141de6bee7",
+      "event_id": "cd42b33fbc3993116778b58e580080b8e9fea8f29e628afc5268e5f4dbb5852c",
+      "pool": "HGxWXXYhLvQzdiouFWL2yhyWXJQ6suURLzdQDnZSv9Qs",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "97320cf37adb20c8f63c42905adc8d5fe44688d41d1f8f49b273741bdaf33a93",
+      "event_id": "aafb127316d2375546633f81babcfa9411a83a48599843a63567a0985a278041",
+      "pool": "HGxWXXYhLvQzdiouFWL2yhyWXJQ6suURLzdQDnZSv9Qs",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "3e1ec19d725bc3677191244cc588892bda6f791ff040ad09f61a8cf8c8db5dc3",
+      "event_id": "1e18bbc6488f9a5e6d4317c69fa9029667745167a94198dc970082818c61bf96",
+      "pool": "7ecRqpsoJ3A7YsQEyp4HgnjXA4g8AzESfi9rhBNGiWcW",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "6a2918663534a887f69fe98ec83304b5c4e77e8ba77c1c4cb96873cb53b86f33",
+      "event_id": "263dda137e26f3c45ab6bb2e012fa2a714e55763e7806ca42c92578897bab064",
+      "pool": "Gf7sXMoP8iRw4iiXmJ1nq4vxcRycbGXy5RL8a8LnTd3v",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "d21e13ea602cbb71190e6f133e75b539ee9316ca01ad8d16a334736dabf0af39",
+      "event_id": "3357a604c03be611e7ff2b134ab1a9a77f578dd4e322dd351a0d95c3fcd880c7",
+      "pool": "EEUaf7rxYuUa8L2BNV2k4T5ahLYHKxefkB17W73okjFW",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "a684df73bc174748168fc6d58f5b8d9da1762e80be4de8401cc91840a9025def",
+      "event_id": "67d25c21a193cf91a779d82a4dc4e63722ab9373607c4ed276b05eebee74332c",
+      "pool": "6KcUhV34oDdGCcjFLeDKro3Q5x6q87jvGWYt8F7ZHyew",
+      "result_kind": "reject",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "7c214415dbf6107720436e56df5d2f9a3730e8b5ba703387b8ba76181dc54e22",
+      "event_id": "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "no_trade",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "c6565a11362a3d045b1ef76f6f06160c5b7714dfa3aceb120c556eef1f7ad7c4",
+      "event_id": "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "no_trade",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+      "event_id": "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "intent",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "1460c9c690f9a255115f951c419a41bd35c42dfcc2885560f47ac7a40c09b57d",
+      "event_id": "0cd3222ba4996c23189a96e1735f7dde1332a26fca107b941e779594233d099e",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "settlement",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "cf2d4a8ce4a3dfd3ae652030c37ed8d4e53f06019b7186d7fcb550b427b8ee38",
+      "event_id": "6d6cc63518f764f3ac33b7107f352c7c9c19e58be2d5beaadccbbdcce7d8d896",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "a6a477ab1f343bc64851bfe5d1cbf000cbd7083d5f4d992d87866c08e3f9e5d3",
+      "event_id": "bc99c206aeaa23116f022b878e5f1b28d0804bcbead7ec80f62db06d6fc470ac",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "9027d566172605d0ed4a65238dcf408e38a0030eb56a2c769432196dd8e5e43d",
+      "event_id": "3c91ae6eae62d35847709c90b8e1a5171e2f07d99f3ec819c1d2eef0c870d4a5",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "82bbb7b5cb01f225c55e82999b4ff976bfb041ca274fc53425c8d14c0f2e57bb",
+      "event_id": "51872211d6fb511cdfbdc7576041fa9b82da9f00141070cb1b3fcb68f636ea17",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "21f296c310a8b11c4c2a74876979da9afa2e8f6997256128d6312577f39780a7",
+      "event_id": "8e2052449c7a80acfea1e73354ecdfc367dbbb17201870dd1600bf4eac0b9dee",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "2eb73b4f7ebce24d6b6ad1883a40d4052bc07bc77d35cd81ae9444bd4944fa8b",
+      "event_id": "9642d0525f04cedcb446d21dbbd3965e7040d43616d23f2af4070bd97d960e2d",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "968310539ee141fd5e58a651e1ec73c86c79d57961d37d859efd605af21f1645",
+      "event_id": "b228e118db989f94f43ca9735e271c3e6d47d10914d7893b70f65e24da7056e8",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "63f580637ac909b9404c7b5571999c7be919964f62368f6edf5533569977a565",
+      "event_id": "45a2e298892019b77e9307a442dba4383e58696614bcca34ff2a4fe29ca80304",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "1856478859d1f4a701bea6c8510c238521b418cd9a1d0f4528b0a0d3ed6cf069",
+      "event_id": "d0f517d5bb751ad1df9ccf48649f373761ebccd94684fde86ea2fc6f66c9b094",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "7bc515e01b20a1316cc6fd3cf63b04b367777e5ce0657449d71341f8be1a8ed5",
+      "event_id": "07f3bb7a74d6b08d4d67bc81769155251a5600628b1669b1645d6cdca93efceb",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    },
+    {
+      "decision_id": "4522bf4fa5fa37114a023847e84aed0f5fe75022a541257d0b22199d15f128af",
+      "event_id": "b0b6ebb9a9dca9343b411749ea922ba13f2900388406e4544c0c887b1c5619a0",
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "result_kind": "hold",
+      "outcome_scope": "pool_observed_marks_in_observatory_outcomes",
+      "realized_pnl_available": false
+    }
+  ],
+  "rejections": [
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "a92cf759db46395332739b0ad6bf1aab045a981418cada2016667cd157fc4f1b",
+      "id": "d22b674f6227bd30f905b591732a37955628a1803436ad4074fd2b2bd71af959",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "cb3efd58fce21f689d40f0c366c514f77a6da800b58c4a7fcef91234f394bc54",
+      "id": "b15751f035456872e1810d601f9048863aa3076af9cee2f1db939a29c976a4a7",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "9678d54506708ec76616831d5e44c147bf3b65bec773bda6ce87dd7f7f28d8db",
+      "id": "ac8de85a472200da54fd2a0fc4a5f369e7acf2d1190ce472b2ab28bfa1dd3bed",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "c6679242efc14a07fb61908aa183aec950dde1487eb7081700c45e2f0dde8d05",
+      "id": "cde4526aaf349ae6d1bc6e526521002d0a376ad93343cfc3fbe99f5c3e744c7e",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "d3be09b1b4bf40092a70d4bc097b5f44ce185bec42aaa92ca1dc4bf9dc9d2a5b",
+      "id": "8cce2c75ab1046ecb8343aef6b66590c98190af7bef50447d0ea0a38032b0218",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "9024c87ed8f910feeea8f5b25c3e6ba244879cfe526bb3b84b8beccf263dd9b0",
+      "id": "6dc7933e6edd7a547a99c7ab8627935c103050584bcaf901329fb83329f376c0",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "2eb00840010e43c9f31ec1c805a9643723dad73bffd8f3de0d6e07c87d536639",
+      "id": "3ccd5d30c1b8c28a7f57c394e584e217bb86af17097d19353bcce982055bd306",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "59e489413af4dda2441c1f25188b3525dead4e592834b3eaf0d3b08c6de986cb",
+      "id": "32f3a2adf88f66bf88ea688d994e90bab081dda9cfc286ab08ac134a00d3aa5f",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "6e75df9222621d4976cfa695f4a2520b566c4ce30a2bd8ff1d82c46775aa5ff5",
+      "id": "7e2400d91739ffde69aad5371e500f8f7c45228b474fb58a838655fa298afa68",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "21b6fdd75d6308592a5925bce05dc9a30a256d9e7a499d0f48d47fe15063bcf9",
+      "id": "fa49ece3a16542f97b38ce53eb4b6265d5f33c54f98bb0557b7d881a0d3a40ae",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "ad32551766a55f183566483ca545287bf516f48cf22c90b72c4c527714f1ca52",
+      "id": "0559a47c0657899e39f6c5554c0c099a813e3287e16ac0fda4cde49aa6969e29",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "25b598e54d5fe64dae2e16fea885048769c604221f3334c172401ca4267f790c",
+      "id": "b251756ec3e4de99263a68e33989c4964d9849121685674ab5684a1c3e676a02",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "15875d5d795dd1107191902d1095415305d8bf8443d030f5a66a02bd56468985",
+      "id": "0bb4e76b757ffde4e566dc13ea7e1f7df1cb5d803207c61cddde9d9bf69c4adf",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "a944fb34c1bd1d8d2dae90ce6f7e084fcd651762a3f2669638cb7c43f9ea087e",
+      "id": "5a01be430515c859f805db2ce7e8761fd3f753375d48d94ba9b4b6fcbc9bdc26",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "6ba2b3d17c33aaec3d1e647decf039fdc6a7a8e399d729bc10cc5c2ed50c4d40",
+      "id": "d24e0994d16aceffc07c41df8873a426f81bf9f99592a7a912906d8674d4d132",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "a7d46d877e7a533b415b8ba2ce1cbd8f92389f4bd7046c9a0538e05c014231fa",
+      "id": "312710971fc4edf2ef952526be8600dd506202116a58993d476adbe4f5502025",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "d3a8e6a8dc9014ad368a1a1481534d57f65243216c64db67f6ac39e35b8aa763",
+      "id": "8964fa89d910c3636b841528449b22135f239e589d8bf259df569439e743d0d6",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "af1b0211d6c562fd9c5894f0eee2193a67c4fad0c98432917ba4107e51bcb9e8",
+      "id": "a64513a3e15eafaacfc5a7b34cc088b17ba0c7eee043616c82e891beb9864ef2",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "d1255a68118ce66cea5ca21e87b3231095ceb01dc97dbc025a271832fb146dba",
+      "id": "deb39e2ca246c3f222b9a181da892e8b089d7b8b90161172c1422e2919a5cb48",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "0cfecbd77cd93794647a6c5fe49bd338e3ff77331b6b9b9054a2f6abed7136ef",
+      "id": "81d3a2f411a6154d74829ddfce59dff5ca36e0b19c7e13a3213b4bf824b44c28",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "3df01b499cf4d3742f419e16400ab143bf9eb9b43b9bb5fadf2f21cfd0aae6c6",
+      "id": "2c715222960ac90f1d9ba15066d0eea48ffed9270386bdfab0bf78cbe01bae1d",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "6e1ed92063e7cfa7d896ba77228eb9b37cace13c8c40d1201ffe7274a004d906",
+      "id": "c3c88a9f3cd047ca6b737af0addab61b145325c02051e19590ec77668c935cb2",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "5b822e177caa017d20525487dac387afd37791b46e2d1dac225209fdd87d2094",
+      "id": "02ab2b4bd643ef2622b233e0f4e5851e2a077022a49533a7269107087c81e1fd",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "5a271a941493e3d99c7940807c3a5f0a92ab64a62b950e945f2af9f8dd6ec650",
+      "id": "7a75761e7c25072af402ee59899a7921757e815a7cbe4d9c19830021c59a1547",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "341270a77427cf41309293a5489903708f9b6a3594bce9782e26fd907f4698f3",
+      "id": "bd3da1e19e154372d3fe78c2690383bd8e849f2dcf34fef312bbb6f463838542",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "c3d9080b24fccb32362cbb8160fae5c9ad4da5b7295948eb0adf2e2c788eeeb2",
+      "id": "b64034bb3b5af55b4fe1784c17ae25dd0523d0ff69e9763091d287f7f4dc9cd7",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "a94ceebf367d7563d8634d00f4f61b0cf7f59b496f72e822a2f735990d720281",
+      "id": "fac125a79e02d46e3236c4740069fa045c5f59ea846e9e35bd188acc2662946c",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "533398311ed148d742a2a796dc565f05544d80ceb8b44be0fa415de906f81db0",
+      "id": "5760a4b265dacb842ca9b5313a1fdf71666196903df9705d4b01b7da6d2bf101",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "bf407cf52fa976a611df34d58dfed6d91c9157f15e9aba57e6793183a3391483",
+      "id": "627cbada64013bdbe8fed73982443f301aba330647fe71efe8c32a7e8fe5c72c",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "cd42b33fbc3993116778b58e580080b8e9fea8f29e628afc5268e5f4dbb5852c",
+      "id": "fdf1d7b70355cba936bb131ddc3e2e64753e80a87b8ce5b1a0f10b141de6bee7",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "aafb127316d2375546633f81babcfa9411a83a48599843a63567a0985a278041",
+      "id": "97320cf37adb20c8f63c42905adc8d5fe44688d41d1f8f49b273741bdaf33a93",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "price_impact_limit",
+      "event_id": "1e18bbc6488f9a5e6d4317c69fa9029667745167a94198dc970082818c61bf96",
+      "id": "3e1ec19d725bc3677191244cc588892bda6f791ff040ad09f61a8cf8c8db5dc3",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "mint_or_freeze_authority_present",
+      "event_id": "263dda137e26f3c45ab6bb2e012fa2a714e55763e7806ca42c92578897bab064",
+      "id": "6a2918663534a887f69fe98ec83304b5c4e77e8ba77c1c4cb96873cb53b86f33",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "3357a604c03be611e7ff2b134ab1a9a77f578dd4e322dd351a0d95c3fcd880c7",
+      "id": "d21e13ea602cbb71190e6f133e75b539ee9316ca01ad8d16a334736dabf0af39",
+      "kind": "reject",
+      "live_execution": false
+    },
+    {
+      "code": "unsupported_quote_currency",
+      "event_id": "67d25c21a193cf91a779d82a4dc4e63722ab9373607c4ed276b05eebee74332c",
+      "id": "a684df73bc174748168fc6d58f5b8d9da1762e80be4de8401cc91840a9025def",
+      "kind": "reject",
+      "live_execution": false
+    }
+  ],
+  "outcomes": [
+    {
+      "pool": "4fusSKD4GbzfDggrNreXn1wBzRWvm2tGt9nm8ZtPLZYA",
+      "horizon_seconds": 60,
+      "due_ns": 1790953800011054300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "4fusSKD4GbzfDggrNreXn1wBzRWvm2tGt9nm8ZtPLZYA",
+      "horizon_seconds": 300,
+      "due_ns": 1790954040011054300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "4fusSKD4GbzfDggrNreXn1wBzRWvm2tGt9nm8ZtPLZYA",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955540011054300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "4fusSKD4GbzfDggrNreXn1wBzRWvm2tGt9nm8ZtPLZYA",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957340011054300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "4fusSKD4GbzfDggrNreXn1wBzRWvm2tGt9nm8ZtPLZYA",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040140011054300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "5wYcsL6CLeDtpG9us6BLawLnFV8oQS4yGEgjPrArTdV",
+      "horizon_seconds": 60,
+      "due_ns": 1790953799844486500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "5wYcsL6CLeDtpG9us6BLawLnFV8oQS4yGEgjPrArTdV",
+      "horizon_seconds": 300,
+      "due_ns": 1790954039844486500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "5wYcsL6CLeDtpG9us6BLawLnFV8oQS4yGEgjPrArTdV",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955539844486500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "5wYcsL6CLeDtpG9us6BLawLnFV8oQS4yGEgjPrArTdV",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957339844486500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "5wYcsL6CLeDtpG9us6BLawLnFV8oQS4yGEgjPrArTdV",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040139844486500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "6KcUhV34oDdGCcjFLeDKro3Q5x6q87jvGWYt8F7ZHyew",
+      "horizon_seconds": 60,
+      "due_ns": 1790953900498175900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "6KcUhV34oDdGCcjFLeDKro3Q5x6q87jvGWYt8F7ZHyew",
+      "horizon_seconds": 300,
+      "due_ns": 1790954140498175900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "6KcUhV34oDdGCcjFLeDKro3Q5x6q87jvGWYt8F7ZHyew",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955640498175900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "6KcUhV34oDdGCcjFLeDKro3Q5x6q87jvGWYt8F7ZHyew",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957440498175900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "6KcUhV34oDdGCcjFLeDKro3Q5x6q87jvGWYt8F7ZHyew",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040240498175900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "7ecRqpsoJ3A7YsQEyp4HgnjXA4g8AzESfi9rhBNGiWcW",
+      "horizon_seconds": 60,
+      "due_ns": 1790953893154263500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "7ecRqpsoJ3A7YsQEyp4HgnjXA4g8AzESfi9rhBNGiWcW",
+      "horizon_seconds": 300,
+      "due_ns": 1790954133154263500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "7ecRqpsoJ3A7YsQEyp4HgnjXA4g8AzESfi9rhBNGiWcW",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955633154263500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "7ecRqpsoJ3A7YsQEyp4HgnjXA4g8AzESfi9rhBNGiWcW",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957433154263500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "7ecRqpsoJ3A7YsQEyp4HgnjXA4g8AzESfi9rhBNGiWcW",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040233154263500,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "97iGTeLhVr6dUT55brbqXDVTmsBdoZHSc3Jr64TD2cZE",
+      "horizon_seconds": 60,
+      "due_ns": 1790953800143940200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "97iGTeLhVr6dUT55brbqXDVTmsBdoZHSc3Jr64TD2cZE",
+      "horizon_seconds": 300,
+      "due_ns": 1790954040143940200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "97iGTeLhVr6dUT55brbqXDVTmsBdoZHSc3Jr64TD2cZE",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955540143940200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "97iGTeLhVr6dUT55brbqXDVTmsBdoZHSc3Jr64TD2cZE",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957340143940200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "97iGTeLhVr6dUT55brbqXDVTmsBdoZHSc3Jr64TD2cZE",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040140143940200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "AR6ZxRGfrTzWthUgvFnV958tuoECqoqhqVvHVqjL5gz9",
+      "horizon_seconds": 60,
+      "due_ns": 1790953807017686100,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "AR6ZxRGfrTzWthUgvFnV958tuoECqoqhqVvHVqjL5gz9",
+      "horizon_seconds": 300,
+      "due_ns": 1790954047017686100,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "AR6ZxRGfrTzWthUgvFnV958tuoECqoqhqVvHVqjL5gz9",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955547017686100,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "AR6ZxRGfrTzWthUgvFnV958tuoECqoqhqVvHVqjL5gz9",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957347017686100,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "AR6ZxRGfrTzWthUgvFnV958tuoECqoqhqVvHVqjL5gz9",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040147017686100,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "horizon_seconds": 60,
+      "due_ns": 1790953900820570400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "horizon_seconds": 300,
+      "due_ns": 1790954140820570400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955640820570400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957440820570400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040240820570400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BnLU4wS1anXzrYbNzG6fQkmeLNUXLb7L5eqdeWDiNi3y",
+      "horizon_seconds": 60,
+      "due_ns": 1790953800269785200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BnLU4wS1anXzrYbNzG6fQkmeLNUXLb7L5eqdeWDiNi3y",
+      "horizon_seconds": 300,
+      "due_ns": 1790954040269785200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BnLU4wS1anXzrYbNzG6fQkmeLNUXLb7L5eqdeWDiNi3y",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955540269785200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BnLU4wS1anXzrYbNzG6fQkmeLNUXLb7L5eqdeWDiNi3y",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957340269785200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "BnLU4wS1anXzrYbNzG6fQkmeLNUXLb7L5eqdeWDiNi3y",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040140269785200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "DfHAXf6aPHne72LWNF5wWvLPyUKYoAnFFLPYsG9vyQUY",
+      "horizon_seconds": 60,
+      "due_ns": 1790953818666779600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "DfHAXf6aPHne72LWNF5wWvLPyUKYoAnFFLPYsG9vyQUY",
+      "horizon_seconds": 300,
+      "due_ns": 1790954058666779600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "DfHAXf6aPHne72LWNF5wWvLPyUKYoAnFFLPYsG9vyQUY",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955558666779600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "DfHAXf6aPHne72LWNF5wWvLPyUKYoAnFFLPYsG9vyQUY",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957358666779600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "DfHAXf6aPHne72LWNF5wWvLPyUKYoAnFFLPYsG9vyQUY",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040158666779600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Dgwez867ASvZzX8LBRB51mup4tGvi6X1TQZLSr9xX5PZ",
+      "horizon_seconds": 60,
+      "due_ns": 1790953859695122300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Dgwez867ASvZzX8LBRB51mup4tGvi6X1TQZLSr9xX5PZ",
+      "horizon_seconds": 300,
+      "due_ns": 1790954099695122300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Dgwez867ASvZzX8LBRB51mup4tGvi6X1TQZLSr9xX5PZ",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955599695122300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Dgwez867ASvZzX8LBRB51mup4tGvi6X1TQZLSr9xX5PZ",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957399695122300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Dgwez867ASvZzX8LBRB51mup4tGvi6X1TQZLSr9xX5PZ",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040199695122300,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EB3NyfTMmpAeVqZdHTw9VyzVzhdCBG9j2bSpP3j9Cf68",
+      "horizon_seconds": 60,
+      "due_ns": 1790953799532629000,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EB3NyfTMmpAeVqZdHTw9VyzVzhdCBG9j2bSpP3j9Cf68",
+      "horizon_seconds": 300,
+      "due_ns": 1790954039532629000,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EB3NyfTMmpAeVqZdHTw9VyzVzhdCBG9j2bSpP3j9Cf68",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955539532629000,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EB3NyfTMmpAeVqZdHTw9VyzVzhdCBG9j2bSpP3j9Cf68",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957339532629000,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EB3NyfTMmpAeVqZdHTw9VyzVzhdCBG9j2bSpP3j9Cf68",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040139532629000,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EEUaf7rxYuUa8L2BNV2k4T5ahLYHKxefkB17W73okjFW",
+      "horizon_seconds": 60,
+      "due_ns": 1790953842181810400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EEUaf7rxYuUa8L2BNV2k4T5ahLYHKxefkB17W73okjFW",
+      "horizon_seconds": 300,
+      "due_ns": 1790954082181810400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EEUaf7rxYuUa8L2BNV2k4T5ahLYHKxefkB17W73okjFW",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955582181810400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EEUaf7rxYuUa8L2BNV2k4T5ahLYHKxefkB17W73okjFW",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957382181810400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "EEUaf7rxYuUa8L2BNV2k4T5ahLYHKxefkB17W73okjFW",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040182181810400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Eba8gxzeDrXpo6ZtMK18sSpTuwF9KUWxPy6EXFB7ERAq",
+      "horizon_seconds": 60,
+      "due_ns": 1790953800488085200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Eba8gxzeDrXpo6ZtMK18sSpTuwF9KUWxPy6EXFB7ERAq",
+      "horizon_seconds": 300,
+      "due_ns": 1790954040488085200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Eba8gxzeDrXpo6ZtMK18sSpTuwF9KUWxPy6EXFB7ERAq",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955540488085200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Eba8gxzeDrXpo6ZtMK18sSpTuwF9KUWxPy6EXFB7ERAq",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957340488085200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Eba8gxzeDrXpo6ZtMK18sSpTuwF9KUWxPy6EXFB7ERAq",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040140488085200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "FNbHzyruvEgDB9q3qRwktLc7qHoF2Qet8HXAcom6ZWLU",
+      "horizon_seconds": 60,
+      "due_ns": 1790953842535470600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "FNbHzyruvEgDB9q3qRwktLc7qHoF2Qet8HXAcom6ZWLU",
+      "horizon_seconds": 300,
+      "due_ns": 1790954082535470600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "FNbHzyruvEgDB9q3qRwktLc7qHoF2Qet8HXAcom6ZWLU",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955582535470600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "FNbHzyruvEgDB9q3qRwktLc7qHoF2Qet8HXAcom6ZWLU",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957382535470600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "FNbHzyruvEgDB9q3qRwktLc7qHoF2Qet8HXAcom6ZWLU",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040182535470600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "GTZRTawr5LPxzfT9imJfrgD6E7Hs3xsg4JY41gT9J8Xp",
+      "horizon_seconds": 60,
+      "due_ns": 1790953829346804400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "GTZRTawr5LPxzfT9imJfrgD6E7Hs3xsg4JY41gT9J8Xp",
+      "horizon_seconds": 300,
+      "due_ns": 1790954069346804400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "GTZRTawr5LPxzfT9imJfrgD6E7Hs3xsg4JY41gT9J8Xp",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955569346804400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "GTZRTawr5LPxzfT9imJfrgD6E7Hs3xsg4JY41gT9J8Xp",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957369346804400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "GTZRTawr5LPxzfT9imJfrgD6E7Hs3xsg4JY41gT9J8Xp",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040169346804400,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Gf7sXMoP8iRw4iiXmJ1nq4vxcRycbGXy5RL8a8LnTd3v",
+      "horizon_seconds": 60,
+      "due_ns": 1790953896182070600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Gf7sXMoP8iRw4iiXmJ1nq4vxcRycbGXy5RL8a8LnTd3v",
+      "horizon_seconds": 300,
+      "due_ns": 1790954136182070600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Gf7sXMoP8iRw4iiXmJ1nq4vxcRycbGXy5RL8a8LnTd3v",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955636182070600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Gf7sXMoP8iRw4iiXmJ1nq4vxcRycbGXy5RL8a8LnTd3v",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957436182070600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Gf7sXMoP8iRw4iiXmJ1nq4vxcRycbGXy5RL8a8LnTd3v",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040236182070600,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "H7pt7KK8pB8xHwpF9DHrgdZsZb6yBjZHhGiUkigyaXwZ",
+      "horizon_seconds": 60,
+      "due_ns": 1790953868229103900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "H7pt7KK8pB8xHwpF9DHrgdZsZb6yBjZHhGiUkigyaXwZ",
+      "horizon_seconds": 300,
+      "due_ns": 1790954108229103900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "H7pt7KK8pB8xHwpF9DHrgdZsZb6yBjZHhGiUkigyaXwZ",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955608229103900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "H7pt7KK8pB8xHwpF9DHrgdZsZb6yBjZHhGiUkigyaXwZ",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957408229103900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "H7pt7KK8pB8xHwpF9DHrgdZsZb6yBjZHhGiUkigyaXwZ",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040208229103900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "HGxWXXYhLvQzdiouFWL2yhyWXJQ6suURLzdQDnZSv9Qs",
+      "horizon_seconds": 60,
+      "due_ns": 1790953892036589200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "HGxWXXYhLvQzdiouFWL2yhyWXJQ6suURLzdQDnZSv9Qs",
+      "horizon_seconds": 300,
+      "due_ns": 1790954132036589200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "HGxWXXYhLvQzdiouFWL2yhyWXJQ6suURLzdQDnZSv9Qs",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955632036589200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "HGxWXXYhLvQzdiouFWL2yhyWXJQ6suURLzdQDnZSv9Qs",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957432036589200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "HGxWXXYhLvQzdiouFWL2yhyWXJQ6suURLzdQDnZSv9Qs",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040232036589200,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "anchor_event": "9024c87ed8f910feeea8f5b25c3e6ba244879cfe526bb3b84b8beccf263dd9b0",
+      "coverage": "PARTIAL",
+      "delay_ns": 1139879700,
+      "due_ns": 1790953802884678900,
+      "horizon_seconds": 60,
+      "liquidable_price": {
+        "status": "NOT_COLLECTED"
+      },
+      "mark_event": "5a271a941493e3d99c7940807c3a5f0a92ab64a62b950e945f2af9f8dd6ec650",
+      "observed_drawdown": {
+        "denominator": "7348737960542",
+        "numerator": "-37084798067"
+      },
+      "observed_mark_return": {
+        "denominator": "21684741837720",
+        "numerator": "149837266081"
+      },
+      "observed_ns": 1790953804024558600,
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "provenance": {
+        "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+        "frame_sequence": 281,
+        "frame_sha256": "266caa331928e05f3a2fb481d731e951364a7d177b0627695454050f4a4a63b5",
+        "genesis_sequence": 254,
+        "raw_sha256": "56c11f9d3d43cbe13905f9a8d3c3d40e0ce145037c56e0912ad2bfbe56f71b12"
+      },
+      "survival": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "horizon_seconds": 300,
+      "due_ns": 1790954042884678900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "horizon_seconds": 1800,
+      "due_ns": 1790955542884678900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "horizon_seconds": 3600,
+      "due_ns": 1790957342884678900,
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "pool": "Tq62KsQcM5CJNyS76Q4VKJnwTgxhv81WBnbKzw7zAAe",
+      "horizon_seconds": 86400,
+      "due_ns": 1791040142884678900,
+      "status": "NOT_COLLECTED"
+    }
+  ],
+  "coverage": "OBSERVED_SUBSET",
+  "provider_emission_latency": {
+    "classification": "UNKNOWN",
+    "status": "NOT_MEASURED"
+  },
+  "real_execution": false,
+  "position_health": [],
+  "position_activation": [
+    {
+      "budget": 80,
+      "code": "32e847fb467ebd6c314489556ec3495256d89dfe0f3cee49d006c8577d5ac290",
+      "economic_changes": false,
+      "entry_thesis": {
+        "available_at": 1790953853010131600,
+        "conditions": {
+          "action": "CANDIDATE_BUY",
+          "conditions": {
+            "context_complete": true,
+            "enough_samples": true,
+            "hydration_not_expired": true,
+            "momentum_not_contradictory": true,
+            "nonnegative_flow": true,
+            "positive_momentum": true,
+            "quality_complete": true,
+            "regime_not_high_volatility": true,
+            "score_threshold": true
+          },
+          "missing_dimensions": [],
+          "reasons": [],
+          "risk_bypass": false,
+          "score": 7527,
+          "version": "ContextEntryV0.1"
+        },
+        "entry_fill": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+        "entry_intent": "4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+        "entry_snapshot": "d2a023e2ba51c7bb6070e8d96867a0676c107863fe55520fa7ddc986c8225bbf",
+        "features": {
+          "activity_acceleration": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "observed_swaps_per_second_squared",
+            "value": {
+              "denominator": 9722392070000481,
+              "numerator": 400000000000000
+            },
+            "version": "live-brain-v0"
+          },
+          "base_reserve": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953853006926600,
+            "classification": "PROVEN",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 3205000,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "KNOWN",
+            "provenance": {
+              "frame": 464,
+              "frame_sha256": "442834e6af6a817a146fe52583cf29c7b33433ea22cec7e90d2aa8a4d189eeab"
+            },
+            "slot": 452646750,
+            "source": "accounts",
+            "status": "FRESH",
+            "unit": "base_raw",
+            "value": 2866811070453,
+            "version": "live-brain-v0"
+          },
+          "buy_flow": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "quote_raw",
+            "value": 3486660,
+            "version": "live-brain-v0"
+          },
+          "executable_depth": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "UNKNOWN",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "UNKNOWN",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "reason": "Indicative size quote and reserves do not prove guaranteed execution or a full depth curve.",
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "UNKNOWN",
+            "unit": null,
+            "value": null,
+            "version": "live-brain-v0"
+          },
+          "imbalance_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "bps",
+            "value": 10000,
+            "version": "live-brain-v0"
+          },
+          "liquidity_change_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "frame": 429,
+                "frame_sha256": "cb162772c042ed4eb7170769715bfade0f6f8c95e2bd6096cc8d8dd508ce389f"
+              },
+              {
+                "frame": 451,
+                "frame_sha256": "1f96ae2330b52e46240835b501f4341fbf374e403e97fa58173669014c4e4ca4"
+              },
+              {
+                "frame": 464,
+                "frame_sha256": "442834e6af6a817a146fe52583cf29c7b33433ea22cec7e90d2aa8a4d189eeab"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "bps",
+            "value": 0,
+            "version": "live-brain-v0"
+          },
+          "maximum_observed_gap_ns": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "ns",
+            "value": 5667184400,
+            "version": "live-brain-v0"
+          },
+          "momentum_acceleration_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "bps_per_observed_interval",
+            "value": 5,
+            "version": "live-brain-v0"
+          },
+          "momentum_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "bps",
+            "value": 5,
+            "version": "live-brain-v0"
+          },
+          "momentum_medium_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "bps",
+            "value": 5,
+            "version": "live-brain-v0"
+          },
+          "momentum_short_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "bps",
+            "value": 5,
+            "version": "live-brain-v0"
+          },
+          "observation_span_ns": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "ns",
+            "value": 9860219100,
+            "version": "live-brain-v0"
+          },
+          "pool_age_seconds": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "UNKNOWN",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "UNKNOWN",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "UNKNOWN",
+            "unit": null,
+            "value": null,
+            "version": "live-brain-v0"
+          },
+          "price": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "quote_raw/base_raw",
+            "value": {
+              "denominator": 617056,
+              "numerator": 1327719
+            },
+            "version": "live-brain-v0"
+          },
+          "quote_age_ns": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850824964000,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2185167600,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": {
+              "frame": 462,
+              "frame_sha256": "93e5312a017eddb45fdd8f3409bc9863c141671c7a4ef066e8021c10a8f668de"
+            },
+            "slot": 452646711,
+            "source": "quote",
+            "status": "FRESH",
+            "unit": "ns",
+            "value": 2185167600,
+            "version": "live-brain-v0"
+          },
+          "quote_impact_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850824964000,
+            "classification": "PROVEN",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2185167600,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "KNOWN",
+            "provenance": {
+              "frame": 462,
+              "frame_sha256": "93e5312a017eddb45fdd8f3409bc9863c141671c7a4ef066e8021c10a8f668de"
+            },
+            "slot": 452646741,
+            "source": "provider_quote",
+            "status": "FRESH",
+            "unit": "bps",
+            "value": 27,
+            "version": "live-brain-v0"
+          },
+          "quote_reserve": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953853006926600,
+            "classification": "PROVEN",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 3205000,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "KNOWN",
+            "provenance": {
+              "frame": 464,
+              "frame_sha256": "442834e6af6a817a146fe52583cf29c7b33433ea22cec7e90d2aa8a4d189eeab"
+            },
+            "slot": 452646750,
+            "source": "accounts",
+            "status": "FRESH",
+            "unit": "quote_raw",
+            "value": 6132493707200,
+            "version": "live-brain-v0"
+          },
+          "realized_volatility_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "floor_RMS_observed_return_bps_not_annualized",
+            "value": 3,
+            "version": "live-brain-v0"
+          },
+          "recent_drawdown_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "bps",
+            "value": 0,
+            "version": "live-brain-v0"
+          },
+          "returns": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "simple_return",
+            "value": [
+              {
+                "denominator": 147411709,
+                "numerator": 291
+              },
+              {
+                "denominator": 663952256,
+                "numerator": 349817
+              }
+            ],
+            "version": "live-brain-v0"
+          },
+          "sell_flow": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "quote_raw",
+            "value": 0,
+            "version": "live-brain-v0"
+          },
+          "size_quote": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850824964000,
+            "classification": "PROVEN",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2185167600,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "KNOWN",
+            "provenance": {
+              "frame": 462,
+              "frame_sha256": "93e5312a017eddb45fdd8f3409bc9863c141671c7a4ef066e8021c10a8f668de"
+            },
+            "slot": 452646741,
+            "source": "indicative_quote",
+            "status": "FRESH",
+            "unit": null,
+            "value": {
+              "input_raw": 10000000,
+              "minimum_output_raw": 4624236,
+              "output_raw": 4647473
+            },
+            "version": "live-brain-v0"
+          },
+          "size_raw": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850824964000,
+            "classification": "PROVEN",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2185167600,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "KNOWN",
+            "provenance": {
+              "frame": 462,
+              "frame_sha256": "93e5312a017eddb45fdd8f3409bc9863c141671c7a4ef066e8021c10a8f668de"
+            },
+            "slot": 452646711,
+            "source": "quote",
+            "status": "FRESH",
+            "unit": "input_raw",
+            "value": 10000000,
+            "version": "live-brain-v0"
+          },
+          "structural_change": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "UNKNOWN",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "UNKNOWN",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "UNKNOWN",
+            "unit": null,
+            "value": null,
+            "version": "live-brain-v0"
+          },
+          "swaps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "count",
+            "value": 3,
+            "version": "live-brain-v0"
+          },
+          "transaction_velocity": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "observed_swaps/second",
+            "value": {
+              "denominator": 32867397,
+              "numerator": 10000000
+            },
+            "version": "live-brain-v0"
+          },
+          "volatility_mean_abs_return_bps": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "bps_mean_abs_observed_return",
+            "value": 2,
+            "version": "live-brain-v0"
+          },
+          "volume": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "quote_raw",
+            "value": 3486660,
+            "version": "live-brain-v0"
+          },
+          "volume_acceleration": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "quote_raw/observed_second_squared",
+            "value": {
+              "denominator": 3240797356666827,
+              "numerator": 229186400000000000000
+            },
+            "version": "live-brain-v0"
+          },
+          "volume_velocity": {
+            "as_of": 1790953853010131600,
+            "available_at": 1790953850680789500,
+            "classification": "DERIVED",
+            "coverage": "OBSERVED_SUBSET",
+            "freshness": {
+              "age_ns": 2329342100,
+              "ttl_ns": 5000000000
+            },
+            "knowledge": "DERIVED",
+            "provenance": [
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 426,
+                "frame_sha256": "f78181f655cbc56b7455b941ce3aae645f18a4a011323c3310529aa2e44b22d0",
+                "genesis_sequence": 361,
+                "raw_sha256": "07656819e44b18b4370f7230331d9ebd6804810b56399cea50b56389eeb5aa1e"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 447,
+                "frame_sha256": "a73245ea1c1bdb139a11511af5c198dfe04a5da743aa48406635afad333c9d25",
+                "genesis_sequence": 445,
+                "raw_sha256": "0e4d196a0dd346bfe358229e1031125e0ea6b67655428c4856f2ff0ac719f0dd"
+              },
+              {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 460,
+                "frame_sha256": "1205f518f2c24ca1c385b135dd5ec7122833d7918d9ddad278738735b33f1c51",
+                "genesis_sequence": 445,
+                "raw_sha256": "9b98f0a95dfc289403b383fabb9306c32ad26ca080f4fa0ce859820bd1ca1e64"
+              }
+            ],
+            "slot": 452646711,
+            "source": [
+              "ac682afc520a9e9def20f35c61ff9febf4c0f96fe3d9fb7d564faec537ee7895",
+              "0213d3d814e9b14382cd06a1b18e14a17a2eb109d4519d14577c4a60fc070eb5",
+              "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab"
+            ],
+            "status": "FRESH",
+            "unit": "quote_raw/observed_second",
+            "value": {
+              "denominator": 32867397,
+              "numerator": 11622200000000
+            },
+            "version": "live-brain-v0"
+          }
+        },
+        "identity": {
+          "event_id": "162f34e3522f18bfaf1016737faf6dfefa05580b9dbce128afda0088bee0b4ab",
+          "network": "mainnet",
+          "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+          "quote": "So11111111111111111111111111111111111111112",
+          "signature": "5EPbXTqUszgV1vuD1F4ejpXJGx5kuuFUhqsros6BCkriAamAiwwxmdCyQbmUL4q9hzvRVQDnfkPWMeLv9zpge21F",
+          "token": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump"
+        },
+        "no_retroactive_entry_decision": true,
+        "recorded_from": "ARCHIVED_ENTRY_ONLY",
+        "version": "PositionBrainV0.2"
+      },
+      "new_budget_scope": "EXPLICIT_POSITION_CONTINUATION_EPOCH_NOT_REPLENISHED_ON_RESTART",
+      "parent_budget": {
+        "limit": 200,
+        "used": 188
+      },
+      "portfolio": {
+        "cash_quote_raw": 987900000,
+        "head": "d5a48517ee10097aa7db6cacd8e19721a08cea73b1dc7e95d8cc6ccd9fc8baca",
+        "loss_quote_raw": 0,
+        "pending": {},
+        "positions": {
+          "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump": {
+            "cost": 12100000,
+            "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+            "units": 4624230
+          }
+        },
+        "realized_scenario_pnl_quote_raw": 0,
+        "sequence": 2
+      },
+      "source_archive": {
+        "frames": 590,
+        "head": "9498f6e8a716c39ad71bfe778ef5685ebdc93b4c4df587f7c8ddeb6e89019d28"
+      },
+      "source_replay": {
+        "network_used": false,
+        "plans": 51,
+        "results": 51,
+        "snapshots": 51,
+        "status": "PASS"
+      },
+      "source_sha256": {
+        "raw.sqlite": "81f06ba1f023d3f101dd8a3b2660853cda79da45a4e177757bfcba0d7b660bff",
+        "state/engine.sqlite": "3841178f47b4d51afe1bcfb25fc3599268315ac677d6999c1699fd8d50d88595",
+        "state/paper.sqlite": "5d47bdebba1557dbb79fca62b08092a996e9823cec45832707388a7d0b06a93e"
+      },
+      "target": {
+        "after_slot": 452646758,
+        "decision_ns": 1790953857333198100,
+        "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+        "mint": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump",
+        "phase": "OPEN_POSITION",
+        "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x"
+      },
+      "version": "PositionBrainV0.2"
+    }
+  ],
+  "position_sessions": [],
+  "archive": {
+    "frames": 591,
+    "head": "07195072dc9cbc5ed3038bc81ad9d2d76cea4b7e0962efa0fb7519751306cb18"
+  },
+  "promotion_allowed": false,
+  "dataset_sha256": "1b35a37ae232abe590be7b4eef97ad610955feb073a9fe9e433deceee611ded2"
+}

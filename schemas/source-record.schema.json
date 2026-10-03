@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASTRA offline source record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source",
+    "source_id",
+    "logical_id",
+    "kind",
+    "event_time",
+    "slot",
+    "blockhash",
+    "commitment",
+    "revision",
+    "supersedes",
+    "retracted",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "logical_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "kind": {
+      "enum": [
+        "token_creation",
+        "pool",
+        "swap",
+        "transfer",
+        "liquidity",
+        "social_post",
+        "risk",
+        "observation"
+      ]
+    },
+    "event_time": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 9223372036854775807
+    },
+    "slot": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 9223372036854775807
+    },
+    "blockhash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "commitment": {
+      "enum": [
+        "processed",
+        "confirmed",
+        "finalized",
+        "offchain"
+      ]
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retracted": {
+      "type": "boolean"
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "commitment": {
+            "const": "offchain"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "slot": {
+            "type": "null"
+          },
+          "blockhash": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "slot": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "blockhash": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

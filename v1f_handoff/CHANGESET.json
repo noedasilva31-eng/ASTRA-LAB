@@ -1,0 +1,11 @@
+{
+  "baseline": "ASTRA-V1e-provenance",
+  "changed_files": [
+    {
+      "path": "provenance_validation/run.py",
+      "before_sha256": "065a6df45a5b8cd741c6002891d27188f3eb6cd423c0fe5e2ad407e8da619632",
+      "after_sha256": "7c5a26c829c04e1315d68fb984407f1d1e21ba55ea45813e81add7178c9e3886",
+      "reason": "explicit UTF-8 reads and safe exception location; no business invariant change"
+    }
+  ]
+}

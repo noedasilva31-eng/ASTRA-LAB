@@ -1,0 +1,275 @@
+{
+  "overall": "FAIL",
+  "checks": [
+    {
+      "id": "v1d_reference_unchanged",
+      "status": "FAIL",
+      "files_checked": 98,
+      "changed_files": [
+        "NEXT_SESSION.md",
+        "README.md"
+      ]
+    },
+    {
+      "status": "PASS",
+      "count": 28,
+      "tests": [
+        {
+          "test": "test_provenance.ProvenanceTests.test_all_slots_accounted_incomplete_not_complete",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_append_only",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_bad_dataset_no_output",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_boundary_subset_preserves_external_skip_witnesses",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_cannot_exclude_unknown",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_code_hash_mismatch_fail_closed",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_corrupt_raw_rejected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_crash_before_during_after_publication",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_excluded_is_explicit",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_foreign_database_refused",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_forged_complete_metric_rejected_even_with_new_outer_hash",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_forged_event_provenance_rejected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_journal_corruption_detected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_journal_dedup_recover_no_republication",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_missing_skip_witness_rejected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_missing_slot_rejected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_never_attempted_explicit",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_offline_reconstruction_exact",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_outside_boundaries_rejected",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_pending_source_never_claimed_complete",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_provenance_every_event",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_retry_new_version_preserves_old_and_unique_events",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_retry_preserves_error_and_previous_dataset",
+          "status": "PASS"
+        },
+        {
+          "test": "test_provenance.ProvenanceTests.test_source_read_only",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_missing_endpoint_never_passes",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_missing_report_fails",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_offline_worker_does_not_receive_endpoint",
+          "status": "PASS"
+        },
+        {
+          "test": "test_runner.RunnerTests.test_timeout_fails",
+          "status": "PASS"
+        }
+      ],
+      "id": "unit"
+    },
+    {
+      "status": "PASS",
+      "evidence": {
+        "journal": {
+          "captures": 1,
+          "datasets": 1,
+          "pending": 0,
+          "unique_event_publications": 3,
+          "hash_or_replay_errors": 0,
+          "foreign_key_errors": 0,
+          "integrity": "ok",
+          "healthy": true,
+          "coverage_versions": [
+            {
+              "accounted_fraction": 1.0,
+              "accounted_slots": 6,
+              "accounting_ok": true,
+              "archive_end": 105,
+              "archive_start": 100,
+              "counts": {
+                "archived": 3,
+                "error": 1,
+                "excluded": 0,
+                "skipped": 1,
+                "unresolved": 1
+              },
+              "decoder_errors": 0,
+              "end": 105,
+              "events": 3,
+              "expected_slots": 6,
+              "fully_decoded": false,
+              "historical_error_attempts": 1,
+              "included_range_complete": false,
+              "resolved_fraction": 0.6666666666666666,
+              "resolved_slots": 4,
+              "selected_attempts": 6,
+              "source_attempts": 6,
+              "source_complete": false,
+              "start": 100,
+              "transactions_expected": 3
+            }
+          ]
+        },
+        "dataset_sha256": "e7ad1b7356989ef8b3657414a955c97efbf42ed833d4bf21ff3ef95e703a1914",
+        "offline_reconstruction_identical": true,
+        "resume_new_process": true,
+        "after_retry": {
+          "captures": 2,
+          "datasets": 2,
+          "pending": 0,
+          "unique_event_publications": 5,
+          "hash_or_replay_errors": 0,
+          "foreign_key_errors": 0,
+          "integrity": "ok",
+          "healthy": true,
+          "coverage_versions": [
+            {
+              "accounted_fraction": 1.0,
+              "accounted_slots": 6,
+              "accounting_ok": true,
+              "archive_end": 105,
+              "archive_start": 100,
+              "counts": {
+                "archived": 3,
+                "error": 1,
+                "excluded": 0,
+                "skipped": 1,
+                "unresolved": 1
+              },
+              "decoder_errors": 0,
+              "end": 105,
+              "events": 3,
+              "expected_slots": 6,
+              "fully_decoded": false,
+              "historical_error_attempts": 1,
+              "included_range_complete": false,
+              "resolved_fraction": 0.6666666666666666,
+              "resolved_slots": 4,
+              "selected_attempts": 6,
+              "source_attempts": 6,
+              "source_complete": false,
+              "start": 100,
+              "transactions_expected": 3
+            },
+            {
+              "accounted_fraction": 1.0,
+              "accounted_slots": 6,
+              "accounting_ok": true,
+              "archive_end": 105,
+              "archive_start": 100,
+              "counts": {
+                "archived": 5,
+                "error": 0,
+                "excluded": 0,
+                "skipped": 1,
+                "unresolved": 0
+              },
+              "decoder_errors": 0,
+              "end": 105,
+              "events": 5,
+              "expected_slots": 6,
+              "fully_decoded": true,
+              "historical_error_attempts": 1,
+              "included_range_complete": true,
+              "resolved_fraction": 1.0,
+              "resolved_slots": 6,
+              "selected_attempts": 8,
+              "source_attempts": 8,
+              "source_complete": true,
+              "start": 100,
+              "transactions_expected": 5
+            }
+          ]
+        }
+      },
+      "id": "deterministic"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "first"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "resume"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "retry"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "offline_replay"
+    },
+    {
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "id": "live_provenance"
+    }
+  ]
+}

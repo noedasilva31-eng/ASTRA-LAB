@@ -1,0 +1,12 @@
+Local: 280/280 PASS
+Overall: FAIL
+PumpSwap_routed_CPI: LOCAL_PASS_REAL_NOT_QUALIFIED
+archived_quote_contract: LOCAL_PASS_INDICATIVE_ONLY
+paper_BUY_SELL_portfolio_PnL: LOCAL_PASS_SYNTHETIC_CONDITIONAL_SCENARIOS
+notification_transport_latency_instrumentation: LOCAL_PASS_REAL_NOT_MEASURED
+automatic_real_paper_decisions: NOT_IMPLEMENTED
+authority_liquidity_evidence_providers: NOT_IMPLEMENTED
+launch_bonding_migration: NOT_IMPLEMENTED
+real_Mainnet_capture: NOT_EXECUTED
+V1e_Windows_failure: PRESERVED_NOT_RESOLVED
+V1 complete: NO

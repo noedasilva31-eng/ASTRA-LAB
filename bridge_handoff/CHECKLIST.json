@@ -1,0 +1,168 @@
+{
+  "version": "ASTRA-V1-live-session",
+  "local_status": "PASS",
+  "tests_passed": 339,
+  "tests_total": 339,
+  "global_status": "FAIL",
+  "qualified_components_unchanged": [
+    "Observer",
+    "Evidence",
+    "Risk",
+    "Paper ledger"
+  ],
+  "targeted_bridge_tests": 59,
+  "new_session_tests": 9,
+  "scheduler_mainnet_qualification": "NOT_EXECUTED",
+  "real_roundtrip": "NOT_EXECUTED",
+  "baseline_user_evidence": "Windows all-validation-74buueu_: Observer and Evidence PASS; roundtrip NOT_EXECUTED",
+  "next_session": "bridge_handoff/NEXT_SESSION.md",
+  "actual_gate_failures": [
+    {
+      "layer": "V1b",
+      "control": "live_rpc",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Integrated",
+      "control": "integrated_live_pipeline",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_pumpswap_events",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_websocket_spine",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_evidence_bridge",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_conditional_roundtrip",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    }
+  ]
+}

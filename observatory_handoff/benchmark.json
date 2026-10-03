@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "kind": "synthetic_local_benchmark_not_provider_latency",
+  "events": 300,
+  "elapsed_ns": 651900928,
+  "stage_latencies_ns": {
+    "decode_ns": {
+      "samples": 300,
+      "p95": 795376,
+      "p99": 1547236
+    },
+    "features_decision_ns": {
+      "samples": 300,
+      "p95": 589360,
+      "p99": 753773
+    },
+    "commit_ns": {
+      "samples": 300,
+      "p95": 62191,
+      "p99": 567258
+    }
+  },
+  "network_latency_measured": false,
+  "engine": {
+    "events": 300,
+    "decisions": 300
+  },
+  "reconstruction": {
+    "status": "PASS",
+    "output_sha256": "d38fcdcfa5f786387255d035380b2b50b77a1594299cf5753e5f452b514813cb"
+  }
+}

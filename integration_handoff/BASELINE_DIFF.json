@@ -1,0 +1,10 @@
+{
+  "baseline": "ASTRA-V1f-validation",
+  "changed_existing_files": [
+    "validate_all_current.py",
+    "validation-summary.json",
+    "validation-summary.txt"
+  ],
+  "business_modules_changed": false,
+  "note": "Only the permanent root gate is extended; the two root summaries are generated outputs."
+}

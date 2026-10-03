@@ -1,0 +1,8 @@
+{
+  "candidate": "ASTRA-V1c-rpc-v1-fix",
+  "windows_devnet_pass": "reported_by_user",
+  "report_attached_this_turn": false,
+  "independently_verified_this_turn": false,
+  "previous_attached_report": "earlier failing V1c run; not proof of this PASS",
+  "baseline_frozen": true
+}

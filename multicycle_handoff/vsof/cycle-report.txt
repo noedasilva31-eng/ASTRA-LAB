@@ -1,0 +1,12 @@
+Conditional paper report — no real execution
+Offline replay: PASS
+Coverage: OBSERVED_SUBSET
+Costs: legacy fixed simulation unchanged; unallocated components UNKNOWN.
+
+Cycle settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f
+Token HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump / pool 9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ
+DERIVED quantity raw=406739; BUY notional raw=10000000
+DERIVED duration ns=8210169200; gross before fixed fees=-158759
+SIMULATED fixed fees=4200000; DERIVED conditional net=-4358759
+MAE/MFE UNKNOWN: executable price-path coverage insufficient.
+Portfolio: {"cash_quote_raw": 995641241, "head": "4668e05bd13c452891a9a9a2323e6a8446225e0083a19d884abdb5719f45a521", "loss_quote_raw": 4358759, "pending": {}, "positions": {}, "realized_scenario_pnl_quote_raw": -4358759, "sequence": 4}

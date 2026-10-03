@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASTRA experiment contract V0 (not operational)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "experiment_id",
+    "hypothesis_version",
+    "protocol_hash",
+    "registered_at",
+    "trial_family_id",
+    "trial_index",
+    "code_hash",
+    "environment_hash",
+    "dataset_hash",
+    "universe_hash",
+    "feature_versions",
+    "label_version",
+    "seeds",
+    "parameters",
+    "splits",
+    "cost_model_hash",
+    "metrics",
+    "artifacts",
+    "status",
+    "failure_reason"
+  ],
+  "properties": {
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hypothesis_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "protocol_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "registered_at": {
+      "type": "integer"
+    },
+    "trial_family_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trial_index": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "code_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environment_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "universe_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "feature_versions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "label_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seeds": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "splits": {
+      "type": "object"
+    },
+    "cost_model_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "status": {
+      "enum": [
+        "REGISTERED",
+        "RUNNING",
+        "COMPLETED",
+        "FAILED",
+        "INVALIDATED"
+      ]
+    },
+    "failure_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "$defs": {
+    "period": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "integer"
+        },
+        "end": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "$comment": "Cross-field constraints, authorization and lifecycle gates require registry service; not implemented."
+}

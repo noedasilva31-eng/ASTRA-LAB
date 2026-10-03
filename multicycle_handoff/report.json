@@ -1,0 +1,220 @@
+{
+  "version": "ASTRA-V1-multicycle",
+  "overall": "FAIL",
+  "local_overall": "PASS",
+  "platform": "linux",
+  "windows_executed": false,
+  "checks": [
+    {
+      "criterion": "V1e preservation after cleanup",
+      "status": "PASS",
+      "evidence": "V1E_PRESERVED_LAST.json",
+      "limits": "Live Devnet artifacts NOT_EXECUTED here; archived deterministic bytes preserved."
+    },
+    {
+      "criterion": "V1e events=0 remains FAIL; protected components unchanged",
+      "status": "PASS",
+      "evidence": "PROTECTED_COMPONENTS.json + measure_tests"
+    },
+    {
+      "criterion": "Cost registry descriptive; legacy economics unchanged",
+      "status": "PASS",
+      "evidence": "measure_tests.test_measure / COST_MODEL.md"
+    },
+    {
+      "criterion": "Real archived VSOF exact reconstruction",
+      "status": "PASS",
+      "evidence": "multicycle_handoff/vsof/cycle-report.json",
+      "scope": "OFFLINE_REPLAY_OF_REAL_CAPTURE, not a new live execution"
+    },
+    {
+      "criterion": "Bounded multi-opportunity orchestration/recovery/idempotence",
+      "status": "PASS",
+      "evidence": "measure_tests.test_multicycle",
+      "scope": "DETERMINISTIC_LOCAL"
+    },
+    {
+      "criterion": "Unknown metrics/partial observation never extrapolated",
+      "status": "PASS",
+      "evidence": "cycle-report.json; tests"
+    },
+    {
+      "criterion": "Local complete non-regression",
+      "status": "PASS",
+      "tests_passed": 364,
+      "tests_total": 364,
+      "evidence": "all-validation-elpkjk2v"
+    },
+    {
+      "criterion": "New Windows/Mainnet multiple real cycles qualification",
+      "status": "NOT_EXECUTED",
+      "reason": "No endpoints in Work; run validate-all.cmd on Windows."
+    },
+    {
+      "criterion": "Historical V1e 137-transaction decoding diagnosis",
+      "status": "UNKNOWN",
+      "reason": "Original blocks absent; future preservation implemented; no decoder defect demonstrated."
+    }
+  ],
+  "unresolved_controls": [
+    {
+      "layer": "V1b",
+      "control": "live_rpc",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Integrated",
+      "control": "integrated_live_pipeline",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_pumpswap_events",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_websocket_spine",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_evidence_bridge",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_conditional_roundtrip",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Multicycle",
+      "control": "real_multi_opportunity",
+      "status": "NOT_EXECUTED",
+      "code": "multicycle_configuration_missing",
+      "cause": "Session multi-opportunites non executee: endpoints Mainnet absents ou self-test."
+    }
+  ],
+  "protected_files_verified_against_baseline": 27,
+  "economic_changes": false,
+  "real_transactions": false,
+  "baseline": "ASTRA-V1-live-session",
+  "baseline_reference": "Windows/Mainnet all-validation-92dln067; actual archived roundtrip replayed offline, see reference and fixture manifest."
+}

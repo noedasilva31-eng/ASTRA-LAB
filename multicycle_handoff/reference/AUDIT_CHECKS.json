@@ -1,0 +1,62 @@
+{
+  "scope": "audit_of_supplied_artifacts_not_live_requalification",
+  "network_used": false,
+  "qualified_code_unchanged": true,
+  "input_files_unchanged": true,
+  "checks": {
+    "sqlite_integrity": {
+      "raw": "ok",
+      "engine": "ok",
+      "paper": "ok"
+    },
+    "archive": {
+      "frames": 47,
+      "head": "bb29188f0e97887095075f3c5def200480bbfe6fac81d2309140d31bbc36c4c4"
+    },
+    "reconstruction": {
+      "status": "PASS",
+      "plans": 4,
+      "results": 4,
+      "network_used": false
+    },
+    "json_matches_sqlite": true,
+    "raw_evidence_opportunities_rebuilt": 4,
+    "temporal_checks": [
+      {
+        "side": "BUY",
+        "decision_to_fill_ns": 4096386900,
+        "decision_to_fill_quote_ns": 1956761800,
+        "quote_to_fill_ns": 2139625100,
+        "quote_slot_delta": 15
+      },
+      {
+        "side": "SELL",
+        "decision_to_fill_ns": 4098468600,
+        "decision_to_fill_quote_ns": 1983978900,
+        "quote_to_fill_ns": 2114489700,
+        "quote_slot_delta": 15
+      }
+    ],
+    "network_used": false,
+    "components_modified": false
+  },
+  "roundtrip": "VERIFIED_CONDITIONAL_PAPER",
+  "actual_execution": "NONE_FOR_ASTRA_PAPER",
+  "v1e": "FAIL_preserved_zero_recognized_events_with_complete_source",
+  "uncertainties": [
+    "Actual execution feasibility and on-chain paper fills (none executed)",
+    "Actual network/priority/ATA fees for the paper strategy",
+    "DEX fee breakdown in quote outputs",
+    "Provider emission latency",
+    "Clock synchronization error",
+    "USD PnL without independently timed FX evidence",
+    "Counterfactual fill probability, MEV and failed transaction cost"
+  ],
+  "limits": [
+    "Archive integrity establishes internal consistency, not independent blockchain finality/authenticity.",
+    "Quotes and account snapshots span slots, not an atomic snapshot.",
+    "Confirmed commitment; no independent finalization/reorg audit.",
+    "Decision timestamps are before SQLite commit; commit-complete execution timestamp is not recorded.",
+    "Only one observed-subset conditional roundtrip; no profitability/generalization inference."
+  ]
+}

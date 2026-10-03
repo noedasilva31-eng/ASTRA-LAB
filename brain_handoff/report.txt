@@ -1,0 +1,19 @@
+ASTRA-V1-brain
+Global: FAIL | Local: PASS
+Tests: 386/386
+PASS | OpportunityState / future namespaces / MetaState | Local contracts and no-lookahead; external namespaces UNKNOWN
+PASS | MarketAgent / regime / reproducible scores / entry arbiter | Deterministic hypotheses, not statistically validated returns
+PASS | PositionState / PositionHealth / HOLD / exit candidates | Observed price extrema separated from executable MAE/MFE
+PASS | Risk veto independent of scores | Qualified Risk unchanged; no simulated bypass
+NOT_IMPLEMENTED | Partial REDUCE execution | Candidate logged only; full-exit ledger unchanged
+NOT_IMPLEMENTED | Dynamic/profit-protection execution rules | Insufficient executable position-path evidence; no invented rule
+PASS | Multi-opportunity / budgets / recovery / idempotence | Deterministic two cycles + crash/restart/new process
+PASS | Costs / no double counting / UNKNOWN distinct from zero | 0.0021 SOL per leg unchanged; fees unallocated SIMULATED
+PASS | VSOF exact archived reconstruction | Actual historical SQLite replayed offline; not a new live session
+PASS | Dataset / observed outcomes / SessionFreeze | Repeat hash + offline reconstruction + corruption rejection
+PASS | Research / Candidate / ablation interfaces | Contracts only; evaluations NOT_EXECUTED; LIVE promotion unavailable
+PASS | V1e external preservation / criteria unchanged | Deterministic artifacts preserved after cleanup; events=0 still FAIL
+PASS | Local full gate | 386/386 tests
+NOT_EXECUTED | New Brain Windows/Mainnet qualification | No configured endpoints in Work; validate-all.cmd prepared
+UNKNOWN | Historical V1e 137-transaction diagnosis | Original raw blocks unavailable; no demonstrated decoder defect
+NOT_EXECUTED | Profitability / out-of-sample improvement | No performance claim from unit tests or the sole VSOF case

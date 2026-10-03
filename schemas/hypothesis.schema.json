@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASTRA hypothesis contract V0 (not operational)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "hypothesis_id",
+    "version",
+    "claim",
+    "author_agent",
+    "created_at",
+    "dataset_version",
+    "features",
+    "controls",
+    "confounders",
+    "counterexamples",
+    "test_design",
+    "train_period",
+    "validation_period",
+    "oos_period",
+    "cost_assumptions",
+    "results",
+    "confidence_method",
+    "confidence",
+    "status"
+  ],
+  "properties": {
+    "hypothesis_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "author_agent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "integer"
+    },
+    "dataset_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "confounders": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "counterexamples": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "test_design": {
+      "type": "string",
+      "minLength": 1
+    },
+    "train_period": {
+      "$ref": "#/$defs/period"
+    },
+    "validation_period": {
+      "$ref": "#/$defs/period"
+    },
+    "oos_period": {
+      "$ref": "#/$defs/period"
+    },
+    "cost_assumptions": {
+      "type": "object"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "confidence_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "TESTING",
+        "REJECTED",
+        "PROMISING",
+        "VALIDATED",
+        "PAPER",
+        "CHALLENGER",
+        "PROMOTED",
+        "RETIRED"
+      ]
+    }
+  },
+  "$defs": {
+    "period": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "integer"
+        },
+        "end": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "$comment": "Cross-field constraints, authorization and lifecycle gates require registry service; not implemented."
+}

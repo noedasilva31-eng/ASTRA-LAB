@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "fixture": "synthetic",
+  "commands": [
+    "ingest",
+    "health",
+    "as-of",
+    "snapshot",
+    "recover",
+    "backup"
+  ],
+  "accepted": 1,
+  "duplicate": 1,
+  "restored_snapshot_identical": true,
+  "cutoff": 1790703907750952,
+  "dataset_sha256": "ffd018d6a9709dd4570ffd0917b42c445a296fbe6d79b50a5ec3ea9565d0605d"
+}

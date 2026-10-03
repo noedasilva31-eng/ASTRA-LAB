@@ -1,0 +1,52 @@
+ASTRA: FAIL
+Local: PASS
+Tests: 255/255 PASS
+Platform: linux
+PASS | V1b | runner_8_tests
+PASS | V1b | foundation
+FAIL | V1b | live_rpc | live_capture_unavailable | Capture RPC reelle indisponible; verifier endpoint, acces reseau et service.
+PASS | V1b | raw_bytes
+PASS | V1b | replay
+PASS | V1b | before_normalize
+PASS | V1b | before_publish
+PASS | V1b | recover_twice
+PASS | V1b | redelivery
+PASS | V1b | conflict
+PASS | V1b | continue
+PASS | V1b | backup
+PASS | V1b | hashes
+PASS | V1b | outage
+FAIL | V1b | after_outage | live_capture_unavailable | Capture RPC reelle indisponible; verifier endpoint, acces reseau et service.
+PASS | V1c | v1b_reference_unchanged
+PASS | V1c | unit
+PASS | V1c | deterministic
+FAIL | V1c | first | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1c | resume | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1c | retry | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1c | offline_replay | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+PASS | V1d | v1c_reference_unchanged
+PASS | V1d | unit
+PASS | V1d | deterministic
+FAIL | V1d | first | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1d | resume | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1d | retry | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1d | offline_replay | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1d | live_memory | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+PASS | V1e | v1d_reference_unchanged
+PASS | V1e | unit
+PASS | V1e | deterministic
+FAIL | V1e | first | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1e | resume | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1e | retry | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1e | offline_replay | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+FAIL | V1e | live_provenance | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+PASS | V1f_local | validation_tests
+PASS | V1f_local | budget_tests
+PASS | V1f_local | pipeline_tests
+PASS | V1f_local | operations_tests
+PASS | V1f_local | observer_tests
+FAIL | Integrated | integrated_live_pipeline | live_endpoint_not_used | SOLANA_RPC_URL absent ou controle reel explicitement desactive.
+NOT_EXECUTED | Observer | real_pumpswap_events | observer_mainnet_configuration_missing | Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis.
+NOT_EXECUTED | Observer | real_websocket_spine | observer_mainnet_configuration_missing | Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis.
+
+Reports: all-validation-xfabz6hk

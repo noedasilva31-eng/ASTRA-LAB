@@ -1,0 +1,256 @@
+{
+  "version": "ASTRA-V1-brain",
+  "global_status": "FAIL",
+  "local_status": "PASS",
+  "tests": {
+    "passed": 386,
+    "total": 386,
+    "measure_tests": 25,
+    "brain_tests": 22
+  },
+  "platform": "linux",
+  "checks": [
+    {
+      "criterion": "OpportunityState / future namespaces / MetaState",
+      "status": "PASS",
+      "scope": "Local contracts and no-lookahead; external namespaces UNKNOWN"
+    },
+    {
+      "criterion": "MarketAgent / regime / reproducible scores / entry arbiter",
+      "status": "PASS",
+      "scope": "Deterministic hypotheses, not statistically validated returns"
+    },
+    {
+      "criterion": "PositionState / PositionHealth / HOLD / exit candidates",
+      "status": "PASS",
+      "scope": "Observed price extrema separated from executable MAE/MFE"
+    },
+    {
+      "criterion": "Risk veto independent of scores",
+      "status": "PASS",
+      "scope": "Qualified Risk unchanged; no simulated bypass"
+    },
+    {
+      "criterion": "Partial REDUCE execution",
+      "status": "NOT_IMPLEMENTED",
+      "scope": "Candidate logged only; full-exit ledger unchanged"
+    },
+    {
+      "criterion": "Dynamic/profit-protection execution rules",
+      "status": "NOT_IMPLEMENTED",
+      "scope": "Insufficient executable position-path evidence; no invented rule"
+    },
+    {
+      "criterion": "Multi-opportunity / budgets / recovery / idempotence",
+      "status": "PASS",
+      "scope": "Deterministic two cycles + crash/restart/new process"
+    },
+    {
+      "criterion": "Costs / no double counting / UNKNOWN distinct from zero",
+      "status": "PASS",
+      "scope": "0.0021 SOL per leg unchanged; fees unallocated SIMULATED"
+    },
+    {
+      "criterion": "VSOF exact archived reconstruction",
+      "status": "PASS",
+      "scope": "Actual historical SQLite replayed offline; not a new live session"
+    },
+    {
+      "criterion": "Dataset / observed outcomes / SessionFreeze",
+      "status": "PASS",
+      "scope": "Repeat hash + offline reconstruction + corruption rejection"
+    },
+    {
+      "criterion": "Research / Candidate / ablation interfaces",
+      "status": "PASS",
+      "scope": "Contracts only; evaluations NOT_EXECUTED; LIVE promotion unavailable"
+    },
+    {
+      "criterion": "V1e external preservation / criteria unchanged",
+      "status": "PASS",
+      "scope": "Deterministic artifacts preserved after cleanup; events=0 still FAIL"
+    },
+    {
+      "criterion": "Local full gate",
+      "status": "PASS",
+      "scope": "386/386 tests"
+    },
+    {
+      "criterion": "New Brain Windows/Mainnet qualification",
+      "status": "NOT_EXECUTED",
+      "scope": "No configured endpoints in Work; validate-all.cmd prepared"
+    },
+    {
+      "criterion": "Historical V1e 137-transaction diagnosis",
+      "status": "UNKNOWN",
+      "scope": "Original raw blocks unavailable; no demonstrated decoder defect"
+    },
+    {
+      "criterion": "Profitability / out-of-sample improvement",
+      "status": "NOT_EXECUTED",
+      "scope": "No performance claim from unit tests or the sole VSOF case"
+    }
+  ],
+  "unresolved_gate_controls": [
+    {
+      "layer": "V1b",
+      "control": "live_rpc",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Integrated",
+      "control": "integrated_live_pipeline",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_pumpswap_events",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_websocket_spine",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_evidence_bridge",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_conditional_roundtrip",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Brain",
+      "control": "real_brain_session",
+      "status": "NOT_EXECUTED",
+      "code": "brain_mainnet_configuration_missing",
+      "cause": "Brain Mainnet non execute: endpoints absents ou self-test."
+    }
+  ],
+  "protected_baseline": "ASTRA-V1-live-session",
+  "protected_files_verified": 30,
+  "real_transactions": false,
+  "economic_parameters_changed": false,
+  "reference_roundtrip": "all-validation-92dln067",
+  "current_reports_directory": "all-validation-13tu6gh7"
+}

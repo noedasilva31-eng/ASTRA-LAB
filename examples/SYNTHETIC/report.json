@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "blocks": {
+    "expected_slots": 2,
+    "counts": {
+      "archived": 2,
+      "skipped": 0,
+      "unavailable": 0,
+      "error": 0
+    },
+    "accounting_ok": true,
+    "next_slot": 102,
+    "first_pass_complete": true,
+    "checkpoint_ok": true,
+    "unresolved": 0,
+    "pending_attempts": 0,
+    "hash_or_replay_errors": 0,
+    "skip_proof_errors": 0,
+    "publications": 2,
+    "integrity": "ok",
+    "foreign_key_errors": 0,
+    "healthy": true,
+    "coverage": {
+      "available": 2,
+      "skipped": 0,
+      "unresolved": 0,
+      "error": 0,
+      "accounted_fraction": 1.0,
+      "resolved_fraction": 1.0,
+      "attempted_slots": 2,
+      "attempts": 2,
+      "raw_bytes": 3290
+    },
+    "attempt_diagnostics": [
+      {
+        "attempt_id": 1,
+        "slot": 100,
+        "status": "archived",
+        "reason": "ok",
+        "raw_hash": "f4dd281b33978299fbae652dd325b09d62f08cabca4467d5c928927d357b50d9",
+        "request": {
+          "method": "getBlock",
+          "params": [
+            100,
+            {
+              "commitment": "finalized",
+              "encoding": "json",
+              "maxSupportedTransactionVersion": 1,
+              "rewards": false,
+              "transactionDetails": "full"
+            }
+          ]
+        }
+      },
+      {
+        "attempt_id": 2,
+        "slot": 101,
+        "status": "archived",
+        "reason": "ok",
+        "raw_hash": "9f701f4afcbe1e69587937da2e7ca63fdcaee5ff79c29c5517e104a79518c5e8",
+        "request": {
+          "method": "getBlock",
+          "params": [
+            101,
+            {
+              "commitment": "finalized",
+              "encoding": "json",
+              "maxSupportedTransactionVersion": 1,
+              "rewards": false,
+              "transactionDetails": "full"
+            }
+          ]
+        }
+      }
+    ],
+    "slots": [
+      {
+        "slot": 100,
+        "status": "archived",
+        "reason": "ok",
+        "attempt_id": 1,
+        "proof_slot": null
+      },
+      {
+        "slot": 101,
+        "status": "archived",
+        "reason": "ok",
+        "attempt_id": 2,
+        "proof_slot": null
+      }
+    ]
+  },
+  "quota": {
+    "requests": 4,
+    "charged_units": 4,
+    "unsettled": 4,
+    "request_limit": 10,
+    "unit_limit": 10,
+    "hash_errors": 0,
+    "integrity": "ok",
+    "healthy": true
+  },
+  "business": {
+    "status": "PASS",
+    "dataset_id": "37686d411f9f5a3cdf590fb6bf5c1f3dd38bd90b6d6b2a295352787f1b96936e",
+    "source_complete": true,
+    "ready_for_complete_range_analysis": true,
+    "business_coverage_complete": false,
+    "metrics": {
+      "slot_coverage": {
+        "start": 100,
+        "end": 101,
+        "expected_slots": 2,
+        "counts": {
+          "archived": 2,
+          "skipped": 0,
+          "unresolved": 0,
+          "error": 0,
+          "excluded": 0
+        },
+        "accounted_slots": 2,
+        "accounting_ok": true,
+        "resolved_slots": 2,
+        "source_complete": true,
+        "included_range_complete": true,
+        "fully_decoded": false,
+        "events": 0,
+        "transactions_expected": 2,
+        "source_attempts": 2,
+        "selected_attempts": 2,
+        "archive_start": 100,
+        "archive_end": 101,
+        "accounted_fraction": 1.0,
+        "resolved_fraction": 1.0,
+        "historical_error_attempts": 0,
+        "decoder_errors": 0
+      },
+      "transactions": {
+        "processed": 2,
+        "failed": 0,
+        "error": 0
+      },
+      "transactions_expected": 2,
+      "events": 6,
+      "event_kinds": {
+        "spl_transfer_checked": 2,
+        "token_balance_change": 4
+      },
+      "token_balance_not_recorded": 0,
+      "token_balance_partial": 0,
+      "instruction_errors": 0,
+      "unsupported_instructions": 0
+    },
+    "index": {
+      "datasets": 1,
+      "unique_events": 6,
+      "hash_or_replay_errors": 0,
+      "integrity": "ok",
+      "healthy": true
+    },
+    "provenance": {
+      "captures": 1,
+      "datasets": 1,
+      "pending": 0,
+      "unique_event_publications": 0,
+      "hash_or_replay_errors": 0,
+      "foreign_key_errors": 0,
+      "integrity": "ok",
+      "healthy": true,
+      "coverage_versions": [
+        {
+          "accounted_fraction": 1.0,
+          "accounted_slots": 2,
+          "accounting_ok": true,
+          "archive_end": 101,
+          "archive_start": 100,
+          "counts": {
+            "archived": 2,
+            "error": 0,
+            "excluded": 0,
+            "skipped": 0,
+            "unresolved": 0
+          },
+          "decoder_errors": 0,
+          "end": 101,
+          "events": 0,
+          "expected_slots": 2,
+          "fully_decoded": false,
+          "historical_error_attempts": 0,
+          "included_range_complete": true,
+          "resolved_fraction": 1.0,
+          "resolved_slots": 2,
+          "selected_attempts": 2,
+          "source_attempts": 2,
+          "source_complete": true,
+          "start": 100,
+          "transactions_expected": 2
+        }
+      ]
+    },
+    "alerts": []
+  },
+  "SYNTHETIC_EXAMPLE": true
+}

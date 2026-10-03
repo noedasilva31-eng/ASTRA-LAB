@@ -1,0 +1,29 @@
+{
+  "baseline_archive_sha256": "09904d6b23725073dece8306f34d40b660706a7917f3ee9a6de3e80664c79d89",
+  "changed_existing_files": [
+    "astra_pipeline/__main__.py",
+    "astra_pipeline/run.py",
+    "validate_all_current.py",
+    "validation-summary.json",
+    "validation-summary.txt"
+  ],
+  "added_modules": [
+    "validation_extensions",
+    "astra_operations",
+    "astra_timeline",
+    "astra_dex",
+    "operations_tests"
+  ],
+  "baseline_references": {
+    "V1C_REFERENCE.json": {
+      "status": "PASS",
+      "files": 75,
+      "mismatches": []
+    },
+    "V1D_REFERENCE.json": {
+      "status": "PASS",
+      "files": 98,
+      "mismatches": []
+    }
+  }
+}

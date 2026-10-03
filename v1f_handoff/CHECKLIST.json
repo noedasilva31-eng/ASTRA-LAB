@@ -1,0 +1,98 @@
+{
+  "overall": "FAIL",
+  "local_overall": "PASS",
+  "platform": "linux",
+  "windows_executed": false,
+  "rpc_configured": false,
+  "test_suites": [
+    {
+      "suite": "V1b/runner",
+      "reported": 8,
+      "passed": 8
+    },
+    {
+      "suite": "V1b/foundation",
+      "reported": 38,
+      "passed": 38
+    },
+    {
+      "suite": "V1c/unit",
+      "reported": 35,
+      "passed": 35
+    },
+    {
+      "suite": "V1d/unit",
+      "reported": 31,
+      "passed": 31
+    },
+    {
+      "suite": "V1e/unit",
+      "reported": 28,
+      "passed": 28
+    },
+    {
+      "suite": "V1f_local/validation_tests",
+      "reported": 7,
+      "passed": 7
+    },
+    {
+      "suite": "V1f_local/budget_tests",
+      "reported": 12,
+      "passed": 12
+    }
+  ],
+  "tests_passed": 159,
+  "criteria": [
+    {
+      "id": "V1e_UTF8_explicit_strict",
+      "status": "PASS_LOCAL"
+    },
+    {
+      "id": "Windows_CP1252_regression_reproduced_and_fixed",
+      "status": "PASS_LOCAL"
+    },
+    {
+      "id": "invalid_UTF8_rejected",
+      "status": "PASS_LOCAL"
+    },
+    {
+      "id": "root_noninteractive_validator_and_safe_summary",
+      "status": "PASS_LOCAL"
+    },
+    {
+      "id": "V1b_V1c_V1d_immutable",
+      "status": "PASS"
+    },
+    {
+      "id": "V1e_business_modules_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "all_local_non_regressions",
+      "status": "PASS_LOCAL"
+    },
+    {
+      "id": "quota_persistence_limits_idempotence_crash_integrity_rebuild",
+      "status": "PASS_LOCAL"
+    },
+    {
+      "id": "quota_RPC_integration",
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "new_Windows_Devnet_qualification",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "current_real_gates",
+      "status": "FAIL",
+      "reason": "endpoint_absent"
+    },
+    {
+      "id": "full_V1",
+      "status": "NOT_VALIDATED"
+    }
+  ],
+  "first_next_action": "On Windows with existing SOLANA_RPC_URL, run validate-all.cmd; summary is written at root.",
+  "next_session": "v1f_handoff/NEXT_SESSION.md"
+}

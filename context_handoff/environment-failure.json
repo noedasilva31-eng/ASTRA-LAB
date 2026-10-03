@@ -1,0 +1,23 @@
+{
+  "status": "OBSERVED_ENVIRONMENT_FAILURE",
+  "original_report": "all-validation-o2tbrop0",
+  "failed_checks": [
+    {
+      "layer": "V1b",
+      "control": "outage",
+      "status": "FAIL",
+      "code": "adapter_or_product_error",
+      "cause": "adapter or product error"
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "FAIL",
+      "code": "outage_prerequisite_failed",
+      "cause": "outage prerequisite failed"
+    }
+  ],
+  "diagnosis": "socket.socket() raises PermissionError EPERM in default sandbox before bind; baseline test creates only a loopback TCP listener.",
+  "code_changes_to_v1b": false,
+  "followup": "Identical --self-test gate requested outside restricted sandbox; see current validation-summary.json for actual result."
+}

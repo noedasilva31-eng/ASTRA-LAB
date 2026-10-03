@@ -1,0 +1,242 @@
+{
+  "version": "ASTRA-V1-watch",
+  "local": "PASS",
+  "tests": {
+    "pass": 460,
+    "total": 460,
+    "new_watch_tests": 23,
+    "previous_tests": 437
+  },
+  "overall_gate": "FAIL",
+  "mainnet_watch": "NOT_EXECUTED",
+  "windows_watch": "NOT_EXECUTED",
+  "protected_files_unchanged": 51,
+  "position_module_unchanged": true,
+  "verified_code_causes": [
+    "Legacy run reuses first persisted position_window (120 seconds)",
+    "Legacy poll cap sums all persisted position_poll_reserved (16)",
+    "After either bound, repeated invocation can skip loop and perform zero network calls",
+    "Legacy no_new_position_observation conflates this case with no supported observations"
+  ],
+  "first_windows_attempt_cause": "UNKNOWN: position-continuation reports and SQLite were not supplied",
+  "endpoint_selection": {
+    "variable": "ASTRA_OBSERVER_RPC_URL",
+    "required_network_variable": "ASTRA_OBSERVER_NETWORK=mainnet",
+    "full_url_logged": false,
+    "devnet_fallback": false
+  },
+  "new_search": {
+    "method": "getSignaturesForAddress",
+    "params": {
+      "limit": 32,
+      "commitment": "confirmed"
+    },
+    "before": null,
+    "until": null,
+    "preference": "highest slot first",
+    "coverage": "LATEST_HEAD_ONLY_NOT_EXHAUSTIVE"
+  },
+  "reference_replay": {
+    "status": "PASS",
+    "plans": 51,
+    "position_health": 0,
+    "network_used": false
+  },
+  "reference_cursor": {
+    "phase": "OPEN_POSITION",
+    "pool": "BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x",
+    "mint": "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump",
+    "after_slot": 452646758,
+    "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f",
+    "decision_ns": 1790953857333198100,
+    "cursor_slot": 452646818,
+    "cursor_signature": "3VysxbmZRkgdx4WSSC8RPgp8Pw3P8c63vtvMyrHkSXykMU5ssfgpdiX8NehgU3JZEY3WTU7821L7BSKSm2dvNKhT",
+    "cursor_signature_slot": 452646818,
+    "cursor_availability_ns": 1790953900472740100
+  },
+  "reference_portfolio": {
+    "cash_quote_raw": 987900000,
+    "positions": {
+      "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump": {
+        "units": 4624230,
+        "cost": 12100000,
+        "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f"
+      }
+    },
+    "realized_scenario_pnl_quote_raw": 0,
+    "loss_quote_raw": 0,
+    "pending": {},
+    "head": "d5a48517ee10097aa7db6cacd8e19721a08cea73b1dc7e95d8cc6ccd9fc8baca",
+    "sequence": 2
+  },
+  "diagnostic_stages": [
+    "NO_NETWORK_CALL",
+    "NO_NEW_SIGNATURE",
+    "NEW_SIGNATURE_NOT_HYDRATED",
+    "NEW_TRANSACTION_UNSUPPORTED",
+    "NEW_OBSERVATION_REJECTED",
+    "NEW_POSITION_OBSERVATION"
+  ],
+  "new_window": "Without --window-id: explicitly journaled new bounded budget",
+  "same_window": "Same --window-id and same bounds: no reset; expired/superseded explicit",
+  "no_real_orders": true,
+  "risk_evidence_threshold_changes": false,
+  "gate_directory": "all-validation-ul3v8ypa",
+  "unqualified_checks": [
+    {
+      "layer": "V1b",
+      "control": "live_rpc",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Integrated",
+      "control": "integrated_live_pipeline",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_pumpswap_events",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_websocket_spine",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_evidence_bridge",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_conditional_roundtrip",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Position",
+      "control": "real_position_watch",
+      "status": "NOT_EXECUTED",
+      "code": "watch_mainnet_configuration_missing",
+      "cause": "watch mainnet configuration missing"
+    }
+  ],
+  "next_session": "watch_handoff/NEXT_SESSION.md"
+}

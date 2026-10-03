@@ -1,0 +1,394 @@
+Oui. Voici la version propre, **sans aucune histoire de changement de nom**. Tu peux l’envoyer telle quelle à Work :
+
+> # REPRISE ASTRA — GROS SPRINT / ÉCONOMIE DE QUOTA WORK
+>
+> Reprends exactement le workspace et le dernier état de `ASTRA-V1-integrated`.
+>
+> Ne recommence aucune analyse déjà effectuée et ne réimplémente pas les briques existantes.
+>
+> ## ÉTAT RÉEL ACTUEL
+>
+> Dernière validation `validate-all.cmd` exécutée sous **Windows + Helius Devnet** :
+>
+> - **189/189 tests PASS** ;
+> - V1b PASS ;
+> - V1c PASS ;
+> - V1e `live_provenance` PASS ;
+> - pipeline intégré réel PASS ;
+> - `real_token_business_data` PASS ;
+> - `real_range_coordinator` PASS.
+>
+> Seul contrôle en échec :
+>
+> `V1d | live_memory | no_supported_transfer_observed`
+>
+> `Aucun transfert SOL pris en charge observe dans la plage.`
+>
+> La petite fenêtre live choisie n'a contenu aucun transfert SOL compatible.
+>
+> **Priorité immédiate :** corrige cette fragilité avec une validation réelle déterministe ou une recherche strictement bornée.
+>
+> Ne transforme jamais l'absence aléatoire d'un événement dans une petite fenêtre en faux PASS. Ne masque pas le contrôle et ne réduis aucun invariant existant.
+>
+> `validate-all.cmd` reste désormais **l'unique gate permanente de validation** et doit être étendu au fur et à mesure.
+>
+> ---
+>
+> # VISION PRODUIT
+>
+> ASTRA doit devenir un **DESK autonome de recherche et de paper/live trading spécialisé dans les marchés Solana rapides et memecoins**.
+>
+> L'architecture doit clairement séparer deux chemins.
+>
+> ### HOT PATH
+>
+> `flux Solana → événements DEX/pools/swaps → features temps réel → signaux validés → Risk déterministe → paper/exécution`
+>
+> Ce chemin doit rester rapide. Il ne doit pas dépendre d'un raisonnement LLM lourd, d'un export JSON ou d'une reconstruction complète avant de pouvoir réagir.
+>
+> ### RESEARCH / MEMORY PATH
+>
+> `données brutes → provenance → historique → données on-chain/sociales → datasets → recherche → backtests → agents R&D → stratégies candidates`
+>
+> Ce chemin peut effectuer les analyses lourdes.
+>
+> Les deux chemins doivent partager une mémoire vérifiable sans que le Research Path bloque le Hot Path.
+>
+> ---
+>
+> # PRIORITÉ DU PROCHAIN SPRINT
+>
+> Après le correctif `live_memory`, consacre l'essentiel du temps à de la **progression fonctionnelle visible**, pas à produire des micro-versions.
+>
+> Avance autant que possible, selon les dépendances, sur :
+>
+> **DEX ciblés → pools → swaps → liquidité/événements marché → wallets/holders/bundles → feature store temporel → paper trading → journal décisionnel.**
+>
+> Ne t'arrête pas automatiquement après chaque élément. Continue tant que les dépendances permettent un travail correct sans intervention humaine.
+>
+> ---
+>
+> # DEX / POOLS / SWAPS
+>
+> ASTRA doit progressivement pouvoir reconstruire un événement vérifiable de la forme :
+>
+> `wallet → swap → token A → token B → montants → pool → DEX → frais → slot → transaction → brut source`
+>
+> avec :
+>
+> - provenance ;
+> - ordre temporel ;
+> - couverture connue ;
+> - intégrité vérifiable ;
+> - replay hors réseau ;
+> - reconstruction déterministe.
+>
+> Prévois une architecture extensible pour plusieurs protocoles plutôt qu'un décodeur monolithique.
+>
+> Les protocoles réellement pris en charge doivent être explicitement identifiés. Une instruction non comprise doit rester comptabilisée plutôt qu'être silencieusement interprétée.
+>
+> Pour ce sprint, privilégie **un petit nombre de protocoles réellement supportés et bien testés** plutôt qu'une fausse couverture générale.
+>
+> ---
+>
+> # MEMECOIN / ON-CHAIN INTELLIGENCE
+>
+> ASTRA est destiné à travailler sur des marchés rapides.
+>
+> Construis progressivement les primitives nécessaires pour analyser :
+>
+> - créations de tokens/pools ;
+> - événements de lancement/migration lorsque observables ;
+> - swaps ;
+> - liquidité ;
+> - accélération/décélération du volume ;
+> - variations rapides de prix ;
+> - wallets ;
+> - candidats smart-money ;
+> - historique comportemental des wallets ;
+> - holders ;
+> - concentration des holders ;
+> - relations entre wallets ;
+> - clusters/graphes de wallets de type bubble-map ;
+> - financements communs ou relations observables entre wallets ;
+> - bundles lorsque les données disponibles permettent réellement de les identifier ;
+> - comportement du deployer ;
+> - retraits/variations de liquidité ;
+> - primitives de détection/analyse de risque et de rug.
+>
+> Ces analyses doivent produire **des observations et des preuves mesurables**, pas des scores arbitraires présentés comme des certitudes.
+>
+> Conserve la provenance permettant de remonter aux événements ayant produit chaque indicateur.
+>
+> ---
+>
+> # SOCIAL / X / KOL / META
+>
+> ASTRA devra pouvoir intégrer des sources publiques externes pour comprendre l'attention autour des memecoins.
+>
+> Prépare une architecture permettant d'ajouter :
+>
+> - tracking de comptes publics X/KOL ;
+> - mentions de tokens/tickers/contracts ;
+> - chronologie des mentions ;
+> - fréquence des mentions ;
+> - vitesse de propagation ;
+> - social velocity ;
+> - historique observable après certaines mentions ;
+> - émergence de metas/narratives ;
+> - association tokens ↔ narratives ;
+> - évolution d'une meta ;
+> - corrélation temporelle social ↔ wallets ↔ swaps ↔ liquidité ↔ prix.
+>
+> Ne consomme pas inutilement le quota à implémenter une grosse intégration X si les accès/API nécessaires sont absents.
+>
+> En revanche, conçois les **interfaces temporelles, couverture et provenance** nécessaires pour intégrer ces sources plus tard dans la même timeline que les données on-chain.
+>
+> Une absence de couverture sociale ne doit jamais être interprétée comme une absence d'activité sociale.
+>
+> ---
+>
+> # FEATURE STORE TEMPOREL
+>
+> Construis progressivement une représentation permettant de conserver chaque feature avec :
+>
+> - timestamp/slot ;
+> - instant réel de disponibilité ;
+> - source ;
+> - version du calcul ;
+> - couverture ;
+> - données utilisées ;
+> - provenance.
+>
+> L'objectif est de pouvoir répondre de manière reproductible :
+>
+> **« Quelles informations ASTRA possédait exactement à cet instant T ? »**
+>
+> C'est indispensable pour éviter le look-ahead dans les backtests, le paper trading et les futurs agents R&D.
+>
+> ---
+>
+> # PAPER TRADING / JOURNAL DÉCISIONNEL
+>
+> Commence les fondations d'un moteur de paper trading reproductible.
+>
+> Il devra enregistrer au minimum :
+>
+> - opportunité détectée ;
+> - état du marché au moment T ;
+> - données disponibles et couverture ;
+> - features ;
+> - stratégie/version utilisée ;
+> - signal ;
+> - décision ;
+> - décision Risk ;
+> - entrée théorique ;
+> - frais ;
+> - slippage estimé/réalisé lorsque pertinent ;
+> - sortie ;
+> - résultat ;
+> - provenance des éléments ayant motivé la décision.
+>
+> L'objectif n'est pas encore de construire une grosse interface graphique. **Le moteur et son journal auditable sont prioritaires.**
+>
+> ---
+>
+> # FUTURS AGENTS
+>
+> L'objectif final n'est pas seulement d'avoir plusieurs agents donnant des BUY/SELL.
+>
+> ASTRA devra progressivement pouvoir disposer de spécialistes tels que :
+>
+> - On-chain Agent ;
+> - DEX/Pool Agent ;
+> - Wallet Agent ;
+> - Holder/Graph Agent ;
+> - Bundle/Launch Agent ;
+> - Rug/Risk Analysis Agent ;
+> - Meta/Narrative Agent ;
+> - KOL/Social Agent ;
+> - Data Agent ;
+> - Quant Agent ;
+> - Research Agent ;
+> - Developer Agent ;
+> - Backtest Agent ;
+> - Critic/Falsification Agent ;
+> - Optimizer Agent ;
+> - Risk Agent ;
+> - Arbiter ;
+> - Execution Agent ;
+> - Sentinel/Supervision Agent.
+>
+> **Ils ne sont pas tous à implémenter maintenant.**
+>
+> L'architecture construite aujourd'hui doit surtout fournir les données, interfaces, preuves et environnements nécessaires à leur ajout futur.
+>
+> ---
+>
+> # AGENTS R&D / AMÉLIORATION DU « CERVEAU »
+>
+> À terme, les agents R&D devront pouvoir :
+>
+> `observer → détecter une hypothèse → la formaliser → développer une feature/stratégie candidate → backtester → tenter de la falsifier → paper trade → mesurer → conserver ou rejeter`
+>
+> Un Developer Agent pourra donc produire du code candidat, mais **aucun agent ne doit pouvoir remplacer directement le cerveau opérationnel ou contourner les gates de validation**.
+>
+> Prépare progressivement le modèle :
+>
+> `brain actuel → candidate → replay → backtest → hors-échantillon/stress → paper → comparaison → promotion ou rejet`
+>
+> avec :
+>
+> - versioning ;
+> - reproductibilité ;
+> - provenance du code/configuration ;
+> - métriques ;
+> - rollback ;
+> - séparation candidate/production ;
+> - impossibilité pour un candidat de s'auto-promouvoir en LIVE.
+>
+> Les agents ne doivent pas pouvoir augmenter arbitrairement leurs propres limites de risque.
+>
+> ---
+>
+> # APPRENTISSAGE APRÈS LES SESSIONS PAPER
+>
+> ASTRA devra pouvoir fonctionner pendant des sessions paper prolongées, par exemple **10 heures**, en conservant pour chaque décision :
+>
+> `informations réellement disponibles à T → couverture → features → analyses/signaux → décision Risk → paper trade → résultat futur`
+>
+> Après une session, les futurs agents Data/Quant/Research/Critic devront pouvoir analyser :
+>
+> - ce qui a fonctionné ;
+> - ce qui a échoué ;
+> - quels signaux étaient inutiles ;
+> - quelles combinaisons semblent intéressantes ;
+> - quelles données manquaient ;
+> - quelles hypothèses méritent d'être testées ;
+> - quelles modifications candidates devraient être développées.
+>
+> **Aucun look-ahead.**
+>
+> Une décision historique doit pouvoir être rejouée avec uniquement les informations réellement disponibles au moment où elle a été prise.
+>
+> Utilise directement pour cela les mécanismes existants de brut, couverture, provenance, replay et reconstruction.
+>
+> ---
+>
+> # INFRASTRUCTURE V1 RESTANTE
+>
+> En parallèle du progrès fonctionnel, termine lorsque les dépendances le permettent :
+>
+> - intégration réelle des quotas/budgets au chemin RPC ;
+> - débit/coût fournisseur lorsque disponible ;
+> - métriques ;
+> - supervision ;
+> - alertes ;
+> - robustesse fournisseur ;
+> - rapprochement multi-provider réel lorsque réalisable ;
+> - archive distante/restauration ;
+> - disponibilité ;
+> - offsets/horloges ;
+> - préparation de la qualification longue durée **72 h**.
+>
+> Ne gaspille pas une session Work à attendre 72 heures.
+>
+> Prépare plutôt le harness, les métriques, checkpoints, rapports et critères PASS/FAIL afin que la qualification longue puisse ensuite être exécutée hors Work.
+>
+> ---
+>
+> # VALIDATION
+>
+> `validate-all.cmd` reste **l'unique gate permanente**.
+>
+> Étends-la aux nouvelles briques.
+>
+> Le runner doit :
+>
+> - rester non interactif ;
+> - utiliser des bases/données temporaires lorsque nécessaire ;
+> - préserver les baselines ;
+> - avoir des timeouts bornés ;
+> - retourner un exit code non-zéro au moindre vrai FAIL ;
+> - produire `validation-summary.json` ;
+> - afficher directement la cause d'un FAIL ;
+> - ne jamais afficher ou persister `SOLANA_RPC_URL` ou les secrets ;
+> - distinguer PASS local, PASS réel et contrôle non exécuté.
+>
+> Ne recrée pas un nouveau validateur séparé pour chaque micro-brique si `validate-all.cmd` peut porter le contrôle.
+>
+> ---
+>
+> # ÉCONOMIE DE QUOTA WORK — IMPORTANT
+>
+> Une part importante du quota Work hebdomadaire a déjà été consommée.
+>
+> Maximise désormais **la progression fonctionnelle par unité de quota**.
+>
+> Ne crée pas un ZIP après chaque petite fonctionnalité.
+>
+> Ne demande pas confirmation entre les sous-étapes.
+>
+> Ne t'arrête pas simplement parce qu'une brique intermédiaire est terminée.
+>
+> Continue sur la dépendance suivante tant qu'il est possible de le faire correctement.
+>
+> Utilise des **tests ciblés pendant le développement**.
+>
+> Évite de relancer inutilement toute la suite après chaque petite modification.
+>
+> Lance la non-régression complète aux jalons significatifs, après une modification transversale et obligatoirement avant le livrable final.
+>
+> Réutilise les recherches/documentations déjà acquises. Ne refais une recherche externe que lorsqu'une information technique réellement nécessaire manque.
+>
+> Corrige autonomement les FAIL locaux que tu peux diagnostiquer.
+>
+> Si une fonctionnalité nécessite un credential/API externe absent :
+>
+> - ne simule pas son PASS ;
+> - implémente les interfaces/fixtures/tests déterministes raisonnables ;
+> - marque clairement le contrôle réel restant ;
+> - puis continue sur une autre dépendance si possible.
+>
+> **Budget de communication faible.**
+>
+> Évite les longs comptes rendus intermédiaires et privilégie :
+>
+> **code fonctionnel > tests nécessaires > intégration > documentation > narration.**
+>
+> ---
+>
+> # NE PAS FAIRE MAINTENANT
+>
+> - Pas d'UI finale décorative.
+> - Pas d'armée d'agents LLM immédiatement.
+> - Pas de LLM lent directement dans le hot path.
+> - Pas de trading LIVE réel.
+> - Pas de contournement des validations pour avancer plus vite.
+> - Pas de faux PASS lorsqu'un contrôle réel n'a pas été exécuté.
+>
+> ---
+>
+> # LIVRABLE FINAL DU SPRINT
+>
+> Travaille de manière autonome jusqu'à la fin raisonnable de la session.
+>
+> **Ne produis qu'un seul état cohérent final**, sauf blocage majeur, contenant :
+>
+> 1. ZIP du dernier état fonctionnel ;
+> 2. `validate-all.cmd` étendu ;
+> 3. `validation-summary.json` ;
+> 4. rapports JSON/texte nécessaires ;
+> 5. résumé très court de ce qu'ASTRA sait désormais faire concrètement ;
+> 6. blocs V1 terminés ;
+> 7. blocs V1 encore manquants ;
+> 8. contrôles nécessitant encore Windows/Devnet ou credentials externes ;
+> 9. `NEXT_SESSION.md` avec le point de reprise exact.
+>
+> Ne qualifie jamais comme PASS un contrôle qui n'a pas réellement été exécuté.
+>
+> **Objectif principal du sprint : faire progresser ASTRA de “pipeline Solana fiable” vers une véritable compréhension exploitable du marché memecoin, avec les premières fondations du paper trading et de l'amélioration future par agents R&D.**
+>
+> **Maximise le travail produit avant le prochain besoin d'intervention humaine.**
+
+Après ça, laisse-le travailler jusqu'à son livrable final.

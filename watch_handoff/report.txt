@@ -1,0 +1,33 @@
+ASTRA-V1-watch — correctif ciblé de surveillance
+Local PASS : 460/460 tests (437 précédents + 23 nouveaux).
+Gate globale FAIL : contrôles réseau absents/non exécutés; causes exactes dans validation-summary.json.
+Nouveau watcher Windows/Mainnet : NOT_EXECUTED. Aucun appel Mainnet relancé dans Work.
+51 fichiers protégés identiques, y compris astra_position V0.2.
+
+CAUSE REPRODUITE : première fenêtre persistée de 120 s réutilisée indéfiniment;
+cap de 16 polls cumulés. Une fois atteint, la boucle saute les appels réseau.
+Le libellé no_new_position_observation ne distinguait pas ce chemin.
+Ce défaut explique la possibilité de relances identiques sans réseau, pas une inactivité du pool.
+Cause de la PREMIÈRE tentative Windows UNKNOWN faute de son dossier position-continuation.
+
+RÉFÉRENCE : OPEN_POSITION, 51 plans rejoués, ledger sequence=2 inchangé.
+Pool BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x.
+Mint GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump.
+Quantité 4 624 230 unités brutes; coût paper 12 100 000; cash 987 900 000 lamports.
+Curseur d'entrée quote : slot 452646758.
+Curseur effectif des observations archivées : slot 452646818.
+Disponibilité de la dernière observation : 1790953900472740100 ns Unix.
+Cette disponibilité n'est pas utilisée comme timestamp on-chain de recherche.
+
+CORRECTION : nouveau module astra_watch, fenêtres/budgets explicites et persistants,
+reprise même ID sans recharge, recherche latest 32 sans before/until, plus récent
+prioritaire; mêmes-slot inconnus admissibles au-dessus de l'entrée. HOLD continue.
+Les transactions null/unsupported et observations refusées ne deviennent pas PASS.
+Les erreurs source restent FAIL. Ctrl+C conserve état, brut, reprise et replay.
+Aucun BUY supplémentaire ni SELL imposé.
+
+COMMANDE : resume-position-windows.cmd --seconds 120 --budget 80 --max-polls 60 --poll-seconds 2
+Placer une copie du dossier actif position-continuation à côté du lanceur ou utiliser --directory.
+Sinon le dossier est créé depuis la référence, sans prétendre reprendre un autre dossier actif.
+Rapports : watch-report.json et watch-review.json dans le dossier actif.
+Reprise : watch_handoff/NEXT_SESSION.md. Instructions complètes : README_WATCH.md.

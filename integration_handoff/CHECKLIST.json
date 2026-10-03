@@ -1,0 +1,80 @@
+{
+  "overall": "FAIL",
+  "local_overall": "PASS",
+  "tests_passed": 189,
+  "test_suites": [
+    {
+      "suite": "V1b/runner",
+      "reported": 8,
+      "passed": 8
+    },
+    {
+      "suite": "V1b/foundation",
+      "reported": 38,
+      "passed": 38
+    },
+    {
+      "suite": "V1c/unit",
+      "reported": 35,
+      "passed": 35
+    },
+    {
+      "suite": "V1d/unit",
+      "reported": 31,
+      "passed": 31
+    },
+    {
+      "suite": "V1e/unit",
+      "reported": 28,
+      "passed": 28
+    },
+    {
+      "suite": "V1f_local/validation_tests",
+      "reported": 7,
+      "passed": 7
+    },
+    {
+      "suite": "V1f_local/budget_tests",
+      "reported": 12,
+      "passed": 12
+    },
+    {
+      "suite": "V1f_local/pipeline_tests",
+      "reported": 30,
+      "passed": 30
+    }
+  ],
+  "windows_executed": false,
+  "rpc_configured": false,
+  "implemented_local": [
+    "quota before every HTTP attempt including context and retries",
+    "shared persistent budget across ranges",
+    "bounded sequential range coordinator with durable receipts",
+    "native SOL plus classic SPL TransferChecked",
+    "token account pre/post balance observations with unknown deltas explicit",
+    "transaction fee/status view",
+    "versioned business index with no duplicate events",
+    "JSONL and standalone replayable dataset",
+    "offline provenance and business reconstruction",
+    "archived observation comparison without provider truth selection",
+    "local completeness and decoding diagnostics"
+  ],
+  "not_validated": [
+    "new integrated Windows/Devnet execution",
+    "independent providers in live operation",
+    "real token program coverage beyond sampled supported instructions"
+  ],
+  "not_complete_V1": [
+    "target DEX/pool/creation/liquidity decoders",
+    "continuous supervision and load/backpressure qualification",
+    "provider billing units and per-second rate policy",
+    "persistent/escalated external alerts",
+    "real independent multi-provider reconciliation",
+    "remote retained archive and restoration",
+    "physical availability/consumer offsets/clock qualification",
+    "72 hour soak and predefined coverage/lag thresholds"
+  ],
+  "next_session": "integration_handoff/NEXT_SESSION.md",
+  "validation_command": "validate-all.cmd",
+  "usage_command": "run-pipeline.cmd run --workdir work\\devnet-session --slots 12 --request-limit 100"
+}

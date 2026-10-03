@@ -1,0 +1,180 @@
+{
+  "overall": "FAIL",
+  "local_overall": "PASS",
+  "tests_passed": 225,
+  "tests_reported": 225,
+  "runtime": "Linux Python 3.12",
+  "windows_executed": false,
+  "rpc_configured": false,
+  "baselines": {
+    "V1C_REFERENCE.json": {
+      "status": "PASS",
+      "files": 75,
+      "mismatches": []
+    },
+    "V1D_REFERENCE.json": {
+      "status": "PASS",
+      "files": 98,
+      "mismatches": []
+    }
+  },
+  "features": [
+    {
+      "id": "bounded_live_memory_selection",
+      "local": "PASS",
+      "real": "NOT_EXECUTED",
+      "evidence": "operations_tests.test_probe (5 tests)"
+    },
+    {
+      "id": "persistent_alerts",
+      "local": "PASS",
+      "real": "NOT_EXECUTED",
+      "evidence": "operations_tests.test_alerts (7 tests)"
+    },
+    {
+      "id": "temporal_knowledge_and_replay",
+      "local": "PASS",
+      "real": "NOT_EXECUTED",
+      "evidence": "operations_tests.test_timeline (11 tests)"
+    },
+    {
+      "id": "pumpswap_targeted_decoder",
+      "local": "PASS",
+      "real": "NOT_EXECUTED",
+      "evidence": "operations_tests.test_dex (13 tests, synthetic IDL fixtures); cli-checks.json"
+    }
+  ],
+  "preserved_gate_failures": [
+    {
+      "layer": "V1b",
+      "control": "live_rpc",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Integrated",
+      "control": "integrated_live_pipeline",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    }
+  ],
+  "not_implemented": [
+    "paper execution and risk engine",
+    "decision journal",
+    "low latency hot path",
+    "routed CPI and historical PumpSwap versions",
+    "holders/global wallet graphs/bundles",
+    "social sources",
+    "independent provider qualification",
+    "remote archive qualification",
+    "72-hour qualification"
+  ],
+  "v1_complete": false
+}

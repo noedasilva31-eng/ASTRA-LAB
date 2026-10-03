@@ -1,0 +1,15 @@
+.env
+.env.*
+*.pem
+*.key
+*secret*
+*credential*
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.sqlite-wal
+*.sqlite-shm
+position-continuation/
+all-validation-*/

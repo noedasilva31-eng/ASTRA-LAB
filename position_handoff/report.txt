@@ -1,0 +1,27 @@
+ASTRA Position Brain V0.2
+LOCAL: PASS — 437/437 tests (406 historiques + 31 nouveaux).
+GATE GLOBALE: FAIL — contrôles réseau non exécutés en self-test; détails validation-summary.json.
+WINDOWS/MAINNET V0.2: NOT_EXECUTED. Aucune qualification réelle relancée.
+PROTECTION: 43 fichiers protégés inchangés; seuls astra_measure/report.py et validate_all_current.py modifiés parmi le code existant.
+RÉFÉRENCE: 51 plans/snapshots/résultats reconstruits, SessionFreeze vérifié, pièces sources identiques.
+POSITION: OPEN_POSITION; 4 624 230 unités brutes; coût paper 12 100 000 lamports; cash 987 900 000; ledger sequence=2. Aucun SELL.
+BUY decision: 4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f.
+BUY règlement conditionnel: 1790953857333198100 ns Unix, quote slot 452646758.
+Pool: BBBeU8BEHrH2PkTai55xEFKPzwfF936S6peEmhT3b49x.
+Token: GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump.
+
+REVUE RÉTROSPECTIVE: 11 observations, 11 HOLD; ceci ne remplace aucune décision historique.
+Dernier âge observé: 46,7191188 s. Retour prix observé / entrée paper hors forfaits: -48 bps.
+MAE observé: -111 bps; MFE observé: 0 bps (entrée incluse comme origine); sous-ensemble reçu seulement, pas des extrema exécutables.
+Dernier PnL indicatif conditionnel: -4 333 292 lamports, frais/haircuts du modèle inclus. NON réalisé, aucune sortie exécutée ou ajoutée au ledger.
+Profondeur exécutable garantie, coûts réellement payés, outcome futur et MAE/MFE complets: UNKNOWN.
+
+BUDGET: parent 188/200 conservé. Nouvelle allocation explicite 80 appels/quotes, persistante et non renouvelée au restart; 120 s, 16 polls maximum. Aucune découverte.
+SORTIE: détérioration conjointe persistante puis Evidence/Risk, quote post-décision avant règlement. Pas de timer SELL, pas d'assouplissement économique.
+
+FAIL HISTORIQUES WINDOWS: devnet_identity_not_verified / previous_phase_failed; Integrated pipeline_exception ValueError rpc.py:75 context. Conservés séparément; cause réseau exacte non établie sans brut Devnet.
+
+Aucune commande à lancer maintenant. Quand une reprise live sera décidée: resume-position-windows.cmd.
+Point de reprise: position_handoff/NEXT_SESSION.md.
+
+Un contrôle live sans nouvelle PositionHealth reste NOT_EXECUTED; une erreur source reste FAIL.

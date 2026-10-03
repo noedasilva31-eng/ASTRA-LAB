@@ -1,0 +1,13 @@
+{
+  "baseline": "ASTRA-V1-position",
+  "protected_files_unchanged": 51,
+  "modified_existing_code": [
+    "astra_measure/report.py",
+    "resume-position-windows.cmd",
+    "validate_all_current.py"
+  ],
+  "new_module": "astra_watch",
+  "new_tests": "watch_tests",
+  "economic_changes": false,
+  "real_mainnet_executed": false
+}

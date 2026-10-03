@@ -1,0 +1,132 @@
+{
+  "id": "archived_real_accounts_and_risk",
+  "status": "PASS",
+  "code": "real_capture_reassessment_no_fills",
+  "archive": {
+    "frames": 58,
+    "head": "5390b8c66da3e8a80133ab40adcd3735f0f2fdd8b9b170ea75930c57e6aa5cb6"
+  },
+  "archive_sha256": "519470db675c98db03e20c7ae5963ecc6ce1aad5652a006545dda34b9931392a",
+  "reassessments": [
+    {
+      "original_plan_frame": 11,
+      "frame_hash": "a454efa0ed1c1fa7a66630c7e306f20c2349754f93758666735c965b84fe5d60",
+      "event_id": "2bd9792a9a9dcb9e9bcdbb96b3a7f74ab6b1634202275532e3c80def4d4b1acb",
+      "mint": "Bd9thw3PAeyHeBGSi4R1ARBuptpG5rM4fhB8BRWJkq1e",
+      "event_provenance": {
+        "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+        "frame_sequence": 6,
+        "frame_sha256": "4b290b8add70000de002e257a1d04b9162434ee89ac5ded13468477bd0b531b0",
+        "genesis_sequence": 2,
+        "raw_sha256": "42b8ea7237a11ed7b731639f5c2a3caa5c35c0bcca9920bd342fbb76f18d5e2c"
+      },
+      "accounts": {
+        "base_reserve_raw": 141822118931313,
+        "quote_reserve_raw": 109597464094,
+        "slot": 452261012,
+        "observed_ns": 1790850572987334100,
+        "provenance": {
+          "frame": 10,
+          "frame_sha256": "4c2b02a2c8110f0b92ee4ae426eb06ba06d9aa62a2cf559c03abf9cb672e8013"
+        },
+        "mint_profiles": [
+          "token2022-immutable-self-metadata-v1",
+          "classic-spl-v1"
+        ],
+        "token_programs": [
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        ],
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "not_a_rug_safety_guarantee": true
+      },
+      "decision_time_ns": 1790850572990332300,
+      "scope": "OFFLINE_REASSESSMENT_REAL_CAPTURE_NOT_LIVE",
+      "fills": 0,
+      "result": "REJECT",
+      "code": "price_impact_limit"
+    },
+    {
+      "original_plan_frame": 52,
+      "frame_hash": "a6179d6d4978bffd6083d0f72aabc6f17beba84ecf8ad0f30e43f89d4f55bbb0",
+      "event_id": "af13040b9bd98cd0fdf4ddc18f7fc88039eedbe35aac105351ff099be290e9cb",
+      "mint": "mLWY3TjoiPabqYYTeqFFjxDwtN4UZZoco3zrV1Spump",
+      "event_provenance": {
+        "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+        "frame_sequence": 48,
+        "frame_sha256": "54f9cde98e97c994571031fddadc37c60ba7472dbd62602db7eeb43a3419a811",
+        "genesis_sequence": 7,
+        "raw_sha256": "9cdb71be3504590a99c1cdc24618df7adfb1837cad517f9135ce9b5de59a82aa"
+      },
+      "accounts": {
+        "base_reserve_raw": 2674861346879,
+        "quote_reserve_raw": 6575110480507,
+        "slot": 452261027,
+        "observed_ns": 1790850577077700000,
+        "provenance": {
+          "frame": 51,
+          "frame_sha256": "ecc15a6342d0df6d560da91cb2abbfd70e293b5206ad65cc37f56d9a5787459a"
+        },
+        "mint_profiles": [
+          "token2022-immutable-self-metadata-v1",
+          "classic-spl-v1"
+        ],
+        "token_programs": [
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        ],
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "not_a_rug_safety_guarantee": true
+      },
+      "decision_time_ns": 1790850577079020600,
+      "scope": "OFFLINE_REASSESSMENT_REAL_CAPTURE_NOT_LIVE",
+      "fills": 0,
+      "result": "intent",
+      "risk": {
+        "allowed": true,
+        "reasons": [],
+        "policy": {
+          "max_position": 20000000,
+          "max_exposure": 40000000,
+          "max_positions": 2,
+          "min_liquidity": 1000000000,
+          "max_slippage_bps": 100,
+          "max_session_loss": 10000000,
+          "max_age_ns": 5000000000,
+          "max_heartbeat_age_ns": 5000000000
+        },
+        "version": "risk-v1"
+      },
+      "decision_id": "archived-reassessment:52"
+    }
+  ],
+  "rejected_orientations": [
+    {
+      "frame": 28,
+      "frame_hash": "659fc55c14f489adc102dc987c1612beeff95ad1714e96361dd118cf8a2f09ca",
+      "base_mint": "So11111111111111111111111111111111111111112",
+      "quote_mint": "F68dKQHnWemwGnv9rqrKYCLJRKFLQYLqBZzpS27n428a",
+      "status": "REJECT",
+      "code": "unsupported_quote_currency"
+    },
+    {
+      "frame": 33,
+      "frame_hash": "94b8049d8dec52c7918f6826f9066bbf449fdcd5eae14ecaef096f078aff4dc9",
+      "base_mint": "So11111111111111111111111111111111111111112",
+      "quote_mint": "GvXGwgg2xkT6f5SQE7ZPoyhw5mZTD1i4VbJMMfS69oc3",
+      "status": "REJECT",
+      "code": "unsupported_quote_currency"
+    },
+    {
+      "frame": 38,
+      "frame_hash": "5659d010bf5f5317363d1c30850d709b88f7e162c59f6b4ba3171f805639ef7d",
+      "base_mint": "So11111111111111111111111111111111111111112",
+      "quote_mint": "5iaPAawjunCwU8x763emo8CA1UJ2YdnSyJQdRXfhMqUD",
+      "status": "REJECT",
+      "code": "unsupported_quote_currency"
+    }
+  ],
+  "live_qualification": "NOT_EXECUTED",
+  "roundtrip": "NOT_EXECUTED",
+  "original_results_modified": false
+}

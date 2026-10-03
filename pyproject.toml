@@ -1,0 +1,9 @@
+[project]
+name = "astra-foundation"
+version = "0.1.0"
+description = "ASTRA append-only point-in-time data foundation"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.astra]
+mode = "offline-data-only"

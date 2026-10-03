@@ -1,0 +1,62 @@
+# Référence Windows/Mainnet all-validation-3qductr2
+
+51 décisions reconstruites hors réseau ; archive et SessionFreeze vérifiés. Aucun run réseau nouveau.
+
+## Pourquoi les quatre scores étaient nuls
+
+| Pool | Observations | Dimension absente | Âge quote (ns) | Score |
+| --- | ---: | --- | ---: | --- |
+| AmdUDqDP7YR9z8CDVUUyQAWKcFgmskXbydxmtP5PUwwD | 1 | momentum_bps | 2172368400 | null |
+| 92ANJ941kfi6ghHufQJ5jVM5S4McT8Kd7i7m2g3DzRJz | 1 | momentum_bps | 2157512800 | null |
+| 3ErBdH7zcyVteWrcUMvEwAtnnbRrALX2dYVv7PYHnupL | 1 | momentum_bps | 2179132100 | null |
+| B8V5RsZ1kvxQS11aQdcRBMQ6bkfMzsBEVE8cdky82X3Y | 1 | momentum_bps | 2184687200 | null |
+
+Chacun de ces pools ne possède qu’un swap dans son historique au temps de décision. Une variation nécessite au moins deux prix ; le modèle d’entrée exige aussi trois observations. Les quotes sont fraîches (< 5 s) : ce ne sont pas elles qui rendent le score nul. Les champs temporels manquants ne peuvent pas être reconstruits en inventant des ticks.
+
+## Audit des devises
+
+21 rejets : WSOL est la base du pool, tandis que la quote est un autre mint. Une éventuelle prise en charge nécessiterait une normalisation de l’orientation, des réserves, des côtés BUY/SELL et des unités. Inverser simplement le prix serait insuffisant. Ces cas sont POTENTIALLY_SUPPORTABLE pour recherche, mais restent REJECT en exécution.
+
+2 rejets : aucune des deux jambes n’est WSOL dans les preuves. Aucun chemin de conversion supplémentaire n’est prouvé : REJECT.
+
+Le support actuel reste uniquement une quote WSOL liée aux preuves qualifiées. Le détail de chaque paire, sa fréquence et ses signatures/provenances est dans reference-audit.json.
+
+| Base | Quote | Fréquence | Classification audit | Runtime |
+| --- | --- | ---: | --- | --- |
+| 2o1vfBqdoCbVfdaVAKuCqmPKRrVRTR3hJ1QQryQjvjNV | So11111111111111111111111111111111111111112 | 2 | SUPPORTED | SUPPORTED |
+| 7NELwkCyL2crujChTgtdKpR1jn2UHTe115v25rUSpump | So11111111111111111111111111111111111111112 | 2 | SUPPORTED | SUPPORTED |
+| 7NNTzAaCANhPt7eZAfhwEaVarP2rjWn4brWAomtXHaN4 | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| 8zrmMNdCdCAPFuBLJPSRZPSxzZ4HmhgbfXig82AC21Hs | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| 9SLcTBtuvembyxFk9Wy9SHB4VWSuaGDFvPb9e3jBpump | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| AS6amk3m3RktnxpevPrFEqGPACerSrQizztrsQ3jpump | So11111111111111111111111111111111111111112 | 2 | SUPPORTED | SUPPORTED |
+| B9mjRdHKf3rr7FDBjDpYCgUJdnLj8CcukNNYe5hUpump | So11111111111111111111111111111111111111112 | 2 | SUPPORTED | SUPPORTED |
+| BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W | A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS | 2 | REJECT | REJECT_UNCHANGED |
+| Cxc4tVf5Tu4ZyxNagjXVCfBikrM63WgKyfXAyX61pump | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| DSmp1qi6fAGn9Xj4cztBi8B1UJUBoiADn7QPhfEnsFq6 | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| DxgJTLsgNVMaZBpgPzKBBBLBSdSAZzxyAeAfboUApump | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| ERHB4UysYrY9f7sS1JfKtjZ6q6gZsrxHy4GKpYZ5pump | So11111111111111111111111111111111111111112 | 2 | SUPPORTED | SUPPORTED |
+| ERxLYPjqeFfLsnChuPnvS6f3y5Me8BjgJi9oWaTJpump | So11111111111111111111111111111111111111112 | 2 | SUPPORTED | SUPPORTED |
+| EpzFGJXtXtabZnVzM8WFeXvgRFrWSQwGZvpgVJH1EuAZ | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| EwSwuiA5JJ788WV66h7kLed2M1uKK6dbn67cSbeQpump | So11111111111111111111111111111111111111112 | 3 | SUPPORTED | SUPPORTED |
+| FnNcduPcyrAuJKxcZjtzSYnNoSkyNnPnjKVqoafu7vqh | So11111111111111111111111111111111111111112 | 2 | SUPPORTED | SUPPORTED |
+| Gui3XrXZfBnwpXaYcAQVgaYT5MCXVxjwuYB1CotNpump | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| HHcDJ6xZq7rEJAYo82KMwAPZjLGZkSUvTCPnTLhapump | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| JERpqiXG9wLuWcbSi51uaqjYzTDd6Tj9VGgpAgik6EW | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+| So11111111111111111111111111111111111111112 | 3xTNm87MwudJJk6nQBdDejd863SDhCpHf2dhwwxH8kg8 | 1 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | 4ctd9mr5j4dQYzxhmXG1TwCw4upH3f4xj38c2R6npump | 3 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | 6MqXWvgJCfz8WtnStpvVVmhA9ww4AvDHJMLkHZTBuPVY | 2 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | 6mz5t6BkXDz1rMxtVcXTvaYqCuPzPmAPX8dxQZvtmA9g | 2 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | 85YoSvbifbZ1sgkVp3wTfgdk7v7mj3A8xDxtNFrKpump | 2 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | 8wMSBbsTEXTFfkJ8uCNc5SkRHyuuvSng3T6AtsLDxFgn | 1 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | 9RdgBmg3GzhyFiVeEpedJfWUfSdBuWdYtppRCJxQoWJt | 1 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | Cd6MT4XFvntr2ojtmt6CoS2JKTimz2xPECjUSUHhPizp | 1 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | D4n3mPP5kzcUkd5ETcW18UHPe9mGojvCQHDGEUsw26r8 | 1 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | D9Kk9ZcRnxt1Df94RtmjWgsJom2NKvWHVf3BL9fwL8zN | 2 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | Ei7YK1YGPowtm7cu8mf3V9PBJXii63AJ2TLeYcFopump | 2 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | F3KjYG72WCDtCN4VdBu23aN3HQZr2zoYf1q6vgBAcGQU | 2 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| So11111111111111111111111111111111111111112 | FXc1CYdGk8A5aYBcMaiCQtNc4BCC4pKsRkDUgXFJpump | 1 | POTENTIALLY_SUPPORTABLE | REJECT_UNCHANGED |
+| oj7csbypyUbg2XxdXhoYKcmoRqExRKtp6JfjrC4pump | So11111111111111111111111111111111111111112 | 1 | SUPPORTED | SUPPORTED |
+
+## Autres résultats Windows conservés
+
+Le rapport global joint est FAIL, malgré 386 tests PASS. Il contient notamment devnet_identity_not_verified pour V1c/V1d/V1e, un pipeline_exception Integrated et execution_evidence_not_proven pour le Bridge historique. Ces FAIL sont conservés dans le JSON. La nouvelle régression porte sur les 51 observations Brain Mainnet ; elle ne transforme pas les autres contrôles du run en PASS. Aucun endpoint complet n’est nécessaire au rapport.

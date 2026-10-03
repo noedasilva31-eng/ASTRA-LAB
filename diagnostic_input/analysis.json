@@ -1,0 +1,41 @@
+{
+  "input_sha256": "55d65e273a94b5a72c7502568a7517e97521bc7218d332277405c42eb8c9b1fb",
+  "overall": "FAIL",
+  "platform": "win32",
+  "v1b_overall": "PASS",
+  "clock_test": {
+    "test": "test_foundation.FoundationTests.test_clock_regression_fail_closed",
+    "status": "PASS"
+  },
+  "real_rpc_captured": true,
+  "live_block_counts": {
+    "first": {
+      "archived": 0,
+      "skipped": 0,
+      "unavailable": 3,
+      "error": 3
+    },
+    "resume": {
+      "archived": 0,
+      "skipped": 0,
+      "unavailable": 0,
+      "error": 6
+    },
+    "retry": {
+      "archived": 0,
+      "skipped": 0,
+      "unavailable": 0,
+      "error": 6
+    }
+  },
+  "live_latest_reasons": [
+    "rpc_-32015",
+    "rpc_-32015",
+    "rpc_-32015",
+    "rpc_-32015",
+    "rpc_-32015",
+    "rpc_-32015"
+  ],
+  "rpc_32603_origin": "deterministic fixture only; absent from real phase evidence",
+  "conclusion": "V1b PASS in both attachments; getBlock incompatible transaction version is the evidenced failure"
+}

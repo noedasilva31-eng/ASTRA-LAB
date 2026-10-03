@@ -1,0 +1,750 @@
+{
+  "version": "ASTRA-V1-position",
+  "local_status": "PASS",
+  "overall_gate": "FAIL",
+  "tests": {
+    "passed": 437,
+    "reported": 437,
+    "historical_tests": 406,
+    "new_position_tests": 31
+  },
+  "platform": "linux",
+  "windows_position_v02": "NOT_EXECUTED",
+  "mainnet_position_v02": "NOT_EXECUTED",
+  "protected_files_unchanged": 43,
+  "source_run": "all-validation-jyqge_an",
+  "source_artifacts_unchanged": true,
+  "reference_replay": {
+    "status": "PASS",
+    "plans": 51,
+    "snapshots": 51,
+    "results": 51,
+    "network_used": false
+  },
+  "reference_freeze": [
+    {
+      "status": "PASS",
+      "freeze_id": "bad54408f1c6932145c8f9cda9d57edf5452be63be0ec9a2a6e5861e8c6064bb",
+      "dataset_sha256": "d14550e397964a4f5f55459769c0e055b682d850cd77f213fb9c54d8677b1a6a",
+      "network_used": false
+    }
+  ],
+  "resumed_state": "OPEN_POSITION",
+  "portfolio": {
+    "cash_quote_raw": 987900000,
+    "positions": {
+      "GqemxZqeMM9M9z9jA5b4Unpa6HUkhssPpeKW3egpump": {
+        "units": 4624230,
+        "cost": 12100000,
+        "entry_id": "settle:4828ddb425a0434c367fbba66cca8028d06eac0fdd9f8f8a0af277444b88176f"
+      }
+    },
+    "realized_scenario_pnl_quote_raw": 0,
+    "loss_quote_raw": 0,
+    "pending": {},
+    "head": "d5a48517ee10097aa7db6cacd8e19721a08cea73b1dc7e95d8cc6ccd9fc8baca",
+    "sequence": 2
+  },
+  "retrospective_review": {
+    "classification": "DERIVED_MODEL_REVIEW_NOT_EXECUTED_DECISIONS",
+    "observations": 11,
+    "actions": [
+      "HOLD",
+      "HOLD",
+      "HOLD",
+      "HOLD",
+      "HOLD",
+      "HOLD",
+      "HOLD",
+      "HOLD",
+      "HOLD",
+      "HOLD",
+      "HOLD"
+    ],
+    "last_metrics": {
+      "return_since_entry_bps": {
+        "value": -48,
+        "unit": "bps",
+        "classification": "DERIVED",
+        "provenance": [
+          {
+            "event_id": "6d6cc63518f764f3ac33b7107f352c7c9c19e58be2d5beaadccbbdcce7d8d896",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 488,
+              "frame_sha256": "7abd4274b248501f799dd086f0fa39cfc2b6aec83edff7beadaa8f33518cfb51",
+              "genesis_sequence": 445,
+              "raw_sha256": "4e703bf6e79d7634dad7aea513bd8aa77367cfb3f3b8472da97efb93c501ff2d"
+            },
+            "available_at": 1790953860473045800
+          },
+          {
+            "event_id": "bc99c206aeaa23116f022b878e5f1b28d0804bcbead7ec80f62db06d6fc470ac",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 496,
+              "frame_sha256": "d62bdb9cec01c6a8d644dd7e647a77a43219454c1da976f5678e501d3c1e5a42",
+              "genesis_sequence": 445,
+              "raw_sha256": "f638a1f8d45afc38990d6a964f697af5e5291d04483ba99caccc7eafe8ce1138"
+            },
+            "available_at": 1790953863168068600
+          },
+          {
+            "event_id": "3c91ae6eae62d35847709c90b8e1a5171e2f07d99f3ec819c1d2eef0c870d4a5",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 504,
+              "frame_sha256": "8773df31f2936d4d1febc63b7b367a0ea7007badb33fca904551d12a0bd59492",
+              "genesis_sequence": 445,
+              "raw_sha256": "eea1dbdf806954963b11ffda5509eb933ad75ffb2630e9c6fc513fd056194510"
+            },
+            "available_at": 1790953867441989000
+          },
+          {
+            "event_id": "51872211d6fb511cdfbdc7576041fa9b82da9f00141070cb1b3fcb68f636ea17",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 517,
+              "frame_sha256": "6c33b2181a5660aa108b45bc00ca2a3c3c9164a5204ff82744a36b271d1d37e9",
+              "genesis_sequence": 445,
+              "raw_sha256": "b13a8404e804b513a14a794a4e8a5c5be428b0697c37f394f0e6245bb601e015"
+            },
+            "available_at": 1790953872866715500
+          },
+          {
+            "event_id": "8e2052449c7a80acfea1e73354ecdfc367dbbb17201870dd1600bf4eac0b9dee",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 525,
+              "frame_sha256": "85536bdc284ec5d74ef078294a5bbdf99ea30fa9d1b5b9db2fe696f1294ccd73",
+              "genesis_sequence": 445,
+              "raw_sha256": "b6c9797afc17ec826a82e0c6615bf01ec2258f47cdeca1d15d90427ca2163add"
+            },
+            "available_at": 1790953875637903200
+          },
+          {
+            "event_id": "9642d0525f04cedcb446d21dbbd3965e7040d43616d23f2af4070bd97d960e2d",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 533,
+              "frame_sha256": "14a734f78821e25d0b9590804097e8f5ab4775ab4418039056b03c2df35c60ec",
+              "genesis_sequence": 445,
+              "raw_sha256": "4efff710be6f5df2ed6f94f304944e033136257363baf72f30a70b743499111f"
+            },
+            "available_at": 1790953879804188300
+          },
+          {
+            "event_id": "b228e118db989f94f43ca9735e271c3e6d47d10914d7893b70f65e24da7056e8",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 541,
+              "frame_sha256": "8b1355e8edc20b116ff4fad2a423e843194c85cc104d9667a1c64d8b1fabb196",
+              "genesis_sequence": 445,
+              "raw_sha256": "4830b963a7a7eaab12d9fab225ea85d744227cddcd4e00dae01abde3357eb013"
+            },
+            "available_at": 1790953883952135500
+          },
+          {
+            "event_id": "45a2e298892019b77e9307a442dba4383e58696614bcca34ff2a4fe29ca80304",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 549,
+              "frame_sha256": "ac6c154c730712c359f89423182ad89ef168bb25367f7dfc4d6a18247262f28e",
+              "genesis_sequence": 445,
+              "raw_sha256": "68c9d209cc319d651503e72b2d59f21aff2369462d373dcf42ef7f387676af06"
+            },
+            "available_at": 1790953888079271900
+          },
+          {
+            "event_id": "d0f517d5bb751ad1df9ccf48649f373761ebccd94684fde86ea2fc6f66c9b094",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 557,
+              "frame_sha256": "dabbbdc7e70a6bbb045cf14f2a9f98aca996df364b74140638d30d934f4851d3",
+              "genesis_sequence": 445,
+              "raw_sha256": "3e64307136e1e565179fc590dead9a17d7d31575fa0fcece4810dff6160be498"
+            },
+            "available_at": 1790953892284866900
+          },
+          {
+            "event_id": "07f3bb7a74d6b08d4d67bc81769155251a5600628b1669b1645d6cdca93efceb",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 565,
+              "frame_sha256": "e71ce5b05c2371f3b6615d4926ea0bbd00e9e9ea22066a95b850bf3946832e13",
+              "genesis_sequence": 445,
+              "raw_sha256": "cf61ec0acfd2ed56797ee3527ea4304159ced1eadc9f82eea5c9ea07c2db4c76"
+            },
+            "available_at": 1790953896356556200
+          },
+          {
+            "event_id": "b0b6ebb9a9dca9343b411749ea922ba13f2900388406e4544c0c887b1c5619a0",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 573,
+              "frame_sha256": "2d6f2b13f93bb9190248dcdf0732d6e61f494f5388025d92d5fc51cb7f2ca7ed",
+              "genesis_sequence": 445,
+              "raw_sha256": "d333f35107896f1d3d3ad536193e4bc29f131b3ee007e8012d8ae57379888ca0"
+            },
+            "available_at": 1790953900472740100
+          }
+        ],
+        "coverage": "OBSERVED_SUBSET",
+        "executable": false
+      },
+      "mae_observed_bps": {
+        "value": -111,
+        "unit": "bps",
+        "classification": "DERIVED",
+        "provenance": [
+          {
+            "event_id": "6d6cc63518f764f3ac33b7107f352c7c9c19e58be2d5beaadccbbdcce7d8d896",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 488,
+              "frame_sha256": "7abd4274b248501f799dd086f0fa39cfc2b6aec83edff7beadaa8f33518cfb51",
+              "genesis_sequence": 445,
+              "raw_sha256": "4e703bf6e79d7634dad7aea513bd8aa77367cfb3f3b8472da97efb93c501ff2d"
+            },
+            "available_at": 1790953860473045800
+          },
+          {
+            "event_id": "bc99c206aeaa23116f022b878e5f1b28d0804bcbead7ec80f62db06d6fc470ac",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 496,
+              "frame_sha256": "d62bdb9cec01c6a8d644dd7e647a77a43219454c1da976f5678e501d3c1e5a42",
+              "genesis_sequence": 445,
+              "raw_sha256": "f638a1f8d45afc38990d6a964f697af5e5291d04483ba99caccc7eafe8ce1138"
+            },
+            "available_at": 1790953863168068600
+          },
+          {
+            "event_id": "3c91ae6eae62d35847709c90b8e1a5171e2f07d99f3ec819c1d2eef0c870d4a5",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 504,
+              "frame_sha256": "8773df31f2936d4d1febc63b7b367a0ea7007badb33fca904551d12a0bd59492",
+              "genesis_sequence": 445,
+              "raw_sha256": "eea1dbdf806954963b11ffda5509eb933ad75ffb2630e9c6fc513fd056194510"
+            },
+            "available_at": 1790953867441989000
+          },
+          {
+            "event_id": "51872211d6fb511cdfbdc7576041fa9b82da9f00141070cb1b3fcb68f636ea17",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 517,
+              "frame_sha256": "6c33b2181a5660aa108b45bc00ca2a3c3c9164a5204ff82744a36b271d1d37e9",
+              "genesis_sequence": 445,
+              "raw_sha256": "b13a8404e804b513a14a794a4e8a5c5be428b0697c37f394f0e6245bb601e015"
+            },
+            "available_at": 1790953872866715500
+          },
+          {
+            "event_id": "8e2052449c7a80acfea1e73354ecdfc367dbbb17201870dd1600bf4eac0b9dee",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 525,
+              "frame_sha256": "85536bdc284ec5d74ef078294a5bbdf99ea30fa9d1b5b9db2fe696f1294ccd73",
+              "genesis_sequence": 445,
+              "raw_sha256": "b6c9797afc17ec826a82e0c6615bf01ec2258f47cdeca1d15d90427ca2163add"
+            },
+            "available_at": 1790953875637903200
+          },
+          {
+            "event_id": "9642d0525f04cedcb446d21dbbd3965e7040d43616d23f2af4070bd97d960e2d",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 533,
+              "frame_sha256": "14a734f78821e25d0b9590804097e8f5ab4775ab4418039056b03c2df35c60ec",
+              "genesis_sequence": 445,
+              "raw_sha256": "4efff710be6f5df2ed6f94f304944e033136257363baf72f30a70b743499111f"
+            },
+            "available_at": 1790953879804188300
+          },
+          {
+            "event_id": "b228e118db989f94f43ca9735e271c3e6d47d10914d7893b70f65e24da7056e8",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 541,
+              "frame_sha256": "8b1355e8edc20b116ff4fad2a423e843194c85cc104d9667a1c64d8b1fabb196",
+              "genesis_sequence": 445,
+              "raw_sha256": "4830b963a7a7eaab12d9fab225ea85d744227cddcd4e00dae01abde3357eb013"
+            },
+            "available_at": 1790953883952135500
+          },
+          {
+            "event_id": "45a2e298892019b77e9307a442dba4383e58696614bcca34ff2a4fe29ca80304",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 549,
+              "frame_sha256": "ac6c154c730712c359f89423182ad89ef168bb25367f7dfc4d6a18247262f28e",
+              "genesis_sequence": 445,
+              "raw_sha256": "68c9d209cc319d651503e72b2d59f21aff2369462d373dcf42ef7f387676af06"
+            },
+            "available_at": 1790953888079271900
+          },
+          {
+            "event_id": "d0f517d5bb751ad1df9ccf48649f373761ebccd94684fde86ea2fc6f66c9b094",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 557,
+              "frame_sha256": "dabbbdc7e70a6bbb045cf14f2a9f98aca996df364b74140638d30d934f4851d3",
+              "genesis_sequence": 445,
+              "raw_sha256": "3e64307136e1e565179fc590dead9a17d7d31575fa0fcece4810dff6160be498"
+            },
+            "available_at": 1790953892284866900
+          },
+          {
+            "event_id": "07f3bb7a74d6b08d4d67bc81769155251a5600628b1669b1645d6cdca93efceb",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 565,
+              "frame_sha256": "e71ce5b05c2371f3b6615d4926ea0bbd00e9e9ea22066a95b850bf3946832e13",
+              "genesis_sequence": 445,
+              "raw_sha256": "cf61ec0acfd2ed56797ee3527ea4304159ced1eadc9f82eea5c9ea07c2db4c76"
+            },
+            "available_at": 1790953896356556200
+          },
+          {
+            "event_id": "b0b6ebb9a9dca9343b411749ea922ba13f2900388406e4544c0c887b1c5619a0",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 573,
+              "frame_sha256": "2d6f2b13f93bb9190248dcdf0732d6e61f494f5388025d92d5fc51cb7f2ca7ed",
+              "genesis_sequence": 445,
+              "raw_sha256": "d333f35107896f1d3d3ad536193e4bc29f131b3ee007e8012d8ae57379888ca0"
+            },
+            "available_at": 1790953900472740100
+          }
+        ],
+        "coverage": "OBSERVED_SUBSET",
+        "executable": false
+      },
+      "mfe_observed_bps": {
+        "value": 0,
+        "unit": "bps",
+        "classification": "DERIVED",
+        "provenance": [
+          {
+            "event_id": "6d6cc63518f764f3ac33b7107f352c7c9c19e58be2d5beaadccbbdcce7d8d896",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 488,
+              "frame_sha256": "7abd4274b248501f799dd086f0fa39cfc2b6aec83edff7beadaa8f33518cfb51",
+              "genesis_sequence": 445,
+              "raw_sha256": "4e703bf6e79d7634dad7aea513bd8aa77367cfb3f3b8472da97efb93c501ff2d"
+            },
+            "available_at": 1790953860473045800
+          },
+          {
+            "event_id": "bc99c206aeaa23116f022b878e5f1b28d0804bcbead7ec80f62db06d6fc470ac",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 496,
+              "frame_sha256": "d62bdb9cec01c6a8d644dd7e647a77a43219454c1da976f5678e501d3c1e5a42",
+              "genesis_sequence": 445,
+              "raw_sha256": "f638a1f8d45afc38990d6a964f697af5e5291d04483ba99caccc7eafe8ce1138"
+            },
+            "available_at": 1790953863168068600
+          },
+          {
+            "event_id": "3c91ae6eae62d35847709c90b8e1a5171e2f07d99f3ec819c1d2eef0c870d4a5",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 504,
+              "frame_sha256": "8773df31f2936d4d1febc63b7b367a0ea7007badb33fca904551d12a0bd59492",
+              "genesis_sequence": 445,
+              "raw_sha256": "eea1dbdf806954963b11ffda5509eb933ad75ffb2630e9c6fc513fd056194510"
+            },
+            "available_at": 1790953867441989000
+          },
+          {
+            "event_id": "51872211d6fb511cdfbdc7576041fa9b82da9f00141070cb1b3fcb68f636ea17",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 517,
+              "frame_sha256": "6c33b2181a5660aa108b45bc00ca2a3c3c9164a5204ff82744a36b271d1d37e9",
+              "genesis_sequence": 445,
+              "raw_sha256": "b13a8404e804b513a14a794a4e8a5c5be428b0697c37f394f0e6245bb601e015"
+            },
+            "available_at": 1790953872866715500
+          },
+          {
+            "event_id": "8e2052449c7a80acfea1e73354ecdfc367dbbb17201870dd1600bf4eac0b9dee",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 525,
+              "frame_sha256": "85536bdc284ec5d74ef078294a5bbdf99ea30fa9d1b5b9db2fe696f1294ccd73",
+              "genesis_sequence": 445,
+              "raw_sha256": "b6c9797afc17ec826a82e0c6615bf01ec2258f47cdeca1d15d90427ca2163add"
+            },
+            "available_at": 1790953875637903200
+          },
+          {
+            "event_id": "9642d0525f04cedcb446d21dbbd3965e7040d43616d23f2af4070bd97d960e2d",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 533,
+              "frame_sha256": "14a734f78821e25d0b9590804097e8f5ab4775ab4418039056b03c2df35c60ec",
+              "genesis_sequence": 445,
+              "raw_sha256": "4efff710be6f5df2ed6f94f304944e033136257363baf72f30a70b743499111f"
+            },
+            "available_at": 1790953879804188300
+          },
+          {
+            "event_id": "b228e118db989f94f43ca9735e271c3e6d47d10914d7893b70f65e24da7056e8",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 541,
+              "frame_sha256": "8b1355e8edc20b116ff4fad2a423e843194c85cc104d9667a1c64d8b1fabb196",
+              "genesis_sequence": 445,
+              "raw_sha256": "4830b963a7a7eaab12d9fab225ea85d744227cddcd4e00dae01abde3357eb013"
+            },
+            "available_at": 1790953883952135500
+          },
+          {
+            "event_id": "45a2e298892019b77e9307a442dba4383e58696614bcca34ff2a4fe29ca80304",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 549,
+              "frame_sha256": "ac6c154c730712c359f89423182ad89ef168bb25367f7dfc4d6a18247262f28e",
+              "genesis_sequence": 445,
+              "raw_sha256": "68c9d209cc319d651503e72b2d59f21aff2369462d373dcf42ef7f387676af06"
+            },
+            "available_at": 1790953888079271900
+          },
+          {
+            "event_id": "d0f517d5bb751ad1df9ccf48649f373761ebccd94684fde86ea2fc6f66c9b094",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 557,
+              "frame_sha256": "dabbbdc7e70a6bbb045cf14f2a9f98aca996df364b74140638d30d934f4851d3",
+              "genesis_sequence": 445,
+              "raw_sha256": "3e64307136e1e565179fc590dead9a17d7d31575fa0fcece4810dff6160be498"
+            },
+            "available_at": 1790953892284866900
+          },
+          {
+            "event_id": "07f3bb7a74d6b08d4d67bc81769155251a5600628b1669b1645d6cdca93efceb",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 565,
+              "frame_sha256": "e71ce5b05c2371f3b6615d4926ea0bbd00e9e9ea22066a95b850bf3946832e13",
+              "genesis_sequence": 445,
+              "raw_sha256": "cf61ec0acfd2ed56797ee3527ea4304159ced1eadc9f82eea5c9ea07c2db4c76"
+            },
+            "available_at": 1790953896356556200
+          },
+          {
+            "event_id": "b0b6ebb9a9dca9343b411749ea922ba13f2900388406e4544c0c887b1c5619a0",
+            "provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 573,
+              "frame_sha256": "2d6f2b13f93bb9190248dcdf0732d6e61f494f5388025d92d5fc51cb7f2ca7ed",
+              "genesis_sequence": 445,
+              "raw_sha256": "d333f35107896f1d3d3ad536193e4bc29f131b3ee007e8012d8ae57379888ca0"
+            },
+            "available_at": 1790953900472740100
+          }
+        ],
+        "coverage": "OBSERVED_SUBSET",
+        "executable": false
+      },
+      "position_age_ns": {
+        "value": 46719118800,
+        "unit": "ns",
+        "classification": "DERIVED",
+        "provenance": null,
+        "coverage": "OBSERVED_SUBSET",
+        "executable": false
+      },
+      "indicative_exit_pnl_quote_raw": {
+        "value": -4333292,
+        "unit": "quote_raw",
+        "classification": "DERIVED",
+        "provenance": {
+          "frame": 574,
+          "frame_sha256": "f4f2ba52b02b8ece425dce15431b01bf5e8460fd3eb7970dcaf3c4316eabf091"
+        },
+        "coverage": "OBSERVED_SUBSET",
+        "executable": false
+      }
+    }
+  },
+  "separate_historical_failures": [
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "devnet_identity_not_verified",
+      "cause": "devnet identity not verified"
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "devnet_identity_not_verified",
+      "cause": "devnet identity not verified"
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "devnet_identity_not_verified",
+      "cause": "devnet identity not verified"
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "Integrated",
+      "control": "interruption_checkpoint",
+      "status": "FAIL",
+      "code": "pipeline_exception",
+      "cause": "pipeline exception ValueError @ rpc.py:75 context"
+    }
+  ],
+  "current_gate_unqualified_checks": [
+    {
+      "layer": "V1b",
+      "control": "live_rpc",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1b",
+      "control": "after_outage",
+      "status": "FAIL",
+      "code": "live_capture_unavailable",
+      "cause": "Capture RPC reelle indisponible; verifier endpoint, acces reseau et service."
+    },
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Integrated",
+      "control": "integrated_live_pipeline",
+      "status": "FAIL",
+      "code": "live_endpoint_not_used",
+      "cause": "SOLANA_RPC_URL absent ou controle reel explicitement desactive."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_pumpswap_events",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Observer",
+      "control": "real_websocket_spine",
+      "status": "NOT_EXECUTED",
+      "code": "observer_mainnet_configuration_missing",
+      "cause": "Observation Mainnet non executee: ASTRA_OBSERVER_NETWORK=mainnet et ASTRA_OBSERVER_RPC_URL requis."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_evidence_bridge",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_conditional_roundtrip",
+      "status": "NOT_EXECUTED",
+      "code": "bridge_mainnet_configuration_missing",
+      "cause": "Pont reel non execute: configuration Mainnet HTTP et WSS absente ou self-test."
+    },
+    {
+      "layer": "Position",
+      "control": "real_position_continuation",
+      "status": "NOT_EXECUTED",
+      "code": "position_mainnet_configuration_missing",
+      "cause": "position mainnet configuration missing"
+    }
+  ],
+  "report_directory": "all-validation-8jzpx4cj",
+  "no_real_orders": true,
+  "no_fabricated_fills": true,
+  "live_windows_command_when_needed": "resume-position-windows.cmd",
+  "next_session": "position_handoff/NEXT_SESSION.md",
+  "live_qualification_semantics": {
+    "fresh_health_required": true,
+    "no_fresh_health": "NOT_EXECUTED",
+    "source_errors": "FAIL",
+    "HOLD_can_qualify_observation_not_exit": true
+  }
+}

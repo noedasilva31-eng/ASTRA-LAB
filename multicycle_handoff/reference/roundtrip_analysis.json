@@ -1,0 +1,2330 @@
+{
+  "scope": "OFFLINE_AUDIT_OF_PROVIDED_WINDOWS_MAINNET_PAPER_CAPTURE",
+  "input_sha256": {
+    "bridge(1).json": "f5525136ef836d870f9587c3ecdf912f3f95be6bb755f94f9dce712e88bc8e0e",
+    "integrated(1).json": "2650ffb2031a3f0721313dc9d4d31eccdf2de1af4d12a3076692d35063baa621",
+    "observer(1).json": "a7e35fc24068d94a45f488f2d175babf01523e1c5251463a3e17b5945c45ba59",
+    "report(4).json": "c8a797251bb1d660dc93c7f0ecfd3de27d339c051bf9fe1f7eee526cb2f62b6e",
+    "report(4).txt": "cafb9e1897d7c1def1c949e65938bea3c5b2850278980f68872e6b3a0c3bc1b5",
+    "validation-summary(3).json": "6d2902814ad83c1e93a2011af6e8c95afe26e4e7c21872f6b83f85451e1fd661",
+    "bridge-report(1).json": "c5baa16da11f81e3fdd772ed50a1944b0506174b84e19530912b0d4b8eea3001",
+    "raw(1).sqlite": "9649fc258ea5024ff259e69f93be856c32d0fe731449de80c932da541649baf9",
+    "engine(1).sqlite": "563504d1de6d28bed1684dca75ab4cb09aef3ba1d416ca89d2a4785d2c40b3d7",
+    "paper(1).sqlite": "de5c7c3a1e7346e972713c0bacb45809c658d2fbd324a008249ef81a1d815181",
+    "report (1)(1).json": "36e09dec6d7642db1b7fce091c5066abf757fe161e9abe909251de080d775163",
+    "engine (2)(1).sqlite": "44e13a74ef89923191cb127c8445eb3f3ff981c76b4c87e038145fa3ca5609f8",
+    "raw (3)(1).sqlite": "e648c87ef87e0efdc12bdd128bf03edb75f52a0ea260651acc3a605ed8d3277d",
+    "engine (4)(1).sqlite": "6960086353e500d484d1c6c1fd4460097e77eca27168668821d8a13bb925befa",
+    "raw (5)(1).sqlite": "976aabcd2491f21f083f8c8c90d50dba5c7131a99295fe0e8e3a16bd464038fe"
+  },
+  "checks": {
+    "sqlite_integrity": {
+      "raw": "ok",
+      "engine": "ok",
+      "paper": "ok"
+    },
+    "archive": {
+      "frames": 47,
+      "head": "bb29188f0e97887095075f3c5def200480bbfe6fac81d2309140d31bbc36c4c4"
+    },
+    "reconstruction": {
+      "status": "PASS",
+      "plans": 4,
+      "results": 4,
+      "network_used": false
+    },
+    "json_matches_sqlite": true,
+    "raw_evidence_opportunities_rebuilt": 4,
+    "temporal_checks": [
+      {
+        "side": "BUY",
+        "decision_to_fill_ns": 4096386900,
+        "decision_to_fill_quote_ns": 1956761800,
+        "quote_to_fill_ns": 2139625100,
+        "quote_slot_delta": 15
+      },
+      {
+        "side": "SELL",
+        "decision_to_fill_ns": 4098468600,
+        "decision_to_fill_quote_ns": 1983978900,
+        "quote_to_fill_ns": 2114489700,
+        "quote_slot_delta": 15
+      }
+    ],
+    "network_used": false,
+    "components_modified": false
+  },
+  "session": {
+    "state": "ROUNDTRIP_OBSERVED",
+    "scope": "cumulative_persistent_session",
+    "started_ns": 1790867976190531500,
+    "observed_ns": 1790867992605685200,
+    "intents": 2,
+    "buy_scenarios": 1,
+    "sell_scenarios": 1,
+    "pending": 0,
+    "positions": 0,
+    "realized_scenario_pnl_quote_raw": -4358759,
+    "rejection_counts": {},
+    "target": null,
+    "assurance": "CONDITIONAL_PAPER_NOT_EXECUTED_TRADES",
+    "coverage": "OBSERVED_SUBSET",
+    "polls": 3,
+    "followup_hydrations": 3,
+    "followup_decoded_events": 3,
+    "stop_reason": "roundtrip_observed",
+    "elapsed_monotonic_ns": 16415205700
+  },
+  "configuration": {
+    "code_sha256": "df21fbca2987ea2cbcdbf21b98f712b232f61a44267c96b69ff9723760a9cf97",
+    "initial": 1000000000,
+    "model": {
+      "adverse_bps": 25,
+      "delay_slots": 1,
+      "fee_quote_raw": 2100000,
+      "quote_ttl_ns": 5000000000
+    },
+    "policy": {
+      "max_age_ns": 5000000000,
+      "max_exposure": 40000000,
+      "max_heartbeat_age_ns": 5000000000,
+      "max_position": 20000000,
+      "max_positions": 2,
+      "max_session_loss": 10000000,
+      "max_slippage_bps": 100,
+      "min_liquidity": 1000000000
+    },
+    "quote_mint": "So11111111111111111111111111111111111111112",
+    "version": "paper-conditional-v1"
+  },
+  "phases": [
+    {
+      "plan_frame": 18,
+      "action": "submit",
+      "side": "BUY",
+      "decision_or_settlement_ns": 1790867979271045600,
+      "utc": "2026-10-01T15:19:39.271045600Z",
+      "event": {
+        "availability_ns": 1790867976936120800,
+        "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "commitment": "confirmed",
+        "event_data_sha256": "e3e841eb44be9ee0f1e29cdf0cfcf2f0792f0bae1567fdc96cca42503ebaac67",
+        "event_time": 1790867976,
+        "event_type": "SellEvent",
+        "executable_quote": false,
+        "fee_semantics": "separate_reported_components_not_assumed_additive",
+        "fields": {
+          "base_amount_in": "744",
+          "base_supply": "999995190932829",
+          "buyback_fee": "5",
+          "buyback_fee_basis_points": "5000",
+          "can_boost": true,
+          "cashback": "0",
+          "cashback_fee_basis_points": "0",
+          "coin_creator": "AAj31bzDY47guYdKDm4J8Dk3P5EX9PTxbMXzvuYmLo5J",
+          "coin_creator_fee": "10",
+          "coin_creator_fee_basis_points": "5",
+          "holder_rewards": "0",
+          "holder_rewards_bps": "0",
+          "lp_fee": "37",
+          "lp_fee_basis_points": "20",
+          "min_quote_amount_out": "17182",
+          "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          "pool_base_token_reserves": "850865345420",
+          "pool_quote_token_reserves": "20733688434442",
+          "protocol_fee": "10",
+          "protocol_fee_basis_points": "5",
+          "protocol_fee_recipient": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+          "protocol_fee_recipient_token_account": "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
+          "quote_amount_out": "18144",
+          "quote_amount_out_without_lp_fee": "18107",
+          "timestamp": "1790867976",
+          "user": "5NQ2w8mkVyhaSra1zpnKiLg4LenVK2tspWg8SaYRpy9a",
+          "user_base_token_account": "FBgpeRLUYZttvip5Tmyehq26cYkiNSWN3jKyQkSJ9njx",
+          "user_base_token_reserves": "498650428890",
+          "user_quote_amount_out": "18087",
+          "user_quote_token_account": "51tzVr8sPFijDiwXcpAz2LPmhuA2NnPEuXcQ7PefhjrP",
+          "user_quote_token_reserves": "0",
+          "virtual_quote_reserves": "17584505288"
+        },
+        "id": "d9caddd3812540f4594fca313259817562b63ee3a361b2246edeef96dd19dfb2",
+        "inner_instruction_index": 6,
+        "input_amount_raw": "744",
+        "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "instruction": "sell",
+        "instruction_index": 3,
+        "kind": "swap",
+        "network": "mainnet",
+        "output_amount_raw": "18087",
+        "output_mint": "So11111111111111111111111111111111111111112",
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "protocol": "pumpswap",
+        "provenance": {
+          "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+          "frame_sequence": 13,
+          "frame_sha256": "d9c77bdde1e555a830698592cd8e70346a5672871385d567a8576417b1c25356",
+          "genesis_sequence": 3,
+          "raw_sha256": "e62d704cb313fb3f8dc6ca7fe7e04995269cf44e4a482aa893559f6a1eaf46cb"
+        },
+        "quote_fee_components": {
+          "buyback_fee": "5",
+          "cashback": "0",
+          "coin_creator_fee": "10",
+          "holder_rewards": "0",
+          "lp_fee": "37",
+          "protocol_fee": "10"
+        },
+        "quote_mint": "So11111111111111111111111111111111111111112",
+        "signature": "2KHLt7Kx5ZkU7sgqmhP8vbcivVSJFTjjF3Ckwqj84sk2k8VFTCxSHDD75KTwEBQw4x68WD1LLbbBF5od21tuykCZ",
+        "slot": 452325975,
+        "wallet": "5NQ2w8mkVyhaSra1zpnKiLg4LenVK2tspWg8SaYRpy9a"
+      },
+      "source_transaction_fee_lamports_other_wallet": 5000,
+      "evidence_frames": {
+        "accounts_seq": 17,
+        "forward_seq": 15,
+        "reverse_seq": 16
+      },
+      "quote": {
+        "input_mint": "So11111111111111111111111111111111111111112",
+        "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "input_raw": 10000000,
+        "output_raw": 408803,
+        "minimum_output_raw": 406759,
+        "slippage_bps": 50,
+        "slot": 452325977,
+        "observed_ns": 1790867977142138900,
+        "impact": "0.0034140997341972582006714654",
+        "routes": [
+          {
+            "swapInfo": {
+              "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+              "label": "Pump.fun Amm",
+              "inputMint": "So11111111111111111111111111111111111111112",
+              "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "inAmount": "10000000",
+              "outAmount": "408803",
+              "updateContextSlot": "452325974"
+            },
+            "percent": 100,
+            "bps": null
+          }
+        ],
+        "provenance": {
+          "frame": 15,
+          "frame_sha256": "9feb1cdebb416198c9deaf6c88adba976add8f791bd2b026712bc5691fbcd362"
+        },
+        "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION"
+      },
+      "quote_observed_utc": "2026-10-01T15:19:37.142138900Z",
+      "quote_price_SOL_per_token": "0.02446166001717208533205480390310247233998",
+      "modeled_price_before_fixed_fee_SOL_per_token": "0.02458458202522869807428968996383607984089",
+      "modeled_output_raw": 406759,
+      "output_haircut_bps": "49.99963307509974241872001917794145346291",
+      "price_impact_bps_interpreted_by_model": "34.1409973419725820067146540000",
+      "quote_age_at_decision_ns": 2128906700,
+      "event_receipt_to_decision_ns": 2334924800,
+      "acquisition_monotonic_ns": 2323658800,
+      "accounts_context_slot": 452325984,
+      "quote_context_to_accounts_slot_gap": 7,
+      "account_proof": {
+        "base_reserve_raw": 850843617641,
+        "quote_reserve_raw": 20734219414450,
+        "slot": 452325984,
+        "observed_ns": 1790867979267432800,
+        "provenance": {
+          "frame": 17,
+          "frame_sha256": "f62267116cc5d00329089e45cd7f15d8a378e8cf575151c228f465345a8e03c2"
+        },
+        "mint_profiles": [
+          "token2022-immutable-self-metadata-v1",
+          "classic-spl-v1"
+        ],
+        "token_programs": [
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        ],
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "not_a_rug_safety_guarantee": true
+      },
+      "provider_timeTaken_seconds": 0.000166334,
+      "platformFee": null,
+      "temporal_checks": "PASS",
+      "transport_ns": {
+        "accounts_seq": 86892400,
+        "forward_seq": 67999800,
+        "reverse_seq": 51055900
+      }
+    },
+    {
+      "plan_frame": 28,
+      "action": "settle",
+      "side": "BUY",
+      "decision_or_settlement_ns": 1790867983367432500,
+      "utc": "2026-10-01T15:19:43.367432500Z",
+      "event": {
+        "availability_ns": 1790867979780777400,
+        "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "commitment": "confirmed",
+        "event_data_sha256": "c5bda18447647eb0cb8a970aaabfa3161b7a7f694dcd79ed30c794382fdd1f47",
+        "event_time": 1790867978,
+        "event_type": "BuyEvent",
+        "executable_quote": false,
+        "fee_semantics": "separate_reported_components_not_assumed_additive",
+        "fields": {
+          "base_amount_out": "18798",
+          "base_supply": "999995190932829",
+          "buyback_fee": "115",
+          "buyback_fee_basis_points": "5000",
+          "can_boost": true,
+          "cashback": "0",
+          "cashback_fee_basis_points": "0",
+          "coin_creator": "AAj31bzDY47guYdKDm4J8Dk3P5EX9PTxbMXzvuYmLo5J",
+          "coin_creator_fee": "230",
+          "coin_creator_fee_basis_points": "5",
+          "current_sol_volume": "0",
+          "holder_rewards": "0",
+          "holder_rewards_bps": "0",
+          "ix_name": "buy_exact_quote_in",
+          "last_update_timestamp": "0",
+          "lp_fee": "917",
+          "lp_fee_basis_points": "20",
+          "max_quote_amount_in": "459853",
+          "min_base_amount_out": "17858",
+          "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          "pool_base_token_reserves": "850865346164",
+          "pool_quote_token_reserves": "20733688416335",
+          "protocol_fee": "230",
+          "protocol_fee_basis_points": "5",
+          "protocol_fee_recipient": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+          "protocol_fee_recipient_token_account": "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
+          "quote_amount_in": "459853",
+          "quote_amount_in_with_lp_fee": "459393",
+          "timestamp": "1790867978",
+          "total_claimed_tokens": "0",
+          "total_unclaimed_tokens": "0",
+          "track_volume": true,
+          "user": "FUVSQy4cgZw7PTjFHV9Ddft9KZKm4yqPge6c47vSBvMD",
+          "user_base_token_account": "HgaHutmpVFefMjrFGimiHJaCQ29XPbHKF1M1QWnN6Jwx",
+          "user_base_token_reserves": "2246576",
+          "user_quote_amount_in": "458476",
+          "user_quote_token_account": "AEfTNDwiuJ1zrvzprYvr8MdMbfeXARzfaUf4byhQwnE4",
+          "user_quote_token_reserves": "459853",
+          "virtual_quote_reserves": "17584505288"
+        },
+        "id": "64044359db948a3107bd53c46bce915abbbf2f9b62389ec283a51ce13f5e8870",
+        "inner_instruction_index": 6,
+        "input_amount_raw": "458476",
+        "input_mint": "So11111111111111111111111111111111111111112",
+        "instruction": "buy_exact_quote_in",
+        "instruction_index": 5,
+        "kind": "swap",
+        "network": "mainnet",
+        "output_amount_raw": "18798",
+        "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "protocol": "pumpswap",
+        "provenance": {
+          "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+          "frame_sequence": 24,
+          "frame_sha256": "960a3e0a87a23f2a8daa13fd7e6224f160b8539952735eea8bf10f71bb576d3c",
+          "genesis_sequence": 22,
+          "raw_sha256": "ad3cf0e0965d8376b56b429c939d0a3a5879f5d5cd86ec71b54bb94434ea32ca"
+        },
+        "quote_fee_components": {
+          "buyback_fee": "115",
+          "cashback": "0",
+          "coin_creator_fee": "230",
+          "holder_rewards": "0",
+          "lp_fee": "917",
+          "protocol_fee": "230"
+        },
+        "quote_mint": "So11111111111111111111111111111111111111112",
+        "signature": "Tfp1J1fb8x5MNJWHZpy4h2acPL5YRKsyVcQPLMzqwx3RuLCqx2cWWRAd2dF6UZhrJptSaYDQx8Xcz9spyiSrXeP",
+        "slot": 452325981,
+        "wallet": "FUVSQy4cgZw7PTjFHV9Ddft9KZKm4yqPge6c47vSBvMD"
+      },
+      "source_transaction_fee_lamports_other_wallet": 5000,
+      "evidence_frames": {
+        "accounts_seq": 27,
+        "forward_seq": 25,
+        "reverse_seq": 26
+      },
+      "quote": {
+        "input_mint": "So11111111111111111111111111111111111111112",
+        "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "input_raw": 10000000,
+        "output_raw": 408782,
+        "minimum_output_raw": 406739,
+        "slippage_bps": 50,
+        "slot": 452325992,
+        "observed_ns": 1790867981227807400,
+        "impact": "0.0029355476490863510689991924",
+        "routes": [
+          {
+            "swapInfo": {
+              "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+              "label": "Pump.fun Amm",
+              "inputMint": "So11111111111111111111111111111111111111112",
+              "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "inAmount": "10000000",
+              "outAmount": "408782",
+              "updateContextSlot": "452325992"
+            },
+            "percent": 100,
+            "bps": null
+          }
+        ],
+        "provenance": {
+          "frame": 25,
+          "frame_sha256": "998a94756f8331810376d84d2f1eb0781e7d5552ec3d09eba0b81b9fa149a27f"
+        },
+        "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION"
+      },
+      "quote_observed_utc": "2026-10-01T15:19:41.227807400Z",
+      "quote_price_SOL_per_token": "0.02446291666462809027794765914350436173804",
+      "modeled_price_before_fixed_fee_SOL_per_token": "0.02458579088801418108418420657964935745036",
+      "modeled_output_raw": 406739,
+      "output_haircut_bps": "49.97773874583518843784706763017941103082",
+      "price_impact_bps_interpreted_by_model": "29.3554764908635106899919240000",
+      "quote_age_at_decision_ns": 2139625100,
+      "event_receipt_to_decision_ns": 3586655100,
+      "acquisition_monotonic_ns": 3575154600,
+      "accounts_context_slot": 452326001,
+      "quote_context_to_accounts_slot_gap": 9,
+      "account_proof": {
+        "base_reserve_raw": 850843600262,
+        "quote_reserve_raw": 20734219839400,
+        "slot": 452326001,
+        "observed_ns": 1790867983364372800,
+        "provenance": {
+          "frame": 27,
+          "frame_sha256": "d71b458c4ccd608e5e25a120af9b65962dfd580314f9afccbc51b1d0c5709f00"
+        },
+        "mint_profiles": [
+          "token2022-immutable-self-metadata-v1",
+          "classic-spl-v1"
+        ],
+        "token_programs": [
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        ],
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "not_a_rug_safety_guarantee": true
+      },
+      "provider_timeTaken_seconds": 0.000182173,
+      "platformFee": null,
+      "temporal_checks": "PASS",
+      "transport_ns": {
+        "accounts_seq": 79868800,
+        "forward_seq": 50850800,
+        "reverse_seq": 51025200
+      }
+    },
+    {
+      "plan_frame": 36,
+      "action": "submit",
+      "side": "SELL",
+      "decision_or_settlement_ns": 1790867987479133100,
+      "utc": "2026-10-01T15:19:47.479133100Z",
+      "event": {
+        "availability_ns": 1790867984585903100,
+        "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "commitment": "confirmed",
+        "event_data_sha256": "68fed761708e6e78c284b2f8b5f2b2bda42ee9b2d9ecb04f1c89e22635003a55",
+        "event_time": 1790867981,
+        "event_type": "BuyEvent",
+        "executable_quote": false,
+        "fee_semantics": "separate_reported_components_not_assumed_additive",
+        "fields": {
+          "base_amount_out": "10337",
+          "base_supply": "999995190932829",
+          "buyback_fee": "63",
+          "buyback_fee_basis_points": "5000",
+          "can_boost": true,
+          "cashback": "0",
+          "cashback_fee_basis_points": "0",
+          "coin_creator": "AAj31bzDY47guYdKDm4J8Dk3P5EX9PTxbMXzvuYmLo5J",
+          "coin_creator_fee": "127",
+          "coin_creator_fee_basis_points": "5",
+          "current_sol_volume": "0",
+          "holder_rewards": "0",
+          "holder_rewards_bps": "0",
+          "ix_name": "buy_exact_quote_in",
+          "last_update_timestamp": "0",
+          "lp_fee": "505",
+          "lp_fee_basis_points": "20",
+          "max_quote_amount_in": "252891",
+          "min_base_amount_out": "9820",
+          "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          "pool_base_token_reserves": "850843611551",
+          "pool_quote_token_reserves": "20734219563415",
+          "protocol_fee": "127",
+          "protocol_fee_basis_points": "5",
+          "protocol_fee_recipient": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+          "protocol_fee_recipient_token_account": "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
+          "quote_amount_in": "252891",
+          "quote_amount_in_with_lp_fee": "252637",
+          "timestamp": "1790867981",
+          "total_claimed_tokens": "0",
+          "total_unclaimed_tokens": "0",
+          "track_volume": true,
+          "user": "9ZqJafjJKABQhA2YxrArff9VDmHAGSvZ1MAKu19raJKB",
+          "user_base_token_account": "cNomfyrZXq9aGNn9vjBjJHZMKVsEK76drHTWwSEXToe",
+          "user_base_token_reserves": "2485669",
+          "user_quote_amount_in": "252132",
+          "user_quote_token_account": "68cKayyA8QJf59SfBimQyPG2DpDCMhKUsvZHpVMTF1dv",
+          "user_quote_token_reserves": "252891",
+          "virtual_quote_reserves": "17584505288"
+        },
+        "id": "4f7426fc2831018b8d2d29be483651076709fc5ce4e00c0555b5a5956c1d9b75",
+        "inner_instruction_index": 6,
+        "input_amount_raw": "252132",
+        "input_mint": "So11111111111111111111111111111111111111112",
+        "instruction": "buy_exact_quote_in",
+        "instruction_index": 5,
+        "kind": "swap",
+        "network": "mainnet",
+        "output_amount_raw": "10337",
+        "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "protocol": "pumpswap",
+        "provenance": {
+          "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+          "frame_sequence": 32,
+          "frame_sha256": "9ead124fa2f7014771ea36625b25583b98b31c0950518b6fd022feb3062d36a7",
+          "genesis_sequence": 22,
+          "raw_sha256": "370abdedf5581b02be2da446a004fc8808000803e07a653dd12a95f6fdc6854b"
+        },
+        "quote_fee_components": {
+          "buyback_fee": "63",
+          "cashback": "0",
+          "coin_creator_fee": "127",
+          "holder_rewards": "0",
+          "lp_fee": "505",
+          "protocol_fee": "127"
+        },
+        "quote_mint": "So11111111111111111111111111111111111111112",
+        "signature": "8kSRpyFRehWvVSvh5adJzEZZ8KBKp2N6Tci2XLkjXSbDZ6wCcFNiurRAhfnTbMisQobFLruUpCeEkHy6thW7TBN",
+        "slot": 452325993,
+        "wallet": "9ZqJafjJKABQhA2YxrArff9VDmHAGSvZ1MAKu19raJKB"
+      },
+      "source_transaction_fee_lamports_other_wallet": 5000,
+      "evidence_frames": {
+        "accounts_seq": 35,
+        "forward_seq": 33,
+        "reverse_seq": 34
+      },
+      "quote": {
+        "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "output_mint": "So11111111111111111111111111111111111111112",
+        "input_raw": 406739,
+        "output_raw": 9890467,
+        "minimum_output_raw": 9841015,
+        "slippage_bps": 50,
+        "slot": 452326008,
+        "observed_ns": 1790867985333942800,
+        "impact": "0.0029952550741282055739580031",
+        "routes": [
+          {
+            "swapInfo": {
+              "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+              "label": "Pump.fun Amm",
+              "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "outputMint": "So11111111111111111111111111111111111111112",
+              "inAmount": "406739",
+              "outAmount": "9890467",
+              "updateContextSlot": "452326005"
+            },
+            "percent": 100,
+            "bps": null
+          }
+        ],
+        "provenance": {
+          "frame": 33,
+          "frame_sha256": "8b906e5ba6cffee8c110a2af0cb8cd7de9f4f78bc2ac8ea29946924d16e29ee2"
+        },
+        "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION"
+      },
+      "quote_observed_utc": "2026-10-01T15:19:45.333942800Z",
+      "quote_price_SOL_per_token": "0.02431649534468049535451481170972048414339",
+      "modeled_price_before_fixed_fee_SOL_per_token": "0.02419491369158108762621730397134280214093",
+      "modeled_output_raw": 9841015,
+      "output_haircut_bps": "49.99966129000784290569899277759078514695",
+      "price_impact_bps_interpreted_by_model": "29.9525507412820557395800310000",
+      "quote_age_at_decision_ns": 2145190300,
+      "event_receipt_to_decision_ns": 2893230000,
+      "acquisition_monotonic_ns": 2883842800,
+      "accounts_context_slot": 452326015,
+      "quote_context_to_accounts_slot_gap": 7,
+      "account_proof": {
+        "base_reserve_raw": 850833853253,
+        "quote_reserve_raw": 20734458044214,
+        "slot": 452326015,
+        "observed_ns": 1790867987476017400,
+        "provenance": {
+          "frame": 35,
+          "frame_sha256": "e2a75c9d3ee1e8b7b7df018beddb6f4955ae56f9737fff11efe33dbd46c9ed0a"
+        },
+        "mint_profiles": [
+          "token2022-immutable-self-metadata-v1",
+          "classic-spl-v1"
+        ],
+        "token_programs": [
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        ],
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "not_a_rug_safety_guarantee": true
+      },
+      "provider_timeTaken_seconds": 0.000132764,
+      "platformFee": null,
+      "temporal_checks": "PASS",
+      "transport_ns": {
+        "accounts_seq": 85469300,
+        "forward_seq": 50580200,
+        "reverse_seq": 49951600
+      }
+    },
+    {
+      "plan_frame": 44,
+      "action": "settle",
+      "side": "SELL",
+      "decision_or_settlement_ns": 1790867991577601700,
+      "utc": "2026-10-01T15:19:51.577601700Z",
+      "event": {
+        "availability_ns": 1790867988675125300,
+        "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "commitment": "confirmed",
+        "event_data_sha256": "2ca9b9026ba125a4a201fe9b71c41b3d2a5947c55dcdd94b308107884c088223",
+        "event_time": 1790867986,
+        "event_type": "SellEvent",
+        "executable_quote": false,
+        "fee_semantics": "separate_reported_components_not_assumed_additive",
+        "fields": {
+          "base_amount_in": "795",
+          "base_supply": "999995190932829",
+          "buyback_fee": "5",
+          "buyback_fee_basis_points": "5000",
+          "can_boost": true,
+          "cashback": "0",
+          "cashback_fee_basis_points": "0",
+          "coin_creator": "AAj31bzDY47guYdKDm4J8Dk3P5EX9PTxbMXzvuYmLo5J",
+          "coin_creator_fee": "10",
+          "coin_creator_fee_basis_points": "5",
+          "holder_rewards": "0",
+          "holder_rewards_bps": "0",
+          "lp_fee": "39",
+          "lp_fee_basis_points": "20",
+          "min_quote_amount_out": "18363",
+          "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          "pool_base_token_reserves": "850843577246",
+          "pool_quote_token_reserves": "20734220401916",
+          "protocol_fee": "10",
+          "protocol_fee_basis_points": "5",
+          "protocol_fee_recipient": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+          "protocol_fee_recipient_token_account": "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
+          "quote_amount_out": "19389",
+          "quote_amount_out_without_lp_fee": "19350",
+          "timestamp": "1790867986",
+          "user": "5ghT7cwfqHpGP8Pw3n6AAa9Suma9EnZ7sMafY2Ya2D1A",
+          "user_base_token_account": "9fVpdNUV32xrpxHqm6as7BfzMzUXRkizCerjLE53dEM5",
+          "user_base_token_reserves": "498650452532",
+          "user_quote_amount_out": "19330",
+          "user_quote_token_account": "BdVJRWBmvwiHRGDRjayyJbBaaUXPRfF5jGKYFFasQqjM",
+          "user_quote_token_reserves": "0",
+          "virtual_quote_reserves": "17584505288"
+        },
+        "id": "2bd6e20446a52308557b6a32a655950bf4c2e384ade54ddf46c6e8442000cd51",
+        "inner_instruction_index": 6,
+        "input_amount_raw": "795",
+        "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "instruction": "sell",
+        "instruction_index": 3,
+        "kind": "swap",
+        "network": "mainnet",
+        "output_amount_raw": "19330",
+        "output_mint": "So11111111111111111111111111111111111111112",
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "protocol": "pumpswap",
+        "provenance": {
+          "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+          "frame_sequence": 40,
+          "frame_sha256": "6bbe69cf9254c089881c8cdacb4862decfb6dd5477a9866ff14e5a1cb8ed83e6",
+          "genesis_sequence": 22,
+          "raw_sha256": "97ac3211043897dd86232befb1ccabe4cc499fde4d14e6c161e8f6ee8490811b"
+        },
+        "quote_fee_components": {
+          "buyback_fee": "5",
+          "cashback": "0",
+          "coin_creator_fee": "10",
+          "holder_rewards": "0",
+          "lp_fee": "39",
+          "protocol_fee": "10"
+        },
+        "quote_mint": "So11111111111111111111111111111111111111112",
+        "signature": "4WambDfnoaYnTV3yELKvFabDzHt4wKpyxhPHyDZ94fn5ekDFYqtRHTe9CsmpoL7TmPqbaQviimmfECRKg1TWhFnL",
+        "slot": 452326011,
+        "wallet": "5ghT7cwfqHpGP8Pw3n6AAa9Suma9EnZ7sMafY2Ya2D1A"
+      },
+      "source_transaction_fee_lamports_other_wallet": 5000,
+      "evidence_frames": {
+        "accounts_seq": 43,
+        "forward_seq": 41,
+        "reverse_seq": 42
+      },
+      "quote": {
+        "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "output_mint": "So11111111111111111111111111111111111111112",
+        "input_raw": 406739,
+        "output_raw": 9890694,
+        "minimum_output_raw": 9841241,
+        "slippage_bps": 50,
+        "slot": 452326023,
+        "observed_ns": 1790867989463112000,
+        "impact": "0.0029666288578767893956912018",
+        "routes": [
+          {
+            "swapInfo": {
+              "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+              "label": "Pump.fun Amm",
+              "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "outputMint": "So11111111111111111111111111111111111111112",
+              "inAmount": "406739",
+              "outAmount": "9890694",
+              "updateContextSlot": "452326020"
+            },
+            "percent": 100,
+            "bps": null
+          }
+        ],
+        "provenance": {
+          "frame": 41,
+          "frame_sha256": "3c65eb4c1eb82ebbe8565391e2dc28661076991b366dcb9852caa55086a1e179"
+        },
+        "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION"
+      },
+      "quote_observed_utc": "2026-10-01T15:19:49.463112000Z",
+      "quote_price_SOL_per_token": "0.02431705344213365327642542269120984218381",
+      "modeled_price_before_fixed_fee_SOL_per_token": "0.02419546933045515674670980653441150221641",
+      "modeled_output_raw": 9841241,
+      "output_haircut_bps": "49.99952480584274470527548420768047216909",
+      "price_impact_bps_interpreted_by_model": "29.6662885787678939569120180000",
+      "quote_age_at_decision_ns": 2114489700,
+      "event_receipt_to_decision_ns": 2902476400,
+      "acquisition_monotonic_ns": 2891553500,
+      "accounts_context_slot": 452326031,
+      "quote_context_to_accounts_slot_gap": 8,
+      "account_proof": {
+        "base_reserve_raw": 850833839945,
+        "quote_reserve_raw": 20734458369551,
+        "slot": 452326031,
+        "observed_ns": 1790867991576059300,
+        "provenance": {
+          "frame": 43,
+          "frame_sha256": "0e4ce79e7c929129050627a3a4c90d5308aa581c1ba005354d395e40874eda6a"
+        },
+        "mint_profiles": [
+          "token2022-immutable-self-metadata-v1",
+          "classic-spl-v1"
+        ],
+        "token_programs": [
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        ],
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "not_a_rug_safety_guarantee": true
+      },
+      "provider_timeTaken_seconds": 0.000183131,
+      "platformFee": null,
+      "temporal_checks": "PASS",
+      "transport_ns": {
+        "accounts_seq": 80287100,
+        "forward_seq": 73722800,
+        "reverse_seq": 49285700
+      }
+    }
+  ],
+  "ledger": [
+    {
+      "amount": 10000000,
+      "decision_ns": 1790867979271045600,
+      "decision_slot": 452325977,
+      "id": "1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f",
+      "kind": "intent",
+      "live_execution": false,
+      "mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+      "model": {
+        "adverse_bps": 25,
+        "delay_slots": 1,
+        "fee_quote_raw": 2100000,
+        "quote_ttl_ns": 5000000000
+      },
+      "opportunity": {
+        "accounts_evidence": {
+          "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+          "base_reserve_raw": 850843617641,
+          "mint_profiles": [
+            "token2022-immutable-self-metadata-v1",
+            "classic-spl-v1"
+          ],
+          "not_a_rug_safety_guarantee": true,
+          "observed_ns": 1790867979267432800,
+          "provenance": {
+            "frame": 17,
+            "frame_sha256": "f62267116cc5d00329089e45cd7f15d8a378e8cf575151c228f465345a8e03c2"
+          },
+          "quote_reserve_raw": 20734219414450,
+          "slot": 452325984,
+          "token_programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+            "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+          ]
+        },
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "authority_state": "OBSERVED_SAFE",
+        "availability_ns": 1790867977142138900,
+        "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "coverage": "OBSERVED",
+        "coverage_scope": "decision_local_accounts_and_two_direct_quotes",
+        "data_health": "OBSERVED",
+        "event_id": "d9caddd3812540f4594fca313259817562b63ee3a361b2246edeef96dd19dfb2",
+        "event_provenance": {
+          "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+          "frame_sequence": 13,
+          "frame_sha256": "d9c77bdde1e555a830698592cd8e70346a5672871385d567a8576417b1c25356",
+          "genesis_sequence": 3,
+          "raw_sha256": "e62d704cb313fb3f8dc6ca7fe7e04995269cf44e4a482aa893559f6a1eaf46cb"
+        },
+        "event_time": 1790867976,
+        "execution_quote": {
+          "assurance": "INDICATIVE_ROUTE_NOT_EXECUTION_GUARANTEE",
+          "exit_possible": true,
+          "expires_ns": 1790867982142138900,
+          "liquidity_quote_raw": 20734219414450,
+          "observed_ns": 1790867977142138900,
+          "provenance": {
+            "frame": 15,
+            "frame_sha256": "9feb1cdebb416198c9deaf6c88adba976add8f791bd2b026712bc5691fbcd362"
+          },
+          "size_raw": 10000000,
+          "slippage_bps": 50,
+          "status": "OBSERVED"
+        },
+        "feed_coverage": "PARTIAL",
+        "heartbeat_ns": 1790867979267432800,
+        "holders": "NOT_COLLECTED",
+        "live_execution": false,
+        "observed_features": {
+          "authority_state": "NOT_COLLECTED",
+          "availability_ns": 1790867976936120800,
+          "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "bundles": {
+            "status": "NOT_COLLECTED"
+          },
+          "coverage": "PARTIAL",
+          "data_health": "PARTIAL",
+          "event_time": 1790867976,
+          "execution_quote": {
+            "status": "NOT_COLLECTED"
+          },
+          "feature_events": [
+            "d9caddd3812540f4594fca313259817562b63ee3a361b2246edeef96dd19dfb2"
+          ],
+          "heartbeat_ns": 1790867976936120800,
+          "holders": {
+            "status": "NOT_COLLECTED"
+          },
+          "lifecycle": "AMM",
+          "market": {
+            "buy_count": 0,
+            "half_window_volume_change_raw": "18087",
+            "late_event": false,
+            "liquidity": {
+              "status": "NOT_COLLECTED"
+            },
+            "new_wallet_observed": true,
+            "price_change_window": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "price_quote_raw_per_base_raw": {
+              "denominator": "248",
+              "numerator": "6029"
+            },
+            "sell_count": 1,
+            "status": "PARTIAL",
+            "swaps_observed": 1,
+            "volume_acceleration_per_second": {
+              "status": "NOT_COLLECTED"
+            },
+            "volume_quote_raw": "18087",
+            "wallets_unique_window": 1
+          },
+          "network": "mainnet",
+          "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          "pool_creation_time": null,
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 13,
+            "frame_sha256": "d9c77bdde1e555a830698592cd8e70346a5672871385d567a8576417b1c25356",
+            "genesis_sequence": 3,
+            "raw_sha256": "e62d704cb313fb3f8dc6ca7fe7e04995269cf44e4a482aa893559f6a1eaf46cb"
+          },
+          "quote_mint": "So11111111111111111111111111111111111111112",
+          "schema": 1,
+          "slot": 452325975,
+          "social": {
+            "status": "NOT_COLLECTED"
+          },
+          "venue": "pumpswap",
+          "version": "6dfb29d2afa89cadf0c4188dc5686b2601090415041e143593d2e3e030131e16"
+        },
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "quote_mint": "So11111111111111111111111111111111111111112",
+        "reverse_quote_evidence": {
+          "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+          "impact": "0.0030678043607350286268301922",
+          "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "input_raw": 406759,
+          "minimum_output_raw": 9841499,
+          "observed_ns": 1790867979176859000,
+          "output_mint": "So11111111111111111111111111111111111111112",
+          "output_raw": 9890953,
+          "provenance": {
+            "frame": 16,
+            "frame_sha256": "83e656c092a9e0584d7f7fcd7409996d5e7a1daef1cf56006c92d447d18b1a3f"
+          },
+          "routes": [
+            {
+              "bps": null,
+              "percent": 100,
+              "swapInfo": {
+                "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+                "inAmount": "406759",
+                "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+                "label": "Pump.fun Amm",
+                "outAmount": "9890953",
+                "outputMint": "So11111111111111111111111111111111111111112",
+                "updateContextSlot": "452325981"
+              }
+            }
+          ],
+          "slippage_bps": 50,
+          "slot": 452325984
+        },
+        "schema": 2,
+        "slot": 452325977,
+        "social": "NOT_COLLECTED"
+      },
+      "risk": {
+        "allowed": true,
+        "policy": {
+          "max_age_ns": 5000000000,
+          "max_exposure": 40000000,
+          "max_heartbeat_age_ns": 5000000000,
+          "max_position": 20000000,
+          "max_positions": 2,
+          "max_session_loss": 10000000,
+          "max_slippage_bps": 100,
+          "min_liquidity": 1000000000
+        },
+        "reasons": [],
+        "version": "risk-v1"
+      },
+      "side": "BUY",
+      "strategy_version": "external-candidate-unpromoted"
+    },
+    {
+      "assurance": "CONDITIONAL_PAPER_SCENARIO",
+      "availability_ns": 1790867983367432500,
+      "base_units": 406739,
+      "fees_model": {
+        "adverse_bps": 25,
+        "delay_slots": 1,
+        "fee_quote_raw": 2100000,
+        "quote_ttl_ns": 5000000000
+      },
+      "id": "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f",
+      "intent_id": "1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f",
+      "kind": "settlement",
+      "live_execution": false,
+      "quote_evidence": {
+        "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+        "impact": "0.0029355476490863510689991924",
+        "input_mint": "So11111111111111111111111111111111111111112",
+        "input_raw": 10000000,
+        "minimum_output_raw": 406739,
+        "observed_ns": 1790867981227807400,
+        "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "output_raw": 408782,
+        "provenance": {
+          "frame": 25,
+          "frame_sha256": "998a94756f8331810376d84d2f1eb0781e7d5552ec3d09eba0b81b9fa149a27f"
+        },
+        "routes": [
+          {
+            "bps": null,
+            "percent": 100,
+            "swapInfo": {
+              "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+              "inAmount": "10000000",
+              "inputMint": "So11111111111111111111111111111111111111112",
+              "label": "Pump.fun Amm",
+              "outAmount": "408782",
+              "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "updateContextSlot": "452325992"
+            }
+          }
+        ],
+        "slippage_bps": 50,
+        "slot": 452325992
+      },
+      "quote_spent": 12100000,
+      "risk": {
+        "allowed": true,
+        "policy": {
+          "max_age_ns": 5000000000,
+          "max_exposure": 40000000,
+          "max_heartbeat_age_ns": 5000000000,
+          "max_position": 20000000,
+          "max_positions": 2,
+          "max_session_loss": 10000000,
+          "max_slippage_bps": 100,
+          "min_liquidity": 1000000000
+        },
+        "reasons": [],
+        "version": "risk-v1"
+      }
+    },
+    {
+      "amount": 406739,
+      "decision_ns": 1790867987479133100,
+      "decision_slot": 452326008,
+      "id": "0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82",
+      "kind": "intent",
+      "live_execution": false,
+      "mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+      "model": {
+        "adverse_bps": 25,
+        "delay_slots": 1,
+        "fee_quote_raw": 2100000,
+        "quote_ttl_ns": 5000000000
+      },
+      "opportunity": {
+        "accounts_evidence": {
+          "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+          "base_reserve_raw": 850833853253,
+          "mint_profiles": [
+            "token2022-immutable-self-metadata-v1",
+            "classic-spl-v1"
+          ],
+          "not_a_rug_safety_guarantee": true,
+          "observed_ns": 1790867987476017400,
+          "provenance": {
+            "frame": 35,
+            "frame_sha256": "e2a75c9d3ee1e8b7b7df018beddb6f4955ae56f9737fff11efe33dbd46c9ed0a"
+          },
+          "quote_reserve_raw": 20734458044214,
+          "slot": 452326015,
+          "token_programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+            "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+          ]
+        },
+        "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+        "authority_state": "OBSERVED_SAFE",
+        "availability_ns": 1790867985333942800,
+        "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "coverage": "OBSERVED",
+        "coverage_scope": "decision_local_accounts_and_two_direct_quotes",
+        "data_health": "OBSERVED",
+        "event_id": "4f7426fc2831018b8d2d29be483651076709fc5ce4e00c0555b5a5956c1d9b75",
+        "event_provenance": {
+          "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+          "frame_sequence": 32,
+          "frame_sha256": "9ead124fa2f7014771ea36625b25583b98b31c0950518b6fd022feb3062d36a7",
+          "genesis_sequence": 22,
+          "raw_sha256": "370abdedf5581b02be2da446a004fc8808000803e07a653dd12a95f6fdc6854b"
+        },
+        "event_time": 1790867981,
+        "execution_quote": {
+          "assurance": "INDICATIVE_ROUTE_NOT_EXECUTION_GUARANTEE",
+          "exit_possible": true,
+          "expires_ns": 1790867990333942800,
+          "liquidity_quote_raw": 20734458044214,
+          "observed_ns": 1790867985333942800,
+          "provenance": {
+            "frame": 33,
+            "frame_sha256": "8b906e5ba6cffee8c110a2af0cb8cd7de9f4f78bc2ac8ea29946924d16e29ee2"
+          },
+          "size_raw": 406739,
+          "slippage_bps": 50,
+          "status": "OBSERVED"
+        },
+        "feed_coverage": "PARTIAL",
+        "heartbeat_ns": 1790867987476017400,
+        "holders": "NOT_COLLECTED",
+        "live_execution": false,
+        "observed_features": {
+          "authority_state": "NOT_COLLECTED",
+          "availability_ns": 1790867984585903100,
+          "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "bundles": {
+            "status": "NOT_COLLECTED"
+          },
+          "coverage": "PARTIAL",
+          "data_health": "PARTIAL",
+          "event_time": 1790867981,
+          "execution_quote": {
+            "status": "NOT_COLLECTED"
+          },
+          "feature_events": [
+            "d9caddd3812540f4594fca313259817562b63ee3a361b2246edeef96dd19dfb2",
+            "64044359db948a3107bd53c46bce915abbbf2f9b62389ec283a51ce13f5e8870",
+            "4f7426fc2831018b8d2d29be483651076709fc5ce4e00c0555b5a5956c1d9b75"
+          ],
+          "heartbeat_ns": 1790867984585903100,
+          "holders": {
+            "status": "NOT_COLLECTED"
+          },
+          "lifecycle": "AMM",
+          "market": {
+            "buy_count": 2,
+            "half_window_volume_change_raw": "692521",
+            "late_event": false,
+            "liquidity": {
+              "status": "NOT_COLLECTED"
+            },
+            "new_wallet_observed": true,
+            "price_change_window": {
+              "denominator": "62321773",
+              "numerator": "206963"
+            },
+            "price_quote_raw_per_base_raw": {
+              "denominator": "10337",
+              "numerator": "252132"
+            },
+            "sell_count": 1,
+            "status": "PARTIAL",
+            "swaps_observed": 3,
+            "volume_acceleration_per_second": {
+              "status": "NOT_COLLECTED"
+            },
+            "volume_quote_raw": "728695",
+            "wallets_unique_window": 3
+          },
+          "network": "mainnet",
+          "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          "pool_creation_time": null,
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 32,
+            "frame_sha256": "9ead124fa2f7014771ea36625b25583b98b31c0950518b6fd022feb3062d36a7",
+            "genesis_sequence": 22,
+            "raw_sha256": "370abdedf5581b02be2da446a004fc8808000803e07a653dd12a95f6fdc6854b"
+          },
+          "quote_mint": "So11111111111111111111111111111111111111112",
+          "schema": 1,
+          "slot": 452325993,
+          "social": {
+            "status": "NOT_COLLECTED"
+          },
+          "venue": "pumpswap",
+          "version": "6dfb29d2afa89cadf0c4188dc5686b2601090415041e143593d2e3e030131e16"
+        },
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "quote_mint": "So11111111111111111111111111111111111111112",
+        "reverse_quote_evidence": {
+          "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+          "impact": "0.002992300683743794030162501",
+          "input_mint": "So11111111111111111111111111111111111111112",
+          "input_raw": 9841015,
+          "minimum_output_raw": 400263,
+          "observed_ns": 1790867987386172500,
+          "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "output_raw": 402274,
+          "provenance": {
+            "frame": 34,
+            "frame_sha256": "71ff3a2f8a547ef360dc2b56245fb36938f5311b3ccc210623f74878dd347472"
+          },
+          "routes": [
+            {
+              "bps": null,
+              "percent": 100,
+              "swapInfo": {
+                "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+                "inAmount": "9841015",
+                "inputMint": "So11111111111111111111111111111111111111112",
+                "label": "Pump.fun Amm",
+                "outAmount": "402274",
+                "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+                "updateContextSlot": "452326012"
+              }
+            }
+          ],
+          "slippage_bps": 50,
+          "slot": 452326015
+        },
+        "schema": 2,
+        "slot": 452326008,
+        "social": "NOT_COLLECTED"
+      },
+      "risk": {
+        "allowed": true,
+        "policy": {
+          "max_age_ns": 5000000000,
+          "max_exposure": 40000000,
+          "max_heartbeat_age_ns": 5000000000,
+          "max_position": 20000000,
+          "max_positions": 2,
+          "max_session_loss": 10000000,
+          "max_slippage_bps": 100,
+          "min_liquidity": 1000000000
+        },
+        "reasons": [],
+        "version": "risk-v1"
+      },
+      "side": "SELL",
+      "strategy_version": "external-candidate-unpromoted"
+    },
+    {
+      "assurance": "CONDITIONAL_PAPER_SCENARIO",
+      "availability_ns": 1790867991577601700,
+      "base_units": 406739,
+      "fees_model": {
+        "adverse_bps": 25,
+        "delay_slots": 1,
+        "fee_quote_raw": 2100000,
+        "quote_ttl_ns": 5000000000
+      },
+      "id": "settle:0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82",
+      "intent_id": "0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82",
+      "kind": "settlement",
+      "live_execution": false,
+      "quote_evidence": {
+        "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+        "impact": "0.0029666288578767893956912018",
+        "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+        "input_raw": 406739,
+        "minimum_output_raw": 9841241,
+        "observed_ns": 1790867989463112000,
+        "output_mint": "So11111111111111111111111111111111111111112",
+        "output_raw": 9890694,
+        "provenance": {
+          "frame": 41,
+          "frame_sha256": "3c65eb4c1eb82ebbe8565391e2dc28661076991b366dcb9852caa55086a1e179"
+        },
+        "routes": [
+          {
+            "bps": null,
+            "percent": 100,
+            "swapInfo": {
+              "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+              "inAmount": "406739",
+              "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "label": "Pump.fun Amm",
+              "outAmount": "9890694",
+              "outputMint": "So11111111111111111111111111111111111111112",
+              "updateContextSlot": "452326020"
+            }
+          }
+        ],
+        "slippage_bps": 50,
+        "slot": 452326023
+      },
+      "quote_received": 7741241,
+      "risk": {
+        "allowed": true,
+        "policy": {
+          "max_age_ns": 5000000000,
+          "max_exposure": 40000000,
+          "max_heartbeat_age_ns": 5000000000,
+          "max_position": 20000000,
+          "max_positions": 2,
+          "max_session_loss": 10000000,
+          "max_slippage_bps": 100,
+          "min_liquidity": 1000000000
+        },
+        "reasons": [],
+        "version": "risk-v1"
+      }
+    }
+  ],
+  "portfolio_states": [
+    {
+      "cash_quote_raw": 1000000000,
+      "positions": {},
+      "realized_scenario_pnl_quote_raw": 0,
+      "loss_quote_raw": 0,
+      "pending": {},
+      "head": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sequence": 0
+    },
+    {
+      "cash_quote_raw": 1000000000,
+      "positions": {},
+      "realized_scenario_pnl_quote_raw": 0,
+      "loss_quote_raw": 0,
+      "pending": {
+        "1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f": {
+          "amount": 10000000,
+          "decision_ns": 1790867979271045600,
+          "decision_slot": 452325977,
+          "id": "1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f",
+          "kind": "intent",
+          "live_execution": false,
+          "mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "model": {
+            "adverse_bps": 25,
+            "delay_slots": 1,
+            "fee_quote_raw": 2100000,
+            "quote_ttl_ns": 5000000000
+          },
+          "opportunity": {
+            "accounts_evidence": {
+              "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+              "base_reserve_raw": 850843617641,
+              "mint_profiles": [
+                "token2022-immutable-self-metadata-v1",
+                "classic-spl-v1"
+              ],
+              "not_a_rug_safety_guarantee": true,
+              "observed_ns": 1790867979267432800,
+              "provenance": {
+                "frame": 17,
+                "frame_sha256": "f62267116cc5d00329089e45cd7f15d8a378e8cf575151c228f465345a8e03c2"
+              },
+              "quote_reserve_raw": 20734219414450,
+              "slot": 452325984,
+              "token_programs": [
+                "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+                "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+              ]
+            },
+            "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+            "authority_state": "OBSERVED_SAFE",
+            "availability_ns": 1790867977142138900,
+            "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+            "coverage": "OBSERVED",
+            "coverage_scope": "decision_local_accounts_and_two_direct_quotes",
+            "data_health": "OBSERVED",
+            "event_id": "d9caddd3812540f4594fca313259817562b63ee3a361b2246edeef96dd19dfb2",
+            "event_provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 13,
+              "frame_sha256": "d9c77bdde1e555a830698592cd8e70346a5672871385d567a8576417b1c25356",
+              "genesis_sequence": 3,
+              "raw_sha256": "e62d704cb313fb3f8dc6ca7fe7e04995269cf44e4a482aa893559f6a1eaf46cb"
+            },
+            "event_time": 1790867976,
+            "execution_quote": {
+              "assurance": "INDICATIVE_ROUTE_NOT_EXECUTION_GUARANTEE",
+              "exit_possible": true,
+              "expires_ns": 1790867982142138900,
+              "liquidity_quote_raw": 20734219414450,
+              "observed_ns": 1790867977142138900,
+              "provenance": {
+                "frame": 15,
+                "frame_sha256": "9feb1cdebb416198c9deaf6c88adba976add8f791bd2b026712bc5691fbcd362"
+              },
+              "size_raw": 10000000,
+              "slippage_bps": 50,
+              "status": "OBSERVED"
+            },
+            "feed_coverage": "PARTIAL",
+            "heartbeat_ns": 1790867979267432800,
+            "holders": "NOT_COLLECTED",
+            "live_execution": false,
+            "observed_features": {
+              "authority_state": "NOT_COLLECTED",
+              "availability_ns": 1790867976936120800,
+              "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "bundles": {
+                "status": "NOT_COLLECTED"
+              },
+              "coverage": "PARTIAL",
+              "data_health": "PARTIAL",
+              "event_time": 1790867976,
+              "execution_quote": {
+                "status": "NOT_COLLECTED"
+              },
+              "feature_events": [
+                "d9caddd3812540f4594fca313259817562b63ee3a361b2246edeef96dd19dfb2"
+              ],
+              "heartbeat_ns": 1790867976936120800,
+              "holders": {
+                "status": "NOT_COLLECTED"
+              },
+              "lifecycle": "AMM",
+              "market": {
+                "buy_count": 0,
+                "half_window_volume_change_raw": "18087",
+                "late_event": false,
+                "liquidity": {
+                  "status": "NOT_COLLECTED"
+                },
+                "new_wallet_observed": true,
+                "price_change_window": {
+                  "denominator": "1",
+                  "numerator": "0"
+                },
+                "price_quote_raw_per_base_raw": {
+                  "denominator": "248",
+                  "numerator": "6029"
+                },
+                "sell_count": 1,
+                "status": "PARTIAL",
+                "swaps_observed": 1,
+                "volume_acceleration_per_second": {
+                  "status": "NOT_COLLECTED"
+                },
+                "volume_quote_raw": "18087",
+                "wallets_unique_window": 1
+              },
+              "network": "mainnet",
+              "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+              "pool_creation_time": null,
+              "provenance": {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 13,
+                "frame_sha256": "d9c77bdde1e555a830698592cd8e70346a5672871385d567a8576417b1c25356",
+                "genesis_sequence": 3,
+                "raw_sha256": "e62d704cb313fb3f8dc6ca7fe7e04995269cf44e4a482aa893559f6a1eaf46cb"
+              },
+              "quote_mint": "So11111111111111111111111111111111111111112",
+              "schema": 1,
+              "slot": 452325975,
+              "social": {
+                "status": "NOT_COLLECTED"
+              },
+              "venue": "pumpswap",
+              "version": "6dfb29d2afa89cadf0c4188dc5686b2601090415041e143593d2e3e030131e16"
+            },
+            "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+            "quote_mint": "So11111111111111111111111111111111111111112",
+            "reverse_quote_evidence": {
+              "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+              "impact": "0.0030678043607350286268301922",
+              "input_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "input_raw": 406759,
+              "minimum_output_raw": 9841499,
+              "observed_ns": 1790867979176859000,
+              "output_mint": "So11111111111111111111111111111111111111112",
+              "output_raw": 9890953,
+              "provenance": {
+                "frame": 16,
+                "frame_sha256": "83e656c092a9e0584d7f7fcd7409996d5e7a1daef1cf56006c92d447d18b1a3f"
+              },
+              "routes": [
+                {
+                  "bps": null,
+                  "percent": 100,
+                  "swapInfo": {
+                    "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+                    "inAmount": "406759",
+                    "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+                    "label": "Pump.fun Amm",
+                    "outAmount": "9890953",
+                    "outputMint": "So11111111111111111111111111111111111111112",
+                    "updateContextSlot": "452325981"
+                  }
+                }
+              ],
+              "slippage_bps": 50,
+              "slot": 452325984
+            },
+            "schema": 2,
+            "slot": 452325977,
+            "social": "NOT_COLLECTED"
+          },
+          "risk": {
+            "allowed": true,
+            "policy": {
+              "max_age_ns": 5000000000,
+              "max_exposure": 40000000,
+              "max_heartbeat_age_ns": 5000000000,
+              "max_position": 20000000,
+              "max_positions": 2,
+              "max_session_loss": 10000000,
+              "max_slippage_bps": 100,
+              "min_liquidity": 1000000000
+            },
+            "reasons": [],
+            "version": "risk-v1"
+          },
+          "side": "BUY",
+          "strategy_version": "external-candidate-unpromoted"
+        }
+      },
+      "head": "d79bab6dc1faa0adb0ac836f932a34942537468487e8a701f404863510d80744",
+      "sequence": 1
+    },
+    {
+      "cash_quote_raw": 987900000,
+      "positions": {
+        "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump": {
+          "units": 406739,
+          "cost": 12100000,
+          "entry_id": "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f"
+        }
+      },
+      "realized_scenario_pnl_quote_raw": 0,
+      "loss_quote_raw": 0,
+      "pending": {},
+      "head": "d5fef6d63b5cadee94cda222e4d016f2b3a8aaaa287726e71acc4e537882a0d4",
+      "sequence": 2
+    },
+    {
+      "cash_quote_raw": 987900000,
+      "positions": {
+        "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump": {
+          "units": 406739,
+          "cost": 12100000,
+          "entry_id": "settle:1fb5007daca9d921d3e67de33952863358c2f19b3463533fd03935468ede9d6f"
+        }
+      },
+      "realized_scenario_pnl_quote_raw": 0,
+      "loss_quote_raw": 0,
+      "pending": {
+        "0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82": {
+          "amount": 406739,
+          "decision_ns": 1790867987479133100,
+          "decision_slot": 452326008,
+          "id": "0d1a298db292bbdca8409467b3e771ec6f90b598cbd4978b0f8144969a979e82",
+          "kind": "intent",
+          "live_execution": false,
+          "mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "model": {
+            "adverse_bps": 25,
+            "delay_slots": 1,
+            "fee_quote_raw": 2100000,
+            "quote_ttl_ns": 5000000000
+          },
+          "opportunity": {
+            "accounts_evidence": {
+              "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+              "base_reserve_raw": 850833853253,
+              "mint_profiles": [
+                "token2022-immutable-self-metadata-v1",
+                "classic-spl-v1"
+              ],
+              "not_a_rug_safety_guarantee": true,
+              "observed_ns": 1790867987476017400,
+              "provenance": {
+                "frame": 35,
+                "frame_sha256": "e2a75c9d3ee1e8b7b7df018beddb6f4955ae56f9737fff11efe33dbd46c9ed0a"
+              },
+              "quote_reserve_raw": 20734458044214,
+              "slot": 452326015,
+              "token_programs": [
+                "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+                "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+              ]
+            },
+            "authority_scope": "validated_mint_profile_no_mint_or_freeze_authority_vault_identity",
+            "authority_state": "OBSERVED_SAFE",
+            "availability_ns": 1790867985333942800,
+            "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+            "coverage": "OBSERVED",
+            "coverage_scope": "decision_local_accounts_and_two_direct_quotes",
+            "data_health": "OBSERVED",
+            "event_id": "4f7426fc2831018b8d2d29be483651076709fc5ce4e00c0555b5a5956c1d9b75",
+            "event_provenance": {
+              "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+              "frame_sequence": 32,
+              "frame_sha256": "9ead124fa2f7014771ea36625b25583b98b31c0950518b6fd022feb3062d36a7",
+              "genesis_sequence": 22,
+              "raw_sha256": "370abdedf5581b02be2da446a004fc8808000803e07a653dd12a95f6fdc6854b"
+            },
+            "event_time": 1790867981,
+            "execution_quote": {
+              "assurance": "INDICATIVE_ROUTE_NOT_EXECUTION_GUARANTEE",
+              "exit_possible": true,
+              "expires_ns": 1790867990333942800,
+              "liquidity_quote_raw": 20734458044214,
+              "observed_ns": 1790867985333942800,
+              "provenance": {
+                "frame": 33,
+                "frame_sha256": "8b906e5ba6cffee8c110a2af0cb8cd7de9f4f78bc2ac8ea29946924d16e29ee2"
+              },
+              "size_raw": 406739,
+              "slippage_bps": 50,
+              "status": "OBSERVED"
+            },
+            "feed_coverage": "PARTIAL",
+            "heartbeat_ns": 1790867987476017400,
+            "holders": "NOT_COLLECTED",
+            "live_execution": false,
+            "observed_features": {
+              "authority_state": "NOT_COLLECTED",
+              "availability_ns": 1790867984585903100,
+              "base_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "bundles": {
+                "status": "NOT_COLLECTED"
+              },
+              "coverage": "PARTIAL",
+              "data_health": "PARTIAL",
+              "event_time": 1790867981,
+              "execution_quote": {
+                "status": "NOT_COLLECTED"
+              },
+              "feature_events": [
+                "d9caddd3812540f4594fca313259817562b63ee3a361b2246edeef96dd19dfb2",
+                "64044359db948a3107bd53c46bce915abbbf2f9b62389ec283a51ce13f5e8870",
+                "4f7426fc2831018b8d2d29be483651076709fc5ce4e00c0555b5a5956c1d9b75"
+              ],
+              "heartbeat_ns": 1790867984585903100,
+              "holders": {
+                "status": "NOT_COLLECTED"
+              },
+              "lifecycle": "AMM",
+              "market": {
+                "buy_count": 2,
+                "half_window_volume_change_raw": "692521",
+                "late_event": false,
+                "liquidity": {
+                  "status": "NOT_COLLECTED"
+                },
+                "new_wallet_observed": true,
+                "price_change_window": {
+                  "denominator": "62321773",
+                  "numerator": "206963"
+                },
+                "price_quote_raw_per_base_raw": {
+                  "denominator": "10337",
+                  "numerator": "252132"
+                },
+                "sell_count": 1,
+                "status": "PARTIAL",
+                "swaps_observed": 3,
+                "volume_acceleration_per_second": {
+                  "status": "NOT_COLLECTED"
+                },
+                "volume_quote_raw": "728695",
+                "wallets_unique_window": 3
+              },
+              "network": "mainnet",
+              "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+              "pool_creation_time": null,
+              "provenance": {
+                "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+                "frame_sequence": 32,
+                "frame_sha256": "9ead124fa2f7014771ea36625b25583b98b31c0950518b6fd022feb3062d36a7",
+                "genesis_sequence": 22,
+                "raw_sha256": "370abdedf5581b02be2da446a004fc8808000803e07a653dd12a95f6fdc6854b"
+              },
+              "quote_mint": "So11111111111111111111111111111111111111112",
+              "schema": 1,
+              "slot": 452325993,
+              "social": {
+                "status": "NOT_COLLECTED"
+              },
+              "venue": "pumpswap",
+              "version": "6dfb29d2afa89cadf0c4188dc5686b2601090415041e143593d2e3e030131e16"
+            },
+            "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+            "quote_mint": "So11111111111111111111111111111111111111112",
+            "reverse_quote_evidence": {
+              "assurance": "INDICATIVE_QUOTE_NOT_EXECUTION",
+              "impact": "0.002992300683743794030162501",
+              "input_mint": "So11111111111111111111111111111111111111112",
+              "input_raw": 9841015,
+              "minimum_output_raw": 400263,
+              "observed_ns": 1790867987386172500,
+              "output_mint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+              "output_raw": 402274,
+              "provenance": {
+                "frame": 34,
+                "frame_sha256": "71ff3a2f8a547ef360dc2b56245fb36938f5311b3ccc210623f74878dd347472"
+              },
+              "routes": [
+                {
+                  "bps": null,
+                  "percent": 100,
+                  "swapInfo": {
+                    "ammKey": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+                    "inAmount": "9841015",
+                    "inputMint": "So11111111111111111111111111111111111111112",
+                    "label": "Pump.fun Amm",
+                    "outAmount": "402274",
+                    "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+                    "updateContextSlot": "452326012"
+                  }
+                }
+              ],
+              "slippage_bps": 50,
+              "slot": 452326015
+            },
+            "schema": 2,
+            "slot": 452326008,
+            "social": "NOT_COLLECTED"
+          },
+          "risk": {
+            "allowed": true,
+            "policy": {
+              "max_age_ns": 5000000000,
+              "max_exposure": 40000000,
+              "max_heartbeat_age_ns": 5000000000,
+              "max_position": 20000000,
+              "max_positions": 2,
+              "max_session_loss": 10000000,
+              "max_slippage_bps": 100,
+              "min_liquidity": 1000000000
+            },
+            "reasons": [],
+            "version": "risk-v1"
+          },
+          "side": "SELL",
+          "strategy_version": "external-candidate-unpromoted"
+        }
+      },
+      "head": "a20deebeb1edebdaa70b862a6f2f61e51540f71265b1f46908daed83ae45c1d3",
+      "sequence": 3
+    },
+    {
+      "cash_quote_raw": 995641241,
+      "positions": {},
+      "realized_scenario_pnl_quote_raw": -4358759,
+      "loss_quote_raw": 4358759,
+      "pending": {},
+      "head": "4668e05bd13c452891a9a9a2323e6a8446225e0083a19d884abdb5719f45a521",
+      "sequence": 4
+    }
+  ],
+  "pnl": {
+    "classification": "DERIVED_CONDITIONAL_PAPER",
+    "gross_before_fixed_fees_lamports": -158759,
+    "fixed_model_fees_lamports": 4200000,
+    "net_lamports": -4358759,
+    "net_SOL": "-0.004358759",
+    "gross_SOL": "-0.000158759",
+    "net_return_on_notional_pct": "-43.58759",
+    "net_return_on_entry_cash_cost_pct": "-36.02280165289256198347107438016528925620",
+    "net_return_on_initial_portfolio_pct": "-0.4358759",
+    "holding_duration_ns": 8210169200,
+    "decision_cycle_duration_ns": 12306556100
+  },
+  "transport_report": {
+    "http_roundtrip_ns": {
+      "samples": 16,
+      "p95": 132759900,
+      "p99": 132759900
+    },
+    "notification_to_processing_ns": {
+      "samples": 2,
+      "p95": 104417500,
+      "p99": 104417500
+    },
+    "provider_emission_latency": "NOT_MEASURED"
+  },
+  "latency_and_session_frames": [
+    {
+      "frame": 2,
+      "kind": "paper_session_start",
+      "observed_ns": 1790867976213896800,
+      "metadata": {
+        "budget": 200,
+        "max_hydration_attempts_per_signature": 2,
+        "poll_interval_seconds": 1,
+        "scheduler_sha256": "c0ae0b688ff04d25e7799c34675b799215c07c2c2c17db981363a7965b9296e7",
+        "seconds": 120,
+        "signatures_per_poll": 8
+      }
+    },
+    {
+      "frame": 3,
+      "kind": "rpc",
+      "observed_ns": 1790867976335846800,
+      "metadata": {
+        "method": "getGenesisHash",
+        "params": [],
+        "transport_error": null,
+        "transport_ns": 98132600
+      }
+    },
+    {
+      "frame": 7,
+      "kind": "rpc",
+      "observed_ns": 1790867976738353200,
+      "metadata": {
+        "method": "getTransaction",
+        "params": [
+          "21rAd49s8gupAgseMovMeyn8PrGBZe117LT5q34JP62ubJruXa1YKoKr6AdGCvU56tdrDyB4mFmvkVmDXtg1zpBa",
+          {
+            "commitment": "confirmed",
+            "encoding": "json",
+            "maxSupportedTransactionVersion": 1
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 93509500
+      }
+    },
+    {
+      "frame": 8,
+      "kind": "latency",
+      "observed_ns": 1790867976742077100,
+      "metadata": {
+        "clock": "host_monotonic",
+        "decoded_events": 0,
+        "notification_to_processing_ns": 101225400,
+        "provider_emission_time_known": false,
+        "signature": "21rAd49s8gupAgseMovMeyn8PrGBZe117LT5q34JP62ubJruXa1YKoKr6AdGCvU56tdrDyB4mFmvkVmDXtg1zpBa"
+      }
+    },
+    {
+      "frame": 10,
+      "kind": "rpc",
+      "observed_ns": 1790867976843844300,
+      "metadata": {
+        "method": "getTransaction",
+        "params": [
+          "2G1ex2uKUJEsGNgAq1Tjds6KxK6znuCFKFReEHLo2NTTSq8EMiYdVc4pD3o3NCvY3z3sy91cTMNPTmYBxz2Bo19G",
+          {
+            "commitment": "confirmed",
+            "encoding": "json",
+            "maxSupportedTransactionVersion": 1
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 96526900
+      }
+    },
+    {
+      "frame": 11,
+      "kind": "latency",
+      "observed_ns": 1790867976848753900,
+      "metadata": {
+        "clock": "host_monotonic",
+        "decoded_events": 0,
+        "notification_to_processing_ns": 104417500,
+        "provider_emission_time_known": false,
+        "signature": "2G1ex2uKUJEsGNgAq1Tjds6KxK6znuCFKFReEHLo2NTTSq8EMiYdVc4pD3o3NCvY3z3sy91cTMNPTmYBxz2Bo19G"
+      }
+    },
+    {
+      "frame": 13,
+      "kind": "rpc",
+      "observed_ns": 1790867976936120800,
+      "metadata": {
+        "method": "getTransaction",
+        "params": [
+          "2KHLt7Kx5ZkU7sgqmhP8vbcivVSJFTjjF3Ckwqj84sk2k8VFTCxSHDD75KTwEBQw4x68WD1LLbbBF5od21tuykCZ",
+          {
+            "commitment": "confirmed",
+            "encoding": "json",
+            "maxSupportedTransactionVersion": 1
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 81217700
+      }
+    },
+    {
+      "frame": 14,
+      "kind": "rpc",
+      "observed_ns": 1790867977066328300,
+      "metadata": {
+        "method": "getGenesisHash",
+        "params": [],
+        "transport_error": null,
+        "transport_ns": 118010100
+      }
+    },
+    {
+      "frame": 15,
+      "kind": "quote",
+      "observed_ns": 1790867977142138900,
+      "metadata": {
+        "error": null,
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 10000000,
+          "inputMint": "So11111111111111111111111111111111111111112",
+          "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "slippageBps": 50
+        },
+        "transport_ns": 67999800
+      }
+    },
+    {
+      "frame": 16,
+      "kind": "quote",
+      "observed_ns": 1790867979176859000,
+      "metadata": {
+        "error": null,
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 406759,
+          "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "outputMint": "So11111111111111111111111111111111111111112",
+          "slippageBps": 50
+        },
+        "transport_ns": 51055900
+      }
+    },
+    {
+      "frame": 17,
+      "kind": "rpc",
+      "observed_ns": 1790867979267432800,
+      "metadata": {
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+            "So11111111111111111111111111111111111111112",
+            "BZqFMyBL63V1tRXSz5nDdj5PZbQa14duhyeeNwR7YeJ9",
+            "7VAgsR5Vwt58YCNAdog6ybQNRXx5YU6yWsFkBpng29nk",
+            "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ"
+          ],
+          {
+            "commitment": "confirmed",
+            "encoding": "jsonParsed",
+            "minContextSlot": 452325977
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 86892400
+      }
+    },
+    {
+      "frame": 22,
+      "kind": "rpc",
+      "observed_ns": 1790867979579668800,
+      "metadata": {
+        "method": "getGenesisHash",
+        "params": [],
+        "transport_error": null,
+        "transport_ns": 132759900
+      }
+    },
+    {
+      "frame": 23,
+      "kind": "rpc",
+      "observed_ns": 1790867979679784700,
+      "metadata": {
+        "method": "getSignaturesForAddress",
+        "params": [
+          "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          {
+            "commitment": "confirmed",
+            "limit": 8
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 98038200
+      }
+    },
+    {
+      "frame": 24,
+      "kind": "rpc",
+      "observed_ns": 1790867979780777400,
+      "metadata": {
+        "method": "getTransaction",
+        "params": [
+          "Tfp1J1fb8x5MNJWHZpy4h2acPL5YRKsyVcQPLMzqwx3RuLCqx2cWWRAd2dF6UZhrJptSaYDQx8Xcz9spyiSrXeP",
+          {
+            "commitment": "confirmed",
+            "encoding": "json",
+            "maxSupportedTransactionVersion": 1
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 96541600
+      }
+    },
+    {
+      "frame": 25,
+      "kind": "quote",
+      "observed_ns": 1790867981227807400,
+      "metadata": {
+        "error": null,
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 10000000,
+          "inputMint": "So11111111111111111111111111111111111111112",
+          "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "slippageBps": 50
+        },
+        "transport_ns": 50850800
+      }
+    },
+    {
+      "frame": 26,
+      "kind": "quote",
+      "observed_ns": 1790867983280661800,
+      "metadata": {
+        "error": null,
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 406739,
+          "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "outputMint": "So11111111111111111111111111111111111111112",
+          "slippageBps": 50
+        },
+        "transport_ns": 51025200
+      }
+    },
+    {
+      "frame": 27,
+      "kind": "rpc",
+      "observed_ns": 1790867983364372800,
+      "metadata": {
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+            "So11111111111111111111111111111111111111112",
+            "BZqFMyBL63V1tRXSz5nDdj5PZbQa14duhyeeNwR7YeJ9",
+            "7VAgsR5Vwt58YCNAdog6ybQNRXx5YU6yWsFkBpng29nk",
+            "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ"
+          ],
+          {
+            "commitment": "confirmed",
+            "encoding": "jsonParsed",
+            "minContextSlot": 452325992
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 79868800
+      }
+    },
+    {
+      "frame": 30,
+      "kind": "paper_session_tick",
+      "observed_ns": 1790867983386875300,
+      "metadata": {
+        "already_processed": 0,
+        "decoded": 1,
+        "failed": 0,
+        "hydrated": 1,
+        "listed": 8,
+        "listing_frame": 23,
+        "matching_events": 1,
+        "old": 3,
+        "phase": "PENDING_BUY",
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "retry_bound": 0
+      }
+    },
+    {
+      "frame": 31,
+      "kind": "rpc",
+      "observed_ns": 1790867984487498200,
+      "metadata": {
+        "method": "getSignaturesForAddress",
+        "params": [
+          "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          {
+            "commitment": "confirmed",
+            "limit": 8
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 96174700
+      }
+    },
+    {
+      "frame": 32,
+      "kind": "rpc",
+      "observed_ns": 1790867984585903100,
+      "metadata": {
+        "method": "getTransaction",
+        "params": [
+          "8kSRpyFRehWvVSvh5adJzEZZ8KBKp2N6Tci2XLkjXSbDZ6wCcFNiurRAhfnTbMisQobFLruUpCeEkHy6thW7TBN",
+          {
+            "commitment": "confirmed",
+            "encoding": "json",
+            "maxSupportedTransactionVersion": 1
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 92506900
+      }
+    },
+    {
+      "frame": 33,
+      "kind": "quote",
+      "observed_ns": 1790867985333942800,
+      "metadata": {
+        "error": null,
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 406739,
+          "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "outputMint": "So11111111111111111111111111111111111111112",
+          "slippageBps": 50
+        },
+        "transport_ns": 50580200
+      }
+    },
+    {
+      "frame": 34,
+      "kind": "quote",
+      "observed_ns": 1790867987386172500,
+      "metadata": {
+        "error": null,
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 9841015,
+          "inputMint": "So11111111111111111111111111111111111111112",
+          "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "slippageBps": 50
+        },
+        "transport_ns": 49951600
+      }
+    },
+    {
+      "frame": 35,
+      "kind": "rpc",
+      "observed_ns": 1790867987476017400,
+      "metadata": {
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+            "So11111111111111111111111111111111111111112",
+            "BZqFMyBL63V1tRXSz5nDdj5PZbQa14duhyeeNwR7YeJ9",
+            "7VAgsR5Vwt58YCNAdog6ybQNRXx5YU6yWsFkBpng29nk",
+            "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ"
+          ],
+          {
+            "commitment": "confirmed",
+            "encoding": "jsonParsed",
+            "minContextSlot": 452326008
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 85469300
+      }
+    },
+    {
+      "frame": 38,
+      "kind": "paper_session_tick",
+      "observed_ns": 1790867987502768900,
+      "metadata": {
+        "already_processed": 0,
+        "decoded": 1,
+        "failed": 0,
+        "hydrated": 1,
+        "listed": 8,
+        "listing_frame": 31,
+        "matching_events": 1,
+        "old": 3,
+        "phase": "OPEN_POSITION",
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "retry_bound": 0
+      }
+    },
+    {
+      "frame": 39,
+      "kind": "rpc",
+      "observed_ns": 1790867988586037000,
+      "metadata": {
+        "method": "getSignaturesForAddress",
+        "params": [
+          "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+          {
+            "commitment": "confirmed",
+            "limit": 8
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 80067800
+      }
+    },
+    {
+      "frame": 40,
+      "kind": "rpc",
+      "observed_ns": 1790867988675125300,
+      "metadata": {
+        "method": "getTransaction",
+        "params": [
+          "4WambDfnoaYnTV3yELKvFabDzHt4wKpyxhPHyDZ94fn5ekDFYqtRHTe9CsmpoL7TmPqbaQviimmfECRKg1TWhFnL",
+          {
+            "commitment": "confirmed",
+            "encoding": "json",
+            "maxSupportedTransactionVersion": 1
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 84601200
+      }
+    },
+    {
+      "frame": 41,
+      "kind": "quote",
+      "observed_ns": 1790867989463112000,
+      "metadata": {
+        "error": null,
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 406739,
+          "inputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "outputMint": "So11111111111111111111111111111111111111112",
+          "slippageBps": 50
+        },
+        "transport_ns": 73722800
+      }
+    },
+    {
+      "frame": 42,
+      "kind": "quote",
+      "observed_ns": 1790867991491447900,
+      "metadata": {
+        "error": null,
+        "provider": "jupiter-v1",
+        "request": {
+          "amount": 9841241,
+          "inputMint": "So11111111111111111111111111111111111111112",
+          "outputMint": "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+          "slippageBps": 50
+        },
+        "transport_ns": 49285700
+      }
+    },
+    {
+      "frame": 43,
+      "kind": "rpc",
+      "observed_ns": 1790867991576059300,
+      "metadata": {
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "HG5rCmkPpWyXvdQ1iytj3YwNg6vdzeb8srs2bzqNpump",
+            "So11111111111111111111111111111111111111112",
+            "BZqFMyBL63V1tRXSz5nDdj5PZbQa14duhyeeNwR7YeJ9",
+            "7VAgsR5Vwt58YCNAdog6ybQNRXx5YU6yWsFkBpng29nk",
+            "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ"
+          ],
+          {
+            "commitment": "confirmed",
+            "encoding": "jsonParsed",
+            "minContextSlot": 452326023
+          }
+        ],
+        "transport_error": null,
+        "transport_ns": 80287100
+      }
+    },
+    {
+      "frame": 46,
+      "kind": "paper_session_tick",
+      "observed_ns": 1790867991600872700,
+      "metadata": {
+        "already_processed": 0,
+        "decoded": 1,
+        "failed": 0,
+        "hydrated": 1,
+        "listed": 8,
+        "listing_frame": 39,
+        "matching_events": 1,
+        "old": 0,
+        "phase": "PENDING_SELL",
+        "pool": "9fLTaEopbBu67oxCJvW2rdfcRVWsinFKKfX4VEwizDNJ",
+        "retry_bound": 0
+      }
+    },
+    {
+      "frame": 47,
+      "kind": "paper_session_end",
+      "observed_ns": 1790867992605738900,
+      "metadata": {
+        "assurance": "CONDITIONAL_PAPER_NOT_EXECUTED_TRADES",
+        "buy_scenarios": 1,
+        "coverage": "OBSERVED_SUBSET",
+        "elapsed_monotonic_ns": 16415205700,
+        "followup_decoded_events": 3,
+        "followup_hydrations": 3,
+        "intents": 2,
+        "observed_ns": 1790867992605685200,
+        "pending": 0,
+        "polls": 3,
+        "positions": 0,
+        "realized_scenario_pnl_quote_raw": -4358759,
+        "rejection_counts": {},
+        "scope": "cumulative_persistent_session",
+        "sell_scenarios": 1,
+        "started_ns": 1790867976190531500,
+        "state": "ROUNDTRIP_OBSERVED",
+        "stop_reason": "roundtrip_observed",
+        "target": null
+      }
+    }
+  ],
+  "v1e": {
+    "status": "FAIL",
+    "evidence": {
+      "journal": {
+        "captures": 1,
+        "datasets": 1,
+        "pending": 0,
+        "unique_event_publications": 0,
+        "hash_or_replay_errors": 0,
+        "foreign_key_errors": 0,
+        "integrity": "ok",
+        "healthy": true,
+        "coverage_versions": [
+          {
+            "accounted_fraction": 1.0,
+            "accounted_slots": 6,
+            "accounting_ok": true,
+            "archive_end": 506315888,
+            "archive_start": 506315883,
+            "counts": {
+              "archived": 6,
+              "error": 0,
+              "excluded": 0,
+              "skipped": 0,
+              "unresolved": 0
+            },
+            "decoder_errors": 0,
+            "end": 506315888,
+            "events": 0,
+            "expected_slots": 6,
+            "fully_decoded": false,
+            "historical_error_attempts": 0,
+            "included_range_complete": true,
+            "resolved_fraction": 1.0,
+            "resolved_slots": 6,
+            "selected_attempts": 6,
+            "source_attempts": 6,
+            "source_complete": true,
+            "start": 506315883,
+            "transactions_expected": 137
+          }
+        ]
+      },
+      "dataset_sha256": "d3e3bda27cc4546c2f0972072462a914d7037e7da502dc05cae364e9601abcfb",
+      "offline_reconstruction_identical": true,
+      "resume_new_process": true
+    },
+    "code": "live_coverage_or_supported_events_missing",
+    "id": "live_provenance"
+  },
+  "unknown": [
+    "Actual execution feasibility and on-chain paper fills (none executed)",
+    "Actual network/priority/ATA fees for the paper strategy",
+    "DEX fee breakdown in quote outputs",
+    "Provider emission latency",
+    "Clock synchronization error",
+    "USD PnL without independently timed FX evidence",
+    "Counterfactual fill probability, MEV and failed transaction cost"
+  ],
+  "limitations": [
+    "Archive integrity establishes internal consistency, not independent blockchain finality/authenticity.",
+    "Quotes and account snapshots span slots, not an atomic snapshot.",
+    "Confirmed commitment; no independent finalization/reorg audit.",
+    "Decision timestamps are before SQLite commit; commit-complete execution timestamp is not recorded.",
+    "Only one observed-subset conditional roundtrip; no profitability/generalization inference."
+  ],
+  "quote_http_transport": {
+    "classification": "DERIVED_FROM_ARCHIVED_MONOTONIC_DURATIONS",
+    "samples": 8,
+    "min_ns": 49285700,
+    "max_ns": 73722800,
+    "mean_ns": 55559000,
+    "p95_ns": 73722800
+  }
+}

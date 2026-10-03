@@ -1,0 +1,4 @@
+# Required for observer/bridge streaming and real WebSocket validation.
+# Install: py -3 -m pip install -r requirements-observer.txt
+# Package websocket-client exports module websocket; offline replay uses stdlib.
+websocket-client==1.8.0

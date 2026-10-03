@@ -1,0 +1,109 @@
+{
+  "version": "ASTRA-V1d-memory",
+  "overall": "FAIL",
+  "platform": "linux",
+  "windows_executed": false,
+  "rpc_configured": false,
+  "baseline": "ASTRA-V1c-rpc-v1-fix",
+  "baseline_unchanged": true,
+  "baseline_files": 75,
+  "baseline_windows_devnet": "PASS reported by user; no detailed report attached this turn",
+  "unit_tests": {
+    "memory": 31,
+    "blocks": 35,
+    "foundation": 38,
+    "v1b_runner": 8,
+    "total_pass": 112
+  },
+  "v1b_local_criteria_pass": 12,
+  "memory_deterministic": {
+    "first_import": {
+      "inputs": 1,
+      "decoded": 1,
+      "pending": 0,
+      "events": 1,
+      "hash_or_replay_errors": 0,
+      "integrity": "ok",
+      "foreign_key_errors": 0,
+      "healthy": true,
+      "decoder_version": "system-transfer-v1",
+      "transactions_expected": 1,
+      "transactions": {
+        "processed": 1,
+        "failed": 0,
+        "unsupported": 0,
+        "error": 0
+      },
+      "instructions": {
+        "decoded": 1,
+        "unsupported": 0,
+        "error": 0
+      },
+      "accounting_ok": true,
+      "inner_coverage_unavailable": 0
+    },
+    "final": {
+      "inputs": 2,
+      "decoded": 2,
+      "pending": 0,
+      "events": 2,
+      "hash_or_replay_errors": 0,
+      "integrity": "ok",
+      "foreign_key_errors": 0,
+      "healthy": true,
+      "decoder_version": "system-transfer-v1",
+      "transactions_expected": 2,
+      "transactions": {
+        "processed": 2,
+        "failed": 0,
+        "unsupported": 0,
+        "error": 0
+      },
+      "instructions": {
+        "decoded": 2,
+        "unsupported": 0,
+        "error": 0
+      },
+      "accounting_ok": true,
+      "inner_coverage_unavailable": 0
+    },
+    "dataset_sha256": "ff876bb64061800e0a31cf924effcccba5ce74fa16c0d30764fe903083f7494c",
+    "rebuild": {
+      "inputs": 2,
+      "decoded": 2,
+      "pending": 0,
+      "events": 2,
+      "hash_or_replay_errors": 0,
+      "integrity": "ok",
+      "foreign_key_errors": 0,
+      "healthy": true,
+      "decoder_version": "system-transfer-v1",
+      "transactions_expected": 2,
+      "transactions": {
+        "processed": 2,
+        "failed": 0,
+        "unsupported": 0,
+        "error": 0
+      },
+      "instructions": {
+        "decoded": 2,
+        "unsupported": 0,
+        "error": 0
+      },
+      "accounting_ok": true,
+      "inner_coverage_unavailable": 0
+    },
+    "resume_new_process": true,
+    "source_read_only": true,
+    "offline": true
+  },
+  "not_validated": [
+    "V1d Windows",
+    "V1d real Devnet decoding",
+    "current-session real V1b/V1c gates"
+  ],
+  "next_command": "validate-memory-windows.cmd",
+  "next_work": "Qualify real Windows V1d, then versioned source coverage/provenance before as-of memory.",
+  "checklist": "V1_STATUS.md",
+  "resume": "V1D_NEXT_SESSION.md"
+}

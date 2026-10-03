@@ -1,0 +1,1719 @@
+{
+  "schema": "MainnetContextReferenceAuditV0.1",
+  "reference": "all-validation-3qductr2",
+  "replay": {
+    "status": "PASS",
+    "plans": 51,
+    "snapshots": 51,
+    "results": 51,
+    "network_used": false
+  },
+  "freeze_verification": {
+    "status": "PASS",
+    "freeze_id": "38e6a2b5674683c57ef5a167c32ae6971e61b79e507e74be3b88822404cdff68",
+    "dataset_sha256": "4247764f607c970486832ac9d43acb4f08bd10a9d031a56d721d92a0aef684f3",
+    "network_used": false
+  },
+  "decisions": 51,
+  "result_counts": {
+    "price_impact_limit": 24,
+    "unsupported_quote_currency": 23,
+    "brain_arbiter_no_trade": 4
+  },
+  "evidence_proven_candidates": [
+    {
+      "snapshot": "8039a7ac0ef168f633c73ed80d6fbf8e14c673ccf65536169e5043415df86e8a",
+      "identity": {
+        "event_id": "c3bb4dfd4b02c9b62c7dc649b37dc23bd06d8d2410da76588a78f3dd5288d49c",
+        "network": "mainnet",
+        "pool": "AmdUDqDP7YR9z8CDVUUyQAWKcFgmskXbydxmtP5PUwwD",
+        "quote": "So11111111111111111111111111111111111111112",
+        "signature": "4JZJyd5t7eEH5F62aGQLHRdTPKFh9PXBE1hXpXCXrj3SMKgvQWeZCc5173KVapyCqszoJKriAXXbr37T2Ug4xTuv",
+        "token": "9SLcTBtuvembyxFk9Wy9SHB4VWSuaGDFvPb9e3jBpump"
+      },
+      "observations": 1,
+      "score": null,
+      "missing": [
+        "momentum_bps"
+      ],
+      "entry_reasons": [
+        "enough_samples",
+        "positive_momentum",
+        "quality_complete",
+        "score_threshold"
+      ],
+      "exact_cause": "Single observed swap in this pool: no price-return pair, hence momentum_bps UNKNOWN; not a stale quote.",
+      "quote_age_ns": 2172368400,
+      "original_action": "NO_TRADE"
+    },
+    {
+      "snapshot": "b478b05849222f2aa2f7d1aebca260a3d9443d00666de425ccd0d31f09adfc1a",
+      "identity": {
+        "event_id": "c4a88df3e442cc6a3079fc1d73107668b6bf972ddd8c4eafd20daf49c91dcd1a",
+        "network": "mainnet",
+        "pool": "92ANJ941kfi6ghHufQJ5jVM5S4McT8Kd7i7m2g3DzRJz",
+        "quote": "So11111111111111111111111111111111111111112",
+        "signature": "2mjrT2HBZ29NUC6MrvY5P5FBLYGF7gPEXa6eq1jWnCXZj2Jtgp9sjKdZYnLZcbsLS3ww1JjbTJ3M54eUzs4VCD17",
+        "token": "HHcDJ6xZq7rEJAYo82KMwAPZjLGZkSUvTCPnTLhapump"
+      },
+      "observations": 1,
+      "score": null,
+      "missing": [
+        "momentum_bps"
+      ],
+      "entry_reasons": [
+        "enough_samples",
+        "positive_momentum",
+        "quality_complete",
+        "score_threshold"
+      ],
+      "exact_cause": "Single observed swap in this pool: no price-return pair, hence momentum_bps UNKNOWN; not a stale quote.",
+      "quote_age_ns": 2157512800,
+      "original_action": "NO_TRADE"
+    },
+    {
+      "snapshot": "7cf91858a7dc9af549c5d1a669743f7615f8cab45e65b73686bdef91df85e604",
+      "identity": {
+        "event_id": "ee071aff318511c4e30b0562bf4ea90282ba7a455f2f94a15d21298d499a266f",
+        "network": "mainnet",
+        "pool": "3ErBdH7zcyVteWrcUMvEwAtnnbRrALX2dYVv7PYHnupL",
+        "quote": "So11111111111111111111111111111111111111112",
+        "signature": "mXMKynGxzEF48zziEPMTQ4Frt8m37gKXKp9hFUbjj6HAd8aPiaPPxsg8gTgYes97zjza6eCEpt43m5fTdA2arwL",
+        "token": "ERHB4UysYrY9f7sS1JfKtjZ6q6gZsrxHy4GKpYZ5pump"
+      },
+      "observations": 1,
+      "score": null,
+      "missing": [
+        "momentum_bps"
+      ],
+      "entry_reasons": [
+        "enough_samples",
+        "positive_momentum",
+        "nonnegative_flow",
+        "quality_complete",
+        "score_threshold"
+      ],
+      "exact_cause": "Single observed swap in this pool: no price-return pair, hence momentum_bps UNKNOWN; not a stale quote.",
+      "quote_age_ns": 2179132100,
+      "original_action": "NO_TRADE"
+    },
+    {
+      "snapshot": "996408533362a2503abb6af44e1b11e94c42da84d01c047e53de0cc2d67a964b",
+      "identity": {
+        "event_id": "27aaf343618823380525da07f4ac63c7e6c8c7727fe08368552bf99a263e7ac6",
+        "network": "mainnet",
+        "pool": "B8V5RsZ1kvxQS11aQdcRBMQ6bkfMzsBEVE8cdky82X3Y",
+        "quote": "So11111111111111111111111111111111111111112",
+        "signature": "5u9vKvdoYdNFpsdXXvptMXGczMcfMWE5DgSdNpDtFfSNiGdMeQf9pgoCWTZCQU95VAtPGuBFMyBynnKcHouE9xQ5",
+        "token": "8zrmMNdCdCAPFuBLJPSRZPSxzZ4HmhgbfXig82AC21Hs"
+      },
+      "observations": 1,
+      "score": null,
+      "missing": [
+        "momentum_bps"
+      ],
+      "entry_reasons": [
+        "enough_samples",
+        "positive_momentum",
+        "nonnegative_flow",
+        "quality_complete",
+        "score_threshold"
+      ],
+      "exact_cause": "Single observed swap in this pool: no price-return pair, hence momentum_bps UNKNOWN; not a stale quote.",
+      "quote_age_ns": 2184687200,
+      "original_action": "NO_TRADE"
+    }
+  ],
+  "quote_currency_audit": [
+    {
+      "base": "2o1vfBqdoCbVfdaVAKuCqmPKRrVRTR3hJ1QQryQjvjNV",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 2,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "4d560993f03b17e6a66e0f4e5b5a36c0a5ef855c354779c0e518b0c4eb844ed1",
+          "identity": {
+            "event_id": "2038fb9d622aff4b45234e6860d50968c4cefbc87f94f2e7636185cb1717ed03",
+            "network": "mainnet",
+            "pool": "5cWa4ps7ZbadFYCaoNQfFD4J3mbnnMjAxxPJuyM3RiBr",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "4LLtsvY2g6Xc7hjt4SfP23PPCxaL6fe4wmH2R7SLVxYZtxpDNxJycaaxFKYMGS5BHcfzQkKZHZwmdZqtnH85Kwsj",
+            "token": "2o1vfBqdoCbVfdaVAKuCqmPKRrVRTR3hJ1QQryQjvjNV"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 570,
+            "frame_sha256": "8084008b0431785abc7c9e91c25d69bbcdab560d40316f96588623f910e599af",
+            "genesis_sequence": 566,
+            "raw_sha256": "2800f6bc1663040ef21429eea8d6caff0595e081eb1f407cde5cd5c39c7f6d66"
+          }
+        },
+        {
+          "snapshot": "7f62f62b9493e9723c1500a706c20bca04e285b6f138b92d91129d32bc386b30",
+          "identity": {
+            "event_id": "7616412f2c01daeeec170afc360e137380e71f4d90752446761022be841340d6",
+            "network": "mainnet",
+            "pool": "5cWa4ps7ZbadFYCaoNQfFD4J3mbnnMjAxxPJuyM3RiBr",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "5b4zijvz47W6LSA92hVqurkQTCmEm3SVU5edA14eVFfNidCGYXWZ2gYvZc7gpsSjEztGtBk3bPnBiAPgUfWFKXm3",
+            "token": "2o1vfBqdoCbVfdaVAKuCqmPKRrVRTR3hJ1QQryQjvjNV"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 580,
+            "frame_sha256": "e80efa6d1b8215ba76be65597958eb5da0a0a03f4eca2f20384ae51536984064",
+            "genesis_sequence": 566,
+            "raw_sha256": "a661b8ff66481182a5720ef1dab26169edc3b8b3c16346c04373b7b2df2ed047"
+          }
+        }
+      ]
+    },
+    {
+      "base": "7NELwkCyL2crujChTgtdKpR1jn2UHTe115v25rUSpump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 2,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "abfe614b52f49a7c6b921b665c6ec84a59c0fd10a975114aa839e7be314cb20e",
+          "identity": {
+            "event_id": "7f6d15952d93db71382ebc96f023aa0b9fe0588fb3454a3ee02b1e7de2d2ddf5",
+            "network": "mainnet",
+            "pool": "F5jQWstPUV7tfHDZPrHjg81ynev62VMV8qWMfgsnbDS2",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "38UzzjzfwqsiKuwJzfhzo7oapGW81EDV5UJ28VzXZDQ8rbUyWtoXg9JAVC6pUpzzf39W8tHQHYD5kQNKEpRVq5Xi",
+            "token": "7NELwkCyL2crujChTgtdKpR1jn2UHTe115v25rUSpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 541,
+            "frame_sha256": "8f5db7a34167b13a87a55e3a4c81e26b40b34668b63b16c2239aa595da84ffb5",
+            "genesis_sequence": 514,
+            "raw_sha256": "7d8e2ec87ccb1acaf77c89ff4b48ebc69d0390d0da890110da7b36dc295130a0"
+          }
+        },
+        {
+          "snapshot": "b61ab50e36203e2cd8e7c870b463ddabede795b01d168e661864ad07a7cdf573",
+          "identity": {
+            "event_id": "631afaeedab10fc2a1bb3097bbc8599fed39bb891e939412d5203a2228720102",
+            "network": "mainnet",
+            "pool": "F5jQWstPUV7tfHDZPrHjg81ynev62VMV8qWMfgsnbDS2",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "3KpGJxje15VNbzvDT1pb7L5cffWpDtPjx5jf4is41o2xKHW5LffL4e8SQsbL7SHqxdsGqrkFv7BKfB1ZH7GJhxr4",
+            "token": "7NELwkCyL2crujChTgtdKpR1jn2UHTe115v25rUSpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 623,
+            "frame_sha256": "2df317317f9872352b7d93996bbe8d4531e1ebf9d5d756c88c853dc2615085d9",
+            "genesis_sequence": 566,
+            "raw_sha256": "74272f279784d8efb506fede2f05b84de1ec6d61a2487a10f506ce35aaabde2c"
+          }
+        }
+      ]
+    },
+    {
+      "base": "7NNTzAaCANhPt7eZAfhwEaVarP2rjWn4brWAomtXHaN4",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "dc022b99244aba0ac222cf08231a72e7f91ee9e04d769caffacb18443f193fe0",
+          "identity": {
+            "event_id": "babd6b8364cf76709774f2796f6af7f18d50dca43d2a45a30deef5e2266929cd",
+            "network": "mainnet",
+            "pool": "BoZiGQMhMh5wxNzLMg5cheJVjJ5hPk5ph2ChE4BfS4ga",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "2BFN1Sq5ULzkRBr92n9CGaH9K3ot3uQmxTwy6dzG9tz81kzkzgDEgGQtkQ8XUg6YGzPmEqzxBxm5iTH8Zx8P6vB4",
+            "token": "7NNTzAaCANhPt7eZAfhwEaVarP2rjWn4brWAomtXHaN4"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 460,
+            "frame_sha256": "1c3553b3ebb3159ca75447c631e56e47d55ec815dc021da47068174888293e36",
+            "genesis_sequence": 426,
+            "raw_sha256": "0273df1fc7865a9958af12c29ac7e4018037ac4f0f2e00cd4f9a773623f3f204"
+          }
+        }
+      ]
+    },
+    {
+      "base": "8zrmMNdCdCAPFuBLJPSRZPSxzZ4HmhgbfXig82AC21Hs",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "996408533362a2503abb6af44e1b11e94c42da84d01c047e53de0cc2d67a964b",
+          "identity": {
+            "event_id": "27aaf343618823380525da07f4ac63c7e6c8c7727fe08368552bf99a263e7ac6",
+            "network": "mainnet",
+            "pool": "B8V5RsZ1kvxQS11aQdcRBMQ6bkfMzsBEVE8cdky82X3Y",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "5u9vKvdoYdNFpsdXXvptMXGczMcfMWE5DgSdNpDtFfSNiGdMeQf9pgoCWTZCQU95VAtPGuBFMyBynnKcHouE9xQ5",
+            "token": "8zrmMNdCdCAPFuBLJPSRZPSxzZ4HmhgbfXig82AC21Hs"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 653,
+            "frame_sha256": "3c507e5e7128a04bd9ebbf83bfb019a9246e3c71e88d02c746efb39c3e9e1975",
+            "genesis_sequence": 639,
+            "raw_sha256": "14bd6446bb0e03ad1475d04246a2c177a60c1832c5fdbc511690dee054433819"
+          }
+        }
+      ]
+    },
+    {
+      "base": "9SLcTBtuvembyxFk9Wy9SHB4VWSuaGDFvPb9e3jBpump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "8039a7ac0ef168f633c73ed80d6fbf8e14c673ccf65536169e5043415df86e8a",
+          "identity": {
+            "event_id": "c3bb4dfd4b02c9b62c7dc649b37dc23bd06d8d2410da76588a78f3dd5288d49c",
+            "network": "mainnet",
+            "pool": "AmdUDqDP7YR9z8CDVUUyQAWKcFgmskXbydxmtP5PUwwD",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "4JZJyd5t7eEH5F62aGQLHRdTPKFh9PXBE1hXpXCXrj3SMKgvQWeZCc5173KVapyCqszoJKriAXXbr37T2Ug4xTuv",
+            "token": "9SLcTBtuvembyxFk9Wy9SHB4VWSuaGDFvPb9e3jBpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 96,
+            "frame_sha256": "d3e36e16a748b4c64430d6db003b972489e2fa7eff68d30fa4882cdef00d2ec8",
+            "genesis_sequence": 25,
+            "raw_sha256": "e6e519f176a69de84d742f346770c765284b52e00091c80a9d166510acc7d3c0"
+          }
+        }
+      ]
+    },
+    {
+      "base": "AS6amk3m3RktnxpevPrFEqGPACerSrQizztrsQ3jpump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 2,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "0d5ed616d255be05351fb9ada492db2ba291b37cbadbedb287fb19f5c3fc182a",
+          "identity": {
+            "event_id": "d63883b164b8ccbb7992af432c11a2f6d5dc5598b8648be272a87b8ba75f37f9",
+            "network": "mainnet",
+            "pool": "ESrxcTgP5SYgy3hxb87F2RSeRQDhtcar6157nj9DwFwW",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "4w7u8dN6ovWxgF8LdmrLgK8VQWfJgQGD9QxnV5QgKMzxHmP9Mo2CjMjXL1gHnrVeX67skMpkoESgAXQiDH6abei3",
+            "token": "AS6amk3m3RktnxpevPrFEqGPACerSrQizztrsQ3jpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 131,
+            "frame_sha256": "2b1d86557e0c3c22ad31d058520c91c16ab0894e2a8c0d0707174b6a940fbd31",
+            "genesis_sequence": 127,
+            "raw_sha256": "61d6a47cefcb62ab4c4a7c995c2a050f6b2130d9c09b03af0e260bace62c6828"
+          }
+        },
+        {
+          "snapshot": "b6ef3be7c63bb0e123c5050ab8c0d53e0648c55934b5d4ae151dec0502aa242f",
+          "identity": {
+            "event_id": "cbc2097d2bdc9a796e6a21cf37d5ae2f6534a72870fd54cc914584b981ddb98f",
+            "network": "mainnet",
+            "pool": "ESrxcTgP5SYgy3hxb87F2RSeRQDhtcar6157nj9DwFwW",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "48GGuQg35z5FV8GwNHhJPJEYZK9TahBvrwnKnjZE3UDh4iM4xJhqN2Rb4AYSg2L5grCutcojUUTTDXzWYEe4e2Ju",
+            "token": "AS6amk3m3RktnxpevPrFEqGPACerSrQizztrsQ3jpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 482,
+            "frame_sha256": "3782f480353595d816727dcacbba5af2252c203e1276f0cf32a0d4a1e3605b6c",
+            "genesis_sequence": 426,
+            "raw_sha256": "2b092c5ae005049c02ed565df93f39e947a2d1835d75139166200eb0adffd197"
+          }
+        }
+      ]
+    },
+    {
+      "base": "B9mjRdHKf3rr7FDBjDpYCgUJdnLj8CcukNNYe5hUpump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 2,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "25558ae0e349b59c4c8884e007f28ca08c57fd035434d121470933b0ce73f97f",
+          "identity": {
+            "event_id": "7051e29866ba5567388aa680e779d62afdec977b9f5c176f35e05a9548279e85",
+            "network": "mainnet",
+            "pool": "BmHwyb5T91Zv4ZKsXVa4LRVEBQddntsamEoznKikqd19",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "5tNLhMNn38LAqjXE2UMijWNUGRev4ytrKGJ37sQhifupXC1yQ7rbihursz3cz3cR848hCJp4dtF6psVVMecGJuXx",
+            "token": "B9mjRdHKf3rr7FDBjDpYCgUJdnLj8CcukNNYe5hUpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 83,
+            "frame_sha256": "ba288984a9dd4de51d5eef78761a8fe0ec465aff5c7e45f5ed3b287603afd19e",
+            "genesis_sequence": 25,
+            "raw_sha256": "d3c2c8ea89a2a87c2c833f568eec030f94400fd57adee9f415d38e985e9061a0"
+          }
+        },
+        {
+          "snapshot": "68ecd81fefc141f720ae7f69ecd38a8ce631f087d26bb6b41130d6063f4bc14b",
+          "identity": {
+            "event_id": "d7effeb4d8a723e6f9920bf217347915a6b9a7b6ad088844035cfb1c0277548b",
+            "network": "mainnet",
+            "pool": "BmHwyb5T91Zv4ZKsXVa4LRVEBQddntsamEoznKikqd19",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "48LEMQBaCN72SH7Xk8EEJ2si8gTJDufvt71D1To58CG2zm74j12sktrLphknwspit1JNmYxTqV55Si2oWVyMbSZq",
+            "token": "B9mjRdHKf3rr7FDBjDpYCgUJdnLj8CcukNNYe5hUpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 321,
+            "frame_sha256": "26d63e3ca87180638a5264fb9ea319a47bcbbf1e96e7e5ffb3e72fa8ebd59758",
+            "genesis_sequence": 317,
+            "raw_sha256": "301e775d64e7faaedecff0fe912f9fd8896618a6575e0fc39f05565d93285606"
+          }
+        }
+      ]
+    },
+    {
+      "base": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+      "quote": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+      "frequency": 2,
+      "unsupported_quote_rejections": 2,
+      "classification": "REJECT",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "no WSOL leg proven",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "81b0849096dc29d2788d0f75b9747c4609bfc6bb884026f969c2f33df30792fb",
+          "identity": {
+            "event_id": "ec704f45a90f8d44212848142943bb7915f572ac287c3b4f96725c0c518c40e1",
+            "network": "mainnet",
+            "pool": "6ejg4aYJM3Mk1t2zBKjbJ43df3s7rBMpC9mgo526K51G",
+            "quote": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+            "signature": "5nAcjhkTTFJk4X3uYEAXqUWvz3fFUyjX4dn2xKdSJYWBqmFCY7FLZmUnnpCijDx54UZQ5cFjixrSwCKyDgrpuikM",
+            "token": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 331,
+            "frame_sha256": "cef1531573058092160c53fcfc3506030d3ce89b1d1caca1ec9a4b8b7dd230c6",
+            "genesis_sequence": 317,
+            "raw_sha256": "074440cd92302f8c64d2ca9caa61589c843f3622b409061a387ec517f1dc53c4"
+          }
+        },
+        {
+          "snapshot": "756b68395b38b1d714cdcfc519d45a492435463e6b3db1470f34294db27f9171",
+          "identity": {
+            "event_id": "ae538e3fd2eccaf1326956ee5907afdb55cca4a4c274e854a6357893c233b480",
+            "network": "mainnet",
+            "pool": "6ejg4aYJM3Mk1t2zBKjbJ43df3s7rBMpC9mgo526K51G",
+            "quote": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+            "signature": "vpLJFGybvY4XXyufMYNhMsoX9yRfRfLy6irQjYcfdEz9tdLv1wmFzrovv5HffbVHktaMU6TohTcLQiust64x4Xi",
+            "token": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 612,
+            "frame_sha256": "d81684b3bda6d56ae04810d2aa1d3d3e166b76a8eb336ab22e7a9285c1f513ea",
+            "genesis_sequence": 566,
+            "raw_sha256": "3474a9bfabbe9dd70bab10932bbd43212e7d798affb8c8d4071c850ea3b8d77e"
+          }
+        }
+      ]
+    },
+    {
+      "base": "Cxc4tVf5Tu4ZyxNagjXVCfBikrM63WgKyfXAyX61pump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "5c54aa17c069dec1480ab15afe8346782afbf2cc5ea96e0e599e651d70706e61",
+          "identity": {
+            "event_id": "f02f9618c0315619991b30ada4da722e33edaf65f635795454d2edd1e8f89952",
+            "network": "mainnet",
+            "pool": "CNCcQpdi1v3eFCHtnFNkFKytshQ7poKhLs2ZkcnC6Mtj",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "41VkAtpdFiEJKxZ5wmr2oNDEyC7AFUkXXomh23cPPMqZKWb1fikNibdtS2CVs2yswyH3g2sDQeY69JBfYBVZdFJL",
+            "token": "Cxc4tVf5Tu4ZyxNagjXVCfBikrM63WgKyfXAyX61pump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 643,
+            "frame_sha256": "7b658dc2cda1b0bb02d6a679920da7d56315a579c3158ede5aaaa51af6bd22b4",
+            "genesis_sequence": 639,
+            "raw_sha256": "c9b5831b26d605fe8c3061e5aeb805d8b9df89b0a24beec25251e80955bbfd18"
+          }
+        }
+      ]
+    },
+    {
+      "base": "DSmp1qi6fAGn9Xj4cztBi8B1UJUBoiADn7QPhfEnsFq6",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "597ac2fe704b1fed4151e0f524c3a8225dbfd776974ab8f1ce2bebf6ee4cc4d8",
+          "identity": {
+            "event_id": "a5a23b13c4c9ca5fa61040f21799f20d70112f14735d2ff8ef6a8f5a3e4a73a9",
+            "network": "mainnet",
+            "pool": "891v3RKdbE5yj5XDbtvxW71PSm6gFfC2aa8fbGb4XPLa",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "57VqqT5rTWcBrthUzYUCkedrTUZkCCUpRE5Suw74Yt8EgyHUbaScPL5WqKcyxRoNQBCPEv3cEXTVpKvb7NbNEtmK",
+            "token": "DSmp1qi6fAGn9Xj4cztBi8B1UJUBoiADn7QPhfEnsFq6"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 673,
+            "frame_sha256": "9544d5a67ef4facbf18607419243dc76bb98a5ea80638c56ed612274f2d7630c",
+            "genesis_sequence": 639,
+            "raw_sha256": "82ca45e9159e23095f2c64135e012be866bb8d6c1530fb347119057ec6af9e71"
+          }
+        }
+      ]
+    },
+    {
+      "base": "DxgJTLsgNVMaZBpgPzKBBBLBSdSAZzxyAeAfboUApump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "e55c45a07be1505def19e6bebbf6b031f1780a622c7f1f4a9b70862c2e446929",
+          "identity": {
+            "event_id": "a5597b850c16658b51519e40d3b9aa071ab55669c5d37771b9f58da7cde57e24",
+            "network": "mainnet",
+            "pool": "2cYkH5MLLaUh9K1776DAjQisXo6iAJRdeJJKWqi3A7US",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "2M4n5Mg413xgmb7ZYzqMpc7VwrB7WUep5cVVNo2h1zBLzUgFNvH1xTFFVGFbALghKcU64nvAmZmV5UkHEkAb1Evt",
+            "token": "DxgJTLsgNVMaZBpgPzKBBBLBSdSAZzxyAeAfboUApump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 236,
+            "frame_sha256": "1ff20908ae4364f229d04c8836d4be597a4d0def41f34724baaecc4c2f1f085c",
+            "genesis_sequence": 127,
+            "raw_sha256": "d31f1bff471c4ef8b561aa0d83f3258d70f08a92d34106f39b27fbb37192b6b8"
+          }
+        }
+      ]
+    },
+    {
+      "base": "ERHB4UysYrY9f7sS1JfKtjZ6q6gZsrxHy4GKpYZ5pump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 2,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "7cf91858a7dc9af549c5d1a669743f7615f8cab45e65b73686bdef91df85e604",
+          "identity": {
+            "event_id": "ee071aff318511c4e30b0562bf4ea90282ba7a455f2f94a15d21298d499a266f",
+            "network": "mainnet",
+            "pool": "3ErBdH7zcyVteWrcUMvEwAtnnbRrALX2dYVv7PYHnupL",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "mXMKynGxzEF48zziEPMTQ4Frt8m37gKXKp9hFUbjj6HAd8aPiaPPxsg8gTgYes97zjza6eCEpt43m5fTdA2arwL",
+            "token": "ERHB4UysYrY9f7sS1JfKtjZ6q6gZsrxHy4GKpYZ5pump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 366,
+            "frame_sha256": "e5d85320b809be140d5e1a021f1b49da03deb7bf08597ece7848e6edd1f6ea13",
+            "genesis_sequence": 317,
+            "raw_sha256": "844115587e6cd1463bd45e79c541dff5fd39153065540029040889d11ff27b81"
+          }
+        },
+        {
+          "snapshot": "c4ff0a9b5920892d9212fdd72ad914cf4d4f045121ce479c2ab27737550b4165",
+          "identity": {
+            "event_id": "7d3fe18286d2a0740c735819af007c32360b5523017b4a44c9e65482b3860a52",
+            "network": "mainnet",
+            "pool": "3ErBdH7zcyVteWrcUMvEwAtnnbRrALX2dYVv7PYHnupL",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "63aKM2Z4HTctFG5AgNWNQ6g6LjJAWUzuANHp7vg8baF2xqMfgKvznQaRSqk5mGwAYYeVnEh1nV3iQ4Yi8Kb73bQQ",
+            "token": "ERHB4UysYrY9f7sS1JfKtjZ6q6gZsrxHy4GKpYZ5pump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 376,
+            "frame_sha256": "4f9b54d5577fd34de1d426cc309acd191b024cdf80ba6d9935219bcb711ce71e",
+            "genesis_sequence": 317,
+            "raw_sha256": "2d3773bf5769d80456fc7f18d2d2e4910960f4c305ea407113a6e24541151941"
+          }
+        }
+      ]
+    },
+    {
+      "base": "ERxLYPjqeFfLsnChuPnvS6f3y5Me8BjgJi9oWaTJpump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 2,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "1a498047722cae6fc14144b58565d7b500b73440f485e8191515d8436fb1d476",
+          "identity": {
+            "event_id": "ba9e0be6d8b8fab1c32135819390ea05ec36a91feaff7c00a56f1c2a01a8cb32",
+            "network": "mainnet",
+            "pool": "ADd8YiSXcRn6kL6t8LsSyiCQTWyWJtLFy5R7gzANZoqK",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "3LenS24A8EaJ5MQcTPSmt1h1aL1C9VFz87fThdUAvD86zWptaMDvGaAXK7n5pKtNzYN2FA92buF6N7umhyU2qaue",
+            "token": "ERxLYPjqeFfLsnChuPnvS6f3y5Me8BjgJi9oWaTJpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 275,
+            "frame_sha256": "fe3941e5954e05cee6f9e7c9f52d5aa53a521b5e74f26025974c056962193bfa",
+            "genesis_sequence": 127,
+            "raw_sha256": "3b5786ed86438091dbd09bacb47d4e9c71b43b864c9e2e596428578adbb1887b"
+          }
+        },
+        {
+          "snapshot": "4625edc2096ea5f94781a714ad15165c6da4efee4d4811e38770e624bfcb647d",
+          "identity": {
+            "event_id": "f715bd0f161067ce429e04e8cc26e0ef6bd86b1a14d59bd66518df3fc5bb9d60",
+            "network": "mainnet",
+            "pool": "ADd8YiSXcRn6kL6t8LsSyiCQTWyWJtLFy5R7gzANZoqK",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "2askDZPdNUMnGoJpzYJLfehAW3JmkBgC2nZnBuEPfrzDsGHRfryzx9HLLAo74k9HdPuju8s7LBKLtshgxbsS1r6m",
+            "token": "ERxLYPjqeFfLsnChuPnvS6f3y5Me8BjgJi9oWaTJpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 293,
+            "frame_sha256": "afb4cc57ad5e8d80ca48df57f5417c83dea945fcd88f5100fdb9175a5028f368",
+            "genesis_sequence": 127,
+            "raw_sha256": "dbe43f7eb3c1d60c778489558e4fed8742003762d15aed80435e8a86b4419589"
+          }
+        }
+      ]
+    },
+    {
+      "base": "EpzFGJXtXtabZnVzM8WFeXvgRFrWSQwGZvpgVJH1EuAZ",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "540c5efe77b2a27b7e8ad51607944cd7d624eb65fecb5ee5c9386aec5686c6eb",
+          "identity": {
+            "event_id": "4b97536eec8941b7d0b26463ce10c55ae567ac91f1413b893e5099381756bf87",
+            "network": "mainnet",
+            "pool": "CAzLDRhe6v8taMbrqCrqgtdPhbrjHdoWrCE1hpoWRHrQ",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "5KxF6ZKMgUc1wYYk7NevQBgNSJMvkNbijNEPXi5wYfhL5EdmwVxMCTd75FqDfTSccXFndLgMQq58SiqZbf2k9jAE",
+            "token": "EpzFGJXtXtabZnVzM8WFeXvgRFrWSQwGZvpgVJH1EuAZ"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 518,
+            "frame_sha256": "5311fde7a9619c3946b4f2de66faccac5ebd19b5e62fab468c0de97180d2246c",
+            "genesis_sequence": 514,
+            "raw_sha256": "a69ba003e272b40012f2bb97999937e55833f0f686a2f7e59aaf0468ec2f431a"
+          }
+        }
+      ]
+    },
+    {
+      "base": "EwSwuiA5JJ788WV66h7kLed2M1uKK6dbn67cSbeQpump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 3,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "3a847b1e690abdd5406c417e91261710831e7239bab38817de5917273490ace3",
+          "identity": {
+            "event_id": "22e6373d3fab90e9972fa19a8214e43490d8abc8b36a11f2eb2d4d52e2efbffb",
+            "network": "mainnet",
+            "pool": "5cZ925n6ckfUma76kqeu4pweAMHaHqfDi4QgvLizSXTP",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "295ZuKRgjbCjyutLw76a8WbqqusrjJAcr3SAJui6TnVow2d9YjC2RVTRVDjn4dLKNiRx71oDxn32znVFEjG5vH4k",
+            "token": "EwSwuiA5JJ788WV66h7kLed2M1uKK6dbn67cSbeQpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 24,
+            "frame_sha256": "c9dae97e33856e69eba85bb75eda034fbbc7bf2443b179783c7a74e2d50b366b",
+            "genesis_sequence": 5,
+            "raw_sha256": "d88c1cb578c89b6fd24396c71421f552d5354b872f3dc5c4a808e8d8e1ba99f4"
+          }
+        },
+        {
+          "snapshot": "a78a2d6c625de56f7b38bdce31bee082591c9d3f3a91054a99fae6a79e58f5ed",
+          "identity": {
+            "event_id": "7e01cf5c4e31abd9c2e4737b9af7d68e6d0b0225310e2b013a21557e56548cb9",
+            "network": "mainnet",
+            "pool": "5cZ925n6ckfUma76kqeu4pweAMHaHqfDi4QgvLizSXTP",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "SrfFuDcdAJtX2BkdyLhow4zz5VQtwhBJFfD4g4SHiL91UFHr8q43c5VnU29KatpXfbVuvT65GaAD8dpoxkx96P9",
+            "token": "EwSwuiA5JJ788WV66h7kLed2M1uKK6dbn67cSbeQpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 397,
+            "frame_sha256": "a8d3cd9ba34a602aeb668ddc6058dcf73f1f1f5b5509f54e7bbeb6ef19c7dc08",
+            "genesis_sequence": 317,
+            "raw_sha256": "94d0a307189d34068651fbf915786c6de1bfc0379e6d169d003ee638670bb18c"
+          }
+        },
+        {
+          "snapshot": "a141354d5338309b65d42bf87da47932d8500bdee0007d3436cc4549817e559c",
+          "identity": {
+            "event_id": "3643928f5fbe5f9121ff068cbdb946c023fc59867779da120ae1f7f7df23c6aa",
+            "network": "mainnet",
+            "pool": "5cZ925n6ckfUma76kqeu4pweAMHaHqfDi4QgvLizSXTP",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "5czN7ZYKcrMUbTAJ3zpHGG2E6mk2jUpXWGh9ZvfEjdbA4hryVxdJ74MRKoRvgP36kGzAJzJMdbKAq3kBw9dTstbz",
+            "token": "EwSwuiA5JJ788WV66h7kLed2M1uKK6dbn67cSbeQpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 498,
+            "frame_sha256": "2de9ad51174868827380c6c6e7c449864d7131debf0584386cd10d24d2450ada",
+            "genesis_sequence": 426,
+            "raw_sha256": "14f6143318fcff9a1a0e99c14cf09a7d488bc549ea9f91fb8eacaa45fbadb6bb"
+          }
+        }
+      ]
+    },
+    {
+      "base": "FnNcduPcyrAuJKxcZjtzSYnNoSkyNnPnjKVqoafu7vqh",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 2,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "ba6a95cc61ac6db2a109cc9bbd1b377a89a4a4d41f45a52b9ea4e250ad252ec1",
+          "identity": {
+            "event_id": "43784af2789fb709443544bebe53db48fd3dd95d8f718cfc15d9034ae9e28891",
+            "network": "mainnet",
+            "pool": "FuTcwLx1tmkKLVSVV7fyBfEgUSPkB4ZHPsoD33ipYCaA",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "i7gDPA49hgru5tKksa89baohNKcRF8L6vziwa4yxez6rxLF1G63R5PYnctp4tdvz7efXojZqSZxNk79tREcehXC",
+            "token": "FnNcduPcyrAuJKxcZjtzSYnNoSkyNnPnjKVqoafu7vqh"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 590,
+            "frame_sha256": "c6c7c7a174ec06e366d75aaa74000f7c293887226d4ff51d07b9b4d3e87077d2",
+            "genesis_sequence": 566,
+            "raw_sha256": "1cae77bd1e5a3f1dedb53b83d017bd2b6bccb60d358ba1c3139662242026c9ad"
+          }
+        },
+        {
+          "snapshot": "a66290f0deb62bf03ca5ab36c4ad3df9c5a1eefa7dcf87b4c10283806e69a70d",
+          "identity": {
+            "event_id": "b43e9adcfc6bd2fb9d6680718fedf600a20a7801496ef47b2ea8390951831235",
+            "network": "mainnet",
+            "pool": "FuTcwLx1tmkKLVSVV7fyBfEgUSPkB4ZHPsoD33ipYCaA",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "czpnadcqrpjCZPW5D3mqkrpLA2ZbcSUzpkFyHad7TGk44NTX4ChUBaDefLMfKh8y2pKXaPoUc1YpVj3p3txcpf2",
+            "token": "FnNcduPcyrAuJKxcZjtzSYnNoSkyNnPnjKVqoafu7vqh"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 663,
+            "frame_sha256": "2fde48d8440bca9c1b7f0f0c742829b642d493047b7d706c72c6d36bdc35cf9a",
+            "genesis_sequence": 639,
+            "raw_sha256": "227941f4d49e3e7f11fb14ab74b4e21f286bdd99b6800fba11f0a180dae71cbb"
+          }
+        }
+      ]
+    },
+    {
+      "base": "Gui3XrXZfBnwpXaYcAQVgaYT5MCXVxjwuYB1CotNpump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "57394a7328507e38110554a189f0fd53a7074341875c3b556d9631c011dd11cc",
+          "identity": {
+            "event_id": "b801d6cba034813f13bcfdf6884a91ef763afbfb2921658f4868203ea8e171c4",
+            "network": "mainnet",
+            "pool": "EuCTz7cjHZhBiUBiAGSPMysjpGVSWk85BGeaRs9FPZ9V",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "BmsmXJGDB3UEexcNAPrY19N9kYWPvsGyBUGXPf9o9Z5kRF2TCo1Ytpc9mWK9DpirdSFUqUicqrRtVb3AsNRKw5N",
+            "token": "Gui3XrXZfBnwpXaYcAQVgaYT5MCXVxjwuYB1CotNpump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 551,
+            "frame_sha256": "ddb8fd780f4074991272ec4251a57ccc76a444c02077666cca6f1eff3e359da9",
+            "genesis_sequence": 514,
+            "raw_sha256": "ce2ad265d0b85e070cd9376cd00907c76b82c4d597cefa711edefb96f4eae804"
+          }
+        }
+      ]
+    },
+    {
+      "base": "HHcDJ6xZq7rEJAYo82KMwAPZjLGZkSUvTCPnTLhapump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "b478b05849222f2aa2f7d1aebca260a3d9443d00666de425ccd0d31f09adfc1a",
+          "identity": {
+            "event_id": "c4a88df3e442cc6a3079fc1d73107668b6bf972ddd8c4eafd20daf49c91dcd1a",
+            "network": "mainnet",
+            "pool": "92ANJ941kfi6ghHufQJ5jVM5S4McT8Kd7i7m2g3DzRJz",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "2mjrT2HBZ29NUC6MrvY5P5FBLYGF7gPEXa6eq1jWnCXZj2Jtgp9sjKdZYnLZcbsLS3ww1JjbTJ3M54eUzs4VCD17",
+            "token": "HHcDJ6xZq7rEJAYo82KMwAPZjLGZkSUvTCPnTLhapump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 106,
+            "frame_sha256": "3de25e217ea7e8216cce95a082c76ae5941c85a0c72db927d28989bc7d96b21f",
+            "genesis_sequence": 25,
+            "raw_sha256": "e3680663715c5464ec95938ff52da97ca1f30d0a4c51da9b9e7e06119251440c"
+          }
+        }
+      ]
+    },
+    {
+      "base": "JERpqiXG9wLuWcbSi51uaqjYzTDd6Tj9VGgpAgik6EW",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "44bfe92fb0289c9225da13f5bb4c1974929e93625d328520d23690936f7dabde",
+          "identity": {
+            "event_id": "fa19b3bbac1cd36af5c1ed7ede6758bcd943a874ad61469e7ec5a1b8d263eefc",
+            "network": "mainnet",
+            "pool": "4LykWqvVpE1LmSSYN585EFewvkgFPePnWGojopWsUXPp",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "WQRJUqNXrhPPAjqyNBFvh4bibvQ3gYAJtjYDmiDxjqZKsqoSJbQDeQoYWCwuL41KsQFwz5j5rLAgbRrr2PyzNvm",
+            "token": "JERpqiXG9wLuWcbSi51uaqjYzTDd6Tj9VGgpAgik6EW"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 438,
+            "frame_sha256": "60ac43ce7f1f0bf5bfebd33c569ef7a25b2517beccb65d2e90ed490857d5613f",
+            "genesis_sequence": 426,
+            "raw_sha256": "08a8d6171715d42e911a734ad6cde13ce7bda7ec4dd6e00fa45a2401fdcd1552"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "3xTNm87MwudJJk6nQBdDejd863SDhCpHf2dhwwxH8kg8",
+      "frequency": 1,
+      "unsupported_quote_rejections": 1,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "04aa4edd3ef5264948d01dcbb3de6a9f11c1590ce31c50b576400b1084701aa5",
+          "identity": {
+            "event_id": "7f41849b80d257cfe7dbc73aff4cf324d8cc976d9561e4fd61a9e7c3701e3872",
+            "network": "mainnet",
+            "pool": "Fz1YsSS7nCktesVtxo7zTSroxj2pP94ftw2eTAEc95Qu",
+            "quote": "3xTNm87MwudJJk6nQBdDejd863SDhCpHf2dhwwxH8kg8",
+            "signature": "5rfatYtoyHaHfNSd4bGjNQyfYT9Uch8uEWeY8wt4KBJ5jG3bQ7s31VkN39ET6oSNCzBwPdeoNwH59Fd6KLsCfKyx",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 169,
+            "frame_sha256": "84a24e29f8c486c430f8fbd5562c414cf29ede49f5623446614808e7db002541",
+            "genesis_sequence": 127,
+            "raw_sha256": "27236862d1936eb3563e3c8998127aeed94133edbdc489e1f009bb7e15ea64c9"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "4ctd9mr5j4dQYzxhmXG1TwCw4upH3f4xj38c2R6npump",
+      "frequency": 3,
+      "unsupported_quote_rejections": 3,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "ecb712f584325bb9b042b45e7cc6148182d29102a9f64a7138d59a945266688b",
+          "identity": {
+            "event_id": "3ac4bf6e9f98e23f5f11c9091c3c1ca8dbdc5271f648759fb011c9becdf76fc3",
+            "network": "mainnet",
+            "pool": "6cTCrXM6GVV1swpGkQvGcksZtCwTLky8yDhifpgkTjDy",
+            "quote": "4ctd9mr5j4dQYzxhmXG1TwCw4upH3f4xj38c2R6npump",
+            "signature": "2aJsViRvVuxYZhgSdQiLkVXaqy18Ca5x5cAM2MtBafEKZ3nqWdZ4vQy3ejA23We5yJ7bjyJxAZLA5ELf41GgGqGx",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 43,
+            "frame_sha256": "daf97e66c201a4850f77371ed500ddb943fa7d03c2c9ee37c3c397a875744cf3",
+            "genesis_sequence": 25,
+            "raw_sha256": "268ebb7f76d3c39087fb3b453258a4e8305e3c329c3e29a21e52b7837c62bfe4"
+          }
+        },
+        {
+          "snapshot": "388c57031adafe1f44a409a7ee61007fa7394c87bdd225f4375c4988b322eb6f",
+          "identity": {
+            "event_id": "65194effcf3e6290df6012ca35a7c6a6bf428f11b16bcf1e2e9ca0f0c7491d0c",
+            "network": "mainnet",
+            "pool": "6cTCrXM6GVV1swpGkQvGcksZtCwTLky8yDhifpgkTjDy",
+            "quote": "4ctd9mr5j4dQYzxhmXG1TwCw4upH3f4xj38c2R6npump",
+            "signature": "5Y5ujoAarDgUpCuWbYu3Npu4V2ZN11DFp5427Chg6qGGqqxK8ejhbtZbyJB6hrR2Et9UzWnRNmXxUh3PAS82KyhK",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 161,
+            "frame_sha256": "f6be27a23a1157a33c9c08c0d8b77376f78c570de1ea85cc0548ddad493bbd7b",
+            "genesis_sequence": 127,
+            "raw_sha256": "65ca0c845447baf579118b0ffbd792322b054bdc06f5745ed618feb9a0e11fd2"
+          }
+        },
+        {
+          "snapshot": "b570ec960521e3fc697d49ae25dc46b76db2a7e6fcbc6408be92395301dcd089",
+          "identity": {
+            "event_id": "8515c6b986fe3584a92159a99deea9867faac56157c395192d59fee7d979c4ef",
+            "network": "mainnet",
+            "pool": "6cTCrXM6GVV1swpGkQvGcksZtCwTLky8yDhifpgkTjDy",
+            "quote": "4ctd9mr5j4dQYzxhmXG1TwCw4upH3f4xj38c2R6npump",
+            "signature": "RpebaXzfYPGBEYL9C1tgknxoQKkUH3DtUAMDhDSKJsySStN8U5p9xh9nVc7YptctBYjagW5y28ZvYCLpDNcPQC7",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 389,
+            "frame_sha256": "bc0ceaf42f008c02bb315e6172ecea5cbb7445783e2fd3b9dda82068bf4c5edb",
+            "genesis_sequence": 317,
+            "raw_sha256": "3a06e8d0f57cc21c7536e1ed1a2595153a5452313377138055bc841032ee0c1d"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "6MqXWvgJCfz8WtnStpvVVmhA9ww4AvDHJMLkHZTBuPVY",
+      "frequency": 2,
+      "unsupported_quote_rejections": 2,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "82f2eed71636823d230e632823787969c72760542747bfa144ff1d7fa624fa00",
+          "identity": {
+            "event_id": "a7769d4e9a3e5d14296df3ee62dcaaa988a3a226b3c9555112ed883075ba3f2f",
+            "network": "mainnet",
+            "pool": "3svYc4RXHtL2Lj4gUWSYKKAXX4qxTvV3AAxyWRwPojDC",
+            "quote": "6MqXWvgJCfz8WtnStpvVVmhA9ww4AvDHJMLkHZTBuPVY",
+            "signature": "4GL1X1x4ftDHctDA6FzpukFH2r5nCUeidU8FSmgMY7A6LkX6UmS7PVcb392dkMQjSrFCdDWy48qQb7pBbKavbpWL",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 219,
+            "frame_sha256": "8664634bd032456ad78a74ab1571f953a27fece0a9ad315e149f12fa986f2842",
+            "genesis_sequence": 127,
+            "raw_sha256": "51a1fa883dcde8284a86989e6b70c5f9fff6d4ef50b7dc8f0ba2b1faf71c7e16"
+          }
+        },
+        {
+          "snapshot": "f74a5a9c4091efbf46c6072e6e4b4f255b79b4641143c7d6f04430d200b290c5",
+          "identity": {
+            "event_id": "776c0a9ee49f4285efc9f118ee52891eb33e3027338b29594beb4f178d4bc959",
+            "network": "mainnet",
+            "pool": "3svYc4RXHtL2Lj4gUWSYKKAXX4qxTvV3AAxyWRwPojDC",
+            "quote": "6MqXWvgJCfz8WtnStpvVVmhA9ww4AvDHJMLkHZTBuPVY",
+            "signature": "SYa4nDB6wdyLmNBK79Zu62EJnWTB1V9XTtDLoCNkHJb9bJMiqj94Pp5m7JKoLxTAwfU1z4ZK8VbrWxCgDRUWeqv",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 264,
+            "frame_sha256": "8a59ba57c4e241aed6084aa47b2fa2f5ec2ddb554ddb4db04e49170d04586475",
+            "genesis_sequence": 127,
+            "raw_sha256": "549176d6302d480fcc98506976a2e6fd3600e0f0bfdab51f2c095d163bbfdb17"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "6mz5t6BkXDz1rMxtVcXTvaYqCuPzPmAPX8dxQZvtmA9g",
+      "frequency": 2,
+      "unsupported_quote_rejections": 2,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "d16a3a7a1223be9fa647502f123736d68571ac1699c0b54f3620152e8f4b9a83",
+          "identity": {
+            "event_id": "e7c6f0e7bb853617fc4ad2b940342bf05d0a913a65afc8b35be3b6420d4b6dcd",
+            "network": "mainnet",
+            "pool": "Ea8M83akBS1Ep5E9mVB6dyx98ZRJESbe2CEKCQFA8cpm",
+            "quote": "6mz5t6BkXDz1rMxtVcXTvaYqCuPzPmAPX8dxQZvtmA9g",
+            "signature": "2wwpD1F7T37HiZyVSKyaQDV7cyZGio4PWGv8s7JCze7u5G3b4LuSg7mKpWmm6qesBm2rcipzvMt3kL5T2PLeJpW9",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 67,
+            "frame_sha256": "dbaeefd089d57b168d54413465c05da01a7409c6d5745baa9341cf8207ece690",
+            "genesis_sequence": 25,
+            "raw_sha256": "51a39aa556baa1da1ac7c985637ab6442bf2a334df7ca591357b62fdf6450333"
+          }
+        },
+        {
+          "snapshot": "55fd0852ec101d76727229a31abecb29dcb62acf219cc78ce21b9764bec5993b",
+          "identity": {
+            "event_id": "4562bfb5e0a5263b79af19dda53c08527bfc73d6713f0e670d99266f1c77bfeb",
+            "network": "mainnet",
+            "pool": "Ea8M83akBS1Ep5E9mVB6dyx98ZRJESbe2CEKCQFA8cpm",
+            "quote": "6mz5t6BkXDz1rMxtVcXTvaYqCuPzPmAPX8dxQZvtmA9g",
+            "signature": "4Rz8JeveMREp1ypWGyr8JVyaoo9NrcqTcr2sCcaNwQtCzQ6hChhP5MenXRjD4rP5AWmmwA4dFmwoh2zDJGkcihy1",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 196,
+            "frame_sha256": "403014ad120f7965a93b3431ce7adf2b5a955c66c2095e491e1bcdc9af5a65e7",
+            "genesis_sequence": 127,
+            "raw_sha256": "eda3b8bbf93135f11ad5afbef08dad9719d162ea6d8f87903c7a3f6646795acd"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "85YoSvbifbZ1sgkVp3wTfgdk7v7mj3A8xDxtNFrKpump",
+      "frequency": 2,
+      "unsupported_quote_rejections": 2,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "0c6ea19522fb629da89b23947e659e588e1ebd1be3a541efc604de6a7da87fb5",
+          "identity": {
+            "event_id": "ec575d9709da393455484c2c459f07c03b10acf181123a3e6e72d5dcd1a877d2",
+            "network": "mainnet",
+            "pool": "D9G6MFrW9wrNCvWEgXETsWA3AWwy63GA9YrJUUArSdoF",
+            "quote": "85YoSvbifbZ1sgkVp3wTfgdk7v7mj3A8xDxtNFrKpump",
+            "signature": "4tbJBZpUXg8uL38FATRNTuA53Q2XDambSACKWFJpBwu9GgqvCMr4b1VnPGsctY6vdwJrjPmZhkt5E9egBXFw2sAp",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 141,
+            "frame_sha256": "185dbb3a719224c9cb3a6d343ac8113ed1da664e01ad483373ddbd8ceb254e38",
+            "genesis_sequence": 127,
+            "raw_sha256": "55c4c7a45e5d3a44ac05fbd044e86436218dd317e78ab7d6a1e9e3fa4bec8ad5"
+          }
+        },
+        {
+          "snapshot": "af7b24ab53b36db016134c809c160ffd868dee682e22f10c10bb4e7138f4c63f",
+          "identity": {
+            "event_id": "f6ed50be2f09cf75bdd7e8393e2d5e797cedc8ea72e3aae5123dc32bc32b9d7b",
+            "network": "mainnet",
+            "pool": "D9G6MFrW9wrNCvWEgXETsWA3AWwy63GA9YrJUUArSdoF",
+            "quote": "85YoSvbifbZ1sgkVp3wTfgdk7v7mj3A8xDxtNFrKpump",
+            "signature": "614Jh1c9DmR8epSdgCwWzfyhSxYta6GduZaofNeYL1heYGzTCrwt5TGr6RBA87d2cn1ukUKQv8DAHgNhDeYuRpHg",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 285,
+            "frame_sha256": "e556df04c5ce47f14fe675822266e61d1151f496423cb475c0eb1ad0f86d219c",
+            "genesis_sequence": 127,
+            "raw_sha256": "093f45b8fdfb6466c0bbb0c747f69be78890ec1deb71962578868d9aa1c28a55"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "8wMSBbsTEXTFfkJ8uCNc5SkRHyuuvSng3T6AtsLDxFgn",
+      "frequency": 1,
+      "unsupported_quote_rejections": 1,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "6344eb534fa0eb7a7fedfc87f1ffa90f0acc20db5813b06dd00e0b5dfd73f00e",
+          "identity": {
+            "event_id": "4b915b10dba58958928aa2693bbb32871f11b78d16d1a8c6bbec27bf34a95b8c",
+            "network": "mainnet",
+            "pool": "E7Fv5hueDsYQGzNEuPQoPEyY2rpLid5cpEaj8tbKeTwa",
+            "quote": "8wMSBbsTEXTFfkJ8uCNc5SkRHyuuvSng3T6AtsLDxFgn",
+            "signature": "rF5xv4R1dzz7J1nb8YbCsVqfDpN5TVCh7RjEGGTf6A5wypkJWo8poDHbu5vAmQJLLVUUaXUseChdzLDuKo68xWE",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 342,
+            "frame_sha256": "42f9faf14eb06f189472ef741b79d45b430c4488d49c923c699f0b3475f36980",
+            "genesis_sequence": 317,
+            "raw_sha256": "7573ebe70d1f42b31ad0149c8830e93ba98d120a3491ee4c8c6a776d9c45a92c"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "9RdgBmg3GzhyFiVeEpedJfWUfSdBuWdYtppRCJxQoWJt",
+      "frequency": 1,
+      "unsupported_quote_rejections": 1,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "1e08084ddba7d7d60a75c0cabee9a5be1e6e09c5ced4cb8d6d1fba69cbd8d214",
+          "identity": {
+            "event_id": "1678b228cb8f09b7823d6c48bb99a08e32658ae1d27fca94b82026f357e88f39",
+            "network": "mainnet",
+            "pool": "4vonk3NtWaSTSNqZmktw5Ein4iYU8j4r6ZLtrVN2JMe5",
+            "quote": "9RdgBmg3GzhyFiVeEpedJfWUfSdBuWdYtppRCJxQoWJt",
+            "signature": "2RTDNgJeM9opBXFFBsLq8L1iAQKq4EYJqyLjfQQs3fxkLiiQcJH8odMVupoHXnfuS7SQyAsPe4Y8xDMabiYpwSVt",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 358,
+            "frame_sha256": "8c3f2f8cc5f669b499a7f45aebafd87cc94a376c849adba6d18818ceb6aec030",
+            "genesis_sequence": 317,
+            "raw_sha256": "40f1f983167661c598754ff569fbce163f43139096e8809a0e21d0be4685bd4b"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "Cd6MT4XFvntr2ojtmt6CoS2JKTimz2xPECjUSUHhPizp",
+      "frequency": 1,
+      "unsupported_quote_rejections": 1,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "9c282f639be5415d2969450ac10c699e5f56ec69e14adc4b7fabf9cb08616208",
+          "identity": {
+            "event_id": "40b3a4bc156d3ecd7e5ac866c3f6a66843ea0a62ef4253e8bc2e81654a0923e8",
+            "network": "mainnet",
+            "pool": "37i7MGBYTrEPMJ8JG8jTtvDg6tBgqu2aZhCEWZq9TzKB",
+            "quote": "Cd6MT4XFvntr2ojtmt6CoS2JKTimz2xPECjUSUHhPizp",
+            "signature": "DVeX7iBrQpcQWzNaBTf5ovFU39tqRt6E6K9gHfq1614KNBtLjaVbnyGukYcYWxTRQiMLmq2raeUboWnhqvSjB2j",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 350,
+            "frame_sha256": "edc8d0fe5d995873389316da3755674f0ce6436139fa07a8ea6abc89502179c8",
+            "genesis_sequence": 317,
+            "raw_sha256": "be81f7c8a1a6685dc8fffb996fb036286692861feb483d1d0073ecac0e53beff"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "D4n3mPP5kzcUkd5ETcW18UHPe9mGojvCQHDGEUsw26r8",
+      "frequency": 1,
+      "unsupported_quote_rejections": 1,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "daf6c71ccd6f23ebbc78c8a0696eac919abe63b14ce6452556268194c23aef01",
+          "identity": {
+            "event_id": "f2c9d00323202eaa3cee7a2eefd78f4b262fb652338fcddd54ce79eb9209e903",
+            "network": "mainnet",
+            "pool": "GJHdDc9H2EJbDaRrvAwtdX1of55Q4tr5uEwe3o7CEnwn",
+            "quote": "D4n3mPP5kzcUkd5ETcW18UHPe9mGojvCQHDGEUsw26r8",
+            "signature": "3VYbjrS4E9aRCi43As1ZLceGY4SFnLU4oJdtXvd81Hb7qEzQEGaYigCm2JWetKCSqfYT6xaoZ9f4jys7rVdpNXxg",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 430,
+            "frame_sha256": "ce2d1eb7396c4916364120245496b709e198fc53527658b0ca0302c75d5f3f87",
+            "genesis_sequence": 426,
+            "raw_sha256": "2443a7fc4dbb52437353091719f8fc3fe7071ce3947d3f04461098d4c71dd3a7"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "D9Kk9ZcRnxt1Df94RtmjWgsJom2NKvWHVf3BL9fwL8zN",
+      "frequency": 2,
+      "unsupported_quote_rejections": 2,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "67f1f1d9c6b93d314ddd219ef6c314ab44ce1d76f233ba57cff70219899d904a",
+          "identity": {
+            "event_id": "159618125c954440bd4a5f521bf3a6e615f40cb011242f939b3a29eeb50e2b61",
+            "network": "mainnet",
+            "pool": "FSDmn8w6oKAT9Qr6neiaYLWpVxajx2VfF1YccGhvqYcr",
+            "quote": "D9Kk9ZcRnxt1Df94RtmjWgsJom2NKvWHVf3BL9fwL8zN",
+            "signature": "5dup1vQZeX8U6u4cBC5BwpgFZH8h9DERXGT1gJDoqDUTWmfmW5HrWM4wB8c1EB8PXpYiaaoyAfeGuvHLG6baY9TS",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 51,
+            "frame_sha256": "1e9ba71750fef94e534fb76eb02bc9bbb78c0fe759c9e820dbd17fcc78563e8f",
+            "genesis_sequence": 25,
+            "raw_sha256": "b2e4f6cb1da648f7c520a0f0e7a685f9cb4985fbb3dafff07513a4cb9e351dcb"
+          }
+        },
+        {
+          "snapshot": "5c6d71c99c749e7953dfc0af490a4c5c4dd8dc74fdc384d2c2f80baef70f2a6a",
+          "identity": {
+            "event_id": "b0336567d4fc5b30b78581f46b01563f079fe595eea13e42edf528dd2ba8e27c",
+            "network": "mainnet",
+            "pool": "FSDmn8w6oKAT9Qr6neiaYLWpVxajx2VfF1YccGhvqYcr",
+            "quote": "D9Kk9ZcRnxt1Df94RtmjWgsJom2NKvWHVf3BL9fwL8zN",
+            "signature": "48BynHMSm9LpGaUC4SbMfXdhaPc5jamBYR8fBVVvymgxrHRRyQX3d98x6zM1FyS4xRKGSrcuQuDxVNqpd1kUZK5",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 407,
+            "frame_sha256": "479a406c351979af1c4f427977ff7e6c2135ad943300cc90a663d58f01aff35c",
+            "genesis_sequence": 317,
+            "raw_sha256": "1ae2a459cc65e450b47d92a5107cb5ebf722d5832755999371fc564b93a7a2df"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "Ei7YK1YGPowtm7cu8mf3V9PBJXii63AJ2TLeYcFopump",
+      "frequency": 2,
+      "unsupported_quote_rejections": 2,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "3df602e7f8439b9aaf028577c689d636ec44cbf51d1bb14e606dcb202864b785",
+          "identity": {
+            "event_id": "fd1ea4f8add4f63e09575920ee33554205f4d39e6dc53751129e318f50fee59f",
+            "network": "mainnet",
+            "pool": "53Sa4isiEM4t8kag4xjfgNa17pm6gyaGbt6B2BzKuf1o",
+            "quote": "Ei7YK1YGPowtm7cu8mf3V9PBJXii63AJ2TLeYcFopump",
+            "signature": "2dxisExxMHVv5nZ8aYUYMoxbGZBxHPEx8rPzhiyQxdpHL5TSrtzXN56dXumq4xr7prELTF6d6QeC4YpWZozvPrAw",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 35,
+            "frame_sha256": "d434c88438ef3b023e5e5dab5c3f8d88e0a9efd1ba5dfea52e653b5888640263",
+            "genesis_sequence": 25,
+            "raw_sha256": "8a92b3dd3ddaa2fb2141663711ebe1931b74344c9cd44348c0c66baf051a058c"
+          }
+        },
+        {
+          "snapshot": "204f4941cf897727aabbfd7fc459984e56c1939d2f9576646eca770b8fd09564",
+          "identity": {
+            "event_id": "99ac19d14ae459dec5617cb591580e9819c9a6b55e24b8a3af32c4149e208619",
+            "network": "mainnet",
+            "pool": "53Sa4isiEM4t8kag4xjfgNa17pm6gyaGbt6B2BzKuf1o",
+            "quote": "Ei7YK1YGPowtm7cu8mf3V9PBJXii63AJ2TLeYcFopump",
+            "signature": "3nhE7jUDVztfbCUp6Fm15DQDGwUCT7KREQFoa4NDfgrCdmdGWUFX7X5iMDbKu3hvtPkpdb9wCugPcsLsWg5DxTwL",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 180,
+            "frame_sha256": "1631e4c42c4a32d73fc5ba43903bc05b3184fcf031eb945a559684ebff2ec9a2",
+            "genesis_sequence": 127,
+            "raw_sha256": "33771571387c6c3b7039c0799841cb35c8ec32650387c23845f3a0a4bb754876"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "F3KjYG72WCDtCN4VdBu23aN3HQZr2zoYf1q6vgBAcGQU",
+      "frequency": 2,
+      "unsupported_quote_rejections": 2,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "e7acf0c6bcc900426d8b3533c92afbdbe2192aadaf7218676f94758720bf2ab2",
+          "identity": {
+            "event_id": "6eed4b2176f54375d3c2be28bf2ea6bd39c557f424708c844d6a41e1676bf0d1",
+            "network": "mainnet",
+            "pool": "ErCwdbytLAuW8iPhoZ46wWYLBM3UsNSJ26F3DdLeUkfe",
+            "quote": "F3KjYG72WCDtCN4VdBu23aN3HQZr2zoYf1q6vgBAcGQU",
+            "signature": "5N8SH1AiCbmvr5gxnSqWH51kNr8LCkUCL2ASzeDqSYLsZC12StXFF4aw3KQ2zmkh2frqq5ZxWdaeZq5qJ98qe8sA",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 59,
+            "frame_sha256": "358a73c94e3f6653ec7d33afa09f5f8d1e08ff090976229ec01ad43e83f2726f",
+            "genesis_sequence": 25,
+            "raw_sha256": "4458b375b7b6d7445254641e6dc4b5194e2cff4f5d8d07da0d8150c94e20159d"
+          }
+        },
+        {
+          "snapshot": "62c5e50c3695996dc7eefe89bdab7788fc6ec18eb7042ce3b61b39334c7c4882",
+          "identity": {
+            "event_id": "6f29dc9064493491bfadf151e032ca52549bcd0c631dd56540dfa4587c0c49c5",
+            "network": "mainnet",
+            "pool": "ErCwdbytLAuW8iPhoZ46wWYLBM3UsNSJ26F3DdLeUkfe",
+            "quote": "F3KjYG72WCDtCN4VdBu23aN3HQZr2zoYf1q6vgBAcGQU",
+            "signature": "3nPcAfNCTS5fwZd6F7yE1mKEuXhH7hkNhNxLY5JgwUEMtdzW47rGA1xoPht4MCoKLFqPMPywgCo4EX9MhsASCnwE",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 188,
+            "frame_sha256": "f640e557334563fa55781e3112187d7ced38516a52e0988ede6b4108ca6846fa",
+            "genesis_sequence": 127,
+            "raw_sha256": "bbbb31bf38a2d715541c8b08188db5a56f62aea9ff499fa441e383b2ae3d519c"
+          }
+        }
+      ]
+    },
+    {
+      "base": "So11111111111111111111111111111111111111112",
+      "quote": "FXc1CYdGk8A5aYBcMaiCQtNc4BCC4pKsRkDUgXFJpump",
+      "frequency": 1,
+      "unsupported_quote_rejections": 1,
+      "classification": "POTENTIALLY_SUPPORTABLE",
+      "runtime_support": "REJECT_UNCHANGED",
+      "normalization": "inverted pool orientation; not implemented",
+      "required_evidence": [
+        "raw pool mint/vault bindings",
+        "mint decimals and token-program/authority proofs",
+        "size-bound forward and reverse WSOL quotes",
+        "direction-aware amount/side/reserve mapping",
+        "tests without fee or unit inversion"
+      ],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "24d23cf4e7712ed1143a692e0caecaf5609dce44e3842b7ada0c20ddadecb2ad",
+          "identity": {
+            "event_id": "b2a3bf2c1a4a23e1ba3dc7ea9a354b4a8053958afa8645eac02f53328e39dae0",
+            "network": "mainnet",
+            "pool": "G5YZf1kZ9NbEr2vYtfk6dAG2Gmf2KNmKCgaPNhjCmkBs",
+            "quote": "FXc1CYdGk8A5aYBcMaiCQtNc4BCC4pKsRkDUgXFJpump",
+            "signature": "21oCziBWzQw6yhMJFqoZfWA4tGC6HuyvymxZG8eEBjU76UaBBQY1XktR3mvZQRsxJszLsa3tid41C6fRHP2ZfxdS",
+            "token": "So11111111111111111111111111111111111111112"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 75,
+            "frame_sha256": "bd5bb7958471f84ff0d607cf8a3655d2e522490944437712fb6e784b4e002d74",
+            "genesis_sequence": 25,
+            "raw_sha256": "36b289f9409ecfc46ceee66ec2d887759f772dec92d2a1caf7c268b17a78942f"
+          }
+        }
+      ]
+    },
+    {
+      "base": "oj7csbypyUbg2XxdXhoYKcmoRqExRKtp6JfjrC4pump",
+      "quote": "So11111111111111111111111111111111111111112",
+      "frequency": 1,
+      "unsupported_quote_rejections": 0,
+      "classification": "SUPPORTED",
+      "runtime_support": "SUPPORTED",
+      "normalization": "already WSOL-denominated",
+      "required_evidence": [],
+      "unit_risk": "Raw quote units cannot be labelled lamports; reciprocal price alone is insufficient.",
+      "sources": [
+        {
+          "snapshot": "2a14aa48f0ee574313bf15ed82432adcede38b436151a7e322804c37d6f86b18",
+          "identity": {
+            "event_id": "7ccd016420c4a4cc14742d7dc24ea602ab9d59e9ed4da15dddc5983dbb835dfd",
+            "network": "mainnet",
+            "pool": "EqPGEEwEtMTPm8G4xym5sThrrsxmonguGtMJfQzww8ea",
+            "quote": "So11111111111111111111111111111111111111112",
+            "signature": "vBWNMnA2SrXbWdfFRQH6zVoWecKLnUMEtUMXCQzdB9T18CnJt8vFV2eDKBfdG5HEYRqZTbrSMdtWBPsV2qzoDrx",
+            "token": "oj7csbypyUbg2XxdXhoYKcmoRqExRKtp6JfjrC4pump"
+          },
+          "provenance": {
+            "decoder_sha256": "1d18256094bce32e5be9429282c27de8e1c4c749252048553104ac78330dec64",
+            "frame_sequence": 531,
+            "frame_sha256": "05c5eaff5f104b1c544015e28689a0862be375af30a208c2992914d3c9e56da0",
+            "genesis_sequence": 514,
+            "raw_sha256": "03fddd48fbe97a9f5f39296818362faf573e5e8cec1a38fcd8f2629b283a9989"
+          }
+        }
+      ]
+    }
+  ],
+  "portfolio": {
+    "cash_quote_raw": 1000000000,
+    "positions": {},
+    "realized_scenario_pnl_quote_raw": 0,
+    "loss_quote_raw": 0,
+    "pending": {},
+    "head": "0000000000000000000000000000000000000000000000000000000000000000",
+    "sequence": 0
+  },
+  "historical_failures_preserved": [
+    {
+      "layer": "V1c",
+      "control": "first",
+      "status": "FAIL",
+      "code": "devnet_identity_not_verified",
+      "cause": "devnet identity not verified"
+    },
+    {
+      "layer": "V1c",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1c",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1c",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "first",
+      "status": "FAIL",
+      "code": "devnet_identity_not_verified",
+      "cause": "devnet identity not verified"
+    },
+    {
+      "layer": "V1d",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "live_memory",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "first",
+      "status": "FAIL",
+      "code": "devnet_identity_not_verified",
+      "cause": "devnet identity not verified"
+    },
+    {
+      "layer": "V1e",
+      "control": "resume",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "retry",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "offline_replay",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "live_provenance",
+      "status": "FAIL",
+      "code": "previous_phase_failed",
+      "cause": "previous phase failed"
+    },
+    {
+      "layer": "Integrated",
+      "control": "interruption_checkpoint",
+      "status": "FAIL",
+      "code": "pipeline_exception",
+      "cause": "pipeline exception ValueError @ rpc.py:75 context"
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_evidence_bridge",
+      "status": "FAIL",
+      "code": "execution_evidence_not_proven",
+      "cause": "execution evidence not proven [EVIDENCE_REJECT]; session=NO_TRADE buy=0 sell=0 polls=0 hydrated=0; price_impact_limit, route_pool_mismatch, unsupported_quote_currency"
+    },
+    {
+      "layer": "Bridge",
+      "control": "real_conditional_roundtrip",
+      "status": "NOT_EXECUTED",
+      "code": "no_qualified_real_roundtrip",
+      "cause": "Aucun aller-retour paper sur preuves reelles qualifie; pas de fill fabrique."
+    }
+  ],
+  "windows_scope": "User run and attached artifacts; offline re-audit only, no new network qualification",
+  "source_files_sha256": {
+    "bridge.json": "554f8be4b89f019366a9db02b1cd7f4369cd442eecf89d90e9686409bfcc02d1",
+    "validation-summary.json": "4434b1c48febae3f36ccde533854225eaa3732d705eb5907d54bb14bcd574986",
+    "brain.json": "b1e1eb3d8d3ffeecc10c8bdd149b90461d66140cdf73527be636bc95647d5327",
+    "report.json": "f0c0a1712ae19f1785031ab1423c6bc689db0f39b78c9a544cb544fa4fee2222",
+    "observer.json": "5688b9eeb2edb1ad761c32bffc718d32b2ba4eee0eb2893204ee66694425693b",
+    "integrated.json": "5293d1e8e3e1691ad913f8c9dd48fc199104b65836947882bd84ad42e3289987",
+    "bridge-proofs/raw.sqlite": "fe911191b985c8e972bd7f9526142249d53ceb06688e384a2347f61a841d2da2",
+    "bridge-proofs/bridge-report.json": "470c812fb8e081d29800ecdb2a0613be18163519d54870ab2e84edbf868e7af2",
+    "brain-proofs/session-dataset.json": "656dbedcaac1c709585848d90c45057887e674f668cdd6e3515d2db72654b4f7",
+    "brain-proofs/cycle-report.json": "9854be7f94b7afe48ba35157af64b0a02da62c93ce7afc435d628f58943df69d",
+    "brain-proofs/raw.sqlite": "90ad840d9fe58288167973129b17d0c5217e667cf2e60ebaa1ecaee843bec84e",
+    "brain-proofs/brain-report.json": "d8c806b150228a2ce58ba8b4df234f02497ce852549745047e70438deb5d568f",
+    "local/report.json": "3fc9b5e2b3fcd72d3c12e3138461053d9ddc3cdf4d12c89bada0641e2f207f1e",
+    "bridge-proofs/state/paper.sqlite": "0eba44f3c853a4059dc5553757f70d08cda1cff8688ffcf4c9d9e0537fe05dbf",
+    "bridge-proofs/state/engine.sqlite": "a41e66749877f4002136b8bfecdc6fa0fc60e743ca7432d6372fa1e43013c505",
+    "brain-proofs/state/paper.sqlite": "0eba44f3c853a4059dc5553757f70d08cda1cff8688ffcf4c9d9e0537fe05dbf",
+    "brain-proofs/state/engine.sqlite": "db38cfd3aac4df4d7ebe8652ea470ac77ba50ed08d2f6f687f055230cd0281a3",
+    "brain-proofs/freezes/38e6a2b5674683c57ef5a167c32ae6971e61b79e507e74be3b88822404cdff68/raw.sqlite": "1a972a992d776b990c320d6c7ffdd853b891bab620673aba9b118d63eafa5f56",
+    "brain-proofs/freezes/38e6a2b5674683c57ef5a167c32ae6971e61b79e507e74be3b88822404cdff68/manifest.json": "bd78b72b45ba141c02a359d7f46a53536a143c5ef2dab69073cc04d70791e381",
+    "brain-proofs/freezes/38e6a2b5674683c57ef5a167c32ae6971e61b79e507e74be3b88822404cdff68/dataset.json": "5a4a23941cfb042587ee788e463eb3528ffc29d308a41acefa780363c069ce65",
+    "brain-proofs/freezes/38e6a2b5674683c57ef5a167c32ae6971e61b79e507e74be3b88822404cdff68/state/paper.sqlite": "c03e2293f43e3ad6e54ecd06cddf3afffc20505d3df7bd40deb852f23044f585",
+    "brain-proofs/freezes/38e6a2b5674683c57ef5a167c32ae6971e61b79e507e74be3b88822404cdff68/state/engine.sqlite": "1f27b77d7dd6326ae74396cd564f3e85b51b5708408ba2e3cb80887e2eea862a",
+    "observer-proofs/real_pumpswap_events/raw.sqlite": "69d83a8b706166f438a2bc6fe92c898f302798b487d127381499c150f44b38e1",
+    "observer-proofs/real_pumpswap_events/engine.sqlite": "2ed221bdcd5aeb0f7d95b9b1e6e78256858bbdd719b1400d29db474118f03201",
+    "observer-proofs/real_websocket_spine/raw.sqlite": "ea8f9e27a247f706fb6cde002cbff5bc9e451f2603101caccb15162b89c60a00",
+    "observer-proofs/real_websocket_spine/engine.sqlite": "b991b411c872437d77d0c69854a20ed9545eb291a0ce22d4cdadfe7025091dbc"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "RESOLVED",
+  "original_report": "all-validation-e61jlwwb",
+  "observed_failures": [
+    {
+      "layer": "V1c",
+      "control": "v1b_reference_unchanged",
+      "status": "FAIL",
+      "code": "check_failed",
+      "cause": "check failed"
+    },
+    {
+      "layer": "V1d",
+      "control": "v1c_reference_unchanged",
+      "status": "FAIL",
+      "code": "check_failed",
+      "cause": "check failed"
+    },
+    {
+      "layer": "V1e",
+      "control": "v1d_reference_unchanged",
+      "status": "FAIL",
+      "code": "check_failed",
+      "cause": "check failed"
+    }
+  ],
+  "cause": "README.md and NEXT_SESSION.md were inherited immutable reference files; newly written documentation violated their hashes.",
+  "correction": "Restored exact baseline bytes; new documentation isolated in README_BRAIN.md and brain_handoff/NEXT_SESSION.md. No reference manifest or criteria relaxed.",
+  "final_gate": "all-validation-13tu6gh7"
+}
