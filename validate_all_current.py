@@ -61,7 +61,7 @@ def unit_worker(folder):
         def addFailure(self,t,e):super().addFailure(t,e);self.failed(t,e)
         def addError(self,t,e):super().addError(t,e);self.failed(t,e)
     checks=[]
-    for name in ('validation_tests','budget_tests','pipeline_tests','operations_tests','observer_tests','execution_tests','bridge_tests','measure_tests','brain_tests','context_tests','position_tests','watch_tests'):
+    for name in ('validation_tests','budget_tests','pipeline_tests','operations_tests','observer_tests','execution_tests','bridge_tests','measure_tests','brain_tests','context_tests','position_tests','watch_tests','lab_tests'):
         suite=unittest.defaultTestLoader.discover(str(ROOT/name),top_level_dir=str(ROOT));r=Result()
         with contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):suite.run(r)
         checks.append({'id':name,'status':'PASS' if r.wasSuccessful() and r.testsRun else 'FAIL','count':r.testsRun,'tests':r.rows})
